@@ -142,7 +142,8 @@ index_layout = html.Div(
                 dcc.Dropdown(id='cities-dd', options=[], searchable=False, clearable=False),
                 html.Br(),
             ], style={
-                'textAlign': 'center', 'margin-left': '100px', 'margin-right': '100px',
+                'textAlign': 'center',
+                # 'margin-left': '100px', 'margin-right': '100px',
                 'color': 'black',
                 # "display": "flex",
                 # 'max-width': '500px',
@@ -156,7 +157,9 @@ index_layout = html.Div(
                 html.Br(),
                 # html.Div(id='us-city-info'),
                 html.Br(),
-            ], style={'textAlign': 'center', 'margin-left': '100px', 'margin-right': '100px', 'color': 'black',
+            ], style={'textAlign': 'center',
+                      # 'margin-left': '100px', 'margin-right': '100px',
+                      'color': 'black',
               # 'width': '50%',
               # 'verticalAlign': 'middle'
               # 'align-items': 'center', 'justify-content': 'center'
@@ -496,16 +499,11 @@ def set_display_children(value):
                "else may do the trick!", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"key": "1", "src": "assets/paris/messi.JPG",
-                     "img_style": {"max-height": "700px"}},
-                    {"key": "1", "src": "assets/paris/louvre.JPG",
-                     "img_style": {"max-height": "700px"}},
-                    {"key": "1", "src": "assets/paris/cafe.JPG",
-                     "img_style": {"max-height": "700px"}},
-                    {"key": "1", "src": "assets/paris/senne.JPG",
-                     "img_style": {"max-height": "700px"}},
-                    {"key": "1", "src": "assets/paris/steak_restaurant.JPG",
-                     "img_style": {"max-height": "700px"}},
+                    {"src": "assets/paris/messi.JPG"},
+                    {"src": "assets/paris/louvre.JPG"},
+                    {"src": "assets/paris/cafe.JPG"},
+                    {"src": "assets/paris/senne.JPG"},
+                    {"src": "assets/paris/steak_restaurant.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
