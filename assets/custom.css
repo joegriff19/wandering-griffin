@@ -14,3 +14,7 @@
     line-height: 60px;
     border-bottom: thin lightgrey solid;
     }
+
+.pic {
+    'height': '500px';
+}

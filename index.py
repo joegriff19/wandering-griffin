@@ -1,5 +1,5 @@
 # Import Packages and other files for app
-from app import app
+from app import app, server #NEED THE IMPORT SERVER FOR RENDER
 from dash import dcc, html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Output, Input
@@ -18,18 +18,18 @@ CONTENT_STYLE = {
 
 # Index Page Layout
 colors = {
-    'background': '#ffffff',
+    # 'background': '#ffffff',
     'text': '#0000CD'
 }
 
 content = html.Div(id="page-content", children=[], style=CONTENT_STYLE)
 
 all_options = {
-    'Andorra 🇦🇩': ['Montaña ski'],
+    'Andorra 🇦🇩': ['Pal Arinsal'],
     'Argentina 🇦🇷': ['Buenos Aires'],
     'Austria 🇦🇹': ['Dornbirn', 'Vienna'],
     'Bahamas 🇧🇸': ['Eleuthera', 'New Providence (where Nassau is)'],
-    'Belgium 🇧🇪': ['Antwerp', 'Ghent'],
+    'Belgium 🇧🇪': ['Antwerp', 'Brussels', 'Ghent', 'Leuven'],
     'Bolivia 🇧🇴': ['Cliza', 'Cochabamba'],
     'Bosnia & Herzegovina 🇧🇦': ['Medjugorje', 'Mostar'],
     'Bulgaria 🇧🇬': ['Sofia', 'Varna'],
@@ -40,6 +40,7 @@ all_options = {
     'Denmark 🇩🇰': ['Copenhagen'],
     'Ecuador 🇪🇨': ['Galapagos Islands', 'Quito'],
     'England 🏴󠁧󠁢󠁥󠁮󠁧󠁿': ['London'],
+    'France 🇫🇷': ['Paris'],
     'Germany 🇩🇪': ['Berlin', 'Dortmund', 'Dresden', 'Flensburg', 'Hamburg', 'Kiel', 'Lübeck', 'Leipzig', 'Munich',
                    'Stuttgart'],
     'Hungary 🇭🇺': ['Budapest'],
@@ -51,6 +52,7 @@ all_options = {
     'Morocco 🇲🇦': ['Tangier'],
     'Netherlands 🇳🇱': ['Amsterdam'],
     'North Macedonia 🇲🇰': ['Skopje'],
+    'Poland 🇵🇱': ['Wroclaw'],
     'Portugal 🇵🇹': ['Guincho Beach', 'Lisbon'],
     'Peru 🇵🇪': ['Lima', 'Iquitos'],
     'Slovakia 🇸🇰': ['Bratislava'],
@@ -118,40 +120,50 @@ index_layout = html.Div(
                 style={
                     'textAlign': 'center',
                     'color': colors['text'],
-                    'background': colors['background']
+                    # 'background': colors['background']
                 }
             ),
             # html.Div(children="Let's travel better", style={'textAlign': 'center', "font-weight": "bold", "fontSize": "20px"}),
             # html.Br(),
             html.Div(children="I have personally been to all of these places and these are all my personal recs!",
-                     style={"font-weight": "bold", 'textAlign': 'center'}),
+                     style={"font-weight": "bold", 'textAlign': 'center', 'color': 'black'}),
 
             html.Br(),
             html.Div([
-                    "Select a country",
-                    dcc.Dropdown(
-                            list(all_options.keys()),
-                            value=None,
-                            clearable=False,
-                            searchable=False,
-                            id='countries-dd'
-                        ),
-            html.Br(),
-            html.Div("Select a city / place"),
-            dcc.Dropdown(id='cities-dd', options=[], value=[], searchable=False, clearable=False),
-            # html.Div(id='cities-dd'),
-            html.Br(),
-            html.Div(id='city_info'),
-            html.Br(),
-            html.Div(id='us-city-info'),
-            html.Br(),
-            # dcc.Dropdown(id='us-cities-dd', options=[], value=[], searchable=False, clearable=False),
-
-    ], style={'textAlign': 'center', 'margin-left': '100px', 'margin-right': '100px',
+                "Select a country",
+                dcc.Dropdown(
+                    list(all_options.keys()),
+                    clearable=False,
+                    searchable=False,
+                    id='countries-dd'
+                ),
+                html.Br(),
+                html.Div("Select a city / place"),
+                dcc.Dropdown(id='cities-dd', options=[], searchable=False, clearable=False),
+                html.Br(),
+            ], style={
+                'textAlign': 'center', 'margin-left': '250px', 'margin-right': '250px',
+                'color': 'black',
+                # "display": "flex",
+                # 'max-width': '500px',
+                # 'verticalAlign': 'middle',
+                # 'align-items': 'center', 'justify-content': 'center'
+                # 'justify': center
+                      }
+            ),
+            html.Div([
+                html.Div(id='city_info'),
+                html.Br(),
+                # html.Div(id='us-city-info'),
+                html.Br(),
+            ], style={'textAlign': 'center', 'margin-left': '200px', 'margin-right': '200px', 'color': 'black',
               # 'width': '50%',
+              # 'verticalAlign': 'middle'
               # 'align-items': 'center', 'justify-content': 'center'
-              }
-)])
+                      }
+            )
+
+    ])
 
 # page callback
 
@@ -196,10 +208,25 @@ def set_cities_options(selected_country):
 def set_display_children(value):
 
 # Andorra
-    if value == 'Montaña ski':
+    if value == 'Pal Arinsal':
         return 'Go skiing. Pyrenees mountains are beautiful and very affordable compared to the US. ' \
                'Only ~3-4 hour drive from Barcelona. I stayed in ____ hotel. Nothing fancy but very nice and clean. ' \
-               'Would recommend'
+               'Would recommend', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"key": "1", "src": "assets/Andorra-44.JPG",
+                     "img_style": {"max-height": "500px"}},
+                    {"key": "2", "src": "assets/Andorra-4.JPG",
+                     "img_style": {"max-height": "500px"}},
+                    {"key": "2", "src": "assets/Andorra-10.JPG",
+                     "img_style": {"max-height": "500px"}},
+                ],
+                # controls=True,
+                # indicators=True,
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Argentina
     if value == 'Buenos Aires':
@@ -247,8 +274,32 @@ def set_display_children(value):
 # Belgium
     if value == 'Antwerp':
         return 'Beware of the Long Wapper'
+    if value == 'Brussels':
+        # image_path = 'assets/andrea_delirium.gif'
+        return 'It is often suggested to skip Brussels and visit other Belgian cities such as Ghent or Antwerp... ' \
+               'and while I love these smaller cities of Belgium, I definitely would NOT recommend immediately ' \
+               'skipping Brussels for other cities in Belgium. The center of Brussels is really nice. The main ' \
+               'square has a huge ____ with hundreds of little statues on the exterior depicting saints. ' \
+               'In addition to the main _____, the square has a number of other buildings that are much more ' \
+               'stunning in person than in pictures, especially becuase all the gold touches on the buildings ' \
+               'really stand out in person. I would highly recommend restaurant __ and ____. There are also ' \
+               'a couple really nice cafes in the _____ park in front of the Brussels Palace, called ___ and ___. ' \
+               'Would definitely recommend coming for a beverage and  / or some food hwen the weather is nice. ' \
+               'It is also absolutely necessary to try the Belgian waffles (in the Liege style, they are somewhat ' \
+               'circular in shape). The best ones are from the food trucks called _____. You can find one ' \
+               '(or two) in front of the palace, and another one next to the Ferris wheel. Lastly, the ' \
+               'Delirium Village is really fun -- especially in the evenings -- definitely enjoy a few beers here! ', \
+                # html.Br(), html.Br(), html.Div(html.Img(src=image_path, style={"height": "500px"}))
+
+    if value == 'Leuven':
+            return 'What a fun little town really close to Brussels. The main attraction in Leuven is the ____ ' \
+                   'and wow it is actually quite stunning. Be sure to also check out the oter main plaza, ___.' \
+                   'Enjoy some Stella Artois -- it is brewed here! You can actually visit the brewery, it is not far ' \
+                   'at all from the center of the city or the main train station. Be sure to book a tour ahead of time ' \
+                   'though as the time slots fill ahead of time.'
     if value == 'Ghent':
         return 'So cute and amazing beer and Delirium'
+
 
 # Bolivia
     if value == 'Cliza':
@@ -294,9 +345,9 @@ def set_display_children(value):
 
 # Canada
     if value == 'Banff':
-        return 'lake'
+        return 'The color of the lake is really stunning'
     if value == 'Calgary':
-        return 'movie'
+        return 'Cool, clean city'
 
 # Chile
     if value == 'Puerto Natales':
@@ -336,19 +387,48 @@ def set_display_children(value):
     if value == 'Dubrovnik':
         return 'cool af'
     if value == 'Plitvice Lakes National Park':
-        return 'Really beautiful. It provides a nice contrast to the cities you will likely in Croatia.'
+        return 'Really beautiful. It provides a nice contrast to the cities you will likely in Croatia.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"key": "1", "src": "assets/croatia/np.JPG",
+                     "img_style": {"max-height": "700px"}},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Pula':
         return "Definitely worth a stop. There's a very old Roman arena and nice little port. There are some cool" \
                "shops and restaurants as well. The view of the city " \
                "from the water / parking lot when you enter the city is beautiful as well. This peninsula is so " \
-               "fertile and provides great conditions for grapes, olives, and black truffles. Sample frequently."
+               "fertile and provides great conditions for grapes, olives, and black truffles. Sample frequently.", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"key": "1", "src": "assets/croatia/dogs.JPG",
+                     "img_style": {"max-height": "700px"}},
+                    {"key": "1", "src": "assets/croatia/olive_oil.JPG",
+                     "img_style": {"max-height": "700px"}},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Rovinj':
         return "One of the most picturesque towns I've ever seen, especially from the port. The view of the city " \
                "from the water / parking lot when you enter the city is beautiful as well. This peninsula is so " \
                "fertile and provides great conditions for grapes, olives, and black truffles. Sample frequently."
     if value == 'Zagreb':
         return 'Cool to see the Croatian capital with more of the Germanic influences, compared to the more Italian ' \
-               'feel on the coast.'
+               'feel on the coast.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"key": "1", "src": "assets/croatia/church.JPG",
+                     "img_style": {"max-height": "700px"}},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Czechia
     if value == 'Prague':
@@ -367,9 +447,28 @@ def set_display_children(value):
 
 # England
     if value == 'London':
-        return "Yes it's expensive but a must-visit at some point. Tons of history and of course... the world mecca" \
-               " for football. Go Gunners baby! Great beer too. Try the London Black beer " \
-               "-- it's a modern take on an old English style dark porter (like a Guinness). I would live here."
+        return "Yes it can be expensive but it is a really great city. Tons of history and of course... " \
+               "the world mecca for football. If there are no games when you are here but you " \
+               "like soccer (or sports in general), consider doing a stadium tour. My biased opinion would be " \
+               "Arsenal's Emirates Stadium (GO GUNNERS !) Be sure to go to Big Ben, Buckingham Palace, Harrod's" \
+               "(try a meat pie), " \
+               "and Tower Bridge. Many people think that Tower Bridge is London Bridge, but no -- the famous pic is " \
+               "from the south side of the River Thames between London Bridge and Tower Bridge. Be sure to walk " \
+               "across the Tower Bridge as well." \
+               "Also enjoy Hyde Park (a bike ride here is great). One of the best areas in the city is " \
+               "Camden Market. The area is cute with some little canals, and there are tons of food and drink " \
+               "stands / vendors. You cand just about any cuisine here. Get some food and drinks here. " \
+               "There is a lot of great beer here too. There are lots of awesome " \
+               "old-timey pubs: The Toucan, The Cross Keys, The Harp, The Seven Stars, The Blackfriar, and more. " \
+               "Hop Locker is also a sweet beer bar by the river. " \
+               "Many pubs and bars will also have a good fish & chips. Make sure to try some cask ales / real ales. " \
+               "They are known as Britain's national drink. It's a unique beer style to the UK. But be warned, " \
+               "the beers are not served very cold. The idea is so you can taste " \
+               "the flavors more (which is scientifically true). If you like Guinness, " \
+               "try the London Black beer -- it's a modern take on an old English style dark porter. If you have " \
+               "time, there is a whole strip of breweries (Brew by Numbers, Anspach & Hobday, and more) all right " \
+               "under the train, it's a cool setup. " \
+               "So... lots to do here. I could definitely live here."
 
 # France
     if value == 'Colmar':
@@ -377,7 +476,42 @@ def set_display_children(value):
                'it is actually wild how many tourists come to visit the Christmas markets. If you have the time, it ' \
                'is definitely worth a day trip from Strasbourg.'
     if value == 'Paris':
-        return 'It is expensive and many people prefer other parts of France... but worth it to see Messi!'
+        return 'It is expensive and many people prefer other parts of France... but worth it to see Messi! JK ' \
+               'there is also plenty to do besides see Messi. Of course visit the Eiffel Tour -- catch some great ' \
+               "views from train line 6. Also be prepared for the little 'light show' that happens " \
+               "on the hour after the sun goes down. Also visit Arc de Triomphe, the Champs-Élysées street for " \
+               "shopping, and the Louvre. Mona Lisa lives here. You could " \
+               'spend days in here so have an idea of what you want to see. Definitely enjoy the Montmarte ' \
+               'neighborhood. Go to the Sacré-Cœur Basilica. The steps in front are a great place to sit with some ' \
+               'wine and enjoy a sunset. The area right next to the basilica also has a really unique vibe, almost ' \
+               'like a ski town. The rest of Montmarte below the basilica is also really nice. Eat a crepe at one ' \
+               "the Breizh Cafes. Also get a crepe on the street at some point. Stop by little cafes for awesome " \
+               "croissants and other baked goods as well. " \
+               "And most important of all... go to Le Relais de l'Entrecote for amazing " \
+               "steak frites. There are no reservations. As you can see below, the line can legitimately be an " \
+               "hour plus sometimes so get " \
+               "there early. Consider also going for lunch (or right when they open) to avoid lines. Lastly, Cafe de " \
+               "Flore (pictured below) is a famous spot -- but be aware it is very expensive. A picture outside " \
+               "and eating somewhere " \
+               "else may do the trick!", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"key": "1", "src": "assets/paris/messi.JPG",
+                     "img_style": {"max-height": "700px"}},
+                    {"key": "1", "src": "assets/paris/louvre.JPG",
+                     "img_style": {"max-height": "700px"}},
+                    {"key": "1", "src": "assets/paris/cafe.JPG",
+                     "img_style": {"max-height": "700px"}},
+                    {"key": "1", "src": "assets/paris/senne.JPG",
+                     "img_style": {"max-height": "700px"}},
+                    {"key": "1", "src": "assets/paris/steak_restaurant.JPG",
+                     "img_style": {"max-height": "700px"}},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+
     if value == 'Strasbourg':
         return 'Known as the ‘Capital of Christmas,’ Strasbourg is quite magical for Christmas. There are so many ' \
                'lights and markets all over the city. Christmas season or not, be sure to walk around the ‘Petite ' \
@@ -386,19 +520,35 @@ def set_display_children(value):
 
 # Germany
     if value == 'Berlin':
-        return "'Poor but sexy' has become the city motto after the mayor said this some 10 years aog. " \
+        image_path = 'assets/berlin/berliner_dom.JPG'
+        return "'Poor but sexy' has become the city motto after the mayor said this back in 2003. " \
                "So much to do here. There is always " \
-               "something happening. It's a very creative, unique, fun, and often quirky city. There are tons of " \
-               "concerts here every day and the club scene (especially techno) is world famous. There are always " \
-               "people playing music on the streets (especially around Museum Island) as well. Berlin may also " \
+               "something happening. It's a very creative, unique, fun, and often quirky city. The club scene " \
+               "(especially techno) is world famous. Berghain is the " \
+               "name of the Berlin's most famous club (and maybe the world's most famous club). It opens Friday " \
+               "night and does not close until noon on Monday. If you want to go, be prepared " \
+               "to wait a long time in line and know that there is a good chance you will not be let in -- it's part " \
+               "of the funky culture that preserves the hype and exclusivity aura of the club. For other club " \
+               "options, try Watergate, Tresor, Club der Visionäre, or Ritter Butzke. For a really fun bar that " \
+               "isn't exactly a club, go to minimal bar. Beyond the clubs, " \
+               "there are tons of concerts here every day and there are always " \
+               "people playing music on the streets (especially around Museum Island) as well. Lots of fun " \
+               "bars as well. There is an unreal rooftop at Klunkenkranich. Great craft beers and a good time at" \
+               "Kaschk, Muted Horn, Hops & Barley, Protokoll, and Straßenbräu. Berlin may also randomly " \
                "have the most beaches of any city in the world. In many parks there are sand volleyball courts " \
                "and there are so many beach bars in parks and on the rivers around the city as well. There are so " \
                "many parks, including maybe the coolest park ever, which is an old airport that has now become a " \
-               "massive park right in the city. There are lots of sports here as well (to watch and play). The pro " \
-               "basketball (Alba), football (2 teams: Hertha and Union), handball (Füchse), and hockey (Eisbären) " \
+               "massive park right in the city. Another awesome park is Treptower Park. There are lots of sports " \
+               "here as well (to watch and play). The pro " \
+               "basketball (Alba), soccer (2 teams: Hertha and Union), handball (Füchse), and ice hockey (Eisbären) " \
                "games all provide really fun atmospheres. Be sure to eat a döner kebab (a variation of a Turkish " \
                "kebab that originated in Berlin -- the best place is Nefi's), currywurst (Curry 36 is great), and " \
-               "vietnamese food (New Day is great)."
+               "vietnamese food (the duck at New Day is crazy good). For German food, 'Max & Moritz' is a " \
+               "really cool restaurant with great food and beers. There is also the Hofbrauhaus Berlin for very " \
+               "fun and festive Bavarian food, beers, live music, and good vibes. Lastly, there is also a lot of " \
+               "great middle eastern food, especially yemenite food at the 'Jemenitisches Restaurant' " \
+               "and Syrian food at the 'Aleppo Supper Club.'", \
+               html.Br(), html.Br(), html.Div(html.Img(src=image_path, style={"height": "500px"})),
     if value == 'Dortmund':
         return "Home to Borussia Dortmund! Go to a football game. It's known to be one of the best game atmospheres " \
                "in the world."
@@ -478,7 +628,7 @@ def set_display_children(value):
                'The view of the river and the city ' \
                'down below is amazing. Go to the famous Szyzyzyzy bath too.'
 
-    # Iceland
+# Iceland
     if value == 'Reykjavik':
         return "Cool city but don't stay too long -- get out and explore the nature in the 'Land of Fire and Ice.'" \
                "There are some unique foods here that are really good and you should try." \
@@ -486,7 +636,19 @@ def set_display_children(value):
                "good reindeer burger. We didn't see puffin on a menu but it is also eaten here." \
                "See the rainbow road. Check out the Viking church and go to the top of it."
     if value == 'Southern half of island':
-        return 'so much to see in not enough time',
+        image_path = 'assets/iceland/hottub.JPG'
+        return 'so much to see in not enough time', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"key": "1", "src": "assets/iceland/hotspring.JPG",
+                     "img_style": {"max-height": "700px"}},
+                    {"key": "1", "src": "assets/iceland/hottub.JPG",
+                     "img_style": {"max-height": "700px"}},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Italy
     if value == 'Bergamo':
@@ -598,12 +760,24 @@ def set_display_children(value):
 
 # Netherlands
     if value == 'Amsterdam':
+        image_path = 'assets/amsterdam/amsterdam_boat.JPG'
         return "A really great city. There's a lot more to the city than the red light district. There are so many " \
-               'little canals and bridges and they are all so picturesque. Go to ___ to try the famous Dutch ' \
-               "apple pie. Take some kind of boat trip -- most boats have some history / fun facts and have drinks " \
+               "little canals and bridges and they are all so picturesque, especially in the Jordaan " \
+               "neighborhood. Don't worry so much about seeing specific sights and just wander in the city " \
+               "and enjoy. Go to Winkel 43 to try the famous Dutch " \
+               "apple pie. Go to Heertje Friet for fries and bitterballen (these are incredible). Fish sandwiches " \
+               "from little stands on the street are also a fantastic choice. " \
+               "Take some kind of boat trip -- most boats have some history / fun facts and have drinks " \
                "on board. They aren't too expensive either. " \
-               "Walk along the port and explore Vondelpark. Go to a coffee shop if that's your vibe haha. Bulldog " \
-               "is the most famous coffee shop chain"
+               "Walk along the port and also for a nice walk through Vondelpark. " \
+               "Go to a coffee shop if that's your vibe haha. Bulldog " \
+               "is the most famous coffee shop chain but the more tranquil little coffee shops on the canals are " \
+               "really awesome. If you are looking for a wild party, come for King's Day. " \
+               "It happens yearly on the king's birthday, April 27. The whole city dresses in orange and there " \
+               "is lots of drinking and music everywhere. Was quite the experience... would absolutely recommend! " \
+               "Lastly, the Anne Frank house is also one of the main tourist attractions -- personally I have not " \
+               "been. Unless you want to wait a long time to go, you need to reserve tickets in advance.", \
+               html.Br(), html.Br(), html.Div(html.Img(src=image_path, style={"height": "500px"})),
 
 # North Macedonia
     if value == 'Skopje':
@@ -620,6 +794,16 @@ def set_display_children(value):
                'cheap. My hostel was only 10 euros per night (8 bed dorm in Hi Skopje Hostel). The woman who ' \
                'runs the place was so nice ' \
                'and gave great recommendations. She also shared some of her homemade rakija, a local liquor. '
+
+# Poland
+    if value == 'Wroclaw':
+        return 'Very pretty small city. The people were all very nice. Go to the market square and check out some ' \
+               'of the cafes and restaurants. The ___ restaurant is really great -- this is also a great option ' \
+               'because there is a lot about the history of Wroclaw and Poland on the walls of the ' \
+               'restaurant and in the menu. Definitely get pierogi. Soups are very good and traditional too. ' \
+               'Be on the lookout for the hundreds of little gnomes around the city as you walk around. They are ' \
+               'really fun and funny. They are a recent project that is inspired by ____. Lastly, go north of the ' \
+               'market square and walk around the river / island area -- the churches there are really nice as well.'
 
 # Portugal
     if value == 'Lisbon':
@@ -746,10 +930,6 @@ def set_display_children(value):
     if value == 'Vilanova':
         return 'ole'
 
-# USA
-#     if value == 'Illinois' or value == 'Wisconsin':
-#         return 'Select a city / place in ', value, dcc.Dropdown([{'label': i, 'value': i} for i in state_options[value]],
-#                                                                 searchable=False, clearable=False, id='us-cities-dd'),
     if value == 'Champaign':
         return 'long live the chief'
     if value == 'Chicago':
@@ -762,19 +942,3 @@ def set_display_children(value):
         return 'daa Bay'
     if value == 'NYC':
         return 'KATZ'
-
-
-# # Illinois
-# @app.callback(
-#     Output('us-city-info', 'children'),
-#     Input('us-cities-dd', 'value')
-# )
-# def update_output(selected_city):
-#     if selected_city is None:
-#         return ''
-#     if selected_city == 'Champaign':
-#         return 'long live the chief'
-#     if selected_city == 'Chicago':
-#         return 'sweet home Chicago'
-#     if selected_city == 'Milwaukee':
-#         return 'lil Chicago'
