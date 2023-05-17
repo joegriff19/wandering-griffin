@@ -142,7 +142,7 @@ index_layout = html.Div(
                 dcc.Dropdown(id='cities-dd', options=[], searchable=False, clearable=False),
                 html.Br(),
             ], style={
-                'textAlign': 'center', 'margin-left': '200px', 'margin-right': '200px',
+                'textAlign': 'center', 'margin-left': '100px', 'margin-right': '100px',
                 'color': 'black',
                 # "display": "flex",
                 # 'max-width': '500px',
@@ -156,7 +156,7 @@ index_layout = html.Div(
                 html.Br(),
                 # html.Div(id='us-city-info'),
                 html.Br(),
-            ], style={'textAlign': 'center', 'margin-left': '200px', 'margin-right': '200px', 'color': 'black',
+            ], style={'textAlign': 'center', 'margin-left': '100px', 'margin-right': '100px', 'color': 'black',
               # 'width': '50%',
               # 'verticalAlign': 'middle'
               # 'align-items': 'center', 'justify-content': 'center'
