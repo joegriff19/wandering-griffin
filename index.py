@@ -8,7 +8,7 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 from datetime import date
 today = date.today()
-#check3
+
 # padding for the page content
 CONTENT_STYLE = {
    "margin-left": "2rem",
@@ -142,7 +142,7 @@ index_layout = html.Div(
                 dcc.Dropdown(id='cities-dd', options=[], searchable=False, clearable=False),
                 html.Br(),
             ], style={
-                'textAlign': 'center', 'margin-left': '250px', 'margin-right': '250px',
+                'textAlign': 'center', 'margin-left': '200px', 'margin-right': '200px',
                 'color': 'black',
                 # "display": "flex",
                 # 'max-width': '500px',
