@@ -516,7 +516,7 @@ def set_display_children(value):
 
 # Croatia
     if value == 'Dubrovnik':
-        return 'cool af', \
+        return 'so cool', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/croatia/dubrovnik4.JPG"},
@@ -526,7 +526,6 @@ def set_display_children(value):
                     {"src": "assets/croatia/dubrovnik8.JPG"},
                     {"src": "assets/croatia/dubrovnik9.JPG"},
                     {"src": "assets/croatia/dubrovnik.JPG"},
-
                 ],
                 interval=2000,
                 ride="carousel",
@@ -567,14 +566,10 @@ def set_display_children(value):
         return "Trufflessss", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    # {"src": "assets/croatia/truffles.JPG"},
-                    {"src": "assets/croatia/truffles1.JPG"},
-                    {"src": "assets/croatia/truffles2.JPG"},# ROTATE
                     {"src": "assets/croatia/truffles3.JPG"},
                     {"src": "assets/croatia/truffles4.JPG"},
-                    {"src": "assets/croatia/truffles5.JPG"},# ROTATE
+                    {"src": "assets/croatia/truffles5.JPG"},
                     {"src": "assets/croatia/truffles7.JPG"},
-
                 ],
                 interval=2000,
                 ride="carousel",
