@@ -35,7 +35,7 @@ all_options = {
     'Bulgaria 🇧🇬': ['Sofia', 'Varna'],
     'Canada 🇨🇦': ['Banff', 'Calgary'],
     'Chile 🇨🇱': ['Puerto Natales', 'Santiago', 'Torres del Paine', 'Valparaíso / Viña del Mar'],
-    'Croatia 🇭🇷': ['Dubrovnik', 'Plitvice Lakes National Park', 'Pula', 'Rovinj', 'Zagreb'],
+    'Croatia 🇭🇷': ['Dubrovnik', 'Motovun', 'Opatija', 'Plitvice Lakes National Park', 'Pula', 'Rovinj', 'Zagreb'],
     'Czechia 🇨🇿': ['Prague'],
     'Denmark 🇩🇰': ['Copenhagen'],
     'Ecuador 🇪🇨': ['Galapagos Islands', 'Quito'],
@@ -64,7 +64,7 @@ all_options = {
     #            'Massachusetts', 'Michigan', 'Missouri', 'Montana', 'Nebraska', 'New Hampshire', 'New York',
     #            'North Carolina', 'Ohio', 'Pennsylvania', 'Tennessee', 'Utah', 'Vermont', 'West Virginia', 'Wisconsin',
     #            'West Virginia'],
-    'USA 🇺🇸': ['Chicago', 'Champaign', 'Dayton', 'San Francisco', 'NYC'],
+    'USA 🇺🇸': ['Champaign', 'Chicago', 'Dayton', 'Miami', 'Missoula', 'NYC', 'San Francisco'],
 }
 
 
@@ -217,15 +217,10 @@ def set_display_children(value):
                'Would recommend', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"key": "1", "src": "assets/Andorra-44.JPG",
-                     "img_style": {"max-height": "500px"}},
-                    {"key": "2", "src": "assets/Andorra-4.JPG",
-                     "img_style": {"max-height": "500px"}},
-                    {"key": "2", "src": "assets/Andorra-10.JPG",
-                     "img_style": {"max-height": "500px"}},
+                    {"src": "assets/andorra/Andorra-44.JPG"},
+                    {"src": "assets/andorra/Andorra-4.JPG"},
+                    {"src": "assets/andorra/Andorra-10.JPG"},
                 ],
-                # controls=True,
-                # indicators=True,
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
@@ -260,13 +255,40 @@ def set_display_children(value):
                "known as the Súperclasico. These two teams are known to have perhaps the fiercest rivalry of " \
                "any two sports teams on tehe planet. Every bar in the city was packed for game, and Boca " \
                "ended up winning. The streets near the stadium proceeded to celebrate all night long. We grabbed a " \
-               "couple beers and joined the celebrations. This was one of the most fun experiences of my life!'"
+               "couple beers and joined the celebrations. This was one of the most fun experiences of my life!'", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/argentina/ba.JPG"},
+                    {"src": "assets/argentina/ba2.JPG"},
+                    {"src": "assets/argentina/ba3.JPG"},
+                    {"src": "assets/argentina/ba4.JPG"},
+                    {"src": "assets/argentina/ba5.JPG"},
+                    {"src": "assets/argentina/ba6.JPG"},
+                    {"src": "assets/argentina/ba7.JPG"},
+                    {"src": "assets/argentina/ba8.JPG"},
+                    {"src": "assets/argentina/ba9.JPG"},
+                    {"src": "assets/argentina/ba10.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Austria
     if value == 'Dornbirn':
         return 'Rhombergers'
     if value == 'Vienna':
-        return 'Kuchen'
+        return 'Kuchen', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/austria/vienna.JPG"},
+                    {"src": "assets/austria/vienna2.JPG"},
+                    {"src": "assets/austria/vienna3.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Bahamas
     if value == 'Eleuthera':
@@ -303,7 +325,6 @@ def set_display_children(value):
     if value == 'Ghent':
         return 'So cute and amazing beer and Delirium'
 
-
 # Bolivia
     if value == 'Cliza':
         return 'A very small town outside of Cochabamba, this was the destination for the Solidarity Bridge ' \
@@ -314,9 +335,28 @@ def set_display_children(value):
 
 # Bosnia & Herzegovina
     if value == 'Medjugorje':
-        return 'brr'
+        return 'brr', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/bosnia/medj.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Mostar':
-        return 'brr'
+        return 'brr', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/bosnia/most2.JPG"},
+                    {"src": "assets/bosnia/most1.JPG"},
+                    {"src": "assets/bosnia/most3.JPG"},
+                    {"src": "assets/bosnia/most.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Bulgaria
     if value == 'Sofia':
@@ -331,20 +371,45 @@ def set_display_children(value):
                'the city is quite nice though, with the national theater. Close by here there are two other really ' \
                'beautiful orthodox churches, one of them being the main one that is likely the most famous landmark ' \
                'in Sofia. The food is quite good — go to ___ for a casual but delicious and cheap meal. Get the ' \
-               'kebapcha (caseless sausages with actually some of the best potatoes I’ve ever had).'
+               'kebapcha (caseless sausages with actually some of the best potatoes I’ve ever had).', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/bulgaria/sofia.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Varna':
         return "I would so highly recommend this little gem of a city on the Black Sea. Enjoy the beaches and the " \
                "cheap prices. This is probably the cheapest place I’ve ever been in Europe. The most expensive " \
                "beers I saw were at a craft brewery — and they were just 2.50 Euros! The beach is beautiful. Go to " \
                "the beach club called ’Moonlight.’ You can get all-day access to the club for just 5 euros. You get " \
-               "to use the beach chairs and umbrellas and you get a 1.5L bottle of water and a beer. Crazy. You can " \
+               "to use the beach chairs, umbrellas, pool (with natural hot spring water), a 1.5L bottle of water, " \
+               "and a beer! Absolutely crazy. You can " \
                "eat here or there are a number of other cafes and bars on the beach. Walk around the port as well. " \
                "‘Craft Beer and Meats’ is on the water at the port. I got to watch a Bulgarian soccer game on TV " \
                "while enjoying sea bass, calamari, and a really good NEIPA (I don’t know what it is about IPAs in " \
                "the Balkans but I really like them — also technically Bulgaria is not in the Balkans but close " \
-               "enough and the taste was similar). You can also stroll through the park area by the beach and down " \
-               "the main tourist / shopping street, it’s very nice as well. Lastly, the main cathedral of the city " \
-               "is also really impressive."
+               "and the taste was similar). You can also stroll through the park area by the beach and down " \
+               "the main tourist / shopping street, it’s very nice as well. The main cathedral of the city " \
+               "is also really impressive. Lastly, as mentioned with the hot spring water pool above, Varna " \
+               "had been settled by the Romans long ago precisely because of the natural hot springs here. " \
+               "There are still remains from Roman baths here, and there are several places you can still bathe " \
+               "in the hot spring water.", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/bulgaria/varna.JPG"},
+                    {"src": "assets/bulgaria/varna1.JPG"},
+                    {"src": "assets/bulgaria/varna2.JPG"},
+                    {"src": "assets/bulgaria/varna3.JPG"},
+                    {"src": "assets/bulgaria/varna4.JPG"},
+                    {"src": "assets/bulgaria/varna5.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Canada
     if value == 'Banff':
@@ -372,7 +437,20 @@ def set_display_children(value):
                'he also speaks fluent English. If you are looking for nightlife, I don’t think you will find it. ' \
                'Santiago is lovely but is a bit of a ‘sleepy’ city. Lastly, I would highly recommend a day trip ' \
                'to the coast (Valparaíso / Viña del Mar) and to nearby wine country. Skiing is also a fantastic ' \
-               'option if you are there in winter.'
+               'option if you are there in winter.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/chile/stgo.JPG"},
+                    {"src": "assets/chile/stgo2.JPG"},
+                    {"src": "assets/chile/stgo3.JPG"},
+                    {"src": "assets/chile/stgo4.JPG"},
+                    {"src": "assets/chile/stgo1.JPG"},
+                    {"src": "assets/chile/stgo5.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Torres del Paine':
         return 'The W was stunning start to finish. The Torres on the last morning was an amazing finish. ' \
                'About 50 miles in 4 days. The refugios are really fun to stay in. We stayed at Francés the first ' \
@@ -381,20 +459,89 @@ def set_display_children(value):
                'you through the day until dinner. There are tons of rivers and streams with freshly melted glacier ' \
                "water that you can drink, so you don't need to bring any water with you. This was really nice. " \
                "End of September was a good time to go as it wasn't too hot as winter just ended and " \
-               "there weren't too many tourists yet. You can also catch the end of ski season in the Andes as well!" \
-               "Also the southern-most game of beer die ever was played in this park in Sept 2022. "
+               "there weren't too many tourists yet. You can also catch the end of ski season in the Andes as well! " \
+               "Also the southern-most game of beer die ever was played in this park in Sept 2022. ", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/chile/patagonia9.JPG"},
+                    {"src": "assets/chile/patagonia.JPG"},
+                    {"src": "assets/chile/patagonia0.JPG"},
+                    {"src": "assets/chile/patagonia2.JPG"},
+                    {"src": "assets/chile/patagonia4.JPG"},
+                    {"src": "assets/chile/patagonia5.JPG"},
+                    {"src": "assets/chile/patagonia6.JPG"},
+                    {"src": "assets/chile/patagonia7.JPG"},
+                    {"src": "assets/chile/patagonia8.JPG"},
+                    {"src": "assets/chile/patagonia3.JPG"},
+                    {"src": "assets/chile/patagonia10.JPG"},
+
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Valparaíso / Viña del Mar':
-        return 'eat the ceviche. joder'
+        return 'Eat the ceviche. JODER !', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/chile/vp.JPG"},
+                    {"src": "assets/chile/vp1.JPG"},
+                    {"src": "assets/chile/vp2.JPG"},
+                    {"src": "assets/chile/vp3.JPG"},
+                    {"src": "assets/chile/vp4.JPG"},
+                    {"src": "assets/chile/vp5.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'Valle Nevado':
+        return 'Stunning views of the Andes mountains! Remember that the seasons are flipped, so ski season goes ' \
+               'from maybe May to September. The ___ resort is on the Ikon pass A lot of people ' \
+               'come up from Santiago just for the day to ski, but there are some pretty cheap airbnbs on ' \
+               'the mountain as well. We saw one of the most incredible sunsets our one night on the mountain.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/chile/ski.JPG"},
+                    {"src": "assets/chile/ski1.JPG"},
+                    {"src": "assets/chile/ski2.JPG"},
+                    {"src": "assets/chile/ski3.JPG"},
+                    {"src": "assets/chile/ski4.JPG"},
+                    {"src": "assets/chile/ski5.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Croatia
     if value == 'Dubrovnik':
-        return 'cool af'
-    if value == 'Plitvice Lakes National Park':
-        return 'Really beautiful. It provides a nice contrast to the cities you will likely in Croatia.', \
+        return 'cool af', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"key": "1", "src": "assets/croatia/np.JPG",
-                     "img_style": {"max-height": "700px"}},
+                    {"src": "assets/croatia/dubrovnik4.JPG"},
+                    {"src": "assets/croatia/dubrovnik5.JPG"},
+                    {"src": "assets/croatia/dubrovnik6.JPG"},
+                    {"src": "assets/croatia/dubrovnik7.JPG"},
+                    {"src": "assets/croatia/dubrovnik8.JPG"},
+                    {"src": "assets/croatia/dubrovnik9.JPG"},
+                    {"src": "assets/croatia/dubrovnik.JPG"},
+
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'Plitvice Lakes National Park':
+        return 'Really beautiful. It provides a nice contrast to the coastal cities you will likely in Croatia.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/croatia/np.JPG"},
+                    {"src": "assets/croatia/np5.JPG"},
+                    {"src": "assets/croatia/np6.JPG"},# ROTATE
+                    {"src": "assets/croatia/np7.JPG"},
+                    {"src": "assets/croatia/np8.JPG"},
+                    {"src": "assets/croatia/np9.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -407,10 +554,54 @@ def set_display_children(value):
                "fertile and provides great conditions for grapes, olives, and black truffles. Sample frequently.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"key": "1", "src": "assets/croatia/dogs.JPG",
-                     "img_style": {"max-height": "700px"}},
-                    {"key": "1", "src": "assets/croatia/olive_oil.JPG",
-                     "img_style": {"max-height": "700px"}},
+                    {"src": "assets/croatia/pula.JPG"},
+                    {"src": "assets/croatia/pula2.JPG"},
+                    {"src": "assets/croatia/pula3.JPG"},
+                    {"src": "assets/croatia/pula4.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'Motovun':
+        return "Trufflessss", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    # {"src": "assets/croatia/truffles.JPG"},
+                    {"src": "assets/croatia/truffles1.JPG"},
+                    {"src": "assets/croatia/truffles2.JPG"},# ROTATE
+                    {"src": "assets/croatia/truffles3.JPG"},
+                    {"src": "assets/croatia/truffles4.JPG"},
+                    {"src": "assets/croatia/truffles5.JPG"},# ROTATE
+                    {"src": "assets/croatia/truffles7.JPG"},
+
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'Vodnjan':
+        return "Olivessss", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/croatia/olives.JPG"},
+                    {"src": "assets/croatia/olives3.JPG"},
+                    {"src": "assets/croatia/olives2.JPG"},
+                    {"src": "assets/croatia/olives1.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'Opatija':
+        return "Just made a quick stop here to watch the sunset, walk by the water, and have a wonderful dinner " \
+               "at Valle Losca Tavern. Amazing sunset and amazing meal! I had stingray for dinner and wow it was " \
+               "really good. Very cute small town on the water. ", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/croatia/opa.JPG"},
+                    {"src": "assets/croatia/opa2.JPG"},
+                    {"src": "assets/croatia/opa3.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -419,14 +610,26 @@ def set_display_children(value):
     if value == 'Rovinj':
         return "One of the most picturesque towns I've ever seen, especially from the port. The view of the city " \
                "from the water / parking lot when you enter the city is beautiful as well. This peninsula is so " \
-               "fertile and provides great conditions for grapes, olives, and black truffles. Sample frequently."
+               "fertile and provides great conditions for grapes, olives, and black truffles. Sample frequently.", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/croatia/rov.JPG"},
+                    {"src": "assets/croatia/rov2.JPG"},
+                    {"src": "assets/croatia/rov3.JPG"},
+                    {"src": "assets/croatia/rov4.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Zagreb':
         return 'Cool to see the Croatian capital with more of the Germanic influences, compared to the more Italian ' \
                'feel on the coast.', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"key": "1", "src": "assets/croatia/church.JPG",
-                     "img_style": {"max-height": "700px"}},
+                    {"src": "assets/croatia/zagreb.JPG"},
+                    {"src": "assets/croatia/zagreb1.JPG"},
+                    {"src": "assets/croatia/zagreb2.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -435,7 +638,22 @@ def set_display_children(value):
 
 # Czechia
     if value == 'Prague':
-        return 'tank beer baby -- and Staropramen unfiltered -- yum'
+        return 'tank beer baby -- and Staropramen unfiltered -- yum', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/czechia/prg.JPG"},
+                    {"src": "assets/czechia/prg1.JPG"},
+                    {"src": "assets/czechia/prg2.JPG"},
+                    {"src": "assets/czechia/prg3.JPG"},
+                    {"src": "assets/czechia/prg4.JPG"},
+                    {"src": "assets/czechia/prg5.JPG"},
+                    {"src": "assets/czechia/prg6.JPG"},
+                    {"src": "assets/czechia/prg7.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Denmark
     if value == 'Copenhagen':
@@ -451,10 +669,13 @@ def set_display_children(value):
 # England
     if value == 'London':
         return "Yes it can be expensive but it is a really great city. Tons of history and of course... " \
-               "the world mecca for football. If there are no games when you are here but you " \
-               "like soccer (or sports in general), consider doing a stadium tour. My biased opinion would be " \
-               "Arsenal's Emirates Stadium (GO GUNNERS !) Be sure to go to Big Ben, Buckingham Palace, Harrod's" \
-               "(try a meat pie), " \
+               "the world mecca for football. Currently, 7 of the 20 teams in the English Premier League " \
+               "(the best league in the world) are in London. The atmosphere at second league (called " \
+               "The Championship) games is also really fun and a lot cheaper than Premier League games. QPR is a " \
+               "second league team in London -- their games are really fun as well. " \
+               "During the season or in summer, also consider doing a stadium tour. My biased opinion would be " \
+               "Arsenal's Emirates Stadium (GO GUNNERS !) Beyond football, " \
+               "be sure to go to Big Ben, Buckingham Palace, Harrod's (try a meat pie), " \
                "and Tower Bridge. Many people think that Tower Bridge is London Bridge, but no -- the famous pic is " \
                "from the south side of the River Thames between London Bridge and Tower Bridge. Be sure to walk " \
                "across the Tower Bridge as well." \
@@ -471,7 +692,23 @@ def set_display_children(value):
                "try the London Black beer -- it's a modern take on an old English style dark porter. If you have " \
                "time, there is a whole strip of breweries (Brew by Numbers, Anspach & Hobday, and more) all right " \
                "under the train, it's a cool setup. " \
-               "So... lots to do here. I could definitely live here."
+               "So... lots to do here. I could definitely live here.", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/england/london.JPG"},
+                    {"src": "assets/england/london6.JPG"},  # ROTATE
+                    {"src": "assets/england/london7.JPG"},
+                    {"src": "assets/england/london3.JPG"},
+                    {"src": "assets/england/london4.JPG"},
+                    {"src": "assets/england/london1.JPG"},
+                    {"src": "assets/england/london8.JPG"},
+                    {"src": "assets/england/london5.JPG"},
+                    {"src": "assets/england/london2.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # France
     if value == 'Colmar':
@@ -482,9 +719,10 @@ def set_display_children(value):
         return 'It is expensive and many people prefer other parts of France... but worth it to see Messi! JK ' \
                'there is also plenty to do besides see Messi. Of course visit the Eiffel Tour -- catch some great ' \
                "views from train line 6. Also be prepared for the little 'light show' that happens " \
-               "on the hour after the sun goes down. Also visit Arc de Triomphe, the Champs-Élysées street for " \
-               "shopping, and the Louvre. Mona Lisa lives here. You could " \
-               'spend days in here so have an idea of what you want to see. Definitely enjoy the Montmarte ' \
+               "on the hour after the sun goes down. Also visit Arc de Triomphe (go to the top " \
+               "on a clear day for awesome views), the Champs-Élysées street for " \
+               "shopping, and the Louvre (where Mona Lisa lives). You could " \
+               'spend days in the Louvre so have an idea of what you want to see. Definitely explore the Montmarte ' \
                'neighborhood. Go to the Sacré-Cœur Basilica. The steps in front are a great place to sit with some ' \
                'wine and enjoy a sunset. The area right next to the basilica also has a really unique vibe, almost ' \
                'like a ski town. The rest of Montmarte below the basilica is also really nice. Eat a crepe at one ' \
@@ -499,11 +737,15 @@ def set_display_children(value):
                "else may do the trick!", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/paris/messi.JPG"},
-                    {"src": "assets/paris/louvre.JPG"},
-                    {"src": "assets/paris/cafe.JPG"},
-                    {"src": "assets/paris/senne.JPG"},
-                    {"src": "assets/paris/steak_restaurant.JPG"},
+                    {"src": "assets/france/paris1.JPG"},
+                    {"src": "assets/france/paris8.JPG"},
+                    {"src": "assets/france/paris.JPG"},
+                    {"src": "assets/france/paris3.JPG"},
+                    {"src": "assets/france/paris2.JPG"},
+                    {"src": "assets/france/paris4.JPG"},
+                    {"src": "assets/france/paris5.JPG"},
+                    {"src": "assets/france/paris6.JPG"},
+                    {"src": "assets/france/paris7.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -514,11 +756,18 @@ def set_display_children(value):
         return 'Known as the ‘Capital of Christmas,’ Strasbourg is quite magical for Christmas. There are so many ' \
                'lights and markets all over the city. Christmas season or not, be sure to walk around the ‘Petite ' \
                'Paris’ area. It is really cute. More recs to come___. A day trip to Colmar is also a great idea, ' \
-               'especially during Christmas time.'
+               'especially during Christmas time.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/france/strasbourg.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Germany
     if value == 'Berlin':
-        image_path = 'assets/berlin/berliner_dom.JPG'
         return "'Poor but sexy' has become the city motto after the mayor said this back in 2003. " \
                "So much to do here. There is always " \
                "something happening. It's a very creative, unique, fun, and often quirky city. The club scene " \
@@ -543,10 +792,26 @@ def set_display_children(value):
                "kebab that originated in Berlin -- the best place is Nefi's), currywurst (Curry 36 is great), and " \
                "vietnamese food (the duck at New Day is crazy good). For German food, 'Max & Moritz' is a " \
                "really cool restaurant with great food and beers. There is also the Hofbrauhaus Berlin for very " \
-               "fun and festive Bavarian food, beers, live music, and good vibes. Lastly, there is also a lot of " \
+               "fun and festive Bavarian food, beers, live music, and good vibes. There is also a lot of " \
                "great middle eastern food, especially yemenite food at the 'Jemenitisches Restaurant' " \
-               "and Syrian food at the 'Aleppo Supper Club.'", \
-               html.Br(), html.Br(), html.Div(html.Img(src=image_path, style={"height": "500px"})),
+               "and Syrian food at the 'Aleppo Supper Club.' And last but definitely not least -- Christmas " \
+               "time is magical here! There are tons of Christmas markets all over the city, and mulled wine " \
+               "(glühwein) also available all over the city.", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/germany/berlin.JPG"},
+                    {"src": "assets/germany/berlin2.JPG"},
+                    {"src": "assets/germany/berlin3.JPG"},
+                    {"src": "assets/germany/berlin4.JPG"},
+                    {"src": "assets/germany/berlin5.JPG"},
+                    {"src": "assets/germany/berlin6.JPG"},
+                    {"src": "assets/germany/berlin7.JPG"},
+                    {"src": "assets/germany/berlin8.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Dortmund':
         return "Home to Borussia Dortmund! Go to a football game. It's known to be one of the best game atmospheres " \
                "in the world."
@@ -554,7 +819,19 @@ def set_display_children(value):
         return 'Home to one of the biggest and most amazing Christmas markets in the world. The medieval Christmas' \
                "market is also really cool. Be sure to try the 'Handbrot.' A famous dessert from here " \
                "during Christmas is ______. The one with marzipan in the middle is so good. " \
-               "You can come here on a day trip from Berlin."
+               "You can come here on a day trip from Berlin.", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/germany/dresden.JPG"},
+                    {"src": "assets/germany/dresden2.JPG"},
+                    {"src": "assets/germany/dresden3.JPG"},
+                    {"src": "assets/germany/dresden4.JPG"},
+                    {"src": "assets/germany/dresden5.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Flensburg':
         return 'Really cute port area and home to the Flensburger brewery. The tour is really cheap and you get ' \
                "a lot of food and beer. They have the best marketing by any company I've ever seen."
@@ -614,7 +891,19 @@ def set_display_children(value):
                "party was actually officially established here, and not long after Hitler was officially named " \
                "the leader of the Nazi party here as well. Lastly, there is some nice shopping " \
                "along ___ near the " \
-               "famous and beautiful main square of the city, Marienplatz, where the town hall (Rathaus) is."
+               "famous and beautiful main square of the city, Marienplatz, where the town hall (Rathaus) is.", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/germany/munich.JPG"},
+                    {"src": "assets/germany/munich2.JPG"},
+                    {"src": "assets/germany/munich3.JPG"},
+                    {"src": "assets/germany/munich4.JPG"},
+                    {"src": "assets/germany/munich5.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Stuttgart':
         return 'Was only here briefly but the main Christmas market was nice'
 
@@ -638,10 +927,8 @@ def set_display_children(value):
         return 'so much to see in not enough time', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"key": "1", "src": "assets/iceland/hotspring.JPG",
-                     "img_style": {"max-height": "700px"}},
-                    {"key": "1", "src": "assets/iceland/hottub.JPG",
-                     "img_style": {"max-height": "700px"}},
+                    {"src": "assets/iceland/hotspring.JPG"},
+                    {"src": "assets/iceland/hottub.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -758,7 +1045,6 @@ def set_display_children(value):
 
 # Netherlands
     if value == 'Amsterdam':
-        image_path = 'assets/amsterdam/amsterdam_boat.JPG'
         return "A really great city. There's a lot more to the city than the red light district. There are so many " \
                "little canals and bridges and they are all so picturesque, especially in the Jordaan " \
                "neighborhood. Don't worry so much about seeing specific sights and just wander in the city " \
@@ -775,7 +1061,16 @@ def set_display_children(value):
                "is lots of drinking and music everywhere. Was quite the experience... would absolutely recommend! " \
                "Lastly, the Anne Frank house is also one of the main tourist attractions -- personally I have not " \
                "been. Unless you want to wait a long time to go, you need to reserve tickets in advance.", \
-               html.Br(), html.Br(), html.Div(html.Img(src=image_path, style={"height": "500px"})),
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/netherlands/ams3.JPG"},
+                    {"src": "assets/netherlands/ams.JPG"},
+                    {"src": "assets/netherlands/ams2.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # North Macedonia
     if value == 'Skopje':
@@ -791,7 +1086,15 @@ def set_display_children(value):
                "Prices for everything are pretty " \
                'cheap. My hostel was only 10 euros per night (8 bed dorm in Hi Skopje Hostel). The woman who ' \
                'runs the place was so nice ' \
-               'and gave great recommendations. She also shared some of her homemade rakija, a local liquor. '
+               'and gave great recommendations. She also shared some of her homemade rakija, a local liquor. ', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/macedonia/skopje.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Poland
     if value == 'Wroclaw':
@@ -928,6 +1231,7 @@ def set_display_children(value):
     if value == 'Vilanova':
         return 'ole'
 
+# USA
     if value == 'Champaign':
         return 'long live the chief'
     if value == 'Chicago':
@@ -940,3 +1244,27 @@ def set_display_children(value):
         return 'daa Bay'
     if value == 'NYC':
         return 'KATZ'
+    if value == 'Miami':
+        return 'ole', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/usa-fl/miami.JPG"},
+                ],
+                # controls=True,
+                # indicators=True,
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'Missoula':
+        return 'ole', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/usa-mt/missoula.JPG"},
+                ],
+                # controls=True,
+                # indicators=True,
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
