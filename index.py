@@ -794,7 +794,6 @@ def set_display_children(value):
                "(glühwein) also available all over the city.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/germany/berlin_new.JPG"},
                     {"src": "assets/germany/berlin.JPG"},
                     {"src": "assets/germany/berlin2.JPG"},
                     {"src": "assets/germany/berlin3.JPG"},
@@ -1247,8 +1246,6 @@ def set_display_children(value):
                 items=[
                     {"src": "assets/usa-fl/miami.JPG"},
                 ],
-                # controls=True,
-                # indicators=True,
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
@@ -1259,8 +1256,6 @@ def set_display_children(value):
                 items=[
                     {"src": "assets/usa-mt/missoula.JPG"},
                 ],
-                # controls=True,
-                # indicators=True,
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
