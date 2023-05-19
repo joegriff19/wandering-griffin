@@ -817,6 +817,7 @@ def set_display_children(value):
                "You can come here on a day trip from Berlin.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
+                    {"src": "assets/germany/dresden_new.JPG"},
                     {"src": "assets/germany/dresden.JPG"},
                     {"src": "assets/germany/dresden2.JPG"},
                     {"src": "assets/germany/dresden3.JPG"},
