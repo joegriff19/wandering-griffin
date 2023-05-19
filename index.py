@@ -794,6 +794,7 @@ def set_display_children(value):
                "(glühwein) also available all over the city.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
+                    {"src": "assets/germany/berlin_new.JPG"},
                     {"src": "assets/germany/berlin.JPG"},
                     {"src": "assets/germany/berlin2.JPG"},
                     {"src": "assets/germany/berlin3.JPG"},
