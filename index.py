@@ -40,21 +40,22 @@ all_options = {
     'Denmark 🇩🇰': ['Copenhagen'],
     'Ecuador 🇪🇨': ['Galapagos Islands', 'Quito'],
     'England 🏴󠁧󠁢󠁥󠁮󠁧󠁿': ['London'],
-    'France 🇫🇷': ['Paris'],
-    'Germany 🇩🇪': ['Berlin', 'Dortmund', 'Dresden', 'Flensburg', 'Hamburg', 'Kiel', 'Lübeck', 'Leipzig', 'Munich',
+    'France 🇫🇷': ['Paris', 'Strasbourg'],
+    'Germany 🇩🇪': ['Berlin', 'Dortmund', 'Dresden', 'Flensburg', 'Gengenbach', 'Hamburg', 'Kiel', 'Lübeck', 'Leipzig', 'Munich',
                    'Stuttgart'],
     'Hungary 🇭🇺': ['Budapest'],
     'Iceland 🇮🇸': ['Reykjavik', 'Southern half of island'],
-    'Italy 🇮🇹': ['Bergamo', 'Florence ', 'Milan', 'Rome', 'Vatican 🇻🇦', 'Venice', 'Verona'],
+    'Italy 🇮🇹': ['Bergamo', 'Florence ', 'Lecco', 'Milan', 'Rome', 'Vatican 🇻🇦', 'Venice', 'Verona'],
     'Ireland 🇮🇪': ['Cliffs of Moher', 'Dublin'],
     'Mexico 🇲🇽': ['Cancún', 'Mexico City'],
     'Montenegro 🇲🇪': ['Kotor'],
     'Morocco 🇲🇦': ['Tangier'],
     'Netherlands 🇳🇱': ['Amsterdam'],
     'North Macedonia 🇲🇰': ['Skopje'],
+    'Peru 🇵🇪': ['Lima', 'Iquitos'],
     'Poland 🇵🇱': ['Wroclaw'],
     'Portugal 🇵🇹': ['Guincho Beach', 'Lisbon'],
-    'Peru 🇵🇪': ['Lima', 'Iquitos'],
+    'Puerto Rico 🇵🇷': ['Rincón', 'San Juan'],
     'Slovakia 🇸🇰': ['Bratislava'],
     'Slovenia 🇸🇮': ['Ljubljana'],
     'Spain 🇪🇸': ['Azpeitia', 'Barcelona', 'Begur', 'Bilbao', 'Buñol', 'Girona', 'Granada', 'Irún', 'Madrid', 'Málaga',
@@ -321,7 +322,15 @@ def set_display_children(value):
                    'and wow it is actually quite stunning. Be sure to also check out the oter main plaza, ___.' \
                    'Enjoy some Stella Artois -- it is brewed here! You can actually visit the brewery, it is not far ' \
                    'at all from the center of the city or the main train station. Be sure to book a tour ahead of time ' \
-                   'though as the time slots fill ahead of time.'
+                   'though as the time slots fill ahead of time.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/belgium/leuven.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Ghent':
         return 'So cute and amazing beer and Delirium'
 
@@ -402,9 +411,11 @@ def set_display_children(value):
                     {"src": "assets/bulgaria/varna.JPG"},
                     {"src": "assets/bulgaria/varna1.JPG"},
                     {"src": "assets/bulgaria/varna2.JPG"},
+                    {"src": "assets/bulgaria/varna7.JPG"},
                     {"src": "assets/bulgaria/varna3.JPG"},
                     {"src": "assets/bulgaria/varna4.JPG"},
                     {"src": "assets/bulgaria/varna5.JPG"},
+                    {"src": "assets/bulgaria/varna6.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -643,7 +654,6 @@ def set_display_children(value):
                     {"src": "assets/czechia/prg4.JPG"},
                     {"src": "assets/czechia/prg5.JPG"},
                     {"src": "assets/czechia/prg6.JPG"},
-                    {"src": "assets/czechia/prg7.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -797,11 +807,11 @@ def set_display_children(value):
                     {"src": "assets/germany/berlin.JPG"},
                     {"src": "assets/germany/berlin2.JPG"},
                     {"src": "assets/germany/berlin3.JPG"},
-                    {"src": "assets/germany/berlin4.JPG"},
-                    {"src": "assets/germany/berlin5.JPG"},
-                    {"src": "assets/germany/berlin6.JPG"},
-                    {"src": "assets/germany/berlin7.JPG"},
-                    {"src": "assets/germany/berlin8.JPG"},
+                    {"src": "assets/germany/berlin1.JPG"},
+                    # {"src": "assets/germany/berlin5.JPG"},
+                    # {"src": "assets/germany/berlin6.JPG"},
+                    # {"src": "assets/germany/berlin7.JPG"},
+                    # {"src": "assets/germany/berlin8.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -821,8 +831,8 @@ def set_display_children(value):
                     {"src": "assets/germany/dresden.JPG"},
                     {"src": "assets/germany/dresden2.JPG"},
                     {"src": "assets/germany/dresden3.JPG"},
-                    {"src": "assets/germany/dresden4.JPG"},
-                    {"src": "assets/germany/dresden5.JPG"},
+                    # {"src": "assets/germany/dresden4.JPG"},
+                    # {"src": "assets/germany/dresden5.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -831,6 +841,17 @@ def set_display_children(value):
     if value == 'Flensburg':
         return 'Really cute port area and home to the Flensburger brewery. The tour is really cheap and you get ' \
                "a lot of food and beer. They have the best marketing by any company I've ever seen."
+    if value == 'Gengenbach':
+        return 'Largest advent calendar in the world! really nice small town in the middle of the Black Forest. ' \
+               'Absolutely worth a stop during Christmas time.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/germany/gengenbach.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Hamburg':
         return 'A beautiful city in the north of Germany. The port of Hamburg is bigger than the entire city of ' \
                'Copenhagen. There are also more bridges than Amsterdam, Venice, and London combined! If you like ' \
@@ -947,7 +968,15 @@ def set_display_children(value):
                'mountains of Switzerland not too far away! Circolino is a great restaurant -- you can ' \
                'get a 3 course ' \
                'meal with wine for just 15 euros (as of 2023). Be sure to have some risotto, ' \
-               'more traditional than pasta in the north of Italy.'
+               'more traditional than pasta in the north of Italy.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/italy/bergamo.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Florence':
         return 'Maybe my favorite city in Italy. The __ river runs right through the city and the sun sets ' \
                'beautifully over it (at least in April when I went!). DO NOT come here without ' \
@@ -962,6 +991,20 @@ def set_display_children(value):
                "You are " \
                "in Tuscany, so a day trip to visit vineyards is also a great idea. There are a number of " \
                "options for this."
+    if value == 'Lecco':
+        return 'Lovely day trip from Bergamo', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/italy/lecco.JPG"},
+                    {"src": "assets/italy/lecco1.JPG"},
+                    {"src": "assets/italy/lecco2.JPG"},
+                    {"src": "assets/italy/lecco3.JPG"},
+                    {"src": "assets/italy/lecco4.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Milan':
         return 'The center of the city with the cathedral (duomo in Italian) and the arcade to the left of ' \
                'the duomo are really nice. In the south of the city the Navigli district is awesome -- ' \
@@ -993,7 +1036,17 @@ def set_display_children(value):
                'one minute. ' \
                'Be sure to have some risotto, more traditional than pasta in the north of Italy. I also had ' \
                'life-changing amaretto gelato at a little shop called ___. Lastly, a really good restaurant is ' \
-               '________.'
+               '________.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/italy/verona.JPG"},
+                    {"src": "assets/italy/verona3.JPG"},
+                    {"src": "assets/italy/verona2.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Ireland
     if value == 'Cliffs of Moher':
@@ -1086,11 +1139,22 @@ def set_display_children(value):
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/macedonia/skopje.JPG"},
+                    {"src": "assets/macedonia/skopje3.JPG"},
+                    {"src": "assets/macedonia/skopje2.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
                 ),
+
+# Peru
+    if value == 'Lima':
+        return 'gotta go back'
+    if value == 'Iquitos':
+        return 'The start of my Amazon river adventure. We flew here from Lima and took a boat about 50 miles down ' \
+               'the Amazon. We then stayed in a few remote places in the rain forest before coming back to ' \
+               'Iquitos. Really an adventure of a lifetime. If you have the opportunity to do something like this,' \
+               'DO IT !'
 
 # Poland
     if value == 'Wroclaw':
@@ -1110,14 +1174,20 @@ def set_display_children(value):
                "There are big sand dunes next to the coast. There's also a couple cafes here where you can grab a" \
                "drink or a bite to eat. Sunset here over the ocean was just beautiful. "
 
-# Peru
-    if value == 'Lima':
-        return 'gotta go back'
-    if value == 'Iquitos':
-        return 'The start of my Amazon river adventure. We flew here from Lima and took a boat about 50 miles down ' \
-               'the Amazon. We then stayed in a few remote places in the rain forest before coming back to ' \
-               'Iquitos. Really an adventure of a lifetime. If you have the opportunity to do something like this,' \
-               'DO IT !'
+# Puerto Rico
+    if value == 'Rincón':
+        return 'Beauty'
+    if value == 'San Juan':
+        return 'so fun', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/pr/rincon.JPG"},
+                    {"src": "assets/pr/rincon2.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Slovakia
     if value == 'Bratislava':
@@ -1136,7 +1206,17 @@ def set_display_children(value):
     if value == 'Azpeitia':
         return 'Birthplace of St. Ignatius and home to a large festival on July ___ each year for his feast day'
     if value == 'Barcelona':
-        return 'mamacita'
+        return 'ole', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/spain/bcn.JPG"},
+                    # {"src": "assets/spain/bcn1.JPG"},
+                    # {"src": "assets/spain/bcn2.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Begur':
         return 'Really nice beaches if you want to visit nice beaches outside of Barcelona'
     if value == 'Bilbao':
