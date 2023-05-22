@@ -35,7 +35,7 @@ all_options = {
     'Bulgaria 🇧🇬': ['Sofia', 'Varna'],
     'Canada 🇨🇦': ['Banff', 'Calgary'],
     'Chile 🇨🇱': ['Puerto Natales', 'Santiago', 'Torres del Paine', 'Valparaíso / Viña del Mar'],
-    'Croatia 🇭🇷': ['Dubrovnik', 'Motovun', 'Opatija', 'Plitvice Lakes National Park', 'Pula', 'Rovinj', 'Zagreb'],
+    'Croatia 🇭🇷': ['Dubrovnik', 'Motovun', 'Opatija', 'Plitvice Lakes National Park', 'Pula', 'Rovinj', 'Vodnjan', 'Zagreb'],
     'Czechia 🇨🇿': ['Prague'],
     'Denmark 🇩🇰': ['Copenhagen'],
     'Ecuador 🇪🇨': ['Galapagos Islands', 'Quito'],
@@ -45,7 +45,7 @@ all_options = {
                    'Stuttgart'],
     'Hungary 🇭🇺': ['Budapest'],
     'Iceland 🇮🇸': ['Reykjavik', 'Southern half of island'],
-    'Italy 🇮🇹': ['Bergamo', 'Florence ', 'Lecco', 'Milan', 'Rome', 'Vatican 🇻🇦', 'Venice', 'Verona'],
+    'Italy 🇮🇹': ['Bergamo', 'Florence', 'Lecco', 'Milan', 'Rome', 'Vatican 🇻🇦', 'Venice', 'Verona'],
     'Ireland 🇮🇪': ['Cliffs of Moher', 'Dublin'],
     'Mexico 🇲🇽': ['Cancún', 'Mexico City'],
     'Montenegro 🇲🇪': ['Kotor'],
@@ -259,16 +259,16 @@ def set_display_children(value):
                "couple beers and joined the celebrations. This was one of the most fun experiences of my life!'", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/argentina/ba.JPG"},
-                    {"src": "assets/argentina/ba2.JPG"},
-                    {"src": "assets/argentina/ba3.JPG"},
-                    {"src": "assets/argentina/ba4.JPG"},
-                    {"src": "assets/argentina/ba5.JPG"},
-                    {"src": "assets/argentina/ba6.JPG"},
-                    {"src": "assets/argentina/ba7.JPG"},
-                    {"src": "assets/argentina/ba8.JPG"},
-                    {"src": "assets/argentina/ba9.JPG"},
-                    {"src": "assets/argentina/ba10.JPG"},
+                    # {"src": "assets/argentina/ba.JPG"},
+                    # {"src": "assets/argentina/ba2.JPG"},
+                    # {"src": "assets/argentina/ba3.JPG"},
+                    # {"src": "assets/argentina/ba4.JPG"},
+                    # {"src": "assets/argentina/ba5.JPG"},
+                    # {"src": "assets/argentina/ba6.JPG"},
+                    # {"src": "assets/argentina/ba7.JPG"},
+                    # {"src": "assets/argentina/ba8.JPG"},
+                    # {"src": "assets/argentina/ba9.JPG"},
+                    # {"src": "assets/argentina/ba10.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -282,9 +282,9 @@ def set_display_children(value):
         return 'Kuchen', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/austria/vienna.JPG"},
-                    {"src": "assets/austria/vienna2.JPG"},
-                    {"src": "assets/austria/vienna3.JPG"},
+                    # {"src": "assets/austria/vienna.JPG"},
+                    # {"src": "assets/austria/vienna2.JPG"},
+                    # {"src": "assets/austria/vienna3.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -347,7 +347,7 @@ def set_display_children(value):
         return 'brr', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/bosnia/medj.JPG"},
+                    # {"src": "assets/bosnia/medj.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -357,10 +357,10 @@ def set_display_children(value):
         return 'brr', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/bosnia/most2.JPG"},
-                    {"src": "assets/bosnia/most1.JPG"},
-                    {"src": "assets/bosnia/most3.JPG"},
-                    {"src": "assets/bosnia/most.JPG"},
+                    # {"src": "assets/bosnia/most2.JPG"},
+                    # {"src": "assets/bosnia/most1.JPG"},
+                    # {"src": "assets/bosnia/most3.JPG"},
+                    # {"src": "assets/bosnia/most.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -451,12 +451,12 @@ def set_display_children(value):
                'option if you are there in winter.', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/chile/stgo.JPG"},
-                    {"src": "assets/chile/stgo2.JPG"},
-                    {"src": "assets/chile/stgo3.JPG"},
-                    {"src": "assets/chile/stgo4.JPG"},
-                    {"src": "assets/chile/stgo1.JPG"},
-                    {"src": "assets/chile/stgo5.JPG"},
+                    # {"src": "assets/chile/stgo.JPG"},
+                    # {"src": "assets/chile/stgo2.JPG"},
+                    # {"src": "assets/chile/stgo3.JPG"},
+                    # {"src": "assets/chile/stgo4.JPG"},
+                    # {"src": "assets/chile/stgo1.JPG"},
+                    # {"src": "assets/chile/stgo5.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -474,17 +474,17 @@ def set_display_children(value):
                "Also the southern-most game of beer die ever was played in this park in Sept 2022. ", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/chile/patagonia9.JPG"},
-                    {"src": "assets/chile/patagonia.JPG"},
-                    {"src": "assets/chile/patagonia0.JPG"},
-                    {"src": "assets/chile/patagonia2.JPG"},
-                    {"src": "assets/chile/patagonia4.JPG"},
-                    {"src": "assets/chile/patagonia5.JPG"},
-                    {"src": "assets/chile/patagonia6.JPG"},
-                    {"src": "assets/chile/patagonia7.JPG"},
-                    {"src": "assets/chile/patagonia8.JPG"},
-                    {"src": "assets/chile/patagonia3.JPG"},
-                    {"src": "assets/chile/patagonia10.JPG"},
+                    # {"src": "assets/chile/patagonia9.JPG"},
+                    # {"src": "assets/chile/patagonia.JPG"},
+                    # {"src": "assets/chile/patagonia0.JPG"},
+                    # {"src": "assets/chile/patagonia2.JPG"},
+                    # {"src": "assets/chile/patagonia4.JPG"},
+                    # {"src": "assets/chile/patagonia5.JPG"},
+                    # {"src": "assets/chile/patagonia6.JPG"},
+                    # {"src": "assets/chile/patagonia7.JPG"},
+                    # {"src": "assets/chile/patagonia8.JPG"},
+                    # {"src": "assets/chile/patagonia3.JPG"},
+                    # {"src": "assets/chile/patagonia10.JPG"},
 
                 ],
                 interval=2000,
@@ -495,12 +495,12 @@ def set_display_children(value):
         return 'Eat the ceviche. JODER !', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/chile/vp.JPG"},
-                    {"src": "assets/chile/vp1.JPG"},
-                    {"src": "assets/chile/vp2.JPG"},
-                    {"src": "assets/chile/vp3.JPG"},
-                    {"src": "assets/chile/vp4.JPG"},
-                    {"src": "assets/chile/vp5.JPG"},
+                    # {"src": "assets/chile/vp.JPG"},
+                    # {"src": "assets/chile/vp1.JPG"},
+                    # {"src": "assets/chile/vp2.JPG"},
+                    # {"src": "assets/chile/vp3.JPG"},
+                    # {"src": "assets/chile/vp4.JPG"},
+                    # {"src": "assets/chile/vp5.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -513,12 +513,12 @@ def set_display_children(value):
                'the mountain as well. We saw one of the most incredible sunsets our one night on the mountain.', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/chile/ski.JPG"},
-                    {"src": "assets/chile/ski1.JPG"},
-                    {"src": "assets/chile/ski2.JPG"},
-                    {"src": "assets/chile/ski3.JPG"},
-                    {"src": "assets/chile/ski4.JPG"},
-                    {"src": "assets/chile/ski5.JPG"},
+                    # {"src": "assets/chile/ski.JPG"},
+                    # {"src": "assets/chile/ski1.JPG"},
+                    # {"src": "assets/chile/ski2.JPG"},
+                    # {"src": "assets/chile/ski3.JPG"},
+                    # {"src": "assets/chile/ski4.JPG"},
+                    # {"src": "assets/chile/ski5.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -530,13 +530,13 @@ def set_display_children(value):
         return 'so cool', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/croatia/dubrovnik4.JPG"},
-                    {"src": "assets/croatia/dubrovnik5.JPG"},
-                    {"src": "assets/croatia/dubrovnik6.JPG"},
-                    {"src": "assets/croatia/dubrovnik7.JPG"},
-                    {"src": "assets/croatia/dubrovnik8.JPG"},
-                    {"src": "assets/croatia/dubrovnik9.JPG"},
-                    {"src": "assets/croatia/dubrovnik.JPG"},
+                    # {"src": "assets/croatia/dubrovnik4.JPG"},
+                    # {"src": "assets/croatia/dubrovnik5.JPG"},
+                    # {"src": "assets/croatia/dubrovnik6.JPG"},
+                    # {"src": "assets/croatia/dubrovnik7.JPG"},
+                    # {"src": "assets/croatia/dubrovnik8.JPG"},
+                    # {"src": "assets/croatia/dubrovnik9.JPG"},
+                    # {"src": "assets/croatia/dubrovnik.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -547,11 +547,11 @@ def set_display_children(value):
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/croatia/np.JPG"},
-                    {"src": "assets/croatia/np5.JPG"},
-                    {"src": "assets/croatia/np6.JPG"},# ROTATE
-                    {"src": "assets/croatia/np7.JPG"},
-                    {"src": "assets/croatia/np8.JPG"},
-                    {"src": "assets/croatia/np9.JPG"},
+                    # {"src": "assets/croatia/np5.JPG"},
+                    # {"src": "assets/croatia/np6.JPG"},
+                    # {"src": "assets/croatia/np7.JPG"},
+                    # {"src": "assets/croatia/np8.JPG"},
+                    # {"src": "assets/croatia/np9.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -564,7 +564,6 @@ def set_display_children(value):
                "fertile and provides great conditions for grapes, olives, and black truffles. Sample frequently.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/croatia/pula.JPG"},
                     {"src": "assets/croatia/pula2.JPG"},
                     {"src": "assets/croatia/pula3.JPG"},
                     {"src": "assets/croatia/pula4.JPG"},
@@ -577,7 +576,6 @@ def set_display_children(value):
         return "Trufflessss", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/croatia/truffles3.JPG"},
                     {"src": "assets/croatia/truffles4.JPG"},
                     {"src": "assets/croatia/truffles5.JPG"},
                     {"src": "assets/croatia/truffles7.JPG"},
@@ -605,8 +603,8 @@ def set_display_children(value):
                "really good. Very cute small town on the water. ", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/croatia/opa.JPG"},
-                    {"src": "assets/croatia/opa2.JPG"},
+                    # {"src": "assets/croatia/opa.JPG"},
+                    # {"src": "assets/croatia/opa2.JPG"},
                     {"src": "assets/croatia/opa3.JPG"},
                 ],
                 interval=2000,
@@ -619,9 +617,6 @@ def set_display_children(value):
                "fertile and provides great conditions for grapes, olives, and black truffles. Sample frequently.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/croatia/rov.JPG"},
-                    {"src": "assets/croatia/rov2.JPG"},
-                    {"src": "assets/croatia/rov3.JPG"},
                     {"src": "assets/croatia/rov4.JPG"},
                 ],
                 interval=2000,
@@ -700,15 +695,15 @@ def set_display_children(value):
                "So... lots to do here. I could definitely live here.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/england/london.JPG"},
-                    {"src": "assets/england/london6.JPG"},  # ROTATE
+                    # {"src": "assets/england/london.JPG"},
+                    # {"src": "assets/england/london6.JPG"},
                     {"src": "assets/england/london7.JPG"},
-                    {"src": "assets/england/london3.JPG"},
-                    {"src": "assets/england/london4.JPG"},
+                    # {"src": "assets/england/london3.JPG"},
+                    # {"src": "assets/england/london4.JPG"},
                     {"src": "assets/england/london1.JPG"},
                     {"src": "assets/england/london8.JPG"},
-                    {"src": "assets/england/london5.JPG"},
-                    {"src": "assets/england/london2.JPG"},
+                    # {"src": "assets/england/london5.JPG"},
+                    # {"src": "assets/england/london2.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -748,7 +743,6 @@ def set_display_children(value):
                     {"src": "assets/france/paris3.JPG"},
                     {"src": "assets/france/paris2.JPG"},
                     {"src": "assets/france/paris4.JPG"},
-                    {"src": "assets/france/paris5.JPG"},
                     {"src": "assets/france/paris6.JPG"},
                     {"src": "assets/france/paris7.JPG"},
                 ],
@@ -886,6 +880,8 @@ def set_display_children(value):
                "but there are some nice beaches and it is a really" \
                "nice, cute little city. Lastly (and randomly), Kiel has one of the most " \
                "successful handball teams in the world. The handball games are actually pretty electric."
+    if value == 'Leipzig':
+        return 'both the new and old Rathaus (town hall) are really cool'
     if value == 'Lübeck':
         return 'Home to some of the best marzipan in the world. I actually only played a basketball game here ' \
                "but we won ;) It's supposed to be very cute and have a really nice Christmas market."
@@ -911,11 +907,11 @@ def set_display_children(value):
                "famous and beautiful main square of the city, Marienplatz, where the town hall (Rathaus) is.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/germany/munich.JPG"},
-                    {"src": "assets/germany/munich2.JPG"},
-                    {"src": "assets/germany/munich3.JPG"},
-                    {"src": "assets/germany/munich4.JPG"},
-                    {"src": "assets/germany/munich5.JPG"},
+                    # {"src": "assets/germany/munich.JPG"},
+                    # {"src": "assets/germany/munich2.JPG"},
+                    # {"src": "assets/germany/munich3.JPG"},
+                    # {"src": "assets/germany/munich4.JPG"},
+                    # {"src": "assets/germany/munich5.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -995,8 +991,8 @@ def set_display_children(value):
         return 'Lovely day trip from Bergamo', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/italy/lecco.JPG"},
-                    {"src": "assets/italy/lecco1.JPG"},
+                    # {"src": "assets/italy/lecco.JPG"}, # different photo size
+                    # {"src": "assets/italy/lecco1.JPG"}, # different photo size
                     {"src": "assets/italy/lecco2.JPG"},
                     {"src": "assets/italy/lecco3.JPG"},
                     {"src": "assets/italy/lecco4.JPG"},
@@ -1020,6 +1016,8 @@ def set_display_children(value):
                'The city is quite big too with so many different neighborhoods, all deserving of some time ' \
                'being spent there. However, in a short ' \
                'trip, be sure to visit the coliseum and eat as much pizza, pasta, and gelato as possible.'
+    if value == 'Vatican 🇻🇦':
+        return 'say ciao to the Pope'
     if value == 'Venice':
         return 'It is definitely as charming as everyone says it is. Visit the main plaza (St. Marco) and church, ' \
                'go to the top of the tower there for great views of the city, take a boat ride (the boat usually ' \
@@ -1176,9 +1174,7 @@ def set_display_children(value):
 
 # Puerto Rico
     if value == 'Rincón':
-        return 'Beauty'
-    if value == 'San Juan':
-        return 'so fun', \
+        return 'Beauty', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/pr/rincon.JPG"},
@@ -1188,6 +1184,8 @@ def set_display_children(value):
                 ride="carousel",
                 className="carousel-fade"
                 ),
+    if value == 'San Juan':
+        return 'so fun'
 
 # Slovakia
     if value == 'Bratislava':
