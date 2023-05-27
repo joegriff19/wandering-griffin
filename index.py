@@ -109,13 +109,12 @@ index_layout = html.Div(
     children=[
             html.Header(
                 children=[
-                    html.Br(),
                     # html.Div(children="wandering griffin", style={"fontSize": "75px"}),
                     html.Div(children="wandering griffin", className="wg"),
                     html.Div(children="travel recs", className="wg"),
                     html.Div(children="🌎", style={"fontSize": "85px"}),
                     html.Div(children="powered by JI", className="powered"),
-                    html.Div(children="(Joe's Intelligence)", className="powered"),
+                    # html.Div(children="(Joe's Intelligence)", className="powered"),
                     html.Br(),
                 ],
                 style={
@@ -124,11 +123,12 @@ index_layout = html.Div(
                     # 'background': colors['background']
                 }
             ),
-            # html.Div(children="Let's travel better", style={'textAlign': 'center', "font-weight": "bold", "fontSize": "20px"}),
             # html.Br(),
-            html.Div(children="I have personally been to all of these places and these are all my personal recs!",
+            # html.Div(children="I am blessed to have personally been to all of these places! "
+            #                   "These are all my recommendations from these experiences.",
+            #          style={"font-weight": "bold", 'textAlign': 'center', 'color': 'black'}),
+            html.Div(children="I can't do everything but I can try...",
                      style={"font-weight": "bold", 'textAlign': 'center', 'color': 'black'}),
-
             html.Br(),
             html.Div([
                 "Select a country",
@@ -282,9 +282,9 @@ def set_display_children(value):
         return 'Kuchen', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    # {"src": "assets/austria/vienna.JPG"},
+                    {"src": "assets/austria/vienna.JPG"},
+                    {"src": "assets/austria/vienna1.JPG"},
                     # {"src": "assets/austria/vienna2.JPG"},
-                    # {"src": "assets/austria/vienna3.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -299,7 +299,22 @@ def set_display_children(value):
 
 # Belgium
     if value == 'Antwerp':
-        return 'Beware of the Long Wapper'
+        return 'Beware of the Long Wapper', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/belgium/antwerp.JPG"},
+                    {"src": "assets/belgium/antwerp1.JPG"},
+                    {"src": "assets/belgium/antwerp2.JPG"},
+                    {"src": "assets/belgium/antwerp3.JPG"},
+                    {"src": "assets/belgium/antwerp4.JPG"},
+                    {"src": "assets/belgium/antwerp5.JPG"},
+                    {"src": "assets/belgium/antwerp6.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+
     if value == 'Brussels':
         # image_path = 'assets/andrea_delirium.gif'
         return 'It is often suggested to skip Brussels and visit other Belgian cities such as Ghent or Antwerp... ' \
@@ -315,7 +330,6 @@ def set_display_children(value):
                'circular in shape). The best ones are from the food trucks called _____. You can find one ' \
                '(or two) in front of the palace, and another one next to the Ferris wheel. Lastly, the ' \
                'Delirium Village is really fun -- especially in the evenings -- definitely enjoy a few beers here! ', \
-                # html.Br(), html.Br(), html.Div(html.Img(src=image_path, style={"height": "500px"}))
 
     if value == 'Leuven':
             return 'What a fun little town really close to Brussels. The main attraction in Leuven is the ____ ' \
@@ -332,7 +346,21 @@ def set_display_children(value):
                 className="carousel-fade"
                 ),
     if value == 'Ghent':
-        return 'So cute and amazing beer and Delirium'
+        return 'So cute and amazing beer and Delirium', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/belgium/ghent.JPG"},
+                    {"src": "assets/belgium/ghent1.JPG"},
+                    {"src": "assets/belgium/ghent2.JPG"},
+                    {"src": "assets/belgium/ghent3.JPG"},
+                    {"src": "assets/belgium/ghent4.JPG"},
+                    {"src": "assets/belgium/ghent5.JPG"},
+                    {"src": "assets/belgium/ghent6.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Bolivia
     if value == 'Cliza':
@@ -344,10 +372,14 @@ def set_display_children(value):
 
 # Bosnia & Herzegovina
     if value == 'Medjugorje':
-        return 'brr', \
+        return 'Very small city in B&H where a miracle happened around 30 years ago -- five children saw a vision ' \
+               'of the Blessed Mother. Even with many people suspicious of the vision, the stories of the ' \
+               'children all align perfectly. One of the children (now an adult) still has her vision daily and ' \
+               'has devoted her life to sharing her experiences with Catholics who make the journey or pilgrimage ' \
+               'to visit Medjugorje. It was quite the moving experience. This is an easy day trip from Mostar. ', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    # {"src": "assets/bosnia/medj.JPG"},
+                    {"src": "assets/bosnia/medj.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -357,10 +389,9 @@ def set_display_children(value):
         return 'brr', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    # {"src": "assets/bosnia/most2.JPG"},
-                    # {"src": "assets/bosnia/most1.JPG"},
-                    # {"src": "assets/bosnia/most3.JPG"},
-                    # {"src": "assets/bosnia/most.JPG"},
+                    {"src": "assets/bosnia/mostar2.JPG"},
+                    {"src": "assets/bosnia/mostar1.JPG"},
+                    {"src": "assets/bosnia/mostar3.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -530,13 +561,13 @@ def set_display_children(value):
         return 'so cool', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    # {"src": "assets/croatia/dubrovnik4.JPG"},
-                    # {"src": "assets/croatia/dubrovnik5.JPG"},
-                    # {"src": "assets/croatia/dubrovnik6.JPG"},
-                    # {"src": "assets/croatia/dubrovnik7.JPG"},
-                    # {"src": "assets/croatia/dubrovnik8.JPG"},
-                    # {"src": "assets/croatia/dubrovnik9.JPG"},
-                    # {"src": "assets/croatia/dubrovnik.JPG"},
+                    {"src": "assets/croatia/dubrovnik.JPG"},
+                    {"src": "assets/croatia/dubrovnik1.JPG"},
+                    {"src": "assets/croatia/dubrovnik2.JPG"},
+                    {"src": "assets/croatia/dubrovnik3.JPG"},
+                    {"src": "assets/croatia/dubrovnik6.JPG"},
+                    {"src": "assets/croatia/dubrovnik7.JPG"},
+                    {"src": "assets/croatia/dubrovnik8.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1232,8 +1263,8 @@ def set_display_children(value):
                 items=[
                     {"src": "assets/slovakia/bratislava.JPG"},
                     {"src": "assets/slovakia/bratislava2.JPG"},
-                    {"src": "assets/slovakia/bratislava3.JPG"},
-                    {"src": "assets/slovakia/bratislava4.JPG"},
+                    {"src": "assets/slovakia/bratislava1.JPG"},
+                    # {"src": "assets/slovakia/bratislava4.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1249,11 +1280,11 @@ def set_display_children(value):
                "'Slovakia.'", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/slovenia/ljublj.JPG"},
-                    {"src": "assets/slovenia/ljublj2.JPG"},
-                    {"src": "assets/slovenia/ljublj3.JPG"},
-                    {"src": "assets/slovenia/ljublj4.JPG"},
-                    {"src": "assets/slovenia/ljublj5.JPG"},
+                    {"src": "assets/slovenia/lju.JPG"},
+                    {"src": "assets/slovenia/lju1.JPG"},
+                    {"src": "assets/slovenia/lju2.JPG"},
+                    {"src": "assets/slovenia/lju3.JPG"},
+                    # {"src": "assets/slovenia/lju4.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1268,8 +1299,11 @@ def set_display_children(value):
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/spain/bcn.JPG"},
-                    # {"src": "assets/spain/bcn1.JPG"},
-                    # {"src": "assets/spain/bcn2.JPG"},
+                    {"src": "assets/spain/bcn1.JPG"},
+                    {"src": "assets/spain/bcn2.JPG"},
+                    {"src": "assets/spain/bcn3.JPG"},
+                    {"src": "assets/spain/bcn4.JPG"},
+                    {"src": "assets/spain/bcn5.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1311,8 +1345,8 @@ def set_display_children(value):
         return 'The Spanish capital. Definitely a different feel than Barcelona but both are amazing cities.', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/spain/mad.JPG"},
-                    {"src": "assets/spain/mad1.JPG"},
+                    # {"src": "assets/spain/mad.JPG"},
+                    # {"src": "assets/spain/mad1.JPG"},
                     # {"src": "assets/spain/mad2.JPG"},
                 ],
                 interval=2000,
