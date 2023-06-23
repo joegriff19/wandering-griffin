@@ -34,15 +34,17 @@ all_options = {
     'Bosnia & Herzegovina 🇧🇦': ['Medjugorje', 'Mostar'],
     'Bulgaria 🇧🇬': ['Sofia', 'Varna'],
     'Canada 🇨🇦': ['Banff', 'Calgary'],
-    'Chile 🇨🇱': ['Puerto Natales (Patagonia)', 'Santiago', 'Torres del Paine National Park (Patagonia)', 'Valparaíso / Viña del Mar'],
-    'Croatia 🇭🇷': ['Dubrovnik', 'Motovun', 'Opatija', 'Plitvice Lakes National Park', 'Pula', 'Rovinj', 'Vodnjan', 'Zagreb'],
+    'Chile 🇨🇱': ['Puerto Natales (Patagonia)', 'Santiago', 'Torres del Paine National Park (Patagonia)',
+                 'Valparaíso / Viña del Mar'],
+    'Croatia 🇭🇷': ['Dubrovnik', 'Motovun', 'Opatija', 'Plitvice Lakes National Park', 'Pula', 'Rovinj',
+                   'Vodnjan', 'Zagreb'],
     'Czechia 🇨🇿': ['Prague'],
     'Denmark 🇩🇰': ['Copenhagen'],
     'Ecuador 🇪🇨': ['Galapagos Islands', 'Quito'],
     'England 🏴󠁧󠁢󠁥󠁮󠁧󠁿': ['London'],
     'France 🇫🇷': ['Paris', 'Strasbourg'],
-    'Germany 🇩🇪': ['Berlin', 'Dortmund', 'Dresden', 'Flensburg', 'Gengenbach', 'Hamburg', 'Kiel', 'Lübeck', 'Leipzig', 'Munich',
-                   'Stuttgart'],
+    'Germany 🇩🇪': ['Berlin', 'Dortmund', 'Dresden', 'Flensburg', 'Gengenbach', 'Hamburg', 'Kiel', 'Lübeck',
+                   'Leipzig', 'Munich', 'Oranienburg', 'Potsdam', 'Stuttgart'],
     'Hungary 🇭🇺': ['Budapest'],
     'Iceland 🇮🇸': ['Reykjavik', 'Southern half of island'],
     'Italy 🇮🇹': ['Bergamo', 'Florence', 'Lecco', 'Milan', 'Rome', 'Vatican 🇻🇦', 'Venice', 'Verona'],
@@ -1052,6 +1054,14 @@ def set_display_children(value):
                 ride="carousel",
                 className="carousel-fade"
                 ),
+    if value == 'Oranienburg':
+        return 'The remains of the Sachsenhausen concentration camp can be found here. It has been converted into ' \
+               'a memorial / museum and it is really well done.' \
+               'There is so much to read, see, and learn here. It is naturally difficult to learn about all the ' \
+               'atrocities that occurred here, but I would recommend a visit.' \
+               'It is an easy day trip from Berlin.'
+    if value == 'Potsdam':
+        return 'Home to many castles! Easy day trip (or fun bike trip) from Berlin!'
     if value == 'Stuttgart':
         return 'Was only here briefly but the main Christmas market was nice'
 
@@ -1346,7 +1356,7 @@ def set_display_children(value):
 
 # Peru
     if value == 'Oslo':
-        return 'trip upcoming in June!', \
+        return 'what a performance Erling Haaland!!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/norway/oslo.JPG"},
@@ -1539,7 +1549,7 @@ def set_display_children(value):
                 items=[
                     {"src": "assets/spain/mal.JPG"},
                     {"src": "assets/spain/mal1.JPG"},
-                    {"src": "assets/spain/mal2.JPG"},
+                    # {"src": "assets/spain/mal2.JPG"},
                     {"src": "assets/spain/mal3.JPG"},
                     {"src": "assets/spain/mal4.JPG"},
                 ],
