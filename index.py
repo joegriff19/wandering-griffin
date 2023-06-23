@@ -52,7 +52,7 @@ all_options = {
     'Morocco 🇲🇦': ['Tangier'],
     'Netherlands 🇳🇱': ['Amsterdam'],
     'North Macedonia 🇲🇰': ['Skopje'],
-    'Norway ': ['Oslo'],
+    'Norway 🇳🇴': ['Oslo'],
     'Peru 🇵🇪': ['Lima', 'Iquitos'],
     'Poland 🇵🇱': ['Krakow', 'Wroclaw'],
     'Portugal 🇵🇹': ['Guincho Beach', 'Lisbon'],
@@ -62,7 +62,7 @@ all_options = {
     'Spain 🇪🇸': ['Azpeitia', 'Barcelona', 'Begur', 'Bilbao', 'Buñol', 'Girona', 'Granada', 'Irún', 'Madrid', 'Málaga',
                  'Mallorca', 'Montserrat', 'Pineda de Mar', 'San Sebastián', 'Sitges', 'Sevilla', 'Tenerife',
                  'Valencia', 'Vilanova'],
-    'Sweden __': ['Stockholm'],
+    'Sweden 🇸🇪': ['Stockholm'],
     # 'USA 🇺🇸': ['Arizona', 'California', 'Colorado', 'DC', 'Florida', 'Illinois', 'Indiana', 'Iowa', 'Kentucky', 'Maine',
     #            'Massachusetts', 'Michigan', 'Missouri', 'Montana', 'Nebraska', 'New Hampshire', 'New York',
     #            'North Carolina', 'Ohio', 'Pennsylvania', 'Tennessee', 'Utah', 'Vermont', 'West Virginia', 'Wisconsin',
@@ -112,11 +112,11 @@ index_layout = html.Div(
             html.Header(
                 children=[
                     # html.Div(children="wandering griffin", style={"fontSize": "75px"}),
-                    html.Div(children="wandering griffin", className="wg"),
-                    html.Div(children="travel recs", className="wg"),
+                    html.Div(children="wandering griffin travel recs", className="wg"),
+                    # html.Div(children="travel recs", className="wg"),
                     html.Div(children="🌎", style={"fontSize": "85px"}),
-                    html.Div(children="powered by JI", className="powered"),
-                    # html.Div(children="(Joe's Intelligence)", className="powered"),
+                    html.Div(children="I can't do everything but I can try...", className="powered"),
+                    # html.Div(children="powered by JI", className="powered"),
                     html.Br(),
                 ],
                 style={
@@ -129,9 +129,7 @@ index_layout = html.Div(
             # html.Div(children="I am blessed to have personally been to all of these places! "
             #                   "These are all my recommendations from these experiences.",
             #          style={"font-weight": "bold", 'textAlign': 'center', 'color': 'black'}),
-            html.Div(children="I can't do everything but I can try...",
-                     style={"font-weight": "bold", 'textAlign': 'center', 'color': 'black'}),
-            html.Br(),
+            # html.Br(),
             html.Div([
                 "Select a country",
                 dcc.Dropdown(
@@ -149,11 +147,13 @@ index_layout = html.Div(
                 # 'margin-left': '100px', 'margin-right': '100px',
                 'color': 'black',
                 # "display": "flex",
-                # 'max-width': '500px',
+                'max-width': '500px',
+                'margin': 'auto'
                 # 'verticalAlign': 'middle',
-                # 'align-items': 'center', 'justify-content': 'center'
-                # 'justify': center
-                      }
+                # 'align-items': 'center',
+                # 'justify-content': 'center'
+                # 'justify': 'center'
+            }
             ),
             html.Div([
                 html.Div(id='city_info'),
@@ -161,6 +161,8 @@ index_layout = html.Div(
                 # html.Div(id='us-city-info'),
                 html.Br(),
             ], style={'textAlign': 'center',
+                      'max-width': '900px',
+                      'margin': 'auto',
                       # 'margin-left': '100px', 'margin-right': '100px',
                       'color': 'black',
               # 'width': '50%',
@@ -279,9 +281,29 @@ def set_display_children(value):
 
 # Austria
     if value == 'Dornbirn':
-        return 'Rhombergers'
+        return 'Home of the Rhombergs! My great-great grandpa, Franz Martin Rhomberg, came to the US ' \
+               'from this small city in Austria. There are so many stores and other signs with the name Rhomberg ' \
+               'still to this day — it was crazy to see! The other big Rhomberg highlight was seeing the ' \
+               'old ‘Kirchebuch,’ the ‘church book’ (since church and state used to be the same) ' \
+               'with my Rhomberg ancestors’ names written by hand all the way back to the 1400s. ' \
+               'This was amazing to see. There are beautiful mountain views all over the city as it is ' \
+               'surrounded by the Alps. For an amazing view of the city, go up the cable car to ' \
+               '_____. There is a cool restaurant up here called _____. For a really cool old tavern down ' \
+               'in the city, the Rothaus is awesome. In winter, there is also great skiing nearby. ' \
+               'I did a trip for a couple days to Steffisalp and the views were incredible. '
     if value == 'Vienna':
-        return 'Kuchen', \
+        return 'A very grand city! The capital of Austria is very impressive. The palace___ is the big highlight, ' \
+               'but there is so much more than that to see! Even beyond the main sightseeing spots, ' \
+               'there are so many beautiful buildings that I feel could be the main tourist attraction ' \
+               'in many other cities. However, there are just so many of these beautiful buildings that many ' \
+               'don’t get the attention they probably deserve. The cafe scene is also very cool. There are many ' \
+               'cafes all over the city — it is a very popular activity to stop at a cafe for coffee and a ' \
+               'piece of cake (or one of many other pastries / dishes). These cafes range from very casual to ' \
+               'quite grand with high ceilings and ornate decorations. The cafe scene ties in with the artsy side ' \
+               'of the city. There is a lot of history here with music and with theatre. Mozart ___. ' \
+               'With all the sights to see, there is plenty to keep one occupied for a few days. ' \
+               'However, if you are looking for a really fun day trip, go to Bratislava, the capital of Slovenia! ' \
+               'It is very close, less than an hour away by train or bus. I loved doing a full day trip here.', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/austria/vienna.JPG"},
@@ -359,6 +381,7 @@ def set_display_children(value):
                     {"src": "assets/belgium/ghent4.JPG"},
                     {"src": "assets/belgium/ghent5.JPG"},
                     {"src": "assets/belgium/ghent6.JPG"},
+                    {"src": "assets/belgium/ghent7.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -658,6 +681,7 @@ def set_display_children(value):
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/croatia/olives.JPG"},
+                    {"src": "assets/croatia/olives4.JPG"},
                     {"src": "assets/croatia/olives3.JPG"},
                     {"src": "assets/croatia/olives2.JPG"},
                     {"src": "assets/croatia/olives1.JPG"},
@@ -746,7 +770,18 @@ def set_display_children(value):
 
 # Denmark
     if value == 'Copenhagen':
-        return 'very nice. take the ferry train to/from Germany!'
+        return 'very nice. take the ferry train to/from Germany!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/denmark/cop.JPG"},
+                    {"src": "assets/denmark/cop1.JPG"},
+                    {"src": "assets/denmark/cop2.JPG"},
+                    {"src": "assets/denmark/cop3.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Ecuador
     if value == 'Quito':
@@ -969,7 +1004,15 @@ def set_display_children(value):
                "(Fischbrötchen) everywhere you go. The rest of the year, Kiel is definitely calmer " \
                "but there are some nice beaches and it is a really" \
                "nice, cute little city. Lastly (and randomly), Kiel has one of the most " \
-               "successful handball teams in the world. The handball games are actually pretty electric."
+               "successful handball teams in the world. The handball games are actually pretty electric.", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/germany/kiel.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Leipzig':
         return 'Both the new and old Rathaus (town hall) are really cool. '
     if value == 'Lübeck':
@@ -1147,17 +1190,22 @@ def set_display_children(value):
                 items=[
                     {"src": "assets/ireland/moher.JPG"},
                     {"src": "assets/ireland/moher1.JPG"},
+                    {"src": "assets/ireland/moher2.JPG"},
+                    {"src": "assets/ireland/moher3.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
                 ),
-
     if value == 'Dublin':
         return 'There is just such a special charm to this city. Go and drink Guinness and enjoy. Sláinte!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/ireland/dublin.JPG"},
+                    {"src": "assets/ireland/dublin1.JPG"},
+                    # {"src": "assets/ireland/dublin2.JPG"},
+                    # {"src": "assets/ireland/dublin3.JPG"},
+                    # {"src": "assets/ireland/dublin4.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1206,7 +1254,7 @@ def set_display_children(value):
                 items=[
                     {"src": "assets/montenegro/kotor1.JPG"},
                     {"src": "assets/montenegro/kotor2.JPG"},
-                    {"src": "assets/montenegro/kotor3.JPG"},
+                    # {"src": "assets/montenegro/kotor3.JPG"},
                     {"src": "assets/montenegro/kotor4.JPG"},
                     {"src": "assets/montenegro/kotor5.JPG"},
                     {"src": "assets/montenegro/kotor6.JPG"},
@@ -1298,7 +1346,23 @@ def set_display_children(value):
 
 # Peru
     if value == 'Oslo':
-        return 'trip upcoming in June!'
+        return 'trip upcoming in June!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/norway/oslo.JPG"},
+                    {"src": "assets/norway/oslo2.JPG"},
+                    {"src": "assets/norway/oslo3.JPG"},
+                    {"src": "assets/norway/oslo4.JPG"},
+                    {"src": "assets/norway/oslo5.JPG"},
+                    {"src": "assets/norway/oslo6.JPG"},
+                    {"src": "assets/norway/oslo7.JPG"},
+                    {"src": "assets/norway/oslo8.JPG"},
+                    {"src": "assets/norway/oslo9.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Peru
     if value == 'Lima':
@@ -1414,7 +1478,12 @@ def set_display_children(value):
                     {"src": "assets/spain/bcn5.JPG"},
                     {"src": "assets/spain/bcn6.JPG"},
                     {"src": "assets/spain/bcn7.JPG"},
-                    {"src": "assets/spain/bcn8.JPG"},
+                    {"src": "assets/spain/bcn9.JPG"},
+                    {"src": "assets/spain/bcn10.JPG"},
+                    {"src": "assets/spain/bcn11.JPG"},
+                    {"src": "assets/spain/bcn12.JPG"},
+                    {"src": "assets/spain/bcn13.JPG"},
+                    {"src": "assets/spain/bcn14.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1465,7 +1534,19 @@ def set_display_children(value):
                 className="carousel-fade"
                 ),
     if value == 'Málaga':
-        return 'Nice city on the Costa del Sol (Coast of the Sun)'
+        return 'Nice city on the Costa del Sol (Coast of the Sun)', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/spain/mal.JPG"},
+                    {"src": "assets/spain/mal1.JPG"},
+                    {"src": "assets/spain/mal2.JPG"},
+                    {"src": "assets/spain/mal3.JPG"},
+                    {"src": "assets/spain/mal4.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Mallorca':
         return 'Beautiful island not far from Barcelona. You can actually take a ferry here from Barcelona, or it ' \
                'is a very quick flight. Many people come to enjoy some nice beaches and island tranquility, but ' \
