@@ -8,6 +8,8 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 from datetime import date
 today = date.today()
+import dash_player as dp
+
 
 # padding for the page content
 CONTENT_STYLE = {
@@ -44,11 +46,11 @@ all_options = {
     'England 🏴󠁧󠁢󠁥󠁮󠁧󠁿': ['London'],
     'France 🇫🇷': ['Paris', 'Strasbourg'],
     'Germany 🇩🇪': ['Berlin', 'Dortmund', 'Dresden', 'Flensburg', 'Gengenbach', 'Hamburg', 'Kiel', 'Lübeck',
-                   'Leipzig', 'Munich', 'Oranienburg', 'Potsdam', 'Stuttgart'],
+                   'Leipzig', 'Munich', 'Oranienburg', 'Potsdam', 'Rügen', 'Stralsund', 'Stuttgart'],
     'Hungary 🇭🇺': ['Budapest'],
     'Iceland 🇮🇸': ['Reykjavik', 'Southern half of island'],
     'Italy 🇮🇹': ['Bergamo', 'Florence', 'Lecco', 'Milan', 'Rome', 'Vatican 🇻🇦', 'Venice', 'Verona'],
-    'Ireland 🇮🇪': ['Cliffs of Moher', 'Dublin'],
+    'Ireland 🇮🇪': ['Cliffs of Moher', 'Dublin', 'Limerick', 'Tralee'],
     'Mexico 🇲🇽': ['Cancún', 'Mexico City'],
     'Montenegro 🇲🇪': ['Kotor'],
     'Morocco 🇲🇦': ['Tangier'],
@@ -83,7 +85,7 @@ all_options = {
 #     'Indiana': ['Medjugorje', 'Mostar'],
 #     'Iowa': ['Sofia', 'Varna'],
 #     'Kentucky': ['Banff', 'Calgary'],
-#     'Maine': ['Puerto Natales', 'Santiago', 'Torres del Paine National Park (Patagonia)', 'Valparaíso / Viña del Mar'],
+#     'Maine': ['Puerto Natales', 'Santiago', 'Torres del Paine National Park (Patagonia)'],
 #     'Massachusetts': ['Dubrovnik', 'Plitvice Lakes National Park', 'Pula', 'Rovinj', 'Zagreb'],
 #     'Michigan': ['Prague'],
 #     'Missouri': ['Copenhagen'],
@@ -189,9 +191,10 @@ def render_page_content(pathname):
        [
            html.H1("404: Not found", className="text-danger"),
            html.Hr(),
-           html.P(f"The pathname {pathname} was not recognised..."),
+           html.P(f"The pathname {pathname} was not recognized..."),
        ]
     )
+
 
 @app.callback(
     # Output('cities-dd', 'children'),
@@ -216,7 +219,6 @@ def set_cities_options(selected_country):
     Input('cities-dd', 'value')
 )
 def set_display_children(value):
-
 # Andorra
     if value == 'Pal Arinsal':
         return 'Go skiing. Pyrenees mountains are beautiful and very affordable compared to the US. ' \
@@ -541,7 +543,7 @@ def set_display_children(value):
                 className="carousel-fade"
                 ),
     if value == 'Torres del Paine National Park (Patagonia)':
-        return 'The W was stunning start to finish. The Torres on the last morning was an amazing finish. ' \
+        return '"The W" trail was stunning from start to finish. The Torres on the last morning was an amazing end. ' \
                'About 50 miles in 4 days. The refugios are really fun to stay in. We stayed at Francés the first ' \
                'two nights and then Chileno on the last night. Breakfast and dinner ' \
                'there is a bit expensive but worth it for the convenience. You can bring snacks as lunch and to get ' \
@@ -550,23 +552,38 @@ def set_display_children(value):
                "End of September was a good time to go as it wasn't too hot as winter just ended and " \
                "there weren't too many tourists yet. You can also catch the end of ski season in the Andes as well! " \
                "Also the southern-most game of beer die ever was played in this park in Sept 2022. ", \
-               html.Br(), html.Br(), dbc.Carousel(
-                items=[
-                    {"src": "assets/chile/patagonia9.JPG"},
-                    {"src": "assets/chile/patagonia.JPG"},
-                    {"src": "assets/chile/patagonia2.JPG"},
-                    {"src": "assets/chile/patagonia1.JPG"},
-                    {"src": "assets/chile/patagonia5.JPG"},
-                    {"src": "assets/chile/patagonia6.JPG"},
-                    {"src": "assets/chile/patagonia7.JPG"},
-                    {"src": "assets/chile/patagonia8.JPG"},
-                    {"src": "assets/chile/patagonia3.JPG"},
-                    {"src": "assets/chile/patagonia10.JPG"},
-                ],
-                interval=2000,
-                ride="carousel",
-                className="carousel-fade"
-                ),
+               html.Br(), html.Br(), \
+               html.Div(
+                   style={"width": "55%", "padding": "0px", 'margin': 'auto'},
+                   children=[
+                       dp.DashPlayer(
+                           id="player",
+                           url="https://youtu.be/eQe3kmo47b8",
+                           controls=True,
+                           width="100%",
+                           height="300px",
+                       )
+                   ]
+               ), \
+               html.Br(), html.Br(), \
+               dbc.Carousel(
+                   items=[
+                       {"src": "assets/chile/patagonia9.JPG"},
+                       {"src": "assets/chile/patagonia.JPG"},
+                       {"src": "assets/chile/patagonia2.JPG"},
+                       {"src": "assets/chile/patagonia1.JPG"},
+                       {"src": "assets/chile/patagonia5.JPG"},
+                       {"src": "assets/chile/patagonia6.JPG"},
+                       {"src": "assets/chile/patagonia7.JPG"},
+                       {"src": "assets/chile/patagonia8.JPG"},
+                       {"src": "assets/chile/patagonia3.JPG"},
+                       {"src": "assets/chile/patagonia10.JPG"},
+                   ],
+                   interval=2000,
+                   ride="carousel",
+                   className="carousel-fade"
+               )
+
     if value == 'Valparaíso / Viña del Mar':
         return 'Eat the ceviche. WOW !', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -1062,6 +1079,13 @@ def set_display_children(value):
                'It is an easy day trip from Berlin.'
     if value == 'Potsdam':
         return 'Home to many castles! Easy day trip (or fun bike trip) from Berlin!'
+    if value == 'Rügen':
+        return "Beautiful island! Germany's biggest. It is known for the steep chalk cliffs along the coasts. There " \
+               "are two national parks on the island. "
+    if value == 'Stralsund':
+        return 'Cool little port city on the Baltic sea. Home to the great Störtebeker brewery! The brewery was ' \
+               'named after a pirate named Klaus Störebeker who was born near Stralsund. He is better known as ' \
+               'Barbarossa'
     if value == 'Stuttgart':
         return 'Was only here briefly but the main Christmas market was nice'
 
@@ -1071,15 +1095,18 @@ def set_display_children(value):
                'that were damaged in WW2 and then abandoned) are really quirky, creative, and fun. ' \
                'Be absolutely sure to climb up the __ to see Lady Freedom (formerly called "Lady Communism"). ' \
                'The view of the river and the city ' \
-               'down below is amazing. Go to the famous Szyzyzyzy bath too.'
+               'down below is amazing. Definitely go to the famous Széchenyi bath too.'
 
 # Iceland
     if value == 'Reykjavik':
         return "Cool city but don't stay too long -- get out and explore the nature in the 'Land of Fire and Ice.'" \
                "There are some unique foods here that are really good and you should try." \
-               "Go to ____ restaurant. They had an amazing whale fin steak and a crazy " \
+               "Go to Íslenski Barinn restaurant. They had an amazing whale fin steak and a crazy " \
                "good reindeer burger. We didn't see puffin on a menu but it is also eaten here." \
-               "See the rainbow road. Check out the Viking church and go to the top of it."
+               "See the rainbow road. Check out the Viking church and go to the top of it. Bæjarins Beztu Pylsur is " \
+               "also a fun hot dog spot made famous by Bill Clinton -- Forbes called it the world's most " \
+               "famous hot dog vendor! They're made of lamb and definitely worth a try!"
+
     if value == 'Southern half of island':
         image_path = 'assets/iceland/hottub.JPG'
         return 'so much to see in not enough time', \
@@ -1173,14 +1200,14 @@ def set_display_children(value):
         return 'The setting from the famous Romeo and Juliet play -- Verona is a beautiful city ' \
                'that probably does ' \
                'not get enough attention. Verona boasts a large coliseum-like arena that is actually older than ' \
-               'the coliseum. The ___ river that runs through the city is really nice. Climb up the ___ hill to ' \
-               '__ for stunning sunset views over the city. Also go to this little pizza spot called ' \
+               'the coliseum. The Adige river that runs through the city is really nice. Climb up the hill to ' \
+               'Castel San Pietro for stunning sunset views over the city. Also go to this little pizza spot called ' \
                'Wallet Pizza ' \
                'for really cheap and ridiculously good pizzas that are made fresh and cook in literally ' \
                'one minute. ' \
                'Be sure to have some risotto, more traditional than pasta in the north of Italy. I also had ' \
-               'life-changing amaretto gelato at a little shop called ___. Lastly, a really good restaurant is ' \
-               '________.', \
+               'legitimately life-changing amaretto gelato at a little shop called Gelateria Ponte Pietra Verona. ' \
+               'Lastly, a really good restaurant is Osteria Caffè Monte Baldo.', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/italy/verona.JPG"},
@@ -1221,6 +1248,10 @@ def set_display_children(value):
                 ride="carousel",
                 className="carousel-fade"
                 ),
+    if value == 'Limerick':
+        return 'Trip upcoming in October!'
+    if value == 'Tralee':
+        return 'Trip upcoming in October!'
 
 # Mexico
     if value == 'Cancún':
