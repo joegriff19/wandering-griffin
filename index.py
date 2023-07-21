@@ -321,7 +321,21 @@ def set_display_children(value):
 
 # Bahamas
     if value == 'Eleuthera':
-        return 'ready for an epic sailing trip??'
+        return 'ready for an epic sailing trip??', html.Br(), html.Br(), \
+           html.Div(
+               style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px", "margin": "auto"},
+               # style={"width": "55%", "padding": "0px", 'margin': 'auto'},
+               children=[
+                   dp.DashPlayer(
+                       id="player",
+                       url="https://youtu.be/x5OY6N37BNM",
+                       controls=True,
+                       width="100%",
+                       # height="100%",
+                       height="200px",
+                   )
+               ]
+           ),
     if value == 'New Providence (where Nassau is)':
         return 'explore Nassau, eat conch, go to the beach, and listen to Bob'
 
@@ -1044,10 +1058,13 @@ def set_display_children(value):
         return 'If you like to have fun and drink beer then Oktoberfest is ' \
                'a must at some point. Munich is where the one true Oktoberfest is held. There are other ' \
                'celebrations around Germany but nothing compares to the real deal. Beyond Oktoberfest -- it is ' \
-               'the capital of Bavaria. Very pretty city. Bavaria is home to some beautiful mountains, the ' \
-               'fairtyale-like castle called Neuschwanstein that inspired the Disney castle, one of the ' \
+               'the capital of Bavaria. Very pretty city. Bavaria is home to some beautiful mountains (the Alps), ' \
+               'the fairtyale-like castle called Neuschwanstein that inspired the Disney castle, one of the ' \
                'most successful (but annoying) football teams in the world in Bayern Munich, ' \
-               'and also home to some of the best beers in the world. Some of their most delicious ' \
+               'and also home to some of the best beers in the world. There are some absolutely beautiful lakes ' \
+               'up in the Alps that are easy day trips from Munich (especially if you rent a car). ' \
+               'Jochberg is an awesome hike with stunning views of the Alps, Kochelsee, and Walchensee.' \
+               'Some of their most delicious ' \
                '(and most unique) beers are the wheat beers (Weissbier / Weißbier / Hefeweizen). ' \
                'The Englischer Garten park is beautiful -- ' \
                "it's fun to watch people surf here on a little artificial wave canal and there " \
@@ -1113,6 +1130,22 @@ def set_display_children(value):
     if value == 'Southern half of island':
         image_path = 'assets/iceland/hottub.JPG'
         return 'so much to see in not enough time', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                          "margin": "auto"},
+                   # style={"width": "55%", "padding": "0px", 'margin': 'auto'},
+                   children=[
+                       dp.DashPlayer(
+                           id="player",
+                           url="https://youtu.be/6cJNYYk1n3I",
+                           controls=True,
+                           width="100%",
+                           # height="100%",
+                           height="200px",
+                       )
+                   ]
+               ), \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/iceland/hotspring.JPG"},
@@ -1149,10 +1182,10 @@ def set_display_children(value):
                 className="carousel-fade"
                 ),
     if value == 'Florence':
-        return 'Maybe my favorite city in Italy. The __ river runs right through the city and the sun sets ' \
+        return 'Maybe my favorite city in Italy. The Arno river runs right through the city and the sun sets ' \
                'beautifully over it (at least in April when I went!). DO NOT come here without ' \
                'visiting the world ' \
-               "famous sandwich shop All'Antico at least once... I would recommend coming multiple times. " \
+               "famous sandwich shop All'Antico at least once... I would recommend coming multiple times! " \
                "For just 5 " \
                "euros (in 2017) you get a huge sandwich on lovely focaccia bread topped high with the freshest " \
                "mozarrella, tomatoes, and prosciutto, finished with this black truffle sauce that is " \
@@ -1181,7 +1214,8 @@ def set_display_children(value):
                'the duomo are really nice. In the south of the city the Navigli district is awesome -- ' \
                'along a river/canal, there are tons of restaurants with massive buffets that offer really good ' \
                'all you can eat happy hour ' \
-               'deals. Go to this fun bar with weirdly-shaped beer glasses called ____. Be sure to have some ' \
+               'deals. Go to this fun bar with weirdly-shaped beer glasses called La Fontanella. ' \
+               'Be sure to have some ' \
                'risotto, more traditional than pasta in the north of Italy. The city is also home to the ' \
                'legendary San Siro stadium where both of the very successful football teams, AC Milan and ' \
                'Internazionale (Inter for short) Milan, play. However, beyond this, Milan feels like ' \
@@ -1390,7 +1424,24 @@ def set_display_children(value):
 
 # Peru
     if value == 'Oslo':
-        return 'what a performance Erling Haaland!!', \
+        return 'The capital of Norway! Oslo is so clean and all the infrastructure is so nice. ' \
+               'Everything is quite expensive though… for example, the airport is far away but there is a ' \
+               'really nice high speed train that takes you to the main train station in the center of the ' \
+               'city in just 20 minutes, but costs ~$20. Right near the main train station is the national ' \
+               'opera house right on the water. The architecture is really cool and unique — the street ' \
+               'becomes the bridge which eventually becomes the roof of the building! You can walk up to ' \
+               'the top of it for some great views of the fjord. Along this fjord there are a couple great ' \
+               'spots for food and drinks called SALT and Vippa. It there are some really nice areas of the ' \
+               'city on the water. There are also a number of really cool floating docks. They have outdoor ' \
+               'areas for enjoying the sun and jumping in the fjord and also indoor saunas! The sauna culture ' \
+               'is big here. There is also a sauna at SALT that is supposed to be cool. ' \
+               'Somewhere near the train station is a good place to stay. I stayed in K7 Hostel and it was ' \
+               'decent but pricey (~$75 per night for a dorm bed). The first highlight of my trip was the ' \
+               'hike I did to Vettakollen. I took the local train about 20 minutes to the Vettakollen stop' \
+               ' and then it was maybe a 20-30 minute hike up to a viewpoint for amazing views of the city ' \
+               'and the Oslo fjord! The next highlight (also the main reason for my trip) was seeing Norway ' \
+               'play against Cyprus in a qualifying game for the 2024 European football championships! ' \
+               'Norway won 3-1, Erling Haaland scored two goals, and Martin Ødegaard had a great game as well.', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/norway/oslo.JPG"},
