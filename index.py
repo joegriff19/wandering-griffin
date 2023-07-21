@@ -36,7 +36,7 @@ all_options = {
     'Bosnia & Herzegovina 🇧🇦': ['Medjugorje', 'Mostar'],
     'Bulgaria 🇧🇬': ['Sofia', 'Varna'],
     'Canada 🇨🇦': ['Banff', 'Calgary'],
-    'Chile 🇨🇱': ['Puerto Natales (Patagonia)', 'Santiago', 'Torres del Paine National Park (Patagonia)',
+    'Chile 🇨🇱': ['Puerto Natales (Patagonia)', 'Santiago', 'Torres del Paine NP (Patagonia)',
                  'Valparaíso / Viña del Mar'],
     'Croatia 🇭🇷': ['Dubrovnik', 'Motovun', 'Opatija', 'Plitvice Lakes National Park', 'Pula', 'Rovinj',
                    'Vodnjan', 'Zagreb'],
@@ -116,10 +116,10 @@ index_layout = html.Div(
             html.Header(
                 children=[
                     # html.Div(children="wandering griffin", style={"fontSize": "75px"}),
-                    html.Div(children="wandering griffin travel recs", className="wg"),
+                    html.Div(children="wandering griffin travel", className="wg"),
                     # html.Div(children="travel recs", className="wg"),
                     html.Div(children="🌎", style={"fontSize": "85px"}),
-                    html.Div(children="I can't do everything but I can try...", className="powered"),
+                    html.Div(children="I can't do everything but I can try!", className="powered"),
                     # html.Div(children="powered by JI", className="powered"),
                     html.Br(),
                 ],
@@ -542,7 +542,8 @@ def set_display_children(value):
                 ride="carousel",
                 className="carousel-fade"
                 ),
-    if value == 'Torres del Paine National Park (Patagonia)':
+
+    if value == 'Torres del Paine NP (Patagonia)':
         return '"The W" trail was stunning from start to finish. The Torres on the last morning was an amazing end. ' \
                'About 50 miles in 4 days. The refugios are really fun to stay in. We stayed at Francés the first ' \
                'two nights and then Chileno on the last night. Breakfast and dinner ' \
@@ -551,17 +552,19 @@ def set_display_children(value):
                "water that you can drink, so you don't need to bring any water with you. This was really nice. " \
                "End of September was a good time to go as it wasn't too hot as winter just ended and " \
                "there weren't too many tourists yet. You can also catch the end of ski season in the Andes as well! " \
-               "Also the southern-most game of beer die ever was played in this park in Sept 2022. ", \
+               "Also the southern-most game of beer die ever was played in this park in Sept 2022.", \
                html.Br(), html.Br(), \
                html.Div(
-                   style={"width": "55%", "padding": "0px", 'margin': 'auto'},
+                   style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px", "margin": "auto"},
+                   # style={"width": "55%", "padding": "0px", 'margin': 'auto'},
                    children=[
                        dp.DashPlayer(
                            id="player",
                            url="https://youtu.be/eQe3kmo47b8",
                            controls=True,
                            width="100%",
-                           height="300px",
+                           # height="100%",
+                           height="200px",
                        )
                    ]
                ), \
