@@ -1086,6 +1086,7 @@ def set_display_children(value):
                     {"src": "assets/germany/munich3.JPG"},
                     {"src": "assets/germany/munich4.JPG"},
                     {"src": "assets/germany/munich5.JPG"},
+                    {"src": "assets/germany/munich6.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1113,8 +1114,8 @@ def set_display_children(value):
     if value == 'Budapest':
         return 'Coolest parliament building in the world? The ruin pubs (makeshift pubs out of buildings ' \
                'that were damaged in WW2 and then abandoned) are really quirky, creative, and fun. ' \
-               'Be absolutely sure to climb up the __ to see Lady Freedom (formerly called "Lady Communism"). ' \
-               'The view of the river and the city ' \
+               'Be absolutely sure to climb up the citadel to see the Liberty Statue ' \
+               '(formerly the "Communism statue"). The view of the river and the city ' \
                'down below is amazing. Definitely go to the famous Széchenyi bath too.'
 
 # Iceland
@@ -1194,7 +1195,21 @@ def set_display_children(value):
                "bottle of wine to get beautiful views of the whole city, with the duomo taking center stage. " \
                "You are " \
                "in Tuscany, so a day trip to visit vineyards is also a great idea. There are a number of " \
-               "options for this."
+               "options for this.", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/italy/flo.JPG"},
+                    {"src": "assets/italy/flo1.JPG"},
+                    {"src": "assets/italy/flo2.JPG"},
+                    {"src": "assets/italy/flo3.JPG"},
+                    {"src": "assets/italy/flo5.JPG"},
+                    {"src": "assets/italy/flo6.JPG"},
+                    {"src": "assets/italy/flo7.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Lecco':
         return 'Lovely day trip from Bergamo', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -1219,20 +1234,66 @@ def set_display_children(value):
                'risotto, more traditional than pasta in the north of Italy. The city is also home to the ' \
                'legendary San Siro stadium where both of the very successful football teams, AC Milan and ' \
                'Internazionale (Inter for short) Milan, play. However, beyond this, Milan feels like ' \
-               'more of a place to shop luxury brands and eat fancy meals.'
+               'more of a place to shop luxury brands and eat fancy meals.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    # {"src": "assets/italy/milan2.JPG"},
+                    {"src": "assets/italy/milan3.JPG"},
+                    {"src": "assets/italy/milan4.JPG"},
+                    {"src": "assets/italy/milan5.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Rome':
         return 'So much fascinating history here. The food scene is also incredible. ' \
                'The city is quite big with so many different neighborhoods, all deserving of some time ' \
                'being spent there. However, in a short ' \
-               'trip, be sure to visit the coliseum and eat as much pizza, pasta, and gelato as possible.'
+               'trip, be sure to visit the coliseum and eat as much pizza, pasta, and gelato as possible.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/italy/rome2.JPG"},
+                    {"src": "assets/italy/rome1.JPG"},
+                    {"src": "assets/italy/rome.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Vatican 🇻🇦':
-        return 'Definitely worth some time on your visit to Rome, especially as a Catholic. The main plaza itself is ' \
-               'really nice, but also go inside -- you have the Sistine Chapel, __, and more. '
+        return 'Definitely worth some time on your visit to Rome, especially as a Catholic. The main plaza (St. ' \
+               "Peter's Square) with St. Peter's Basilica is " \
+               'really nice, but also be sure to see the Sistine Chapel and check out some of the museums as well.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/italy/vat.JPG"},
+                    # {"src": "assets/italy/vat1.JPG"},
+                    # {"src": "assets/italy/vat4.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Venice':
         return 'It is definitely as charming as everyone says it is. Visit the main plaza (St. Marco) and church, ' \
                'go to the top of the tower there for great views of the city, take a boat ride (the boat usually ' \
                'has a fixed cost no matter the size of your group -- find some new friends to lower the cost per ' \
-               'person!), and just enjoy the lovely ambiance.'
+               'person!), and just enjoy the lovely ambiance.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/italy/ven.JPG"},
+                    {"src": "assets/italy/ven1.JPG"},
+                    {"src": "assets/italy/ven2.JPG"},
+                    {"src": "assets/italy/ven3.JPG"},
+                    {"src": "assets/italy/ven4.JPG"},
+                    {"src": "assets/italy/ven5.JPG"},
+                    {"src": "assets/italy/ven6.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Verona':
         return 'The setting from the famous Romeo and Juliet play -- Verona is a beautiful city ' \
                'that probably does ' \
@@ -1304,7 +1365,7 @@ def set_display_children(value):
                "market. Having a mariachi band step onto your boat and play a few songs while drinking beers, " \
                "eating elote, and floating down the river is just truly a beautiful life experience. " \
                "Be sure to have a good amount of cash for this. " \
-               "Also see the Frida Kahlo house and check out __ market. It is 100% authentic and you can try " \
+               "Also see the Frida Kahlo house and check out the Coyoacán market. It is 100% authentic and you can try " \
                "ants, crickets, and even scorpions if you are feeling ambitious. It definitely helps to " \
                "speak some Spanish, as there are not a lot of tourists compared to beach or resort towns in Mexico." \
                'Mexico City is also home to the legendary Azteca football stadium, where the Mexico national ' \
@@ -1353,7 +1414,7 @@ def set_display_children(value):
                'something. I think restaurants compensate them if they bring people to their restaurant. However, ' \
                'once you are with a local no one else will bother you. Getting a guide for a day is not too ' \
                'expensive, and will likely also set you up to go a city near the beach and ride camels, which ' \
-               'as you can imagine is a really fun unique experience. The food there is great -- the crepe like ' \
+               'as you can imagine is a really fun unique experience. The food there is great -- the crepe-like ' \
                'pancakes for breakfast, chicken tagine, ____. Also go to Cafe ___. Jimmy Hendrix liked going here ' \
                'and the view of the water is really nice. You can even see the south of Spain in the distance.', \
                html.Br(), html.Br(), dbc.Carousel(
