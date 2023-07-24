@@ -252,11 +252,12 @@ def set_display_children(value):
                "called La Bombonera, is many soccer fans’ holy grail of soccer stadiums. We did not go to a " \
                "game there unfortunately, but we went to a San Lorenzo (Pope Francis’ team) game " \
                "and the atmosphere was still like nothing I had ever seen before. You can be sure to get legitimate " \
-               "tickets by booking through this website: landing pad ba? ______________ " \
+               "tickets by booking through this website: https://landingpadba.com/ " \
                "Santiago is the name of the guy who runs the company. He is from " \
                "Argentina and loves football. You will meet him and any others going to the game at a famous pizza " \
-               "place. Buenos Aires has a huge Italian population and here you can try the famous super cheesy " \
-               "Argentinan pizza. Be sure to try the most famous one — onions and cheese. After some pizza and beer, " \
+               "place. Buenos Aires has a huge Italian population and here you can try the super cheesy " \
+               "Argentinian pizza. Be sure to try the most famous one, the fugazza " \
+               "(loads of cheese and grilled onions). After some pizza and beer, " \
                "you will take a private bus to the stadium. The pizza and beer at the restaurant, and the " \
                "transportation to and from the game, are included in your football ticket package. Although we did " \
                "not see a game at La Bombonera, we were still able to do a stadium visit. There was a very big " \
@@ -942,12 +943,13 @@ def set_display_children(value):
                "bars as well. There is an unreal rooftop at Klunkenkranich. Great craft beers and a good time at" \
                "Kaschk, Muted Horn, Hops & Barley, Protokoll, and Straßenbräu. Berlin may also randomly " \
                "have the most beaches of any city in the world. In many parks there are sand volleyball courts " \
-               "and there are so many beach bars in parks and on the rivers around the city as well. There are so " \
-               "many parks, including maybe the coolest park ever, which is an old airport that has now become a " \
-               "massive park right in the city. Another awesome park is Treptower Park. There are lots of sports " \
-               "here as well (to watch and play). The pro " \
+               "and there are so many beach bars in parks and on the rivers around the city as well. However, " \
+               "to get to a proper beach you need to travel out of the city a bit -- the Wannsee has maybe the " \
+               "best beach. There are so many parks, including maybe the coolest park ever, which is an old airport " \
+               "that has now become a massive park right in the city. Another awesome park is Treptower Park. " \
+               "There are lots of sports here as well (to watch and play). The pro " \
                "basketball (Alba), soccer (2 teams: Hertha and Union), handball (Füchse), and ice hockey (Eisbären) " \
-               "games all provide really fun atmospheres. Be sure to eat a döner kebab (a variation of a Turkish " \
+               "games all provide a very fun atmosphere. Be sure to eat a döner kebab (a variation of a Turkish " \
                "kebab that originated in Berlin -- the best place is Nefi's), currywurst (Curry 36 is great), and " \
                "vietnamese food (the duck at New Day is crazy good). For German food, 'Max & Moritz' is a " \
                "really cool restaurant with great food and beers. There is also the Hofbräuhaus Berlin for very " \
@@ -967,6 +969,7 @@ def set_display_children(value):
                     {"src": "assets/germany/berlin7.JPG"},
                     {"src": "assets/germany/berlin4.JPG"},
                     {"src": "assets/germany/berlin8.jpeg"},
+                    {"src": "assets/germany/berlin9.jpeg"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1015,7 +1018,7 @@ def set_display_children(value):
                'with its roof resembling and reflecting the waves of the water below. Go up to the top of the ' \
                'nearby church, ____ to get great views of the port and of the concert hall. Be sure to walk ' \
                'through the Speicherstadt, the beautiful storage area for all incoming goods coming by boat ' \
-               'to the city. Have a drink at the little castle in this area, called the ______. Also be sure ' \
+               'to the city. Have a drink at the little castle in this area, called the Wasserschloss. Also be sure ' \
                'to visit the Hamburger version of the Amsterdam red light district, St. Pauli. ' \
                'Different than Amsterdam though in that this was formerly the outside of the city of Hamburg ' \
                'and thus became the more expressive and creative area, with music, art, and bars ' \
@@ -1082,6 +1085,7 @@ def set_display_children(value):
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/germany/munich.JPG"},
+                    {"src": "assets/germany/munich1.JPG"},
                     {"src": "assets/germany/munich2.JPG"},
                     {"src": "assets/germany/munich3.JPG"},
                     {"src": "assets/germany/munich4.JPG"},
@@ -1237,9 +1241,11 @@ def set_display_children(value):
                'more of a place to shop luxury brands and eat fancy meals.', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    # {"src": "assets/italy/milan2.JPG"},
+                    {"src": "assets/italy/milan.JPG"},
+                    {"src": "assets/italy/milan1.JPG"},
                     {"src": "assets/italy/milan3.JPG"},
                     {"src": "assets/italy/milan4.JPG"},
+                    {"src": "assets/italy/milan2.JPG"},
                     {"src": "assets/italy/milan5.JPG"},
                 ],
                 interval=2000,
@@ -1253,9 +1259,12 @@ def set_display_children(value):
                'trip, be sure to visit the coliseum and eat as much pizza, pasta, and gelato as possible.', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/italy/rome2.JPG"},
-                    {"src": "assets/italy/rome1.JPG"},
                     {"src": "assets/italy/rome.JPG"},
+                    {"src": "assets/italy/rome1.JPG"},
+                    {"src": "assets/italy/rome2.JPG"},
+                    {"src": "assets/italy/rome3.JPG"},
+                    {"src": "assets/italy/rome4.JPG"},
+                    {"src": "assets/italy/rome5.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1268,7 +1277,7 @@ def set_display_children(value):
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/italy/vat.JPG"},
-                    # {"src": "assets/italy/vat1.JPG"},
+                    {"src": "assets/italy/vat1.JPG"},
                     # {"src": "assets/italy/vat4.JPG"},
                 ],
                 interval=2000,
@@ -1407,16 +1416,20 @@ def set_display_children(value):
 
 # Morocco
     if value == 'Tangier':
-        return 'I felt more culture shock here than anywhere in Europe. The newer part of the city has a European ' \
+        return 'Despite being just 17 miles from the southern coast of Spain, I felt more culture shock here than ' \
+               'anywhere in Europe. The newer part of the city has a European ' \
                'feel as this used to be the gateway from Europe to Africa (and vice versa) before air travel. ' \
-               'However, inside the old city walls of Tangier (the Kazbah) is a whole different story.' \
-               'There are a number of locals here who will as you where you are going or if you want to eat ' \
-               'something. I think restaurants compensate them if they bring people to their restaurant. However, ' \
-               'once you are with a local no one else will bother you. Getting a guide for a day is not too ' \
-               'expensive, and will likely also set you up to go a city near the beach and ride camels, which ' \
-               'as you can imagine is a really fun unique experience. The food there is great -- the crepe-like ' \
-               'pancakes for breakfast, chicken tagine, ____. Also go to Cafe ___. Jimmy Hendrix liked going here ' \
-               'and the view of the water is really nice. You can even see the south of Spain in the distance.', \
+               'However, inside the old city walls of Tangier (the Kasbah) is a whole different story.' \
+               'Here, there are a number of locals who will ask you where you are going or if you want to eat ' \
+               'something. I think restaurants compensate them if they bring people to their restaurant. ' \
+               'If you are with a local though no one will bother you. Thus, getting a guide for a day is a good ' \
+               'idea and not too expensive. They will likely also set you up to go a nearby beach and ride camels, ' \
+               'which was such a fun, unique experience. The food there is so good -- the ' \
+               "'thousand-hole pancakes' and shakshouka (my favorite breakfast on the planet), " \
+               "chicken tagine (lamb or beef are also amazing), couscous (originally from Morocco and also " \
+               "their national dish), fish chermoula, and zaalouk (like baba ganoush). Be sure to visit Cafe Hafa. " \
+               "It overlooks the Bay of Tangier (and the Strait of Gibraltar) and you can see the " \
+               "southern tip of Spain on a clear day! This was also a favorite spot of Jimi Hendrix!", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/morocco/tangier.JPG"},
@@ -1461,9 +1474,11 @@ def set_display_children(value):
     if value == 'Skopje':
         return 'Really cool authentic Balkan city with not so many tourists. This was the home / birthplace ' \
                "of Alexander the Great. There is a huge statue of him on the main plaza, and it's funny there a big " \
-               "sign for a Macedonian beer company right behind him -- CKO(pi)CKO / Skopsko. " \
+               "sign for a Macedonian beer company right behind him -- CKOΠCKO (SKOPSKO). You'll notice that " \
+               "most everything is written with the cyrillic alphabet rather than the latin alphabet, so it does " \
+               "help to learn a bit about the cyrillic alphabet. "\
                "The Alexander the Great statue is just one of seemingly hundreds of statues in the city. Keep an " \
-               "eye out as you walk around, they are fun. " \
+               "eye out as you walk around for other statues, they are fun. " \
                "Be sure to climb up to the fortress that overlooks the city. Ideally for sunset. There's an " \
                "amazing view of the city and the snow-covered mountains in the background. " \
                "The old town / bazaar is really cool. Just walk around and explore. I went to ___ and it was really " \
@@ -1545,7 +1560,7 @@ def set_display_children(value):
         return 'trip upcoming in August!'
     if value == 'Wroclaw':
         return 'Very pretty small city. The people were all very nice. Go to the market square and check out some ' \
-               'of the cafes and restaurants. The ___ restaurant is really great -- this is also a great option ' \
+               'of the cafes and restaurants. The Konspira restaurant is really great -- this is also a great option ' \
                'because there is a lot about the history of Wroclaw and Poland on the walls of the ' \
                'restaurant and in the menu. Definitely get pierogi. Soups are very good and traditional too. ' \
                'Be on the lookout for the hundreds of little gnomes around the city as you walk around. They are ' \
@@ -1621,7 +1636,7 @@ def set_display_children(value):
 
 # Spain
     if value == 'Azpeitia':
-        return 'Birthplace of St. Ignatius and home to a large festival on July ___ each year for his feast day'
+        return 'Birthplace of St. Ignatius and home to a large festival on July 31 each year for his feast day'
     if value == 'Barcelona':
         return 'ole', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -1650,17 +1665,17 @@ def set_display_children(value):
     if value == 'Bilbao':
         return "Capital of the Basque country. I didn't spend too much time here but worth a stop. "
     if value == 'Buñol':
-        return "Home of the world’s biggest food fight! It happens in August every year. It is a tiny town with " \
-               "probably little to no tourism for most of the year besides this weekend. Trucks upon trucks bring " \
-               "tomatoes that weren’t quite up to the country’s high standards to be sold for consumption. These " \
-               "trucks then push through the super narrow streets of ___, and there are even people in front of the " \
-               "trucks to push the crowds off to the side so the trucks can pass through. As the truck passes, " \
-               "people standing on the truck throw and shovel the tomatoes into the crowds. People in turn throw " \
-               "these tomatoes around again and again. By the end, the entire street becomes a river of tomato " \
-               "mush. Make sure you wear a shirt that you don’t mind throwing out. Also, you absolutely want to " \
+        return "Home of the world’s biggest food fight! It happens the last Wednesday of August every year. " \
+               "It is a tiny town with probably little to no tourism for most of the year besides this weekend. " \
+               "Trucks upon trucks bring tomatoes that weren’t quite up to Spain’s high standards to be sold for " \
+               "consumption. These trucks then push through the super narrow streets -- there are even people / " \
+               "staff in front of the trucks to push the crowds off to the side so the trucks can get through. As " \
+               "the trucks pass, people standing on the truck throw and shovel tomatoes into the crowds. People " \
+               "in turn throw these tomatoes around again and again. By the end, the entire street becomes a river " \
+               "of tomato mush. Make sure you wear a shirt that you don’t mind throwing out. Also, you 100% want to " \
                "wear ski goggles or lab goggles, especially if you are tall. Tall people are going to get caught " \
                "in the tomato crossfire a lot more! It is quite the experience and was a lot of fun, but I probably " \
-               "do not need to ever go again. I would probably only ever recommend coming to ___ for La Tomatina, FYI. "
+               "do not need to go again."
     if value == 'Girona':
         return "Capital of the northern province of Catalonia. It's a cool little city if you want to visit another " \
                "Catalan city."
@@ -1668,15 +1683,18 @@ def set_display_children(value):
         return 'Absolutely beautiful city. The Sierra Nevada mountains surround the city and the city itself is ' \
                'quite mountainous too. THe Alhambra castle complex is incredible. The south of Spain was controlled ' \
                'by the Moors for a long time, and each new leader would add a new addition to the Alhambra. However, ' \
-               'when the ___ happened in 1492 and all people were forced to either convert to Christianity or leave' \
-               'the country, King Ferdinand and Queen Isabella did not have the Muslim palace destroyed, but rather ' \
-               'added their own addition and touches. The result is awesome. The gardens are also beautiful. ' \
+               "when the 'Reconquista' culminated in 1492 and Spain once again took control of Granada, " \
+               "King Ferdinand and Queen Isabella chose not have the Muslim palace destroyed, but rather " \
+               'added their own addition and touches. The resulting structures, that still stand today, are ' \
+               'incredible. The gardens there are also so beautiful. ' \
                'Granada has a strong tapas tradition -- meaning that whenever you order drinks you are almost always' \
                'served a tapa to go with the drinks. The food in general is also great.'
     if value == 'Irún':
         return 'This is the main city on the Spanish side of the Spain / France border near the coast. ' \
-               'Definitely off the beaten path but really nice little city. The view from on top of ___ mountain ' \
-               'where you can see the river that divides Spain and France is beautiful and really neat to see.'
+               'Definitely off the beaten path but really nice little city. The view from on top of the mountain ' \
+               'at Jaizkibeleko V. Dorrea where you can see the Bidasoa river that divides Spain and France is ' \
+               'absolutely beautiful. You can also walk along this river in the city as well, there are plenty ' \
+               'of nice bars, restaurants, and shops here!'
     if value == 'Madrid':
         return 'The Spanish capital. Definitely a different feel than Barcelona but both are amazing cities.', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -1715,7 +1733,8 @@ def set_display_children(value):
         return 'ole'
     if value == 'San Sebastián':
         return 'Beautiful city on the northern coast of Spain. It supposedly has the highest density of bars and ' \
-               'restuarants in the world. Go up to ___ to get a great view of the bay and city from above.'
+               'restuarants in the world. Take the Funicular Monte Igueldo up to Igeldo mendiko behatokia ' \
+               'to get an amazing view of the bay and city from above.'
     if value == 'Sitges':
         return 'The carnaval capital of Spain'
     if value == 'Segovia':
