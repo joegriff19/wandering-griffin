@@ -1194,7 +1194,7 @@ def set_display_children(value):
                "For just 5 " \
                "euros (in 2017) you get a huge sandwich on lovely focaccia bread topped high with the freshest " \
                "mozzarella, tomatoes, and prosciutto, finished with this black truffle sauce that is " \
-               "just too good. " \
+               "just too good. There will likely be a line but trust me it is worth it!" \
                "Definitely visit the cathedral. You can also go up the tower for some great views. " \
                "Also next to the cathdral is another great spot for more great sandwiches and food -- there is a " \
                "very nice little cafe here called Panini Toscani. Also be sure to climb up to the " \
