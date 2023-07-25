@@ -969,7 +969,7 @@ def set_display_children(value):
                     {"src": "assets/germany/berlin7.JPG"},
                     {"src": "assets/germany/berlin4.JPG"},
                     {"src": "assets/germany/berlin8.jpeg"},
-                    {"src": "assets/germany/berlin9.jpeg"},
+                    {"src": "assets/germany/berlin9.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1187,25 +1187,29 @@ def set_display_children(value):
                 className="carousel-fade"
                 ),
     if value == 'Florence':
-        return 'Maybe my favorite city in Italy. The Arno river runs right through the city and the sun sets ' \
+        return 'Such a lovely city. The Arno river runs right through the city and the sun sets ' \
                'beautifully over it (at least in April when I went!). DO NOT come here without ' \
                'visiting the world ' \
                "famous sandwich shop All'Antico at least once... I would recommend coming multiple times! " \
                "For just 5 " \
                "euros (in 2017) you get a huge sandwich on lovely focaccia bread topped high with the freshest " \
-               "mozarrella, tomatoes, and prosciutto, finished with this black truffle sauce that is " \
+               "mozzarella, tomatoes, and prosciutto, finished with this black truffle sauce that is " \
                "just too good. " \
-               "Visit the cathedral (duomo in Italian) and be sure to climb up to the Michaelangelo plaza with a " \
-               "bottle of wine to get beautiful views of the whole city, with the duomo taking center stage. " \
-               "You are " \
+               "Definitely visit the cathedral. You can also go up the tower for some great views. " \
+               "Also next to the cathdral is another great spot for more great sandwiches and food -- there is a " \
+               "very nice little cafe here called Panini Toscani. Also be sure to climb up to the " \
+               "Michelangelo plaza with a bottle of wine to get beautiful views of the whole city, " \
+               "with the cathedral taking center stage. For a fun bar, go to Red Garter. Lastly, you are " \
                "in Tuscany, so a day trip to visit vineyards is also a great idea. There are a number of " \
-               "options for this.", \
+               "options for this, just look online on Viator or Airbnb Experiences.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/italy/flo.JPG"},
                     {"src": "assets/italy/flo1.JPG"},
                     {"src": "assets/italy/flo2.JPG"},
                     {"src": "assets/italy/flo3.JPG"},
+                    {"src": "assets/italy/flo4.JPG"},
+                    {"src": "assets/italy/flo8.JPG"},
                     {"src": "assets/italy/flo5.JPG"},
                     {"src": "assets/italy/flo6.JPG"},
                     {"src": "assets/italy/flo7.JPG"},
@@ -1697,16 +1701,16 @@ def set_display_children(value):
                'of nice bars, restaurants, and shops here!'
     if value == 'Madrid':
         return 'The Spanish capital. Definitely a different feel than Barcelona but both are amazing cities.', \
-               html.Br(), html.Br(), dbc.Carousel(
-                items=[
-                    # {"src": "assets/spain/mad.JPG"},
-                    # {"src": "assets/spain/mad1.JPG"},
-                    # {"src": "assets/spain/mad2.JPG"},
-                ],
-                interval=2000,
-                ride="carousel",
-                className="carousel-fade"
-                ),
+               # html.Br(), html.Br(), dbc.Carousel(
+               #  items=[
+               #      # {"src": "assets/spain/mad.JPG"},
+               #      # {"src": "assets/spain/mad1.JPG"},
+               #      # {"src": "assets/spain/mad2.JPG"},
+               #  ],
+               #  interval=2000,
+               #  ride="carousel",
+               #  className="carousel-fade"
+               #  ),
     if value == 'Málaga':
         return 'Nice city on the Costa del Sol (Coast of the Sun)', \
                html.Br(), html.Br(), dbc.Carousel(
