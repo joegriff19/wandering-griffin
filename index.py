@@ -1260,7 +1260,9 @@ def set_display_children(value):
         return 'So much fascinating history here. The food scene is also incredible. ' \
                'The city is quite big with so many different neighborhoods, all deserving of some time ' \
                'being spent there. However, in a short ' \
-               'trip, be sure to visit the coliseum and eat as much pizza, pasta, and gelato as possible.', \
+               'trip, be sure to visit the coliseum, the old Roman ruins, get your Lizzie McGuire on at the ' \
+               'Trevi Fountain, and eat as much pizza, pasta, and gelato as possible! Also be sure to ' \
+               'visit the Vatican.', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/italy/rome.JPG"},
@@ -1269,6 +1271,7 @@ def set_display_children(value):
                     {"src": "assets/italy/rome3.JPG"},
                     {"src": "assets/italy/rome4.JPG"},
                     {"src": "assets/italy/rome5.JPG"},
+                    {"src": "assets/italy/rome6.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
