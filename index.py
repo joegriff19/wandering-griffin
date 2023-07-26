@@ -1199,14 +1199,13 @@ def set_display_children(value):
     if value == 'Florence':
         return 'Such a lovely city. The Arno river runs right through the city and the sun sets ' \
                'beautifully over it (at least in April when I went!). DO NOT come here without ' \
-               'visiting the world ' \
-               "famous sandwich shop All'Antico at least once... I would recommend coming multiple times! " \
-               "For just 5 " \
-               "euros (in 2017) you get a huge sandwich on lovely focaccia bread topped high with the freshest " \
+               "visiting the world famous sandwich shop All'Antico at least once... I would recommend coming " \
+               "multiple times! For just 5 " \
+               "euros (in 2017) you can get a huge sandwich on lovely bread topped high with the freshest " \
                "mozzarella, tomatoes, and prosciutto, finished with this black truffle sauce that is " \
-               "just too good. There will likely be a line but trust me it is worth it!" \
+               "just too good. There will likely be a line but trust me it is so worth it!" \
                "Definitely visit the cathedral. You can also go up the tower for some great views. " \
-               "Also next to the cathdral is another great spot for more great sandwiches and food -- there is a " \
+               "Also next to the cathedral is another great spot for more great sandwiches and food -- there is a " \
                "very nice little cafe here called Panini Toscani. Also be sure to climb up to the " \
                "Michelangelo plaza with a bottle of wine to get beautiful views of the whole city, " \
                "with the cathedral taking center stage. For a fun bar, go to Red Garter. Lastly, you are " \
@@ -1300,7 +1299,10 @@ def set_display_children(value):
     if value == 'Vatican 🇻🇦':
         return 'Definitely worth some time on your visit to Rome, especially as a Catholic. The main plaza (St. ' \
                "Peter's Square) with St. Peter's Basilica is " \
-               'really nice, but also be sure to see the Sistine Chapel and check out some of the museums as well.', \
+               'really nice, but also be sure to see the Sistine Chapel and check out some of the museums as well.' \
+               'Be sure to make a stop at Bonci Pizzarium before or after your visit. They are world famous ' \
+               '(you will probably recognize the logo) for their pizza but they have other food options as well. ' \
+               'There will likely be a line but it will be worth the wait!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/italy/vat.JPG"},
