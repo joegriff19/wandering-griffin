@@ -163,7 +163,15 @@ index_layout = html.Div(
                 html.Div(id='city_info'),
                 html.Br(),
                 # html.Div(id='us-city-info'),
-                html.Br(),
+                html.Div(children="If this was helpful, please consider buying me a beverage! Thank you!",
+                         className="powered"),
+                html.Div(children="🍻", style={"fontSize": "35px"}),
+                dbc.Button(children='My Venmo',
+                           id='button_plain',
+                           color="primary",
+                           outline=True, # more lightweight format
+                           # size="med", # sm, lg
+                           href="https://venmo.com/u/joegriff19")
             ], style={'textAlign': 'center',
                       'max-width': '900px',
                       'margin': 'auto',
@@ -173,7 +181,7 @@ index_layout = html.Div(
               # 'verticalAlign': 'middle'
               # 'align-items': 'center', 'justify-content': 'center'
                       }
-            )
+            ),
 
     ])
 
@@ -252,7 +260,9 @@ def set_display_children(value):
                "called La Bombonera, is many soccer fans’ holy grail of soccer stadiums. We did not go to a " \
                "game there unfortunately, but we went to a San Lorenzo (Pope Francis’ team) game " \
                "and the atmosphere was still like nothing I had ever seen before. You can be sure to get legitimate " \
-               "tickets by booking through this website: https://landingpadba.com/ " \
+               "tickets by booking through this website: ",\
+               html.A("https://landingpadba.com/", id='work', href="https://landingpadba.com/"), \
+               html.Br(), html.Br(),\
                "Santiago is the name of the guy who runs the company. He is from " \
                "Argentina and loves football. You will meet him and any others going to the game at a famous pizza " \
                "place. Buenos Aires has a huge Italian population and here you can try the super cheesy " \
@@ -1257,12 +1267,22 @@ def set_display_children(value):
                 className="carousel-fade"
                 ),
     if value == 'Rome':
-        return 'So much fascinating history here. The food scene is also incredible. ' \
-               'The city is quite big with so many different neighborhoods, all deserving of some time ' \
-               'being spent there. However, in a short ' \
-               'trip, be sure to visit the coliseum, the old Roman ruins, get your Lizzie McGuire on at the ' \
-               'Trevi Fountain, and eat as much pizza, pasta, and gelato as possible! Also be sure to ' \
-               'visit the Vatican.', \
+        return 'So much fascinating history here. The food scene is also incredible. Be sure to visit the coliseum, ' \
+               'the old Roman ruins, visit the Vatican(separate Italy page for this), and get your Lizzie McGuire ' \
+               'on at the Trevi Fountain! The city is quite big with so many different neighborhoods, ' \
+               'all deserving of some time being spent there. Trastevere is probably the most beloved neighborhood ' \
+               '-- beautiful and with many great resturants and bars. One very famous bar is Bar San Calisto. ' \
+               'Know that there are some Italian foods that are specifically Roman in origin and are best eaten in ' \
+               'Rome. The traditional cheese here is pecorino romano rather than parmigiano reggiano. There are ' \
+               'four classic Roman pastas that are all very connected, just with slight variations in ingredients -- ' \
+               "cacio e pepe (pecorino and pepper), pasta alla gricia (pecorino, pepper, and  guanciale), " \
+               "carbonara (pecorino, pepper, egg, and  guanciale), and pasta all'amatriciana " \
+               "(pecorino, pepper, tomatoes, and  guanciale). Hopefully you have time to try all of these!" \
+               "Unlike Neopolitan pizza, Roman pizza styles can actually vary quite a bit. " \
+               "Bonci Pizzarium is the most famous -- you will probably recognize the logo. Bonci Pizzarium is " \
+               "an easy stop before or after visiting the Vatican. Piccolo Buco is " \
+               "an easy stop before or after visiting the Trevi Fountain. Other great pizza spots include Sbanco " \
+               "(serving Birrificio del Ducato craft beers!), Tonda, and Trapizzino (multiple locations).", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/italy/rome.JPG"},
