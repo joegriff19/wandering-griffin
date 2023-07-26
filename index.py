@@ -1323,7 +1323,8 @@ def set_display_children(value):
         return 'It is definitely as charming as everyone says it is. Visit the main plaza (St. Marco) and church, ' \
                'go to the top of the tower there for great views of the city, take a boat ride (the boat usually ' \
                'has a fixed cost no matter the size of your group -- find some new friends to lower the cost per ' \
-               'person!), and just enjoy the lovely ambiance.', \
+               "person!) Beyond St. Marco, don't necessarily worry about " \
+               "trying to see or do everything -- just enjoy the lovely ambiance of the canals and little streets.",\
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/italy/ven.JPG"},
