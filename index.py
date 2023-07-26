@@ -1299,15 +1299,21 @@ def set_display_children(value):
     if value == 'Vatican 🇻🇦':
         return 'Definitely worth some time on your visit to Rome, especially as a Catholic. The main plaza (St. ' \
                "Peter's Square) with St. Peter's Basilica is " \
-               'really nice, but also be sure to see the Sistine Chapel and check out some of the museums as well.' \
-               'Be sure to make a stop at Bonci Pizzarium before or after your visit. They are world famous ' \
+               'really nice, but also be sure to see the Sistine Chapel (famous for Michelangelo painting on ' \
+               'ceiling of God and Adam reaching out to each other, picture below) and check out some of the museums ' \
+               'as well. Be sure to make a stop at Bonci Pizzarium before or after your visit. They are world famous ' \
                '(you will probably recognize the logo) for their pizza but they have other food options as well. ' \
                'There will likely be a line but it will be worth the wait!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/italy/vat.JPG"},
                     {"src": "assets/italy/vat1.JPG"},
-                    # {"src": "assets/italy/vat4.JPG"},
+                    {"src": "assets/italy/vat2.JPG"},
+                    {"src": "assets/italy/vat6.JPG"},
+                    {"src": "assets/italy/vat3.JPG"},
+                    {"src": "assets/italy/vat4.JPG"},
+                    {"src": "assets/italy/vat5.JPG"},
+
                 ],
                 interval=2000,
                 ride="carousel",
