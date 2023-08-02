@@ -1840,7 +1840,24 @@ def set_display_children(value):
 
 # Sweden
     if value == 'Stockholm':
-        return 'trip upcoming in July!'
+        return 'absolutely beautiful city! more info coming soon!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/sweden/sto.JPG"},
+                    {"src": "assets/sweden/sto1.JPG"},
+                    {"src": "assets/sweden/sto2.JPG"},
+                    {"src": "assets/sweden/sto3.JPG"},
+                    {"src": "assets/sweden/sto4.JPG"},
+                    {"src": "assets/sweden/sto5.JPG"},
+                    {"src": "assets/sweden/sto6.JPG"},
+                    {"src": "assets/sweden/sto7.JPG"},
+                    {"src": "assets/sweden/sto9.JPG"},
+                    {"src": "assets/sweden/sto10.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # USA
     if value == 'Champaign':
