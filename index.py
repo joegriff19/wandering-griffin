@@ -49,7 +49,7 @@ all_options = {
                    'Leipzig', 'Munich', 'Oranienburg', 'Potsdam', 'Rügen', 'Stralsund', 'Stuttgart'],
     'Hungary 🇭🇺': ['Budapest'],
     'Iceland 🇮🇸': ['Reykjavik', 'Southern half of island'],
-    'Italy 🇮🇹': ['Bergamo', 'Florence', 'Lecco', 'Milan', 'Rome', 'Vatican 🇻🇦', 'Venice', 'Verona'],
+    'Italy 🇮🇹': ['Bergamo', 'Florence', 'Genoa', 'Lecco', 'Milan', 'Portofino', 'Rome', 'Vatican 🇻🇦', 'Venice', 'Verona'],
     'Ireland 🇮🇪': ['Cliffs of Moher', 'Dublin', 'Limerick', 'Tralee'],
     'Mexico 🇲🇽': ['Cancún', 'Mexico City'],
     'Montenegro 🇲🇪': ['Kotor'],
@@ -58,7 +58,7 @@ all_options = {
     'North Macedonia 🇲🇰': ['Skopje'],
     'Norway 🇳🇴': ['Oslo'],
     'Peru 🇵🇪': ['Lima', 'Iquitos'],
-    'Poland 🇵🇱': ['Krakow', 'Wroclaw'],
+    'Poland 🇵🇱': ['Krakow', 'Wrocław'],
     'Portugal 🇵🇹': ['Guincho Beach', 'Lisbon'],
     'Puerto Rico 🇵🇷': ['Rincón', 'San Juan'],
     'Slovakia 🇸🇰': ['Bratislava'],
@@ -167,10 +167,9 @@ index_layout = html.Div(
                          className="powered"),
                 html.Div(children="🍻", style={"fontSize": "35px"}),
                 dbc.Button(children='My Venmo',
-                           id='button_plain',
                            color="primary",
-                           outline=True, # more lightweight format
-                           # size="med", # sm, lg
+                           outline=True,  # more lightweight format
+                           # size="med",  # sm, lg
                            href="https://venmo.com/u/joegriff19")
             ], style={'textAlign': 'center',
                       'max-width': '900px',
@@ -261,7 +260,7 @@ def set_display_children(value):
                "game there unfortunately, but we went to a San Lorenzo (Pope Francis’ team) game " \
                "and the atmosphere was still like nothing I had ever seen before. You can be sure to get legitimate " \
                "tickets by booking through this website: ",\
-               html.A("https://landingpadba.com/", id='work', href="https://landingpadba.com/"), \
+               html.A("https://landingpadba.com/", href="https://landingpadba.com/"), \
                html.Br(), html.Br(),\
                "Santiago is the name of the guy who runs the company. He is from " \
                "Argentina and loves football. You will meet him and any others going to the game at a famous pizza " \
@@ -370,37 +369,64 @@ def set_display_children(value):
 
     if value == 'Brussels':
         # image_path = 'assets/andrea_delirium.gif'
-        return 'It is often suggested to skip Brussels and visit other Belgian cities such as Ghent or Antwerp... ' \
+        return 'It is often suggested to skip Brussels (Band visit other Belgian cities such as Ghent or Antwerp... ' \
                'and while I love these smaller cities of Belgium, I definitely would NOT recommend immediately ' \
-               'skipping Brussels for other cities in Belgium. The center of Brussels is really nice. The main ' \
-               'square has a huge ____ with hundreds of little statues on the exterior depicting saints. ' \
-               'In addition to the main _____, the square has a number of other buildings that are much more ' \
-               'stunning in person than in pictures, especially becuase all the gold touches on the buildings ' \
-               'really stand out in person. I would highly recommend restaurant __ and ____. There are also ' \
-               'a couple really nice cafes in the _____ park in front of the Brussels Palace, called ___ and ___. ' \
-               'Would definitely recommend coming for a beverage and  / or some food hwen the weather is nice. ' \
+               'skipping Brussels for other cities in Belgium. The center of Brussels is really nice. The town hall ' \
+               'of Brussels is amazing. There are more than 300 little statues on the exterior depicting saints ' \
+               'and other historical figures. In addition to the town hall, the Grand Square (Grand Place in French) ' \
+               'has a number of other buildings that are much more stunning in person than in pictures, especially ' \
+               'because all the gold accents -- they really stand out in person. I would highly recommend restaurant ' \
+               'Fin de Siècle (amazing Flemish Carbonnade) and Le Bistro - Porte de Hal (amazing oyster buckets ' \
+               'and beer selection here). There are also a couple really nice cafes in the Parc de Bruxelles park in ' \
+               'front of the Brussels Palace, called Kiosk Radio and Woodpecker Parc Royal. ' \
+               'Would definitely recommend coming for a beverage and  / or some food when the weather is nice. ' \
                'It is also absolutely necessary to try the Belgian waffles (in the Liege style, they are somewhat ' \
-               'circular in shape). The best ones are from the food trucks called _____. You can find one ' \
-               '(or two) in front of the palace, and another one next to the Ferris wheel. Lastly, the ' \
-               'Delirium Village is really fun -- especially in the evenings -- definitely enjoy a few beers here! ', \
-
+               "circular in shape). The best ones are from the yellow food trucks called 'Gaufres Chaudes.' You can " \
+               "find one (or two) in front of the palace, and another one next to the Ferris wheel. Don't forget the " \
+               'Delirium Village -- it is really fun and gets quite lively in the evenings! Lastly, a couple of the ' \
+               "funniest and weirdest statues are the 'manneken pis' (peeing boy) and 'het zinneke' (peeing dog).", \
+                html.Br(), html.Br(), dbc.Carousel(
+                    items=[
+                        {"src": "assets/belgium/brussels.JPG"},
+                        {"src": "assets/belgium/brussels7.JPG"},
+                        {"src": "assets/belgium/brussels3.JPG"},
+                        {"src": "assets/belgium/brussels1.JPG"},
+                        {"src": "assets/belgium/brussels2.JPG"},
+                        {"src": "assets/belgium/brussels4.JPG"},
+                        {"src": "assets/belgium/brussels5.JPG"},
+                        {"src": "assets/belgium/brussels6.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                    ),
     if value == 'Leuven':
         return 'What a fun little town really close to Brussels. It is easily accessible via the train system;' \
-               'the ride takes less than 30 minutes from Brussels. The main attraction in Leuven is the ____ ' \
-               'and wow it is actually quite stunning. Be sure to also check out the other main plaza, ___.' \
+               'the ride takes less than 30 minutes from Brussels. The main attraction in Leuven is the Town Hall, ' \
+               'and wow it is actually quite stunning. There are 236 little statues on the exterior depicting saints ' \
+               'and other historical figures. Be sure to also check out the other main plaza, Oude Markt.' \
                'Enjoy some Stella Artois -- it is brewed here! You can actually visit the brewery, it is not far ' \
                'at all from the center of the city or the main train station. Be sure to book a tour ahead of ' \
                'time though as the time slots fill up.', \
                html.Br(), html.Br(), dbc.Carousel(
-                items=[
-                    {"src": "assets/belgium/leuven.JPG"},
-                ],
-                interval=2000,
-                ride="carousel",
-                className="carousel-fade"
-                ),
+                    items=[
+                        {"src": "assets/belgium/leuven2.JPG"},
+                        {"src": "assets/belgium/leuven.JPG"},
+                        {"src": "assets/belgium/leuven1.JPG"},
+                        {"src": "assets/belgium/leuven3.JPG"},
+                        {"src": "assets/belgium/leuven4.JPG"},
+
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                    ),
     if value == 'Ghent':
-        return 'So cute and amazing beer and Delirium', \
+        return 'I absolutely loved my time here. It is such a cute little city. The main area of the city feels like ' \
+               'something out of a Harry Potter movie! The canal lined with classic Belgian architecture houses, ' \
+               'the bridge, the castle, and the grand churches all make for really stunning and impressive views.' \
+               'On top of that, the beer is amazing! One of the best beers in the world (Delirium Tremens) is made ' \
+               'just outside of Ghent. I ', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/belgium/ghent.JPG"},
@@ -1063,7 +1089,17 @@ def set_display_children(value):
                 className="carousel-fade"
                 ),
     if value == 'Leipzig':
-        return 'Both the new and old Rathaus (town hall) are really cool. '
+        return 'Both the new and old Rathaus (town hall) are really cool. ', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/germany/leipzig.JPG"},
+                    {"src": "assets/germany/leipzig2.JPG"},
+                    {"src": "assets/germany/leipzig1.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Lübeck':
         return 'Home to some of the best marzipan in the world. I actually only played a basketball game here ' \
                "(we won). It's supposed to be very cute and have a really nice Christmas market."
@@ -1072,7 +1108,7 @@ def set_display_children(value):
                'a must at some point. Munich is where the one true Oktoberfest is held. There are other ' \
                'celebrations around Germany but nothing compares to the real deal. Beyond Oktoberfest -- it is ' \
                'the capital of Bavaria. Very pretty city. Bavaria is home to some beautiful mountains (the Alps), ' \
-               'the fairtyale-like castle called Neuschwanstein that inspired the Disney castle, one of the ' \
+               'the fairytale-like castle called Neuschwanstein that inspired the Disney castle, one of the ' \
                'most successful (but annoying) football teams in the world in Bayern Munich, ' \
                'and also home to some of the best beers in the world. There are some absolutely beautiful lakes ' \
                'up in the Alps that are easy day trips from Munich (especially if you rent a car). ' \
@@ -1088,9 +1124,10 @@ def set_display_children(value):
                "years it has been the primary gathering place in the city, even for political matters. The Nazi " \
                "party was actually officially established here, and not long after Hitler was officially named " \
                "the leader of the Nazi party here as well. A couple other great traditional beer halls are " \
-               "Augustiner (there are a few locations) and Schneider Bräuhaus. " \
-               "Lastly, there is some nice shopping (and strolling)" \
-               "along Maximilianstraße and Kaufingerstraße near the " \
+               "Augustiner (there are a few locations) and Schneider Bräuhaus. Nearly all of these traditional beer " \
+               "halls will offer the wonderful traditional Bavarian breakfast, weißwurst (Bavarian white sausages) " \
+               "with pretzels, sweet mustard, and of course a helles beer! Lastly, there is some nice shopping " \
+               "(and strolling) along Maximilianstraße and Kaufingerstraße near the " \
                "famous and beautiful main square of the city, Marienplatz, where the town hall (Rathaus) is.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
@@ -1101,6 +1138,8 @@ def set_display_children(value):
                     {"src": "assets/germany/munich4.JPG"},
                     {"src": "assets/germany/munich5.JPG"},
                     {"src": "assets/germany/munich6.JPG"},
+                    {"src": "assets/germany/munich7.JPG"},
+                    {"src": "assets/germany/munich8.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1216,12 +1255,29 @@ def set_display_children(value):
                     {"src": "assets/italy/flo.JPG"},
                     {"src": "assets/italy/flo1.JPG"},
                     {"src": "assets/italy/flo2.JPG"},
+                    {"src": "assets/italy/flo7.JPG"},
                     {"src": "assets/italy/flo3.JPG"},
                     {"src": "assets/italy/flo4.JPG"},
                     {"src": "assets/italy/flo8.JPG"},
+                    {"src": "assets/italy/flo9.JPG"},
                     {"src": "assets/italy/flo5.JPG"},
-                    {"src": "assets/italy/flo6.JPG"},
-                    {"src": "assets/italy/flo7.JPG"},
+
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'Genoa':
+        return "PANISSA", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/italy/gen6.JPG"},
+                    {"src": "assets/italy/gen.JPG"},
+                    {"src": "assets/italy/gen1.JPG"},
+                    {"src": "assets/italy/gen2.JPG"},
+                    {"src": "assets/italy/gen3.JPG"},
+                    {"src": "assets/italy/gen4.JPG"},
+                    {"src": "assets/italy/gen5.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1255,11 +1311,27 @@ def set_display_children(value):
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/italy/milan.JPG"},
-                    {"src": "assets/italy/milan1.JPG"},
+                    {"src": "assets/italy/milan7.JPG"},
                     {"src": "assets/italy/milan3.JPG"},
                     {"src": "assets/italy/milan4.JPG"},
                     {"src": "assets/italy/milan2.JPG"},
                     {"src": "assets/italy/milan5.JPG"},
+                    {"src": "assets/italy/milan6.JPG"},
+                    {"src": "assets/italy/milan8.JPG"},
+                    {"src": "assets/italy/milan1.JPG"},
+
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'Portofino':
+        return 'more info coming soon!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/italy/pf1.JPG"},
+                    {"src": "assets/italy/pf.JPG"},
+                    {"src": "assets/italy/pf2.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1593,15 +1665,50 @@ def set_display_children(value):
 
 # Poland
     if value == 'Krakow':
-        return 'trip upcoming in August!'
-    if value == 'Wroclaw':
+        return 'more info coming soon!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/poland/kra.JPG"},
+                    {"src": "assets/poland/kra2.JPG"},
+                    {"src": "assets/poland/kra3.JPG"},
+                    {"src": "assets/poland/kra4.JPG"},
+                    {"src": "assets/poland/kra5.JPG"},
+                    {"src": "assets/poland/kra6.JPG"},
+                    {"src": "assets/poland/kra7.JPG"},
+                    {"src": "assets/poland/kra8.JPG"},
+                    {"src": "assets/poland/kra9.JPG"},
+                    {"src": "assets/poland/kra10.JPG"},
+                    {"src": "assets/poland/kra11.JPG"},
+                    {"src": "assets/poland/kra12.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'Wrocław':
         return 'Very pretty small city. The people were all very nice. Go to the market square and check out some ' \
                'of the cafes and restaurants. The Konspira restaurant is really great -- this is also a great option ' \
-               'because there is a lot about the history of Wroclaw and Poland on the walls of the ' \
+               'because there is a lot about the history of Wrocław and Poland on the walls of the ' \
                'restaurant and in the menu. Definitely get pierogi. Soups are very good and traditional too. ' \
                'Be on the lookout for the hundreds of little gnomes around the city as you walk around. They are ' \
                'really fun and funny. They are a recent project that is inspired by ____. Lastly, go north of the ' \
-               'market square and walk around the river / island area -- the churches there are really nice as well.'
+               'market square and walk around the river / island area -- the churches there are really nice as well.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/poland/wro.JPG"},
+                    {"src": "assets/poland/wro1.JPG"},
+                    {"src": "assets/poland/wro2.JPG"},
+                    {"src": "assets/poland/wro3.JPG"},
+                    {"src": "assets/poland/wro4.JPG"},
+                    {"src": "assets/poland/wro5.JPG"},
+                    {"src": "assets/poland/wro6.JPG"},
+                    {"src": "assets/poland/wro7.JPG"},
+                    {"src": "assets/poland/wro8.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Portugal
     if value == 'Lisbon':
