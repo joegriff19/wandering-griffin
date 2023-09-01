@@ -1175,7 +1175,7 @@ def set_display_children(value):
                html.Br(), html.Br(), \
                "The traditional style of buildings is really " \
                "nice -- the Albrecht-Dürer-Straße is especially picturesque! Besides this, be sure to see the main " \
-               "cathedral, " \
+               "cathedral, the Handwerkerhof (made to resemble medieval Nuremberg)," \
                "the Schöner Brunnen fountain, and climb up to the 11th century castle complex.", \
                html.Br(), html.Br(), \
                "There is a lot of really great food and beer here. First, you have to try the Nürnberger Bratwurst. " \
