@@ -46,7 +46,7 @@ all_options = {
     'England 🏴󠁧󠁢󠁥󠁮󠁧󠁿': ['London'],
     'France 🇫🇷': ['Paris', 'Strasbourg'],
     'Germany 🇩🇪': ['Berlin', 'Dortmund', 'Dresden', 'Flensburg', 'Gengenbach', 'Hamburg', 'Kiel', 'Lübeck',
-                   'Leipzig', 'Munich', 'Oranienburg', 'Potsdam', 'Rügen', 'Stralsund', 'Stuttgart'],
+                   'Leipzig', 'Munich', 'Nuremberg', 'Oranienburg', 'Potsdam', 'Rügen', 'Stralsund', 'Stuttgart'],
     'Hungary 🇭🇺': ['Budapest'],
     'Iceland 🇮🇸': ['Reykjavik', 'Southern half of island'],
     'Italy 🇮🇹': ['Bergamo', 'Florence', 'Genoa', 'Lecco', 'Milan', 'Portofino', 'Rome', 'Vatican 🇻🇦', 'Venice', 'Verona'],
@@ -424,9 +424,21 @@ def set_display_children(value):
     if value == 'Ghent':
         return 'I absolutely loved my time here. It is such a cute little city. The main area of the city feels like ' \
                'something out of a Harry Potter movie! The canal lined with classic Belgian architecture houses, ' \
-               'the bridge, the castle, and the grand churches all make for really stunning and impressive views.' \
-               'On top of that, the beer is amazing! One of the best beers in the world (Delirium Tremens) is made ' \
-               'just outside of Ghent. I ', \
+               'the bridge, the castle (Gravensteen), and the grand churches all make for really stunning and ' \
+               "impressive views. Be sure to walk across St. Michael's Bridge and walk along the canal (Korenlei) " \
+               "to get the best views." \
+               'On top of all this -- the beer here is amazing! There is a very ' \
+               'One of the best beers in the world (Delirium Tremens) is made ' \
+               'just outside of Ghent. If you have a few hours, definitely make the little trip to visit -- the ' \
+               'brewery that makes Delirium is called Huyghe. It is still family-owned and I even got to meet and ' \
+               'have a beer with the CEO!', html.Br(), html.Br(), \
+               'Back in the city of Ghent, be sure to also visit ' \
+               "the 'Friday Market Square' -- a nice plaza surrounded by beautiful buildings in the classic Belgian" \
+               "/ Dutch style, and also where one of the coolest breweries / beer bars can be found! They have a " \
+               "fun / funny ny tradition where if you order their house blonde beer (which is insanely good) " \
+               "in the 1.5 liter pour, you have to give the barman a shoe as a deposit for the science experiment-" \
+               "looking beer glass! Not only that, but the shoes then go in a basket which is raised to the " \
+               "ceiling and it rings a bell. Enjoy the picture below!", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/belgium/ghent.JPG"},
@@ -437,6 +449,7 @@ def set_display_children(value):
                     {"src": "assets/belgium/ghent5.JPG"},
                     {"src": "assets/belgium/ghent6.JPG"},
                     {"src": "assets/belgium/ghent7.JPG"},
+                    {"src": "assets/belgium/ghent8.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1145,6 +1158,58 @@ def set_display_children(value):
                 ride="carousel",
                 className="carousel-fade"
                 ),
+    if value == 'Nuremberg':
+        return "I really enjoyed this city (spelled Nürnberg in German FYI) in the north of Bavaria! " \
+               "Important to note though that this was not always part of Bavaria -- Nuremberg used to be the main " \
+               "city of the region of Franconia. You will notice all of the city flags and details around the city " \
+               "are red rather than the typical Bavarian blue. Nuremberg holds great significance throughout history " \
+               "-- in the Holy Roman Empire and in Nazi Germany. The massive 'Nuremberg rallies' were held just " \
+               "outside the city at the Zepellinfeld, which is an easy visit (20 minute bus/tram or 10 minute S-Bahn " \
+               "train ride) from Nuremberg. Following WW2, the 'Nuremberg trials' were held here. There is a really " \
+               "cool memorial, called the Street of Human Rights, that has big pillars with the Universal " \
+               "Declaration of Human Rights written in tons of different languages from across the globe inscribed " \
+               "on each. Much of the city was ultimately bombed, but there were relatively very " \
+               "few people who died here -- thanks to beer! A large underground cellar and tunnel complex had been " \
+               "in use since the 14th century to brew and store beer, and many citizens took shelter here during " \
+               "WW2. I took a tour of the complex and really enjoyed it.", \
+               html.Br(), html.Br(), \
+               "The traditional style of buildings is really " \
+               "nice -- the Albrecht-Dürer-Straße is especially picturesque! Besides this, be sure to see the main " \
+               "cathedral, " \
+               "the Schöner Brunnen fountain, and climb up to the 11th century castle complex.", \
+               html.Br(), html.Br(), \
+               "There is a lot of really great food and beer here. First, you have to try the Nürnberger Bratwurst. " \
+               "They are quite small in size so you can definitely eat a few at least. Go to this traditional " \
+               "bratwurst restaurant -- 'Bratwursthäusle bei St. Sebald.' " \
+               "Obviously try the bratwurst, and round out the meal with sauerkraut, a pretzel, and a beer! " \
+               "It is also quite common around the city to be able to get three little bratwurst in a roll with " \
+               "mustard, this is known as 'drei im Weggla.' These are also really good and only cost a few euros. " \
+               "Another part of the friendly rivalry between Franconia and traditional Bavaria -- which part of " \
+               "the pig leg is the local delicacy. In Franconia, it is the Schäufele (shoulder), and in Bavaria " \
+               "it is the ham hock (Schweinshaxe). Both are great -- but try the Schäufele when you're here! " \
+               "I had an absolutely delicious sampler plate (that included it) at Hütt'n. Right next door, join in " \
+               "on a very fun tradition in the city -- people gather and sit on the sloped road in front of Cafe " \
+               "Wanderer to enjoy a beer around happy hour every evening. Lastly, be sure to try the local " \
+               "Lebkuchen (gingerbread) at Wicklein, the world's oldest gingerbread store -- they have been making " \
+               "gingerbread since 1615!", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/germany/nur.JPG"},
+                    {"src": "assets/germany/nur1.JPG"},
+                    {"src": "assets/germany/nur2.JPG"},
+                    {"src": "assets/germany/nur3.JPG"},
+                    {"src": "assets/germany/nur4.JPG"},
+                    {"src": "assets/germany/nur5.JPG"},
+                    {"src": "assets/germany/nur6.JPG"},
+                    {"src": "assets/germany/nur7.JPG"},
+                    {"src": "assets/germany/nur8.JPG"},
+                    {"src": "assets/germany/nur10.JPG"},
+                    {"src": "assets/germany/nur11.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Oranienburg':
         return 'The remains of the Sachsenhausen concentration camp can be found here. It has been converted into ' \
                'a memorial / museum and it is really well done.' \
@@ -1158,8 +1223,7 @@ def set_display_children(value):
                "are two national parks on the island. "
     if value == 'Stralsund':
         return 'Cool little port city on the Baltic sea. Home to the great Störtebeker brewery! The brewery was ' \
-               'named after a pirate named Klaus Störebeker who was born near Stralsund. He is better known as ' \
-               'Barbarossa'
+               'named after the legendary pirate Klaus Störebeker, who was born just outside Stralsund.'
     if value == 'Stuttgart':
         return 'Was only here briefly but the main Christmas market was nice'
 
