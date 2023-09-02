@@ -986,7 +986,9 @@ def set_display_children(value):
                "to wait a long time in line and know that there is a good chance you will not be let in -- it's part " \
                "of the funky culture that preserves the hype and exclusivity aura of the club. For other club " \
                "options, try Watergate, Tresor, Club der Visionäre, or Ritter Butzke. For a really fun bar that " \
-               "isn't exactly a club, go to minimal bar. Beyond the clubs, " \
+               "isn't exactly a club, go to Minimal bar. ", \
+               html.Br(), html.Br(), \
+               "Beyond the clubs, " \
                "there are tons of concerts here every day and there are always " \
                "people playing music on the streets (especially around Museum Island) as well. Lots of fun " \
                "bars as well. There is an unreal rooftop at Klunkenkranich. Great craft beers and a good time at" \
@@ -998,7 +1000,9 @@ def set_display_children(value):
                "that has now become a massive park right in the city. Another awesome park is Treptower Park. " \
                "There are lots of sports here as well (to watch and play). The pro " \
                "basketball (Alba), soccer (2 teams: Hertha and Union), handball (Füchse), and ice hockey (Eisbären) " \
-               "games all provide a very fun atmosphere. Be sure to eat a döner kebab (a variation of a Turkish " \
+               "games all provide a very fun atmosphere. ", \
+               html.Br(), html.Br(),\
+               "Be sure to eat a döner kebab (a variation of a Turkish " \
                "kebab that originated in Berlin -- the best place is Nefi's), currywurst (Curry 36 is great), and " \
                "vietnamese food (the duck at New Day is crazy good). For German food, 'Max & Moritz' is a " \
                "really cool restaurant with great food and beers. There is also the Hofbräuhaus Berlin for very " \
@@ -1026,20 +1030,33 @@ def set_display_children(value):
                 ),
     if value == 'Dortmund':
         return "Home to Borussia Dortmund! Go to a football game. It's known to be one of the best game atmospheres " \
-               "in the world."
+               "in the world. The Christmas market is also amazing! It is one of the biggest Christmas markets in " \
+               "the world, and actually has the largest natural Christmas 'tree' in the world. I say 'tree' because " \
+               "it's actually some 1,700 trees put together to make one tree that is over 150 feet tall! Lasly, they " \
+               "also have the coolest 'Herrenhandtasche,' literally a 'man's handbag' in English (picture below).", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/germany/dor1.JPG"},
+                    {"src": "assets/germany/dort.JPG"},
+                    {"src": "assets/germany/dor2.JPG"},
+                    {"src": "assets/germany/dor3.JPG"},
+                    {"src": "assets/germany/dor4.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Dresden':
         return 'Home to one of the biggest and most amazing Christmas markets in the world. The medieval Christmas' \
                "market is also really cool. Be sure to try the 'Handbrot.' A famous dessert from here " \
-               "during Christmas is ______. The one with marzipan in the middle is so good. " \
-               "You can come here on a day trip from Berlin.", \
+               "during Christmas is Stollen (sometimes called Christstollen). The one with marzipan in the " \
+               "middle is sooo good. You can come here on a day trip from Berlin.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/germany/dresden_new.JPG"},
                     {"src": "assets/germany/dresden.JPG"},
                     {"src": "assets/germany/dresden2.JPG"},
                     {"src": "assets/germany/dresden3.JPG"},
-                    # {"src": "assets/germany/dresden4.JPG"},
-                    # {"src": "assets/germany/dresden5.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1118,17 +1135,24 @@ def set_display_children(value):
                "(we won). It's supposed to be very cute and have a really nice Christmas market."
     if value == 'Munich':
         return 'If you like to have fun and drink beer then Oktoberfest is ' \
-               'a must at some point. Munich is where the one true Oktoberfest is held. There are other ' \
-               'celebrations around Germany but nothing compares to the real deal. Beyond Oktoberfest -- it is ' \
+               'a must at some point. Munich is where the one true Oktoberfest is held (cash only FYI). ' \
+               'There are other celebrations around Germany but nothing compares to the real deal. ' \
+               'I would absolutely recommend going once! Each tent holds thousands of people, ' \
+               'and with all the people, music, food, and beer it really is quite the amazing and unique experience.', \
+               html.Br(), html.Br(), \
+               'Beyond Oktoberfest -- it is ' \
                'the capital of Bavaria. Very pretty city. Bavaria is home to some beautiful mountains (the Alps), ' \
                'the fairytale-like castle called Neuschwanstein that inspired the Disney castle, one of the ' \
                'most successful (but annoying) football teams in the world in Bayern Munich, ' \
-               'and also home to some of the best beers in the world. There are some absolutely beautiful lakes ' \
+               'and also home to some of the best beers in the world. ' \
+               "Some of Bavaria's most delicious " \
+               '(and most unique) beers are the wheat beers (Weissbier / Weißbier / Hefeweizen). ', \
+               html.Br(), html.Br(), \
+               'There are some absolutely beautiful lakes ' \
                'up in the Alps that are easy day trips from Munich (especially if you rent a car). ' \
-               'Jochberg is an awesome hike with stunning views of the Alps, Kochelsee, and Walchensee.' \
-               'Some of their most delicious ' \
-               '(and most unique) beers are the wheat beers (Weissbier / Weißbier / Hefeweizen). ' \
-               'The Englischer Garten park is beautiful -- ' \
+               'Jochberg is an awesome hike with stunning views of the Alps, Kochelsee lake, and Walchensee lake ' \
+               '(photo below). Back in Munich, '\
+               'the Englischer Garten park is beautiful -- ' \
                "it's fun to watch people surf here on a little artificial wave canal and there " \
                "is a really cool beer garden at the base of the Chinese Tower. You have to visit " \
                "the Hofbräuhaus as well - the most iconic beer hall in the world. There is always " \
@@ -1139,11 +1163,16 @@ def set_display_children(value):
                "the leader of the Nazi party here as well. A couple other great traditional beer halls are " \
                "Augustiner (there are a few locations) and Schneider Bräuhaus. Nearly all of these traditional beer " \
                "halls will offer the wonderful traditional Bavarian breakfast, weißwurst (Bavarian white sausages) " \
-               "with pretzels, sweet mustard, and of course a helles beer! Lastly, there is some nice shopping " \
+               "with pretzels, sweet mustard, and of course a helles beer! Another very traditional Munich food is " \
+               "the Schweinshaxe (ham hock). It is a huge piece of pork that is incredibly tender -- definitely " \
+               "try it! ", \
+               html.Br(), html.Br(), \
+               "Lastly, there is some nice shopping " \
                "(and strolling) along Maximilianstraße and Kaufingerstraße near the " \
                "famous and beautiful main square of the city, Marienplatz, where the town hall (Rathaus) is.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
+                    {"src": "assets/germany/munich10.JPG"},
                     {"src": "assets/germany/munich.JPG"},
                     {"src": "assets/germany/munich1.JPG"},
                     {"src": "assets/germany/munich2.JPG"},
@@ -1153,6 +1182,7 @@ def set_display_children(value):
                     {"src": "assets/germany/munich6.JPG"},
                     {"src": "assets/germany/munich7.JPG"},
                     {"src": "assets/germany/munich8.JPG"},
+                    {"src": "assets/germany/munich9.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1203,6 +1233,7 @@ def set_display_children(value):
                     {"src": "assets/germany/nur6.JPG"},
                     {"src": "assets/germany/nur7.JPG"},
                     {"src": "assets/germany/nur8.JPG"},
+                    {"src": "assets/germany/nur9.JPG"},
                     {"src": "assets/germany/nur10.JPG"},
                     {"src": "assets/germany/nur11.JPG"},
                 ],
@@ -1845,7 +1876,50 @@ def set_display_children(value):
     if value == 'Azpeitia':
         return 'Birthplace of St. Ignatius and home to a large festival on July 31 each year for his feast day'
     if value == 'Barcelona':
-        return 'ole', \
+        return 'PSA -- I am biased having studied abroad here but this is one of my favorite cities in the world! ' \
+               'So much to do, see, and eat in this beautiful city on the Mediterranean Sea. Things to do include ' \
+               'visiting the Bunkers del Carmel (amazing place for a picnic with stunning views of the city), the ' \
+               'beach (Ciutat Vella is much less crowded than Barceloneta), Parc Güell (get your Cheetah Girls on! ' \
+               'also note that to get to the area of the park with the famous bench, you need to book tickets -- it ' \
+               'do is best to do so ahead of time!), Sagrada Familia church, the apartment buildings designed by ' \
+               'the famous architect Gaudí (La Pedrera and Casa Batllo), Montjuic Park / Castle, La Boquería market ' \
+               '(on the touristy street of La Rambla), Arc de Triomf and the Parque de la Ciutadella (fun spot ' \
+               "to rent little boats), the old Olympic Stadium, and if you're a soccer fan -- the Camp Nou, home " \
+               "of FC Barcelona, and the largest soccer stadium in Europe with a capacity of 105,000! There are " \
+               "also plenty of great rooftop bars, just look some up online. " , \
+               html.Br(), html.Br(), \
+               "There is so much great food here. Maybe my favorite restaurant in the world is here and is " \
+               "called El Glop (the one in the Gràcia neighborhood is the original and is the best. The chicken & " \
+               "vegetable paella is incredible. Also get the crema catalana (similar to a Crème Brûlée) for " \
+               "dessert. My other favorite place to eat is at either Sol Soler or Niña. They are right next " \
+               "to each other on the lovely Plaça del Sol and share the same kitchen. This plaza is an awesome " \
+               "neighborhood spot and it fills up every evening with people socializing. There are" \
+               "also empanada places nearby if you want to grab an empanada and enjoy the atmosphere! " \
+               "Some other great dinner " \
+               "spots include Taverna la Llesca, La Pubilla, Arume Restaurante (duck paella is amazing), and " \
+               "La Pepita. Another awesome place is Surfhouse Barcelona right on the beach -- it is a bit touristy " \
+               "but the food is great, and there is often live music next to the outdoor seating area! One more food " \
+               "place that is really cool and more upscale is El Nacional.", \
+               html.Br(), html.Br(), \
+               "Barcelona has what was my absolute favorite bar in the world -- Gato Negro! It has changed a bit " \
+               "unfortunately, but it is still a really cool spot with great cheap local beer on draft (Moritz)." \
+               "There are lots of other really fun little bars in Gràcia as well." \
+               "Barcelona also has a big party scene -- there are many clubs on the beach which are a bit touristy " \
+               "but really cool. These include Opium, Pacha, and Shoko. Besides the beach clubs, there is Otto Zutz, " \
+               "Razzmatazz (huge, known to be probably the best club', and Jamboree (dance club). There are also " \
+               "some really fun salsa clubs." \
+               "For an upbeat atmosphere but not clubs, there is Oveja Negra (two locations, one is more casual " \
+               "and the other " \
+               "is more of a beer hall), Dow Jones (drink prices change like stocks), and Espit Chupitos " \
+               "(cool shot bar).", \
+               html.Br(), html.Br(), \
+               "Outside of Barcelona, there is even more to do! Up the coast from Barcelona is the beautiful 'Costa" \
+               "Brava,' with a number of cute little towns, nice beaches, and really cool coves for swimming. " \
+               "You can also take a train inland to go for a really cool hike and visit Montserrat, where there are " \
+               "some really uniquely shaped mountains. Lastly, in winter you can even go skiing -- it is just " \
+               "a few hours drive to the tiny country of Andorra, on the border of Spain and France, " \
+               "up in the Pyrenees mountains. It is absolutely beautiful here and the skiing is great. I have " \
+               "another page on Andorra.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/spain/bcn.JPG"},
@@ -1868,9 +1942,9 @@ def set_display_children(value):
                 className="carousel-fade"
                 ),
     if value == 'Begur':
-        return 'Really nice beaches if you want to visit nice beaches outside of Barcelona'
+        return 'Really nice beaches if you want to visit nice beaches up the coast from Barcelona'
     if value == 'Bilbao':
-        return "Capital of the Basque country. I didn't spend too much time here but worth a stop. "
+        return "Capital of the Basque country. I didn't spend too much time here but definitely worth a stop. "
     if value == 'Buñol':
         return "Home of the world’s biggest food fight! It happens the last Wednesday of August every year. " \
                "It is a tiny town with probably little to no tourism for most of the year besides this weekend. " \
@@ -1882,7 +1956,7 @@ def set_display_children(value):
                "of tomato mush. Make sure you wear a shirt that you don’t mind throwing out. Also, you 100% want to " \
                "wear ski goggles or lab goggles, especially if you are tall. Tall people are going to get caught " \
                "in the tomato crossfire a lot more! It is quite the experience and was a lot of fun, but I probably " \
-               "do not need to go again."
+               "don't need to go again."
     if value == 'Girona':
         return "Capital of the northern province of Catalonia. It's a cool little city if you want to visit another " \
                "Catalan city."
