@@ -45,7 +45,8 @@ all_options = {
     'Ecuador 🇪🇨': ['Galapagos Islands', 'Quito'],
     'England 🏴󠁧󠁢󠁥󠁮󠁧󠁿': ['London'],
     'France 🇫🇷': ['Paris', 'Strasbourg'],
-    'Germany 🇩🇪': ['Berlin', 'Dortmund', 'Dresden', 'Flensburg', 'Gengenbach', 'Hamburg', 'Kiel', 'Lübeck',
+    'Germany 🇩🇪': ['Berlin', 'Cologne', 'Düsseldorf', 'Dortmund', 'Dresden', 'Flensburg', 'Gengenbach', 'Hamburg',
+                   'Kiel', 'Lübeck',
                    'Leipzig', 'Munich', 'Nuremberg', 'Oranienburg', 'Potsdam', 'Rügen', 'Stralsund', 'Stuttgart'],
     'Hungary 🇭🇺': ['Budapest'],
     'Iceland 🇮🇸': ['Reykjavik', 'Southern half of island'],
@@ -64,7 +65,7 @@ all_options = {
     'Slovakia 🇸🇰': ['Bratislava'],
     'Slovenia 🇸🇮': ['Ljubljana'],
     'Spain 🇪🇸': ['Azpeitia', 'Barcelona', 'Begur', 'Bilbao', 'Buñol', 'Girona', 'Granada', 'Irún', 'Madrid', 'Málaga',
-                 'Mallorca', 'Montserrat', 'Pineda de Mar', 'San Sebastián', 'Sitges', 'Sevilla', 'Tenerife',
+                 'Mallorca', 'Montserrat', 'Pineda de Mar', 'San Sebastián', 'Sitges', 'Segovia', 'Sevilla', 'Tenerife',
                  'Valencia', 'Vilanova'],
     'Sweden 🇸🇪': ['Stockholm'],
     # 'USA 🇺🇸': ['Arizona', 'California', 'Colorado', 'DC', 'Florida', 'Illinois', 'Indiana', 'Iowa', 'Kentucky', 'Maine',
@@ -1028,6 +1029,34 @@ def set_display_children(value):
                 ride="carousel",
                 className="carousel-fade"
                 ),
+    if value == 'Cologne':
+        return "More info coming soon!", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    # {"src": "assets/germany/dor1.JPG"},
+                    # {"src": "assets/germany/dort.JPG"},
+                    # {"src": "assets/germany/dor2.JPG"},
+                    # {"src": "assets/germany/dor3.JPG"},
+                    # {"src": "assets/germany/dor4.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'Düsseldorf':
+        return "More info coming soon!", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    # {"src": "assets/germany/dor1.JPG"},
+                    # {"src": "assets/germany/dort.JPG"},
+                    # {"src": "assets/germany/dor2.JPG"},
+                    # {"src": "assets/germany/dor3.JPG"},
+                    # {"src": "assets/germany/dor4.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Dortmund':
         return "Home to Borussia Dortmund! Go to a football game. It's known to be one of the best game atmospheres " \
                "in the world. The Christmas market is also amazing! It is one of the biggest Christmas markets in " \
@@ -1811,6 +1840,18 @@ def set_display_children(value):
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/portugal/lisbon.JPG"},
+                    {"src": "assets/portugal/lisbon1.JPG"},
+                    {"src": "assets/portugal/lisbon2.JPG"},
+                    {"src": "assets/portugal/lisbon3.JPG"},
+                    {"src": "assets/portugal/lisbon4.JPG"},
+                    {"src": "assets/portugal/lisbon5.JPG"},
+                    {"src": "assets/portugal/lisbon6.JPG"},
+                    {"src": "assets/portugal/lisbon7.JPG"},
+                    {"src": "assets/portugal/lisbon8.JPG"},
+                    {"src": "assets/portugal/lisbon9.JPG"},
+                    {"src": "assets/portugal/lisbon10.JPG"},
+                    {"src": "assets/portugal/lisbon11.JPG"},
+                    {"src": "assets/portugal/lisbon12.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1819,7 +1860,17 @@ def set_display_children(value):
     if value == 'Guincho Beach':
         return 'Not too far of a drive from Lisbon -- I was lucky to meet someone with a car and we drove here. ' \
                "There are big sand dunes next to the coast. There's also a couple cafes here where you can grab a" \
-               "drink or a bite to eat. Sunset here over the ocean was just beautiful. "
+               "drink or a bite to eat. Sunset here over the ocean was just beautiful. ", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/portugal/guincho.JPG"},
+                    {"src": "assets/portugal/guincho1.JPG"},
+                    {"src": "assets/portugal/guincho2.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
 
 # Puerto Rico
     if value == 'Rincón':
@@ -1978,16 +2029,16 @@ def set_display_children(value):
                'of nice bars, restaurants, and shops here!'
     if value == 'Madrid':
         return 'The Spanish capital. Definitely a different feel than Barcelona but both are amazing cities.', \
-               # html.Br(), html.Br(), dbc.Carousel(
-               #  items=[
-               #      # {"src": "assets/spain/mad.JPG"},
-               #      # {"src": "assets/spain/mad1.JPG"},
-               #      # {"src": "assets/spain/mad2.JPG"},
-               #  ],
-               #  interval=2000,
-               #  ride="carousel",
-               #  className="carousel-fade"
-               #  ),
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/spain/mad.JPG"},
+                    # {"src": "assets/spain/mad1.JPG"},
+                    {"src": "assets/spain/mad5.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Málaga':
         return 'Nice city on the Costa del Sol (Coast of the Sun)', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -2011,7 +2062,7 @@ def set_display_children(value):
         return 'Beautiful and really uniquely shaped mountains that are only an hour or so by train inland from ' \
                'Barcelona.'
     if value == 'Pineda de Mar':
-        return 'ole'
+        return 'more info coming soon!'
     if value == 'San Sebastián':
         return 'Beautiful city on the northern coast of Spain. It supposedly has the highest density of bars and ' \
                'restuarants in the world. Take the Funicular Monte Igueldo up to Igeldo mendiko behatokia ' \
@@ -2026,9 +2077,67 @@ def set_display_children(value):
                'is crazy tender and flavourful. Get the marzipan cake for dessert. This was amazing as well. Enjoy ' \
                'a walk along the aqueduct.  Don’t forget to admire the castle — it looks like something out of a ' \
                'fairytale. Enjoy the architecture as you stroll around the rest of the city. Check out the city ' \
-               'gates as well. '
+               'gates as well. ', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/spain/seg4.JPG"},
+                    {"src": "assets/spain/seg1.JPG"},
+                    {"src": "assets/spain/seg2.JPG"},
+                    {"src": "assets/spain/seg3.JPG"},
+                    {"src": "assets/spain/seg.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Sevilla':
-        return 'ole'
+        return "Such a lovely city in the south of Spain (Andalusia). It’s a decent-sized city but " \
+               "extremely walkable. One of the highlights (especially for Star Wars fans) is the " \
+               "Plaza de España, which was featured as the main castle in the planet of Naboo in Star Wars! " \
+               "Regardless of the Star Wars connection, it is so picturesque with the canal, the bridge, " \
+               "the little boats, and the ceramic tiles. ", \
+               html.Br(), html.Br(), \
+               "Other main things to do and see include the main cathedral (inside you can see " \
+               "Christopher Columbus’ tomb), the Royal Alcázar (the Muslim influences are really cool to see, " \
+               "and the gardens are beautiful), and the giant mushrooms! The Setas de Sevilla is a large " \
+               "wooden structure in the shape of mushrooms with a rooftop walkway and really nice views " \
+               "from the top. In December, there is actually an ice skating rink below the structure, " \
+               "which I found pretty fun since it can still be quite warm and sunny in winter. Additionally, " \
+               "something that is a must for Sevilla is seeing a flamenco show! There is a great traditional " \
+               "place called La Carbonería — I would highly recommend. Be sure to also visit the neighborhood " \
+               "of Triana across the Canal de Alfonso XIII from the center of Sevilla. Triana is really " \
+               "interesting as it used to be the area where all the Jews, Muslims, and gypsies lived " \
+               "(while the Catholics lived in the center). Today, it is a very creative and artistic area. " \
+               "This is a great place to explore some markets (especially the Mercado de Triana) and buy " \
+               "some beautiful colorful ceramics as a gift or as a souvenir! On your way to/from Triana, " \
+               "you can also pass the old bullfighting arena (Plaza de Toros) of the city. Lastly, if you " \
+               "are a soccer fan, there are two teams in Sevilla that play in the top league in Spain, " \
+               "called Real Betis Balompié and Sevilla FC.", \
+               html.Br(), html.Br(), \
+               "One of the great things about Andalusia is that it is very customary to receive complimentary " \
+               "tapas when you order a drink! The food and drink scene in general is so great here — laid back " \
+               "yet very lively. Also, as with most places in Spain, be aware that dinner is eaten very late " \
+               "here (9pm at the earliest). Some great restaurants include La Santa (right next to Las Setas), " \
+               "La Taberna, Taberna Coloniales, and Las Golondrinas (Triana). There is also a rooftop bar with " \
+               "amazing views of the main cathedral called La Terraza del EME.", \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/spain/sev.JPG"},
+                    {"src": "assets/spain/sev1.JPG"},
+                    {"src": "assets/spain/sev2.JPG"},
+                    {"src": "assets/spain/sev3.JPG"},
+                    {"src": "assets/spain/sev4.JPG"},
+                    {"src": "assets/spain/sev5.JPG"},
+                    {"src": "assets/spain/sev10.JPG"},
+                    {"src": "assets/spain/sev11.JPG"},
+                    {"src": "assets/spain/sev6.JPG"},
+                    {"src": "assets/spain/sev7.JPG"},
+                    {"src": "assets/spain/sev9.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Tenerife':
         return 'Amazing island with incredibly diverse wildlife and landscapes. Temperatures here are consistently ' \
                'warm (but not too hot) year round. There are lots of nice beaches (including black sand beaches) and ' \
@@ -2081,7 +2190,7 @@ def set_display_children(value):
                'Lastly, if you are here in August, make the little trip to ____ for La Tomatina, the world’s biggest ' \
                'food fight! Select ____ for more info about that.'
     if value == 'Vilanova':
-        return 'ole'
+        return 'more info coming soon!'
 
 # Sweden
     if value == 'Stockholm':
@@ -2108,7 +2217,7 @@ def set_display_children(value):
     if value == 'Champaign':
         return 'long live the chief'
     if value == 'Chicago':
-        return 'Home of the Digglers', \
+        return 'Home of the Digglers!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/usa-il/chicago.JPG"},
@@ -2134,11 +2243,11 @@ def set_display_children(value):
     if value == 'Dayton':
         return 'Go to the Wandering Griffin Pub!'
     if value == 'San Francisco':
-        return 'daa Bay'
+        return 'more info coming soon!'
     if value == 'NYC':
         return 'KATZ'
     if value == 'Miami':
-        return 'ole', \
+        return 'Beautiful latino cultural melting pot. And of course the home of Messi', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/usa-fl/miami.JPG"},
@@ -2148,7 +2257,7 @@ def set_display_children(value):
                 className="carousel-fade"
                 ),
     if value == 'Missoula':
-        return 'ole', \
+        return 'more info coming soon!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/usa-mt/missoula.JPG"},
