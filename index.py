@@ -2044,6 +2044,9 @@ def set_display_children(value):
                'great ham sandwiches), Bocadillos Oink (get a sandwich with Jamón Serrano -- soooo good), ' \
                'and the Basque restaurant Maitetxe. Also be sure to visit the Círculo de Bellas Artes Terrace. ' \
                'The view is amazing, it costs a few euros to go up but it is well worth it!', \
+               html.Br(), html.Br(), \
+               'Although there are tons of things to do in Madrid, definitely consider a day trip to either Segovia ' \
+               'and / or Toledo. Both are cities with fascinating history, dating back much further than Madrid.',\
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/spain/mad.JPG"},
