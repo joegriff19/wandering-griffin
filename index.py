@@ -66,7 +66,7 @@ all_options = {
     'Slovenia 🇸🇮': ['Ljubljana'],
     'Spain 🇪🇸': ['Azpeitia', 'Barcelona', 'Begur', 'Bilbao', 'Buñol', 'Girona', 'Granada', 'Irún', 'Madrid', 'Málaga',
                  'Mallorca', 'Montserrat', 'Pineda de Mar', 'San Sebastián', 'Sitges', 'Segovia', 'Sevilla', 'Tenerife',
-                 'Valencia', 'Vilanova'],
+                 'Toledo', 'Valencia', 'Vilanova'],
     'Sweden 🇸🇪': ['Stockholm'],
     # 'USA 🇺🇸': ['Arizona', 'California', 'Colorado', 'DC', 'Florida', 'Illinois', 'Indiana', 'Iowa', 'Kentucky', 'Maine',
     #            'Massachusetts', 'Michigan', 'Missouri', 'Montana', 'Nebraska', 'New Hampshire', 'New York',
@@ -2031,7 +2031,7 @@ def set_display_children(value):
         return 'The Spanish capital! Definitely a different feel than Barcelona but both are amazing cities. ' \
                'Tons of places to visit: Parque de Retiro (for sure see the central pond and the Palacio ' \
                'de Cristal here), Real Palacio, Las Ventas Plaza de Toros (tour is pretty cool to learn ' \
-               'about bullfighting history), Puerta del Sol Plaza (famous bear and cherry tree statue), Plaza Mayor,' \
+               'about bullfighting history), Puerta del Sol Plaza (famous bear and cherry tree statue), Plaza Mayor, ' \
                'famous art museums (El Prado and Reina Sofia), Templo de Debod (Egyptian temple from 200BC, ' \
                'awesome spot for sunset), Siete Tetas (nice park a little outside the city, also good for sunset), ' \
                'and the Broadway-like street of Gran Vía. Additionally, if you ' \
