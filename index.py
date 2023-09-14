@@ -2028,7 +2028,22 @@ def set_display_children(value):
                'absolutely beautiful. You can also walk along this river in the city as well, there are plenty ' \
                'of nice bars, restaurants, and shops here!'
     if value == 'Madrid':
-        return 'The Spanish capital. Definitely a different feel than Barcelona but both are amazing cities.', \
+        return 'The Spanish capital! Definitely a different feel than Barcelona but both are amazing cities. ' \
+               'Tons of places to visit: Parque de Retiro (for sure see the central pond and the Palacio ' \
+               'de Cristal here), Real Palacio, Las Ventas Plaza de Toros (tour is pretty cool to learn ' \
+               'about bullfighting history), Puerta del Sol Plaza (famous bear and cherry tree statue), Plaza Mayor,' \
+               'famous art museums (El Prado and Reina Sofia), Templo de Debod (Egyptian temple from 200BC, ' \
+               'awesome spot for sunset), Siete Tetas (nice park a little outside the city, also good for sunset), ' \
+               'and the Broadway-like street of Gran Vía. Additionally, if you ' \
+               "are a soccer fan, there are three teams in Madrid that play in the top league in Spain, " \
+               "called Rayo Vallecano, Real Madrid, and Atlético de Madrid.", \
+                html.Br(), html.Br(),\
+               'Some great restaurants/food spots include Cuevas el Secreto, El MiniBar (go for dinner),San Ginés ' \
+               '(super famous hot chocolate and churros -- worth the wait!), Bar Postas or Casa Rúa famous for ' \
+               'bocadillos de calamares / calamari sandwiches, Museo del Jamón (a bunch of locations, ' \
+               'great ham sandwiches), Bocadillos Oink (get a sandwich with Jamón Serrano -- soooo good), ' \
+               'and the Basque restaurant Maitetxe. Also be sure to visit the Círculo de Bellas Artes Terrace. ' \
+               'The view is amazing, it costs a few euros to go up but it is well worth it!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/spain/mad.JPG"},
