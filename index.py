@@ -50,8 +50,8 @@ all_options = {
                    'Leipzig', 'Munich', 'Nuremberg', 'Oranienburg', 'Potsdam', 'Rügen', 'Stralsund', 'Stuttgart'],
     'Hungary 🇭🇺': ['Budapest'],
     'Iceland 🇮🇸': ['Reykjavik', 'Southern half of island'],
+    'Ireland 🇮🇪': ['Cliffs of Moher', 'Dingle', 'Dublin', 'Tralee'],
     'Italy 🇮🇹': ['Bergamo', 'Florence', 'Genoa', 'Lecco', 'Milan', 'Portofino', 'Rome', 'Vatican 🇻🇦', 'Venice', 'Verona'],
-    'Ireland 🇮🇪': ['Cliffs of Moher', 'Dublin', 'Limerick', 'Tralee'],
     'Mexico 🇲🇽': ['Cancún', 'Mexico City'],
     'Montenegro 🇲🇪': ['Kotor'],
     'Morocco 🇲🇦': ['Tangier'],
@@ -68,11 +68,12 @@ all_options = {
                  'Mallorca', 'Montserrat', 'Pineda de Mar', 'San Sebastián', 'Sitges', 'Segovia', 'Sevilla', 'Tenerife',
                  'Toledo', 'Valencia', 'Vilanova'],
     'Sweden 🇸🇪': ['Stockholm'],
+    'Turkey 🇹🇷': ['Istanbul'],
     # 'USA 🇺🇸': ['Arizona', 'California', 'Colorado', 'DC', 'Florida', 'Illinois', 'Indiana', 'Iowa', 'Kentucky', 'Maine',
     #            'Massachusetts', 'Michigan', 'Missouri', 'Montana', 'Nebraska', 'New Hampshire', 'New York',
     #            'North Carolina', 'Ohio', 'Pennsylvania', 'Tennessee', 'Utah', 'Vermont', 'West Virginia', 'Wisconsin',
     #            'West Virginia'],
-    'USA 🇺🇸': ['Champaign', 'Chicago', 'Dayton', 'Miami', 'Missoula', 'NYC', 'San Francisco'],
+    'USA 🇺🇸': ['Champaign', 'Chicago', 'Dayton', 'Dubuque', 'Miami', 'Missoula', 'NYC', 'San Francisco', 'Seattle'],
 }
 
 
@@ -229,9 +230,8 @@ def set_cities_options(selected_country):
 def set_display_children(value):
 # Andorra
     if value == 'Pal Arinsal':
-        return 'Go skiing. Pyrenees mountains are beautiful and very affordable compared to the US. ' \
-               'Only ~3-4 hour drive from Barcelona. I stayed in ____ hotel. Nothing fancy but very nice and clean. ' \
-               'Would recommend', \
+        return 'Go skiing! Pyrenees mountains are beautiful and very affordable compared to the US. ' \
+               'Only ~3-4 hour drive from Barcelona. The skiing is great and the ski town is very fun as well.', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/andorra/Andorra-44.JPG"},
@@ -307,17 +307,25 @@ def set_display_children(value):
                'in the city, the Rothaus is awesome. In winter, there is also great skiing nearby. ' \
                'I did a trip for a couple days to Steffisalp and the views were incredible. '
     if value == 'Vienna':
-        return 'A very grand city! The capital of Austria is very impressive. The palace___ is the big highlight, ' \
-               'but there is so much more than that to see! Even beyond the main sightseeing spots, ' \
+        return 'A very grand city! The capital of Austria is very impressive. The Hofburg Palace and the main ' \
+               'cathedral on Stephansplatz are the big ' \
+               'highlights, but there is so much more to see! Even beyond the main sightseeing spots, ' \
                'there are so many beautiful buildings that I feel could be the main tourist attraction ' \
                'in many other cities. However, there are just so many of these beautiful buildings that many ' \
-               'don’t get the attention they probably deserve. The cafe scene is also very cool. There are many ' \
+               'don’t get the attention they probably deserve.', \
+               html.Br(), html.Br(), \
+               'The cafe scene is huge here. There are many ' \
                'cafes all over the city — it is a very popular activity to stop at a cafe for coffee and a ' \
                'piece of cake (or one of many other pastries / dishes). These cafes range from very casual to ' \
                'quite grand with high ceilings and ornate decorations. The cafe scene ties in with the artsy side ' \
-               'of the city. There is a lot of history here with music and with theatre. Mozart ___. ' \
-               'With all the sights to see, there is plenty to keep one occupied for a few days. ' \
-               'However, if you are looking for a really fun day trip, go to Bratislava, the capital of Slovenia! ' \
+               'of the city. There is a lot of history here with music and with theatre. Mozart lived here much ' \
+               'of his life and had a huge influence on the city. It is highly recommended to visit the opera house ' \
+               'to see a show if possible.', \
+               html.Br(), html.Br(), \
+               'There is a lot of great food in Vienna. Be sure to try Wiener Schnitzel and Kaiserschmarrn (little ' \
+               'pancake bites served with an apple sauce). Other favorites include goulasch, sausage (great street ' \
+               'food), and pumpkin soup (in the fall). There is plenty to do in a few days in Vienna, ' \
+               'but for a really fun day trip option, go to Bratislava, the capital of Slovakia! ' \
                'It is very close, less than an hour away by train or bus. I loved doing a full day trip here.', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
@@ -432,7 +440,8 @@ def set_display_children(value):
                'One of the best beers in the world (Delirium Tremens) is made ' \
                'just outside of Ghent. If you have a few hours, definitely make the little trip to visit -- the ' \
                'brewery that makes Delirium is called Huyghe. It is still family-owned and I even got to meet and ' \
-               'have a beer with the CEO!', html.Br(), html.Br(), \
+               'have a beer with the CEO!', \
+               html.Br(), html.Br(), \
                'Back in the city of Ghent, be sure to also visit ' \
                "the 'Friday Market Square' -- a nice plaza surrounded by beautiful buildings in the classic Belgian" \
                "/ Dutch style, and also where one of the coolest breweries / beer bars can be found! They have a " \
@@ -826,10 +835,11 @@ def set_display_children(value):
                "cool gothic church called the Church of Our Lady Before Tyn. There is also a really nice Christmas " \
                "market here in the winter. The next main attraction is the " \
                "Charles Bridge. After crossing the bridge, climb up to the Prague Castle and explore the castle " \
-               "grounds. A boat ride on the river is also a fantastic idea any time of year. Lastly, " \
+               "grounds. A boat ride on the river is also a fantastic idea any time of year. ", \
+               html.Br(), html.Br(), \
                "The Czech Republic is very well known for their beer. The Czechs drink by far the most " \
                "beer in the world -- approximately 500 12-ounce beers per person per year! No other country " \
-               "drinks more than one beer per person per day. There are a few beers you will commonly see " \
+               "drinks more than one beer per person per day! There are a few beers you will commonly see " \
                "throughout the city. First, Pilsner Urquell -- this is the original pilsner-style beer, " \
                "and the name of the style itself comes from the Czech city where this beer was brewed, called Plzen. " \
                "BE SURE to try a fresh Pilsner Urquell on draft from a bronze tank -- you will thank me later!" \
@@ -885,15 +895,17 @@ def set_display_children(value):
                "The Championship) games is also really fun and a lot cheaper than Premier League games. QPR is a " \
                "second league team in London -- their games are really fun as well. " \
                "During the season or in summer, also consider doing a stadium tour. My biased opinion would be " \
-               "Arsenal's Emirates Stadium (GO GUNNERS !) Beyond football, " \
-               "be sure to go to Big Ben, Buckingham Palace, Harrod's (try a meat pie), " \
+               "Arsenal's Emirates Stadium (GO GUNNERS !) ", \
+               html.Br(), html.Br(), \
+               "Beyond football, be sure to go to Big Ben, Buckingham Palace, Harrod's (try a meat pie), " \
                "and Tower Bridge. Many people think that Tower Bridge is London Bridge, but no -- the famous pic is " \
                "from the south side of the River Thames between London Bridge and Tower Bridge. Be sure to walk " \
                "across the Tower Bridge as well." \
                "Also enjoy Hyde Park (a bike ride here is great). One of the best areas in the city is " \
-               "Camden Market. The area is cute with some little canals, and there are tons of food and drink " \
-               "stands / vendors. You cand just about any cuisine here. Get some food and drinks here. " \
-               "There is a lot of great beer here too. There are lots of awesome " \
+               "Camden Market. The area is cute with some little canals, and there are tons of " \
+               "stands / vendors. You can find just about any cuisine here. Enjoy some food and drinks here. ", \
+               html.Br(), html.Br(), \
+               "There is a lot of great beer in London. There are lots of awesome " \
                "old-timey pubs: The Toucan, The Cross Keys, The Harp, The Seven Stars, The Blackfriar, and more. " \
                "Hop Locker is also a sweet beer bar by the river. " \
                "Many pubs and bars will also have a good fish & chips. Make sure to try some cask ales / real ales. " \
@@ -902,8 +914,9 @@ def set_display_children(value):
                "the flavors more (which is scientifically true). If you like Guinness, " \
                "try the London Black beer -- it's a modern take on an old English style dark porter. If you have " \
                "time, there is a whole strip of breweries (Brew by Numbers, Anspach & Hobday, and more) all right " \
-               "under the train, it's a cool setup. " \
-               "So... lots to do here. I could definitely live here.", \
+               "under the train, it's a cool setup. ", \
+               html.Br(), html.Br(), \
+               "So... lots to do here. I could definitely live here!", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/england/london.JPG"},
@@ -923,9 +936,11 @@ def set_display_children(value):
 
 # France
     if value == 'Colmar':
-        return 'Colmar is a small city but really goes all out for Christmas. It is a really cute little city, and ' \
-               'it is actually wild how many tourists come to visit the Christmas markets. If you have the time, it ' \
-               'is definitely worth a day trip from Strasbourg.'
+        return 'Colmar may be small but it really goes all out for Christmas. It is a really cute little city, and ' \
+               'it is wild how many tourists come to visit the Christmas markets. If you have the time, it ' \
+               'is definitely worth a day trip from Strasbourg. The French architect that designed the Statue of ' \
+               'Liberty is from here, and there is actually a small replica of the statue that welcomes you as ' \
+               'you enter the city!'
     if value == 'Paris':
         return 'It is expensive and many people prefer other parts of France... but worth it to see Messi! JK ' \
                'there is also plenty to do besides see Messi. Of course visit the Eiffel Tour -- catch some great ' \
@@ -980,25 +995,31 @@ def set_display_children(value):
     if value == 'Berlin':
         return "'Poor but sexy' has become the city motto after the mayor said this back in 2003. " \
                "So much to do here. There is always " \
-               "something happening. It's a very creative, unique, fun, and often quirky city. The club scene " \
-               "(especially techno) is world famous. Berghain is the " \
-               "name of the Berlin's most famous club (and maybe the world's most famous club). It opens Friday " \
+               "something happening. It's a very creative, unique, fun, and often quirky city with lots of history. " \
+               "There is so much to see, especially the Brandenburg Gate, the Berliner Dom (cathedral), the " \
+               "Reichstag (national parliament), the Fernsehturm (TV tower), the Memorial to the Murdered Jews of " \
+               "Europe, and the East Side Gallery (section of Berlin wall with famous murals). There are many " \
+               "famous museums as well, many are right in the center of the city on Museum Island.", \
+               html.Br(), html.Br(), \
+               "For the artistic side of the city -- the club scene (especially techno) is world famous. Berghain " \
+               "is the most famous club in Berlin (and maybe the world). It opens Friday " \
                "night and does not close until noon on Monday. If you want to go, be prepared " \
                "to wait a long time in line and know that there is a good chance you will not be let in -- it's part " \
-               "of the funky culture that preserves the hype and exclusivity aura of the club. For other club " \
+               "of the funky culture that preserves the hype and exclusive aura of the club. For other club " \
                "options, try Watergate, Tresor, Club der Visionäre, or Ritter Butzke. For a really fun bar that " \
                "isn't exactly a club, go to Minimal bar. ", \
                html.Br(), html.Br(), \
                "Beyond the clubs, " \
                "there are tons of concerts here every day and there are always " \
-               "people playing music on the streets (especially around Museum Island) as well. Lots of fun " \
-               "bars as well. There is an unreal rooftop at Klunkenkranich. Great craft beers and a good time at" \
-               "Kaschk, Muted Horn, Hops & Barley, Protokoll, and Straßenbräu. Berlin may also randomly " \
-               "have the most beaches of any city in the world. In many parks there are sand volleyball courts " \
-               "and there are so many beach bars in parks and on the rivers around the city as well. However, " \
+               "people playing music on the streets (especially on the Admiralbrücke and around Museum Island). " \
+               "Lots of fun bars as well -- there's an amazing rooftop at Klunkerkranich. Find great craft beer and " \
+               "a good time at Kaschk, Muted Horn, Hops & Barley, Protokoll, and Straßenbräu. Berlin (randomly) " \
+               "has so many beaches -- there are many sand volleyball courts and beach bars in parks and on " \
+               "on the rivers around the city. However, " \
                "to get to a proper beach you need to travel out of the city a bit -- the Wannsee has maybe the " \
                "best beach. There are so many parks, including maybe the coolest park ever, which is an old airport " \
-               "that has now become a massive park right in the city. Another awesome park is Treptower Park. " \
+               "that has now become a massive park right in the city. Other great parks include Treptower Park, " \
+               "Park am Gleisdreieck, Viktoriapark, and Körnerpark. " \
                "There are lots of sports here as well (to watch and play). The pro " \
                "basketball (Alba), soccer (2 teams: Hertha and Union), handball (Füchse), and ice hockey (Eisbären) " \
                "games all provide a very fun atmosphere. ", \
@@ -1011,9 +1032,10 @@ def set_display_children(value):
                "great middle eastern food, especially yemenite food at the 'Jemenitisches Restaurant' " \
                "and Syrian food at the 'Aleppo Supper Club.' And last but definitely not least -- Christmas " \
                "time is magical here! There are tons of Christmas markets all over the city, and mulled wine " \
-               "(glühwein) also available all over the city.", \
+               "(Glühwein) also available all over the city.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
+                    {"src": "assets/germany/berlin10.JPG"},
                     {"src": "assets/germany/berlin.JPG"},
                     {"src": "assets/germany/berlin2.JPG"},
                     {"src": "assets/germany/berlin3.JPG"},
@@ -1024,34 +1046,60 @@ def set_display_children(value):
                     {"src": "assets/germany/berlin4.JPG"},
                     {"src": "assets/germany/berlin8.jpeg"},
                     {"src": "assets/germany/berlin9.JPG"},
+                    {"src": "assets/germany/berlin11.JPG"},
+                    {"src": "assets/germany/berlin12.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
                 ),
     if value == 'Cologne':
-        return "More info coming soon!", \
-               html.Br(), html.Br(), dbc.Carousel(
+        return "Known officially as Köln in German -- and known unofficially as the 'Carnaval city,' " \
+               "I would have guessed it was February if I didn't know any better! (I went in September) " \
+               "There were so many bachelor / bachelorette parties happening, and so many people " \
+               "dressed in all kinds of costumes. I had really nice summer weather when I went, and the entire " \
+               "city was full of people, especially in the old town, which was originally established by the " \
+               "Romans. There are several huge gates to the old city that still stand today. " \
+               "Right in the center of the city, you'll see the very famous, very big " \
+               "gothic-style Cologne Cathedral (Kölner Dom in German). Entry is free! It is really impressive.", \
+               html.Br(), html.Br(), \
+               "Also in the center of the city, there are several famous Cologne beer halls / taverns, serving " \
+               "the light, easy-drinking Cologne-style beer (Kölsch). There is really great atmosphere and culture " \
+               "inside, especially in Brauhaus Früh am Dom, Peters Brauhaus, Brauhaus Zum Prinzen, " \
+               "and Brauerei zur Malzmühle. For the most lively atmosphere, go to Gaffel am Dom!" \
+               "Kölsch beer is always served in small glasses, and the waiters come by " \
+               "each table frequently with more fresh beers to replace the empty glasses. When you've had enough, " \
+               "be sure to put your coaster on top of your glass, otherwise the waiter will keep bringing you more!", \
+               html.Br(), html.Br(), \
+               "Be sure to also enjoy the waterfront along the Rhine river (Rhein in German). There is a nice cafe " \
+               "where you can find a beer or coffee overlooking the river, called Hafenterasse. Be sure to also " \
+               "make your way to the other side of the river, where you will get an amazing view of the city with " \
+               "the cathedral towering over it. Lastly, there is also a nice park with a small lake called Hiroshima-" \
+               "Nagasaki-Park. On a nice day you will find plenty of people at the 'Biergarten am Aachener Weiher!'", \
+                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    # {"src": "assets/germany/dor1.JPG"},
-                    # {"src": "assets/germany/dort.JPG"},
-                    # {"src": "assets/germany/dor2.JPG"},
-                    # {"src": "assets/germany/dor3.JPG"},
-                    # {"src": "assets/germany/dor4.JPG"},
+                    {"src": "assets/germany/koln.JPG"},
+                    {"src": "assets/germany/koln1.JPG"},
+                    {"src": "assets/germany/koln2.JPG"},
+                    {"src": "assets/germany/koln3.JPG"},
+                    {"src": "assets/germany/koln4.JPG"},
+                    {"src": "assets/germany/koln5.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
                 ),
     if value == 'Düsseldorf':
-        return "More info coming soon!", \
+        return "I was only here briefly, but the center of the city was very lively with many bars and restaurants! " \
+               "The waterfront along the Rhine river (Rhein in German) was also nicely developed with a number of " \
+               "bars and restaurants overlooking the water.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    # {"src": "assets/germany/dor1.JPG"},
-                    # {"src": "assets/germany/dort.JPG"},
-                    # {"src": "assets/germany/dor2.JPG"},
-                    # {"src": "assets/germany/dor3.JPG"},
-                    # {"src": "assets/germany/dor4.JPG"},
+                    {"src": "assets/germany/duss.JPG"},
+                    {"src": "assets/germany/duss1.JPG"},
+                    {"src": "assets/germany/duss2.JPG"},
+                    {"src": "assets/germany/duss3.JPG"},
+                    {"src": "assets/germany/duss4.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1059,17 +1107,33 @@ def set_display_children(value):
                 ),
     if value == 'Dortmund':
         return "Home to Borussia Dortmund! Go to a football game. It's known to be one of the best game atmospheres " \
-               "in the world. The Christmas market is also amazing! It is one of the biggest Christmas markets in " \
-               "the world, and actually has the largest natural Christmas 'tree' in the world. I say 'tree' because " \
-               "it's actually some 1,700 trees put together to make one tree that is over 150 feet tall! Lasly, they " \
-               "also have the coolest 'Herrenhandtasche,' literally a 'man's handbag' in English (picture below).", \
+               "in the world. I have been lucky to see Dortmund and the German national team play here! Both games " \
+               "were so much fun, especially since both resulted in wins for the home team! At the Westfalenstadion," \
+               "they also have the coolest 'Herrenhandtasche,' literally 'man's handbag' in English (picture below).", \
+               html.Br(), html.Br(), \
+               "The Christmas market is also amazing! It is one of the biggest Christmas markets in the world, " \
+               "and actually has the largest natural Christmas 'tree' in the world. I say 'tree' because " \
+               "it's actually some 1,700 trees put together to make one tree that is over 150 feet tall! ", \
+               html.Br(), html.Br(), \
+               "The main plaza in the city, Hansaplatz, has some great restaurants and bars, including Wenkers " \
+               "am Markt." \
+               "Lastly, there is a newly developed area of the city called Phoenix that is so nice! It used to be " \
+               "an industrial area before being completely transformed. There is a lake in the middle of this " \
+               "neighborhood that is surrounded by bars, restaurants, cafes, and impressive houses. There is also " \
+               "a walking and biking path that goes around the lake. Lastly, there is a large hill that you can " \
+               "climb to get a great view of the sunset, the neighborhood, the city of Dortmund, and of the " \
+               "Westfalenstadion!", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/germany/dor1.JPG"},
-                    {"src": "assets/germany/dort.JPG"},
+                    {"src": "assets/germany/dor6.JPG"},
+                    {"src": "assets/germany/dor.JPG"},
+                    {"src": "assets/germany/dor7.JPG"},
+                    {"src": "assets/germany/dor5.JPG"},
                     {"src": "assets/germany/dor2.JPG"},
                     {"src": "assets/germany/dor3.JPG"},
                     {"src": "assets/germany/dor4.JPG"},
+                    {"src": "assets/germany/dor8.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1334,6 +1398,67 @@ def set_display_children(value):
                 className="carousel-fade"
                 ),
 
+# Ireland
+    if value == 'Cliffs of Moher':
+        return 'Awesome (big) day trip from Dublin. They are amazing. My trip also included cool little stops at ' \
+               'castles ___ and ___.', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/ireland/moher.JPG"},
+                    {"src": "assets/ireland/moher1.JPG"},
+                    {"src": "assets/ireland/moher2.JPG"},
+                    {"src": "assets/ireland/moher3.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'Dingle':
+        return 'Griffin family trip upcoming in October!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/ireland/dingle.JPG"},
+                    {"src": "assets/ireland/dingle1.JPG"},
+                    {"src": "assets/ireland/dingle2.JPG"},
+                    {"src": "assets/ireland/dingle4.JPG"},
+                    {"src": "assets/ireland/dingle5.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'Dublin':
+        return 'There is just such a special charm to this city. Go and drink Guinness and enjoy. Sláinte!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/ireland/dublin.JPG"},
+                    {"src": "assets/ireland/dublin1.JPG"},
+                    {"src": "assets/ireland/dublin2.JPG"},
+                    {"src": "assets/ireland/dublin3.JPG"},
+                    {"src": "assets/ireland/dublin4.JPG"},
+                    {"src": "assets/ireland/dublin5.JPG"},
+                    {"src": "assets/ireland/dublin6.JPG"},
+                    {"src": "assets/ireland/dublin7.JPG"},
+                    {"src": "assets/ireland/dublin8.JPG"},
+                    {"src": "assets/ireland/dublin9.JPG"},
+                    {"src": "assets/ireland/dublin10.JPG"},
+                    {"src": "assets/ireland/dublin11.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'Tralee':
+        return 'Griffin family trip upcoming in October!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/ireland/tralee.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+
 # Italy
     if value == 'Bergamo':
         return 'DO NOT immediately overlook Bergamo in favor of Milan. A lot of budget airlines that ' \
@@ -1392,7 +1517,7 @@ def set_display_children(value):
                 className="carousel-fade"
                 ),
     if value == 'Genoa':
-        return "PANISSA", \
+        return "The birthplace of Christopher Columbus and pesto! Also make sure you try panissa!", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/italy/gen6.JPG"},
@@ -1557,40 +1682,6 @@ def set_display_children(value):
                 ride="carousel",
                 className="carousel-fade"
                 ),
-
-# Ireland
-    if value == 'Cliffs of Moher':
-        return 'Awesome (big) day trip from Dublin. They are amazing. My trip also included cool little stops at ' \
-               'castles ___ and ___.', \
-               html.Br(), html.Br(), dbc.Carousel(
-                items=[
-                    {"src": "assets/ireland/moher.JPG"},
-                    {"src": "assets/ireland/moher1.JPG"},
-                    {"src": "assets/ireland/moher2.JPG"},
-                    {"src": "assets/ireland/moher3.JPG"},
-                ],
-                interval=2000,
-                ride="carousel",
-                className="carousel-fade"
-                ),
-    if value == 'Dublin':
-        return 'There is just such a special charm to this city. Go and drink Guinness and enjoy. Sláinte!', \
-               html.Br(), html.Br(), dbc.Carousel(
-                items=[
-                    {"src": "assets/ireland/dublin.JPG"},
-                    {"src": "assets/ireland/dublin1.JPG"},
-                    # {"src": "assets/ireland/dublin2.JPG"},
-                    # {"src": "assets/ireland/dublin3.JPG"},
-                    # {"src": "assets/ireland/dublin4.JPG"},
-                ],
-                interval=2000,
-                ride="carousel",
-                className="carousel-fade"
-                ),
-    if value == 'Limerick':
-        return 'Trip upcoming in October!'
-    if value == 'Tralee':
-        return 'Trip upcoming in October!'
 
 # Mexico
     if value == 'Cancún':
@@ -1987,6 +2078,7 @@ def set_display_children(value):
                     {"src": "assets/spain/bcn12.JPG"},
                     {"src": "assets/spain/bcn13.JPG"},
                     {"src": "assets/spain/bcn14.JPG"},
+                    {"src": "assets/spain/bcn15.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -2205,14 +2297,42 @@ def set_display_children(value):
                'area look super futuristic and are really impressive. They look like they could be space ships from ' \
                'the next Star Wars movie. In reality they are actually museums, hence the name of the area. There ' \
                'are some very nice parks in the city. There is also a cool market area where you can eat and drink. ' \
-               'Lastly, if you are here in August, make the little trip to ____ for La Tomatina, the world’s biggest ' \
-               'food fight! Select ____ for more info about that.'
+               'Lastly, if you are here in August, make the little trip to Buñol for La Tomatina, the world’s ' \
+               'biggest food fight! Select Buñol for more info about that.'
     if value == 'Vilanova':
         return 'more info coming soon!'
 
 # Sweden
     if value == 'Stockholm':
-        return 'absolutely beautiful city! more info coming soon!', \
+        return 'The Swedish capitol is absolutely beautiful! The city itself is made up of ___ islands and they ' \
+               'definitely have a different feel. The center island with the old town (___) ' \
+               'has some of the picturesque little streets that you may see in pictures online. ' \
+               'There are some lovely cafes here. ___ on the water has nice views, awesome open-faced seafood ' \
+               'sandwiches, and the traditional Swedish cinnamon rolls that are so good! There are also ' \
+               'some great bars and restaurants. I loved the cozy little neighborhood restaurant called ___. ' \
+               'We also had so much fun drinking mead out of little ceramic mugs in the underground, ' \
+               'viking-themed bar here called ___. ' \
+               "The staff are dressed in 'viking' clothes, and there is also live 'viking' music! They have many " \
+               'different types of mead, but I think we preferred the classic.', \
+               html.Br(), html.Br(), \
+               'To the south of ___ is ___. The view of the old town from ___ on this island (first pic below)' \
+               'is perhaps the most famous in Stockholm! Right next to this viewpoint, check out a really unique ' \
+               "litle bridge connecting to someone's apartment! It's called ___"\
+               'There are also a couple really cool restaurants / bars ' \
+               'here that give you a bit of a view of the old town as well, including __ ' \
+               'These are a great idea during the day or at night! ', \
+               html.Br(), html.Br(), \
+               'Also on ___, you can find a main shopping street (impressively clean), a great beach / swimming ' \
+               'area (with a cool dock bar called Loopen Bar), a really fun and quirky open air area / club ' \
+               'called ___, and probably most importantly... ' \
+               'MEATBALLS ! You need to go to the Meatballs for the People. No, they are not just meatballs. ' \
+               'They are worth the wait. There are so many different kinds, so getting the sampler plate (comes ' \
+               'with amazing mashed potatos) is a great idea. ' \
+               'sample them all!', \
+               html.Br(), html.Br(), \
+               'Getting out on a boat is also highly recommended in Stockholm. This is a great way to see more of ' \
+               'the islands. We did the a quick tour of the main handful of islands near the old town island ___, ' \
+               'but there are many options that go much farther!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/sweden/sto.JPG"},
@@ -2231,9 +2351,21 @@ def set_display_children(value):
                 className="carousel-fade"
                 ),
 
+# Turkey
+    if value == 'Istanbul':
+        return 'Trip with Zach upcoming in November!'
+
 # USA
     if value == 'Champaign':
-        return 'long live the chief'
+        return 'Long live the chief!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/usa-il/champaign.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Chicago':
         return 'Home of the Digglers!', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -2259,11 +2391,17 @@ def set_display_children(value):
     if value == 'Milwaukee':
         return 'lil Chicago'
     if value == 'Dayton':
-        return 'Go to the Wandering Griffin Pub!'
-    if value == 'San Francisco':
-        return 'more info coming soon!'
-    if value == 'NYC':
-        return 'KATZ'
+        return 'Go to the Wandering Griffin Pub! The namesake for this app!'
+    if value == 'Dubuque':
+        return 'Jewel of the Mississippi!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/usa-ia/dbq.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
     if value == 'Miami':
         return 'Beautiful latino cultural melting pot. And of course the home of Messi', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -2279,6 +2417,28 @@ def set_display_children(value):
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/usa-mt/missoula.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ),
+    if value == 'NYC':
+        return 'KATZ'
+    if value == 'San Francisco':
+        return 'more info coming soon!'
+    if value == 'Seattle':
+        return 'more info coming soon!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/usa-wa/seattle.JPG"},
+                    {"src": "assets/usa-wa/seattle1.JPG"},
+                    {"src": "assets/usa-wa/seattle2.JPG"},
+                    {"src": "assets/usa-wa/seattle3.JPG"},
+                    {"src": "assets/usa-wa/seattle4.JPG"},
+                    {"src": "assets/usa-wa/seattle5.JPG"},
+                    {"src": "assets/usa-wa/seattle6.JPG"},
+                    {"src": "assets/usa-wa/seattle7.JPG"},
+
                 ],
                 interval=2000,
                 ride="carousel",
