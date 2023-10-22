@@ -9,7 +9,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 from datetime import date
 today = date.today()
 import dash_player as dp
-
+import dash_leaflet as dl
 
 # padding for the page content
 CONTENT_STYLE = {
@@ -25,6 +25,28 @@ colors = {
 }
 
 content = html.Div(id="page-content", children=[], style=CONTENT_STYLE)
+
+# germany coordinates
+ber_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.405, 52.52]}}
+duss_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.7735, 51.2277]}}
+koln_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.9603, 50.9375]}}
+dort_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.4653, 51.5136]}}
+dresden_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.7373, 51.0504]}}
+rügen_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.363, 54.352]}}
+pots_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.0645, 52.3906]}}
+leip_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.3731, 51.3397]}}
+munich_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.5820, 48.1351]}}
+nür_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.0767, 49.4521]}}
+stutt_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.1829, 48.7758]}}
+kiel_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.1228, 54.3233]}}
+ham_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.9872, 53.5488]}}
+oran_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.2409, 52.7557]}}
+lüb_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.6866, 53.8655]}}
+geng_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.0096, 48.4098]}}
+stral_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.077, 54.3091]}}
+flens_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.447, 54.7937]}}
+
+
 
 all_options = {
     'Andorra 🇦🇩': ['Pal Arinsal'],
@@ -1052,7 +1074,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=ber_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)),
     if value == 'Cologne':
         return "Known officially as Köln in German -- and known unofficially as the 'Carnaval city,' " \
                "I would have guessed it was February if I didn't know any better! (I went in September) " \
@@ -1088,7 +1114,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=koln_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)),
     if value == 'Düsseldorf':
         return "I was only here briefly, but the center of the city was very lively with many bars and restaurants! " \
                "The waterfront along the Rhine river (Rhein in German) was also nicely developed with a number of " \
@@ -1104,7 +1134,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=duss_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)),
     if value == 'Dortmund':
         return "Home to Borussia Dortmund! Go to a football game. It's known to be one of the best game atmospheres " \
                "in the world. I have been lucky to see Dortmund and the German national team play here! Both games " \
@@ -1138,7 +1172,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=dort_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)),
     if value == 'Dresden':
         return 'Home to one of the biggest and most amazing Christmas markets in the world. The medieval Christmas' \
                "market is also really cool. Be sure to try the 'Handbrot.' A famous dessert from here " \
@@ -1154,10 +1192,20 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(),\
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=dresden_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Flensburg':
         return 'Really cute port area and home to the Flensburger brewery. The tour is really cheap and you get ' \
-               "a lot of food and beer. They have the best marketing by any company I've ever seen."
+               "a lot of food and beer. They have the best marketing by any company I've ever seen.", \
+                html.Br(), html.Br(),\
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=flens_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Gengenbach':
         return 'Largest advent calendar in the world! Really nice small town in the middle of the Black Forest. ' \
                'Absolutely worth a stop during Christmas time.', \
@@ -1168,7 +1216,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), html.Br(),\
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=geng_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Hamburg':
         return 'A beautiful city in the north of Germany. The port of Hamburg is bigger than the entire city of ' \
                'Copenhagen. There are also more bridges than Amsterdam, Venice, and London combined! If you like ' \
@@ -1187,7 +1239,12 @@ def set_display_children(value):
                'following worldwide as they really represent the ' \
                'neighborhood well -- as a foil to the historically much more successful Hamburger SV, supporting the ' \
                'LGBTQ community by wearing a rainbow captain armband, and by often making demonstrations for various ' \
-               'human rights issues. Go to a game if you can!'
+               'human rights issues. Go to a game if you can!', \
+                html.Br(),\
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=ham_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Kiel':
         return 'My home on the coast of the Baltic Sea for a little less than a year after college. ' \
                'Definitely not the most happening place in Germany ' \
@@ -1210,7 +1267,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(),\
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=kiel_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Leipzig':
         return 'Both the new and old Rathaus (town hall) are really cool. ', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -1222,10 +1283,20 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(),\
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=leip_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Lübeck':
         return 'Home to some of the best marzipan in the world. I actually only played a basketball game here ' \
-               "(we won). It's supposed to be very cute and have a really nice Christmas market."
+               "(we won). It's supposed to be very cute and have a really nice Christmas market.", \
+                html.Br(), html.Br(), \
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=lüb_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Munich':
         return 'If you like to have fun and drink beer then Oktoberfest is ' \
                'a must at some point. Munich is where the one true Oktoberfest is held (cash only FYI). ' \
@@ -1280,7 +1351,12 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(),\
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=munich_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Nuremberg':
         return "I really enjoyed this city (spelled Nürnberg in German FYI) in the north of Bavaria! " \
                "Important to note though that this was not always part of Bavaria -- Nuremberg used to be the main " \
@@ -1333,23 +1409,55 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(),\
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=nür_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Oranienburg':
         return 'The remains of the Sachsenhausen concentration camp can be found here. It has been converted into ' \
                'a memorial / museum and it is really well done.' \
                'There is so much to read, see, and learn here. It is naturally difficult to learn about all the ' \
                'atrocities that occurred here, but I would recommend a visit.' \
-               'It is an easy day trip from Berlin.'
+               'It is an easy day trip from Berlin.', \
+                html.Br(), html.Br(), \
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=oran_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Potsdam':
-        return 'Home to many castles! Easy day trip (or fun bike trip) from Berlin!'
+        return 'Home to many castles! Easy day trip (or fun bike trip) from Berlin!', \
+                html.Br(), html.Br(), \
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=pots_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Rügen':
         return "Beautiful island! Germany's biggest. It is known for the steep chalk cliffs along the coasts. There " \
-               "are two national parks on the island. "
+               "are two national parks on the island. ", \
+                html.Br(), html.Br(), \
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=rügen_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Stralsund':
         return 'Cool little port city on the Baltic sea. Home to the great Störtebeker brewery! The brewery was ' \
-               'named after the legendary pirate Klaus Störebeker, who was born just outside Stralsund.'
+               'named after the legendary pirate Klaus Störebeker, who was born just outside Stralsund.', \
+                html.Br(), html.Br(), \
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=stral_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Stuttgart':
-        return 'Was only here briefly but the main Christmas market was nice'
+        return 'Was only here briefly but the main Christmas market was nice', \
+                html.Br(), html.Br(), \
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=stutt_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Hungary
     if value == 'Budapest':
@@ -1388,7 +1496,7 @@ def set_display_children(value):
                        )
                    ]
                ), \
-               html.Br(), html.Br(), dbc.Carousel(
+               html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/iceland/hotspring.JPG"},
                     {"src": "assets/iceland/hottub.JPG"},
