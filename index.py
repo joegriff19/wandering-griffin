@@ -9,6 +9,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 from datetime import date
 today = date.today()
 import dash_player as dp
+import pandas as pd
 import dash_leaflet as dl
 
 # padding for the page content
