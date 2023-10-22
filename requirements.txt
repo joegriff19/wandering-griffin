@@ -3,3 +3,4 @@ pandas
 gunicorn
 dash-bootstrap-components
 dash_player
+dash_leaflet
