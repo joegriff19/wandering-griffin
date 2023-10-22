@@ -26,39 +26,216 @@ colors = {
 
 content = html.Div(id="page-content", children=[], style=CONTENT_STYLE)
 
+# andorra coordinates
+pal_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1.4835, 42.5726]}}
+
+# argentina coordinates
+ba_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-58.3816, -34.6037]}}
+
+# austria coordinates
+dornbirn_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.7438, 47.4124]}}
+vienna_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [16.3738, 48.2082]}}
+
+# bahamas coordinates
+eleuthera_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-76.1581, 24.8791]}}
+nassau_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-77.3504, 25.0443]}}
+
+# belgium coordinates
+antwerp_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [4.4051, 51.2213]}}
+brussels_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [4.3572, 50.8476]}}
+ghent_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [3.7303, 51.05]}}
+leuven_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [4.7138, 50.8823]}}
+
+# bolivia coordinates
+cliza_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-65.9393, -17.5953]}}
+cocha_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-66.1653, -17.414]}}
+
+# bosnia coordinates
+medj_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [17.663, 43.2009]}}
+mostar_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [17.8078, 43.3438]}}
+
+# bulgaria coordinates
+sofia_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [23.3219, 42.6977]}}
+varna_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [27.9147, 43.2141]}}
+
+# canada coordinates
+banff_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-115.5708, 51.1784]}}
+calgary_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-114.0719, 51.0447]}}
+
+# chile coordinates
+puertonat_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-72.5068, -51.7269]}}
+sant_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-70.6693, -33.4489]}}
+torres_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-72.3517, -51.2533]}}
+valpa_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-71.6127, -33.0472]}}
+valle_nevado_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-70.2489, -33.3538]}}
+
+# croatia coordinates
+dubrovnik_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [18.0944, 42.6507]}}
+motovun_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.8279, 45.336]}}
+opatija_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [14.3052, 45.3376]}}
+plitvice_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [15.5820, 44.8654]}}
+pula_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.8496, 44.8666]}}
+rovinj_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.6387, 45.0812]}}
+vodnjan_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.8528, 44.9612]}}
+zagreb_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [15.9819, 45.8150]}}
+
+# czechia coordinates
+prague_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [14.4378, 50.0755]}}
+
+# denmark coordinates
+copen_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.5683, 55.6761]}}
+
+# ecuador coordinates
+galapagos_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-90.9656, -0.9538]}}
+quito_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.4678, -0.1807]}}
+
+# england coordinates
+london_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.1276, 51.5072]}}
+
+# france coordinates
+colmar_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.3585, 48.0794]}}
+paris_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.3522, 48.8566]}}
+stras_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.7521, 48.5734]}}
+
 # germany coordinates
 ber_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.405, 52.52]}}
-duss_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.7735, 51.2277]}}
-koln_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.9603, 50.9375]}}
 dort_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.4653, 51.5136]}}
 dresden_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.7373, 51.0504]}}
-rügen_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.363, 54.352]}}
-pots_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.0645, 52.3906]}}
-leip_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.3731, 51.3397]}}
-munich_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.5820, 48.1351]}}
-nür_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.0767, 49.4521]}}
-stutt_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.1829, 48.7758]}}
-kiel_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.1228, 54.3233]}}
-ham_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.9872, 53.5488]}}
-oran_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.2409, 52.7557]}}
-lüb_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.6866, 53.8655]}}
-geng_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.0096, 48.4098]}}
-stral_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.077, 54.3091]}}
+duss_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.7735, 51.2277]}}
 flens_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.447, 54.7937]}}
+geng_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.0096, 48.4098]}}
+ham_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.9872, 53.5488]}}
+kiel_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.1228, 54.3233]}}
+koln_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.9603, 50.9375]}}
+leip_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.3731, 51.3397]}}
+lub_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.6866, 53.8655]}}
+munich_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.5820, 48.1351]}}
+nur_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.0767, 49.4521]}}
+oran_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.2409, 52.7557]}}
+pots_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.0645, 52.3906]}}
+rugen_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.363, 54.352]}}
+stral_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.077, 54.3091]}}
+stutt_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.1829, 48.7758]}}
 
+# hungary coordinates
+budapest_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [19.0402, 47.4979]}}
 
+# iceland coordinates
+reykjavik_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-21.9426, 64.1466]}}
+vik_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.6417, 63.4192]}}
+
+# ireland coordinates
+cliffs_of_moher_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-9.4247, 52.9719]}}
+dingle_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-10.2664, 52.1414]}}
+dublin_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-6.2603, 53.3498]}}
+tralee_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-9.7026, 52.2713]}}
+
+# italy coordinates
+bergamo_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.6623, 45.6983]}}
+florence_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.2558, 43.7696]}}
+genoa_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.9463, 44.4056]}}
+lecco_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.3923, 45.8554]}}
+milan_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.1900, 45.4642]}}
+portofino_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.2097, 44.3030]}}
+rome_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.4964, 41.9028]}}
+vatican_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.4534, 41.9029]}}
+venice_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.3155, 45.4408]}}
+verona_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.9916, 45.4384]}}
+
+# mexico coordinates
+cancun_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-86.8515, 21.1619]}}
+mexico_city_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1332, 19.4326]}}
+
+# montenegro coordinates
+kotor_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [18.7712, 42.4247]}}
+
+# morocco coordinates
+tangier_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-5.8325, 35.7595]}}
+
+# netherlands coordinates
+amsterdam_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [4.8979, 52.3772]}}
+
+# north macedonia coordinates
+skopje_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [21.4279, 42.0022]}}
+
+# norway coordinates
+oslo_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.7522, 59.9139]}}
+
+# peru coordinates
+lima_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-77.0428, -12.0464]}}
+iquitos_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-73.2472, -3.7172]}}
+
+# poland coordinates
+krakow_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [19.9449, 50.0647]}}
+wroclaw_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [17.0385, 51.1079]}}
+
+# portugal coordinates
+guincho_beach_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-9.4984, 38.7255]}}
+lisbon_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-9.1393, 38.7223]}}
+
+# puerto rico coordinates
+rincon_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-67.2389, 18.3402]}}
+san_juan_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-66.1057, 18.4655]}}
+
+# slovakia coordinates
+bratislava_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [17.1079, 48.1486]}}
+
+# slovenia coordinates
+ljubljana_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [14.5058, 46.0569]}}
+
+# spain coordinates
+azpeitia_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-2.3242, 43.0372]}}
+barcelona_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.1734, 41.3851]}}
+begur_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [3.2071, 41.9542]}}
+bilbao_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-2.9253, 43.2630]}}
+bunol_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.7944, 39.4194]}}
+girona_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.8241, 41.8787]}}
+granada_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-3.5919, 37.1773]}}
+irun_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-1.9022, 43.3407]}}
+madrid_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-3.7038, 40.4168]}}
+malaga_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-4.4214, 36.7213]}}
+mallorca_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.6502, 39.6953]}}
+montserrat_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1.8262, 41.5934]}}
+pineda_de_mar_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.6646, 41.6362]}}
+san_sebastian_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-1.9812, 43.3183]}}
+sitges_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1.8110, 41.2353]}}
+segovia_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-4.1200, 40.9429]}}
+sevilla_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-5.9845, 37.3886]}}
+tenerife_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-16.6291, 28.4636]}}
+toledo_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-4.0226, 39.8628]}}
+valencia_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.3750, 39.4699]}}
+vilanova_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1.7250, 41.2184]}}
+
+# sweden coordinates
+stockholm_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [18.0686, 59.3293]}}
+
+# turkey coordinates
+istanbul_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [28.9784, 41.0082]}}
+
+# usa coordinates
+champaign_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-88.2434, 40.1164]}}
+chicago_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-87.6298, 41.8781]}}
+copper_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-106.1613, 39.479]}}
+dayton_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-84.1916, 39.7589]}}
+dubuque_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-90.6648, 42.5006]}}
+miami_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-80.1917902, 25.7616798]}}
+milw_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-87.9065, 43.0389]}}
+missoula_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-113.9966, 46.8721]}}
+nyc_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.0060, 40.7128]}}
+san_francisco_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.4194, 37.7749]}}
+seattle_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.3321, 47.6062]}}
 
 all_options = {
     'Andorra 🇦🇩': ['Pal Arinsal'],
     'Argentina 🇦🇷': ['Buenos Aires'],
     'Austria 🇦🇹': ['Dornbirn', 'Vienna'],
-    'Bahamas 🇧🇸': ['Eleuthera', 'New Providence (where Nassau is)'],
+    'Bahamas 🇧🇸': ['Eleuthera', 'New Providence (where Nassau is located)'],
     'Belgium 🇧🇪': ['Antwerp', 'Brussels', 'Ghent', 'Leuven'],
     'Bolivia 🇧🇴': ['Cliza', 'Cochabamba'],
     'Bosnia & Herzegovina 🇧🇦': ['Medjugorje', 'Mostar'],
     'Bulgaria 🇧🇬': ['Sofia', 'Varna'],
     'Canada 🇨🇦': ['Banff', 'Calgary'],
-    'Chile 🇨🇱': ['Puerto Natales (Patagonia)', 'Santiago', 'Torres del Paine NP (Patagonia)',
+    'Chile 🇨🇱': ['Puerto Natales (Patagonia)', 'Santiago', 'Torres del Paine NP (Patagonia)', 'Valle Nevado',
                  'Valparaíso / Viña del Mar'],
     'Croatia 🇭🇷': ['Dubrovnik', 'Motovun', 'Opatija', 'Plitvice Lakes National Park', 'Pula', 'Rovinj',
                    'Vodnjan', 'Zagreb'],
@@ -66,7 +243,7 @@ all_options = {
     'Denmark 🇩🇰': ['Copenhagen'],
     'Ecuador 🇪🇨': ['Galapagos Islands', 'Quito'],
     'England 🏴󠁧󠁢󠁥󠁮󠁧󠁿': ['London'],
-    'France 🇫🇷': ['Paris', 'Strasbourg'],
+    'France 🇫🇷': ['Colmar', 'Paris', 'Strasbourg'],
     'Germany 🇩🇪': ['Berlin', 'Cologne', 'Düsseldorf', 'Dortmund', 'Dresden', 'Flensburg', 'Gengenbach', 'Hamburg',
                    'Kiel', 'Lübeck',
                    'Leipzig', 'Munich', 'Nuremberg', 'Oranienburg', 'Potsdam', 'Rügen', 'Stralsund', 'Stuttgart'],
@@ -95,38 +272,9 @@ all_options = {
     #            'Massachusetts', 'Michigan', 'Missouri', 'Montana', 'Nebraska', 'New Hampshire', 'New York',
     #            'North Carolina', 'Ohio', 'Pennsylvania', 'Tennessee', 'Utah', 'Vermont', 'West Virginia', 'Wisconsin',
     #            'West Virginia'],
-    'USA 🇺🇸': ['Champaign', 'Chicago', 'Dayton', 'Dubuque', 'Miami', 'Missoula', 'NYC', 'San Francisco', 'Seattle'],
+    'USA 🇺🇸': ['Champaign', 'Chicago', 'Copper Mountain', 'Dayton', 'Dubuque', 'Miami', 'Missoula', 'Milwaukee',
+                 'NYC', 'San Francisco', 'Seattle'],
 }
-
-
-# state_options = {
-#     'Arizona': ['Montaña ski'],
-#     'California': ['Buenos Aires'],
-#     'Colorado': ['Dornbirn', 'Vienna'],
-#     'DC': ['Eleuthera', 'New Providence (where Nassau is)'],
-#     'Florida': ['Antwerp', 'Ghent'],
-#     'Illinois': ['Champaign', 'Chicago'],
-#     'Indiana': ['Medjugorje', 'Mostar'],
-#     'Iowa': ['Sofia', 'Varna'],
-#     'Kentucky': ['Banff', 'Calgary'],
-#     'Maine': ['Puerto Natales', 'Santiago', 'Torres del Paine National Park (Patagonia)'],
-#     'Massachusetts': ['Dubrovnik', 'Plitvice Lakes National Park', 'Pula', 'Rovinj', 'Zagreb'],
-#     'Michigan': ['Prague'],
-#     'Missouri': ['Copenhagen'],
-#     'Montana': ['Galapagos Islands', 'Quito'],
-#     'Nebraska󠁧󠁿': ['London'],
-#     'New Hampshire': ['Berlin', 'Dortmund', 'Dresden', 'Flensburg', 'Hamburg', 'Kiel', 'Lübeck', 'Leipzig', 'Munich',
-#                    'Stuttgart'],
-#     'New York': ['Budapest'],
-#     'North Carolina': ['Reykjavik', 'Southern half of island'],
-#     'Ohio': ['Bergamo', 'Florence ', 'Milan', 'Rome', 'Vatican 🇻🇦', 'Venice', 'Verona'],
-#     'Pennsylvania': ['Cliffs of Moher', 'Dublin'],
-#     'Utah': ['Cancún', 'Mexico City'],
-#     'Vermont': ['Kotor'],
-#     'West Virginia': ['somewhere'],
-#     'Wisconsin': ['Milwaukee'],
-# }
-
 
 # define sidebar layout
 app.layout = html.Div([
@@ -263,7 +411,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(),\
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=pal_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Argentina
     if value == 'Buenos Aires':
@@ -314,7 +466,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(),\
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=ba_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Austria
     if value == 'Dornbirn':
@@ -327,7 +483,11 @@ def set_display_children(value):
                'surrounded by the Alps. For an amazing view of the city, go up the cable car to ' \
                '_____. There is a cool restaurant up here called _____. For a really cool old tavern down ' \
                'in the city, the Rothaus is awesome. In winter, there is also great skiing nearby. ' \
-               'I did a trip for a couple days to Steffisalp and the views were incredible. '
+               'I did a trip for a couple days to Steffisalp and the views were incredible. ', \
+               html.Br(), html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=dornbirn_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Vienna':
         return 'A very grand city! The capital of Austria is very impressive. The Hofburg Palace and the main ' \
                'cathedral on Stephansplatz are the big ' \
@@ -358,7 +518,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(),\
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=vienna_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Bahamas
     if value == 'Eleuthera':
@@ -376,9 +540,18 @@ def set_display_children(value):
                        height="200px",
                    )
                ]
-           ),
-    if value == 'New Providence (where Nassau is)':
-        return 'explore Nassau, eat conch, go to the beach, and listen to Bob'
+           ), html.Br(),\
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=eleuthera_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+    if value == 'New Providence (where Nassau is located)':
+        return 'explore Nassau, eat conch, go to the beach, and listen to Bob', \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=nassau_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
 
 # Belgium
     if value == 'Antwerp':
@@ -396,7 +569,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=antwerp_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
     if value == 'Brussels':
         # image_path = 'assets/andrea_delirium.gif'
@@ -430,7 +607,12 @@ def set_display_children(value):
                     interval=2000,
                     ride="carousel",
                     className="carousel-fade"
-                    ),
+                    ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=brussels_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Leuven':
         return 'What a fun little town really close to Brussels. It is easily accessible via the train system;' \
                'the ride takes less than 30 minutes from Brussels. The main attraction in Leuven is the Town Hall, ' \
@@ -451,7 +633,11 @@ def set_display_children(value):
                     interval=2000,
                     ride="carousel",
                     className="carousel-fade"
-                    ),
+                    ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=leuven_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Ghent':
         return 'I absolutely loved my time here. It is such a cute little city. The main area of the city feels like ' \
                'something out of a Harry Potter movie! The canal lined with classic Belgian architecture houses, ' \
@@ -486,7 +672,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=ghent_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Bolivia
     if value == 'Cliza':
@@ -500,7 +690,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=cliza_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Cochabamba':
         return 'el Cristo más grande', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -511,7 +705,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=cocha_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Bosnia & Herzegovina
     if value == 'Medjugorje':
@@ -527,9 +725,13 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=medj_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Mostar':
-        return 'brr', \
+        return 'more info coming soon!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/bosnia/mostar2.JPG"},
@@ -539,7 +741,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=mostar_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Bulgaria
     if value == 'Sofia':
@@ -562,7 +768,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=sofia_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Varna':
         return "I would so highly recommend this little gem of a city on the Black Sea. Enjoy the beaches and the " \
                "cheap prices. This is probably the cheapest place I’ve ever been in Europe. The most expensive " \
@@ -594,17 +804,36 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=varna_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Canada
     if value == 'Banff':
-        return 'The color of the lake is really stunning'
+        return 'The color of the lake is really stunning', \
+                html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=banff_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Calgary':
-        return 'Cool, clean city'
+        return 'Cool, clean city', \
+                html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=calgary_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Chile
     if value == 'Puerto Natales (Patagonia)':
-        return 'eat the guanaco and the spider crab and drink the calafate beer'
+        return 'eat the guanaco and the spider crab and drink the calafate beer', \
+                html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=puertonat_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Santiago':
         return 'The capital of Chile! An absolutely beautiful city with the stunning backdrop of the Andes ' \
                'mountains everywhere you look. Be sure to eat lots of ‘parilla’ (grilled meat). You can (and ' \
@@ -637,7 +866,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=santiago_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
     if value == 'Torres del Paine NP (Patagonia)':
         return '"The W" trail was stunning from start to finish. The Torres on the last morning was an amazing end. ' \
@@ -681,7 +914,11 @@ def set_display_children(value):
                    interval=2000,
                    ride="carousel",
                    className="carousel-fade"
-               )
+               ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=torres_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
     if value == 'Valparaíso / Viña del Mar':
         return 'Eat the ceviche. WOW !', \
@@ -697,7 +934,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=valpa_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Valle Nevado':
         return 'Stunning views of the Andes mountains! Remember that the seasons are flipped, so ski season goes ' \
                'from maybe May to September. The ___ resort is on the Ikon pass A lot of people ' \
@@ -720,7 +961,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=valle_nevado_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Croatia
     if value == 'Dubrovnik':
@@ -746,7 +991,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=dubrovnik_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Plitvice Lakes National Park':
         return 'Really beautiful. It provides a nice contrast to the coastal cities you will likely in Croatia.', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -761,7 +1010,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=plitvice_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Pula':
         return "Definitely worth a stop. There's a very old Roman arena and nice little port. There are some cool" \
                "shops and restaurants as well. The view of the city " \
@@ -777,7 +1030,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=pula_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Motovun':
         return "What a fun, unique experience. Would definitely recommend truffle hunting with a local and their " \
                "dogs! Often times, truffle hunting has run in a family for generations as it takes a lot of effort " \
@@ -793,7 +1050,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=motovun_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Vodnjan':
         return "Olivessss", \
                html.Br(), html.Br(), dbc.Carousel(
@@ -821,7 +1082,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=opatija_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Rovinj':
         return "One of the most picturesque towns I've ever seen, especially from the port. The view of the city " \
                "from the water / parking lot when you enter the city is beautiful as well. This peninsula is so " \
@@ -846,7 +1111,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=zagreb_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Czechia
     if value == 'Prague':
@@ -885,7 +1154,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=prague_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Denmark
     if value == 'Copenhagen':
@@ -900,14 +1173,28 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=copen_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Ecuador
     if value == 'Quito':
-        return 'go up'
+        return 'more info to come!', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=quito_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Galapagos Islands':
         return "Maybe the coolest place I've ever been. Week-long cruise with daily snorkeling. We saw penguins, " \
-               "sea lions, sting rays, sharks, and more sea turtles than you could ever imagine."
+               "sea lions, sting rays, sharks, and more sea turtles than you could ever imagine.", \
+                html.Br(), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=galapagos_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # England
     if value == 'London':
@@ -954,7 +1241,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+                    html.Div(
+                        dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=london_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # France
     if value == 'Colmar':
@@ -962,7 +1253,12 @@ def set_display_children(value):
                'it is wild how many tourists come to visit the Christmas markets. If you have the time, it ' \
                'is definitely worth a day trip from Strasbourg. The French architect that designed the Statue of ' \
                'Liberty is from here, and there is actually a small replica of the statue that welcomes you as ' \
-               'you enter the city!'
+               'you enter the city!', \
+               html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=colmar_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Paris':
         return 'It is expensive and many people prefer other parts of France... but worth it to see Messi! JK ' \
                'there is also plenty to do besides see Messi. Of course visit the Eiffel Tour -- catch some great ' \
@@ -997,7 +1293,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=paris_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
     if value == 'Strasbourg':
         return 'Known as the ‘Capital of Christmas,’ Strasbourg is quite magical for Christmas. There are so many ' \
@@ -1011,7 +1311,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=stras_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Germany
     if value == 'Berlin':
@@ -1224,8 +1528,8 @@ def set_display_children(value):
     if value == 'Hamburg':
         return 'A beautiful city in the north of Germany. The port of Hamburg is bigger than the entire city of ' \
                'Copenhagen. There are also more bridges than Amsterdam, Venice, and London combined! If you like ' \
-               'seafood you are in luck, the fresh fish sandwiches (Fischbrötchen) are so good. Go to Brücke 37 ' \
-               'on port. At the port you will also see the iconic new concert hall called the Elbphilharmonie, ' \
+               'seafood you are in luck, the fresh fish sandwiches (Fischbrötchen) are so good -- go to Brücke 37 ' \
+               'at the port. Also at the port you will see the iconic new concert hall called the Elbphilharmonie, ' \
                'with its roof resembling and reflecting the waves of the water below. Go up to the top of the ' \
                'nearby church, ____ to get great views of the port and of the concert hall. Be sure to walk ' \
                'through the Speicherstadt, the beautiful storage area for all incoming goods coming by boat ' \
@@ -1233,14 +1537,34 @@ def set_display_children(value):
                'to visit the Hamburger version of the Amsterdam red light district, St. Pauli. ' \
                'Different than Amsterdam though in that this was formerly the outside of the city of Hamburg ' \
                'and thus became the more expressive and creative area, with music, art, and bars ' \
-               '(and also prostition). There are tons of fun bars and clubs' \
+               '(and also prostitution). There are tons of fun bars and clubs' \
                'here. The Beatles wrote their first album here and have actually played more shows in ' \
                'St. Pauli than anywhere else in the world. The football team has also gained a cult ' \
                'following worldwide as they really represent the ' \
                'neighborhood well -- as a foil to the historically much more successful Hamburger SV, supporting the ' \
                'LGBTQ community by wearing a rainbow captain armband, and by often making demonstrations for various ' \
-               'human rights issues. Go to a game if you can!', \
-                html.Br(),\
+               'human rights issues. I had so much fun at the game I went to, and you can see in the picture below ' \
+               'there was a big sign saying "Kein Mensch ist illegal," or in english "No person is illegal." ' \
+               'Go to a game if you can!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/germany/ham.JPG"},
+                    {"src": "assets/germany/ham1.JPG"},
+                    {"src": "assets/germany/ham2.JPG"},
+                    {"src": "assets/germany/ham3.JPG"},
+                    {"src": "assets/germany/ham4.JPG"},
+                    {"src": "assets/germany/ham5.JPG"},
+                    {"src": "assets/germany/ham6.JPG"},
+                    {"src": "assets/germany/ham7.JPG"},
+                    {"src": "assets/germany/ham8.JPG"},
+                    {"src": "assets/germany/ham9.JPG"},
+                    {"src": "assets/germany/ham10.JPG"},
+                    {"src": "assets/germany/ham11.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ), html.Br(),\
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=ham_geojson)],
@@ -1263,6 +1587,16 @@ def set_display_children(value):
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/germany/kiel.JPG"},
+                    {"src": "assets/germany/kiel1.JPG"},
+                    {"src": "assets/germany/kiel2.JPG"},
+                    {"src": "assets/germany/kiel3.JPG"},
+                    {"src": "assets/germany/kiel4.JPG"},
+                    {"src": "assets/germany/kiel5.JPG"},
+                    {"src": "assets/germany/kiel6.JPG"},
+                    {"src": "assets/germany/kiel7.JPG"},
+                    {"src": "assets/germany/kiel8.JPG"},
+                    {"src": "assets/germany/kiel9.JPG"},
+                    {"src": "assets/germany/kiel10.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1295,7 +1629,7 @@ def set_display_children(value):
                 html.Br(), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=lüb_geojson)],
+                            dl.GeoJSON(data=lub_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Munich':
         return 'If you like to have fun and drink beer then Oktoberfest is ' \
@@ -1412,7 +1746,7 @@ def set_display_children(value):
                 ), html.Br(),\
                 html.Div(
                     dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=nür_geojson)],
+                            dl.GeoJSON(data=nur_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
     if value == 'Oranienburg':
@@ -1440,7 +1774,7 @@ def set_display_children(value):
                 html.Br(), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=rügen_geojson)],
+                            dl.GeoJSON(data=rugen_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
     if value == 'Stralsund':
@@ -1465,7 +1799,12 @@ def set_display_children(value):
                'that were damaged in WW2 and then abandoned) are really quirky, creative, and fun. ' \
                'Be absolutely sure to climb up the citadel to see the Liberty Statue ' \
                '(formerly the "Communism statue"). The view of the river and the city ' \
-               'down below is amazing. Definitely go to the famous Széchenyi bath too.'
+               'down below is amazing. Definitely go to the famous Széchenyi bath too.', \
+               html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=budapest_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Iceland
     if value == 'Reykjavik':
@@ -1475,7 +1814,12 @@ def set_display_children(value):
                "good reindeer burger. We didn't see puffin on a menu but it is also eaten here." \
                "See the rainbow road. Check out the Viking church and go to the top of it. Bæjarins Beztu Pylsur is " \
                "also a fun hot dog spot made famous by Bill Clinton -- Forbes called it the world's most " \
-               "famous hot dog vendor! They're made of lamb and definitely worth a try!"
+               "famous hot dog vendor! They're made of lamb and definitely worth a try!", \
+                html.Br(), \
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=reykjavik_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
     if value == 'Southern half of island':
         image_path = 'assets/iceland/hottub.JPG'
@@ -1504,7 +1848,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=vik_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Ireland
     if value == 'Cliffs of Moher':
@@ -1520,7 +1868,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=cliffs_of_moher_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Dingle':
         return 'Griffin family trip upcoming in October!', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -1534,7 +1886,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=dingle_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Dublin':
         return 'There is just such a special charm to this city. Go and drink Guinness and enjoy. Sláinte!', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -1555,7 +1911,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=dingle_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Tralee':
         return 'Griffin family trip upcoming in October!', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -1565,7 +1925,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=tralee_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Italy
     if value == 'Bergamo':
@@ -1591,7 +1955,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=bergamo_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Florence':
         return 'Such a lovely city. The Arno river runs right through the city and the sun sets ' \
                'beautifully over it (at least in April when I went!). DO NOT come here without ' \
@@ -1623,7 +1991,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=florence_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Genoa':
         return "The birthplace of Christopher Columbus and pesto! Also make sure you try panissa!", \
                html.Br(), html.Br(), dbc.Carousel(
@@ -1639,7 +2011,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=genoa_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Lecco':
         return 'Lovely day trip from Bergamo', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -1653,7 +2029,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=lecco_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Milan':
         return 'The center of the city with the cathedral (duomo in Italian) and the arcade to the left of ' \
                'the duomo are really nice. In the south of the city the Navigli district is awesome -- ' \
@@ -1681,7 +2061,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=milan_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Portofino':
         return 'more info coming soon!', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -1693,7 +2077,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=portofino_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Rome':
         return 'So much fascinating history here. The food scene is also incredible. Be sure to visit the coliseum, ' \
                'the old Roman ruins, visit the Vatican(separate Italy page for this), and get your Lizzie McGuire ' \
@@ -1724,7 +2112,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=rome_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Vatican 🇻🇦':
         return 'Definitely worth some time on your visit to Rome, especially as a Catholic. The main plaza (St. ' \
                "Peter's Square) with St. Peter's Basilica is " \
@@ -1747,7 +2139,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=vatican_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Venice':
         return 'It is definitely as charming as everyone says it is. Visit the main plaza (St. Marco) and church, ' \
                'go to the top of the tower there for great views of the city, take a boat ride (the boat usually ' \
@@ -1767,7 +2163,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=venice_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Verona':
         return 'The setting from the famous Romeo and Juliet play -- Verona is a beautiful city ' \
                'that probably does ' \
@@ -1789,13 +2189,22 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=verona_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Mexico
     if value == 'Cancún':
         return 'The beaches in the Riviera Maya are beautiful. One can obviously come here to party, but ' \
                'visitng the Mayan ruins and exploring nature are also amazing. Visit the Xel-Ha park and snorkel ' \
-               'through the waters and caves!'
+               'through the waters and caves!', \
+                html.Br(), \
+                html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=cancun_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Mexico City':
         return "What a city. Weather is temperate year round. So much good cheap food. The tamales with mole " \
                "just might change your life. Surprisingly there really don't seem to be too many tourists." \
@@ -1823,7 +2232,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=mexico_city_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Montenegro
     if value == 'Kotor':
@@ -1843,7 +2256,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=kotor_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Morocco
     if value == 'Tangier':
@@ -1870,7 +2287,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=tangier_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Netherlands
     if value == 'Amsterdam':
@@ -1899,7 +2320,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=amsterdam_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # North Macedonia
     if value == 'Skopje':
@@ -1927,7 +2352,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=skopje_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Peru
     if value == 'Oslo':
@@ -1964,11 +2393,20 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=oslo_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Peru
     if value == 'Lima':
-        return 'gotta go back'
+        return 'more info to come!', \
+                html.Br(), html.Br(), \
+                html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=lima_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Iquitos':
         return 'The start of my Amazon river adventure. We flew here from Lima and took a boat about 50 miles down ' \
                'the Amazon. We then stayed in a few remote places in the rain forest before coming back to ' \
@@ -1984,7 +2422,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=iquitos_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Poland
     if value == 'Krakow':
@@ -2007,7 +2449,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=krakow_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Wrocław':
         return 'Very pretty small city. The people were all very nice. Go to the market square and check out some ' \
                'of the cafes and restaurants. The Konspira restaurant is really great -- this is also a great option ' \
@@ -2031,11 +2477,15 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=wroclaw_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Portugal
     if value == 'Lisbon':
-        return 'Beauty', \
+        return 'Absolutely lovely city! More info to come!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/portugal/lisbon.JPG"},
@@ -2055,7 +2505,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=lisbon_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Guincho Beach':
         return 'Not too far of a drive from Lisbon -- I was lucky to meet someone with a car and we drove here. ' \
                "There are big sand dunes next to the coast. There's also a couple cafes here where you can grab a" \
@@ -2069,11 +2523,15 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=guincho_beach_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Puerto Rico
     if value == 'Rincón':
-        return 'Beauty', \
+        return 'Beautiful! More info to come!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/pr/rincon.JPG"},
@@ -2082,9 +2540,18 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=rincon_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'San Juan':
-        return 'so fun'
+        return 'So fun. More info to come!', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=san_juan_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Slovakia
     if value == 'Bratislava':
@@ -2100,7 +2567,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=bratislava_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Slovenia
     if value == 'Ljubljana':
@@ -2120,11 +2591,20 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=ljubljana_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Spain
     if value == 'Azpeitia':
-        return 'Birthplace of St. Ignatius and home to a large festival on July 31 each year for his feast day'
+        return 'Birthplace of St. Ignatius and home to a large festival on July 31 each year for his feast day', \
+               html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=azpeitia_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Barcelona':
         return 'PSA -- I am biased having studied abroad here but this is one of my favorite cities in the world! ' \
                'So much to do, see, and eat in this beautiful city on the Mediterranean Sea. Things to do include ' \
@@ -2191,11 +2671,25 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=barcelona_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Begur':
-        return 'Really nice beaches if you want to visit nice beaches up the coast from Barcelona'
+        return 'Really nice beaches if you want to visit nice beaches up the coast from Barcelona', \
+               html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=begur_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Bilbao':
-        return "Capital of the Basque country. I didn't spend too much time here but definitely worth a stop. "
+        return "Capital of the Basque country! I didn't spend too much time here but definitely worth a stop. ", \
+               html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=bilbao_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Buñol':
         return "Home of the world’s biggest food fight! It happens the last Wednesday of August every year. " \
                "It is a tiny town with probably little to no tourism for most of the year besides this weekend. " \
@@ -2207,10 +2701,20 @@ def set_display_children(value):
                "of tomato mush. Make sure you wear a shirt that you don’t mind throwing out. Also, you 100% want to " \
                "wear ski goggles or lab goggles, especially if you are tall. Tall people are going to get caught " \
                "in the tomato crossfire a lot more! It is quite the experience and was a lot of fun, but I probably " \
-               "don't need to go again."
+               "don't need to go again.", \
+               html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=bunol_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Girona':
-        return "Capital of the northern province of Catalonia. It's a cool little city if you want to visit another " \
-               "Catalan city."
+        return "Capital of the northern province of Catalonia! It's a cool little city if you want to visit another " \
+               "Catalan city.", \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=girona_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Granada':
         return 'Absolutely beautiful city. The Sierra Nevada mountains surround the city and the city itself is ' \
                'quite mountainous too. THe Alhambra castle complex is incredible. The south of Spain was controlled ' \
@@ -2220,13 +2724,23 @@ def set_display_children(value):
                'added their own addition and touches. The resulting structures, that still stand today, are ' \
                'incredible. The gardens there are also so beautiful. ' \
                'Granada has a strong tapas tradition -- meaning that whenever you order drinks you are almost always' \
-               'served a tapa to go with the drinks. The food in general is also great.'
+               'served a tapa to go with the drinks. The food in general is also great.', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=granada_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Irún':
         return 'This is the main city on the Spanish side of the Spain / France border near the coast. ' \
                'Definitely off the beaten path but really nice little city. The view from on top of the mountain ' \
                'at Jaizkibeleko V. Dorrea where you can see the Bidasoa river that divides Spain and France is ' \
                'absolutely beautiful. You can also walk along this river in the city as well, there are plenty ' \
-               'of nice bars, restaurants, and shops here!'
+               'of nice bars, restaurants, and shops here!', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=irun_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Madrid':
         return 'The Spanish capital! Definitely a different feel than Barcelona but both are amazing cities. ' \
                'Tons of places to visit: Parque de Retiro (for sure see the central pond and the Palacio ' \
@@ -2256,7 +2770,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ),  html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=madrid_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Málaga':
         return 'Nice city on the Costa del Sol (Coast of the Sun)', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -2270,23 +2788,52 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=malaga_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Mallorca':
         return 'Beautiful island not far from Barcelona. You can actually take a ferry here from Barcelona, or it ' \
                'is a very quick flight. Many people come to enjoy some nice beaches and island tranquility, but ' \
                'there is also a German-speaking part of the island where many Germans come to party. There is a ' \
-               'whole German genre of music made for partying on Mallorca.'
+               'whole German genre of music made for partying on Mallorca.', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=mallorca_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Montserrat':
         return 'Beautiful and really uniquely shaped mountains that are only an hour or so by train inland from ' \
-               'Barcelona.'
+               'Barcelona.', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=montserrat_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Pineda de Mar':
-        return 'more info coming soon!'
+        return 'more info coming soon!', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=pineda_de_mar_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'San Sebastián':
         return 'Beautiful city on the northern coast of Spain. It supposedly has the highest density of bars and ' \
                'restuarants in the world. Take the Funicular Monte Igueldo up to Igeldo mendiko behatokia ' \
-               'to get an amazing view of the bay and city from above.'
+               'to get an amazing view of the bay and city from above.', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=san_sebastian_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Sitges':
-        return 'The carnaval capital of Spain'
+        return 'The carnaval capital of Spain!', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=sitges_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Segovia':
         return 'Another small city with fascinating history, Segovia is a very old city that makes for an awesome ' \
                'day trip from Madrid. There is a Roman aqueduct that runs through the main plaza of the city that ' \
@@ -2307,7 +2854,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=segovia_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Sevilla':
         return "Such a lovely city in the south of Spain (Andalusia). It’s a decent-sized city but " \
                "extremely walkable. One of the highlights (especially for Star Wars fans) is the " \
@@ -2355,7 +2906,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=sevilla_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Tenerife':
         return 'Amazing island with incredibly diverse wildlife and landscapes. Temperatures here are consistently ' \
                'warm (but not too hot) year round. There are lots of nice beaches (including black sand beaches) and ' \
@@ -2383,7 +2938,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=tenerife_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Toledo':
         return 'The original capital of Spain, Toledo is a very old city that makes for an awesome day trip from ' \
                'Madrid. It is a small city that is essentially on a little island, surrounded by city walls and a ' \
@@ -2396,7 +2955,12 @@ def set_display_children(value):
                'the 20 (?) minute walk south along the opposite side of the river to get a great view of the city. ' \
                'Lastly, make sure to try lots of different marzipan treats — to bring some back for friends! Toledo ' \
                'is known to make maybe the best marzipan in Europe. There is a shop that even has a maybe 10 foot ' \
-               'tall Don Quijote made completely out of marzipan! It has some Guinness world record for this.'
+               'tall Don Quijote made completely out of marzipan! It has some Guinness world record for this.', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=toledo_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Valencia':
         return 'The birthplace of paella! Be sure to eat plenty of paella while you’re here. Valencia is on the ' \
                'eastern coast of Spain, but the city center is not quite on the coast. The coast and beaches are ' \
@@ -2406,9 +2970,19 @@ def set_display_children(value):
                'the next Star Wars movie. In reality they are actually museums, hence the name of the area. There ' \
                'are some very nice parks in the city. There is also a cool market area where you can eat and drink. ' \
                'Lastly, if you are here in August, make the little trip to Buñol for La Tomatina, the world’s ' \
-               'biggest food fight! Select Buñol for more info about that.'
+               'biggest food fight! Select Buñol for more info about that.', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=valencia_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Vilanova':
-        return 'more info coming soon!'
+        return 'more info coming soon!', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=vilanova_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Sweden
     if value == 'Stockholm':
@@ -2457,11 +3031,20 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=stockholm_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # Turkey
     if value == 'Istanbul':
-        return 'Trip with Zach upcoming in November!'
+        return 'Trip with Zach upcoming in November!', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=istanbul_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # USA
     if value == 'Champaign':
@@ -2473,7 +3056,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=champaign_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Chicago':
         return 'Home of the Digglers!', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -2483,7 +3070,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=chicago_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Copper Mountain':
         return 'awesome skiing', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -2495,11 +3086,23 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=copper_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Milwaukee':
-        return 'lil Chicago'
+        return 'lil Chicago', html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=milw_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Dayton':
-        return 'Go to the Wandering Griffin Pub! The namesake for this app!'
+        return 'Go to the Wandering Griffin Pub! The namesake for this app!', html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=dayton_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Dubuque':
         return 'Jewel of the Mississippi!', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -2509,9 +3112,13 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=dubuque_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Miami':
-        return 'Beautiful latino cultural melting pot. And of course the home of Messi', \
+        return 'Beautiful latino cultural melting pot. And of course the home of Messi! More info to come!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/usa-fl/miami.JPG"},
@@ -2519,7 +3126,11 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=miami_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Missoula':
         return 'more info coming soon!', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -2529,11 +3140,25 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=missoula_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'NYC':
-        return 'KATZ'
+        return 'KATZ', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=nyc_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'San Francisco':
-        return 'more info coming soon!'
+        return 'more info coming soon!', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=san_francisco_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Seattle':
         return 'more info coming soon!', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -2542,13 +3167,18 @@ def set_display_children(value):
                     {"src": "assets/usa-wa/seattle1.JPG"},
                     {"src": "assets/usa-wa/seattle2.JPG"},
                     {"src": "assets/usa-wa/seattle3.JPG"},
+                    {"src": "assets/usa-wa/seattle7.JPG"},
                     {"src": "assets/usa-wa/seattle4.JPG"},
                     {"src": "assets/usa-wa/seattle5.JPG"},
+                    {"src": "assets/usa-wa/seattle8.JPG"},
                     {"src": "assets/usa-wa/seattle6.JPG"},
-                    {"src": "assets/usa-wa/seattle7.JPG"},
-
+                    {"src": "assets/usa-wa/seattle9.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ),
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=seattle_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
