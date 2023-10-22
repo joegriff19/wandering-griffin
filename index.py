@@ -291,7 +291,6 @@ index_layout = html.Div(
                     # html.Div(children="travel recs", className="wg"),
                     html.Div(children="🌎", style={"fontSize": "85px"}),
                     html.Div(children="I can't do everything but I can try!", className="powered"),
-                    # html.Div(children="powered by JI", className="powered"),
                     html.Br(),
                 ],
                 style={
