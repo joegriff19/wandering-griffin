@@ -3,7 +3,6 @@ from app import app, server #NEED THE IMPORT SERVER FOR RENDER
 from dash import dcc, html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Output, Input
-import random
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 from datetime import date
@@ -546,12 +545,11 @@ def set_display_children(value):
                             dl.GeoJSON(data=eleuthera_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'New Providence (where Nassau is located)':
-        return 'explore Nassau, eat conch, go to the beach, and listen to Bob', \
+        return 'explore Nassau, eat conch, go to the beach, and listen to Bob', html.Br(), html.Br(), \
                html.Div(
                    dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=nassau_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
-
 
 # Belgium
     if value == 'Antwerp':
@@ -869,7 +867,7 @@ def set_display_children(value):
                 ), html.Br(), \
                     html.Div(
                         dl.Map([dl.TileLayer(),
-                           dl.GeoJSON(data=santiago_geojson)],
+                           dl.GeoJSON(data=sant_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
     if value == 'Torres del Paine NP (Patagonia)':
@@ -1370,7 +1368,7 @@ def set_display_children(value):
                     {"src": "assets/germany/berlin6.JPG"},
                     {"src": "assets/germany/berlin7.JPG"},
                     {"src": "assets/germany/berlin4.JPG"},
-                    {"src": "assets/germany/berlin8.jpeg"},
+                    {"src": "assets/germany/berlin8.JPG"},
                     {"src": "assets/germany/berlin9.JPG"},
                     {"src": "assets/germany/berlin11.JPG"},
                     {"src": "assets/germany/berlin12.JPG"},
@@ -2416,8 +2414,8 @@ def set_display_children(value):
                 items=[
                     {"src": "assets/peru/iquitos.PNG"},
                     {"src": "assets/peru/iquitos1.PNG"},
-                    {"src": "assets/peru/iquitos2.PNG"},
-                    {"src": "assets/peru/iquitos3.PNG"},
+                    {"src": "assets/peru/iquitos2.PNG"}, # need to adjust photo size ratio
+                    {"src": "assets/peru/iquitos3.PNG"}, # need to adjust photo size ratio
                 ],
                 interval=2000,
                 ride="carousel",
