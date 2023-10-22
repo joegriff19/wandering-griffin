@@ -334,7 +334,7 @@ index_layout = html.Div(
                 html.Br(),
                 # html.Div(id='us-city-info'),
                 html.Div(children="If this was helpful, please consider buying me a beverage! Thank you!",
-                         className="powered"),
+                         className="beverage"),
                 html.Div(children="🍻", style={"fontSize": "35px"}),
                 dbc.Button(children='My Venmo',
                            color="primary",

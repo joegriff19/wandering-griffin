@@ -10,6 +10,12 @@
     font-family: Skia;
 }
 
+.beverage {
+    font-size: 18px;
+    font-style: italic;
+    font-family: Tratello;
+}
+
 .other {
     height: 600px;
     line-height: 60px;
