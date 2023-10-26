@@ -4,6 +4,7 @@ import dash_bootstrap_components as dbc
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(
         __name__,
+        title='Wandering Griffin Travel',
         external_stylesheets=[dbc.themes.MORPH],
         suppress_callback_exceptions=True
         )
