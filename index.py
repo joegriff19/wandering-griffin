@@ -825,8 +825,36 @@ def set_display_children(value):
 
 # Chile
     if value == 'Puerto Natales (Patagonia)':
-        return 'eat the guanaco and the spider crab and drink the calafate beer', \
-                html.Br(), \
+        return 'One of the southernmost cities in the world! If you are going to Torres del Paine National Park,' \
+                'you will likely fly here and stop here before (and after) your time in the park. ' \
+                'The airport is quick and cheap 10 minute ride to / from the city. The park is farther, ' \
+                'about a 1.5-2 hour drive from Puerto Natales, but there are multiple bus options for this. ' \
+                'In Puerto Natales, we stayed in the Lili Patagónicos hostel and very much enjoyed it. ' \
+                'They offered had hiking and climbing equipment rentals, as well as luggage storage. ', \
+               html.Br(), html.Br(), \
+                'It’s not a big city, but it has everything you could want and it is very walkable. ' \
+                'There is a full grocery store where you can stock up on snacks for your hike, ' \
+                'really nice restaurants, and lovely views here as well. Be sure to walk along the water ' \
+                'and see the  Monumento al Milodón, the Monumento de la Mano, the Monumento al Viento, ' \
+                'and the beautiful mountains in the distance over the water. We really enjoyed the Restaurante el ' \
+                'Bote and Mesita Grande restaurants. Be sure to try a couple unique local foods: the guanaco ' \
+                'and the centolla crab. Chilean sea bass is also amazing! Lastly, be sure to try the Austral ' \
+                'Calafate beer! It is a delicious local beer made with local calafate berries ' \
+                '(similar to blueberries).', \
+                html.Br(), html.Br(), dbc.Carousel(
+                 items=[
+                    {"src": "assets/chile/puertonat.JPG"},
+                    {"src": "assets/chile/puertonat1.JPG"},
+                    {"src": "assets/chile/puertonat2.JPG"},
+                    {"src": "assets/chile/puertonat3.JPG"},
+                    {"src": "assets/chile/puertonat4.JPG"},
+                    {"src": "assets/chile/puertonat5.JPG"},
+                    {"src": "assets/chile/puertonat6.JPG"},
+                 ],
+                 interval=2000,
+                 ride="carousel",
+                 className="carousel-fade"
+                ), html.Br(), \
                     html.Div(
                         dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=puertonat_geojson)],
@@ -1159,8 +1187,23 @@ def set_display_children(value):
 
 # Denmark
     if value == 'Copenhagen':
-        return 'very nice. take the ferry train to/from Germany!', \
-               html.Br(), html.Br(), dbc.Carousel(
+        return ('The capital of Denmark! It is very fun to walk or bike around this city as it is full of parks '
+                'and waterways. Be sure to walk around Nyhaven and see the most famous view of the city! '
+                'Perhaps the next most famous sight to see is The Little Mermaid statue. '
+                'The statue itself is actually quite small, but it is still fun to see. A visit to the '
+                'Carlsberg brewery is very fun. Don’t be alarmed by the swastikas on the elephants as you '
+                'enter the brewery — they have been there long before WW2! The swastika is an ancient '
+                'symbol of good fortune, not something created by Nazi Germany. The Tivoli Garden is also '
+                'worth a visit, and they decorate it depending on the season. We saw it in fall / Halloween theme! '), \
+                html.Br(), html.Br(), \
+               ('I visited from Kiel, and I loved my train ride here! The train from Germany goes across '
+                'the German island of Fehmarn and drives onto a ferry, which then crosses the Baltic Sea to '
+                'reach Denmark! While on the ferry, you can get off the train and enjoy the views from the '
+                'boat deck — just don’t forget to get back on the train before it drives off the boat! I was '
+                'enjoying the views as we approached Denmark and almost didn’t get back on in time! '
+                '(Note: an underwater tunnel is actually being built right now, so soon the train will '
+                'make this journey via this tunnel rather than via ferry)'), \
+                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/denmark/cop.JPG"},
                     {"src": "assets/denmark/cop1.JPG"},
@@ -1766,8 +1809,18 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
     if value == 'Rügen':
-        return "Beautiful island! Germany's biggest. It is known for the steep chalk cliffs along the coasts. There " \
-               "are two national parks on the island. ", \
+        return "The biggest island of Germany! ", \
+                "(Yes Germany has islands, almost 100 actually!) Located in the Baltic Sea, ", \
+                "Rügen is just off the northern coast of Germany, the closest city on the mainland being Stralsund. ", \
+                html.Br(), html.Br(), \
+                "Rügen is famous for its steep chalk cliffs along the water — and they are indeed quite stunning! ", \
+                "There are two national parks on the island, the more famous being Jasmund. This is where the ", \
+                "famous ‘Königsstuhl’ can be found. You can drive here, but I would definitely recommend ", \
+                "taking a bike around the island! The cliffs are an easy bike ride from the nearby city of Sassnitz. ", \
+                "Sassnitz is a really nice little city with nice cafes and restaurants. There is also a big, ", \
+                "long pier with a cool little green lighthouse at the end. There aren’t any beaches here though — ", \
+                "the best place for beaches and swimming is Binz. This is the main hotel / resort area of the island. ", \
+                "We didn’t end up making it here but this would certainly be a lovely place to stay.", \
                 html.Br(), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
@@ -1777,6 +1830,9 @@ def set_display_children(value):
     if value == 'Stralsund':
         return 'Cool little port city on the Baltic sea. Home to the great Störtebeker brewery! The brewery was ' \
                'named after the legendary pirate Klaus Störebeker, who was born just outside Stralsund.', \
+               'If you are visiting Rügen, Stralsund is definitely worth a stop. It is also a great option to ', \
+               'stay in Stralsund and explore Rügen during the day. There are really good train connections ', \
+               'from the main train station in Stralsund to the different parts of the island of Rügen.', \
                 html.Br(), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
@@ -2262,14 +2318,15 @@ def set_display_children(value):
 # Morocco
     if value == 'Tangier':
         return 'Despite being just 17 miles from the southern coast of Spain, I felt more culture shock here than ' \
-               'anywhere in Europe. The newer part of the city has a European ' \
+               'anywhere in Europe. The newer part of th e city has a European ' \
                'feel as this used to be the gateway from Europe to Africa (and vice versa) before air travel. ' \
                'However, inside the old city walls of Tangier (the Kasbah) is a whole different story.' \
                'Here, there are a number of locals who will ask you where you are going or if you want to eat ' \
                'something. I think restaurants compensate them if they bring people to their restaurant. ' \
                'If you are with a local though no one will bother you. Thus, getting a guide for a day is a good ' \
                'idea and not too expensive. They will likely also set you up to go a nearby beach and ride camels, ' \
-               'which was such a fun, unique experience. The food there is so good -- the ' \
+               'which was such a fun, unique experience. We also visited the Cave of Hercules which was really cool! ' \
+               'The food there is so good -- the ' \
                "'thousand-hole pancakes' and shakshouka (my favorite breakfast on the planet), " \
                "chicken tagine (lamb or beef are also amazing), couscous (originally from Morocco and also " \
                "their national dish), fish chermoula, and zaalouk (like baba ganoush). Be sure to visit Cafe Hafa. " \
@@ -2280,6 +2337,10 @@ def set_display_children(value):
                     {"src": "assets/morocco/tangier.JPG"},
                     {"src": "assets/morocco/tangier1.JPG"},
                     {"src": "assets/morocco/tangier2.JPG"},
+                    {"src": "assets/morocco/tangier3.JPG"},
+                    {"src": "assets/morocco/tangier4.JPG"},
+                    {"src": "assets/morocco/tangier5.JPG"},
+                    {"src": "assets/morocco/tangier6.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
