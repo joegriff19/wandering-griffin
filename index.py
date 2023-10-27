@@ -1331,7 +1331,7 @@ def set_display_children(value):
     if value == 'Flensburg':
         return 'Really cute port city just south of the Denmark border. Also home to the Flensburger brewery! ' \
                 'The tour is really cheap (was only 10 euros in 2017!) and you get ' \
-               "a lot of food and beer afterwards. They have the best marketing ever.", \
+               "a lot of food and beer afterwards! They have the best marketing ever.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/germany/flens.JPG"},
