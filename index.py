@@ -40,28 +40,52 @@ index_layout = html.Div(
     children=[
             html.Header(
                 children=[
-                    # html.Div(children="wandering griffin", style={"fontSize": "75px"}),
-                    html.Div(children="wandering griffin travel", className="wg"),
+                    # html.Div(children="Wandering Griffin", style={"fontSize": "75px"}),
+                    html.Div(children="Wandering Griffin Travel", className="wg"),
+                    html.Br(),
+                    html.Div(children=dcc.Graph(
+                        # id='choropleth-fig',
+                        # className='graph-container',
+                        # height=10, width=10,
+                        figure=globe.fig,
+                        animate=True,
+                        responsive=True,
+                        style={
+                            # 'width': '20',
+                            'height': '40vh',
+                            'padding-left': '10%', 'padding-right': '10%'
+                        },
+                        config={
+                            'displayModeBar': False,
+                            # 'displaylogo': False,
+                            'scrollZoom': False,
+                            'doubleClick': False,
+                            # 'staticPlot': True
+                        })),
                     # html.Div(children="travel recs", className="wg"),
-                    html.Div(children="🌎", style={"fontSize": "85px"}),
+                    # html.Div(children="🌎", style={"fontSize": "85px"}),
                     html.Div(children="I can't do everything but I can try!", className="powered"),
                     # html.Div(plot(globe.fig, filename='rotation.html', auto_play=True)),
-                    # dcc.Graph(id='choropleth-fig',
-                    #           className='graph-container',
+                    # dcc.Graph(
+                    #         # id='choropleth-fig',
+                    #           # className='graph-container',
                     #           figure=globe.fig,
                     #           responsive=True,
                     #           config={
-                    #             'displayModeBar': False,
+                    #             'displayModeBar': True,
                     #             'scrollZoom': False,
                     #             'doubleClick': False,
                     #             # 'staticPlot': True
                     #               }),
-                    # dcc.Interval(id='choropleth-interval', interval=50),
+                    # # dcc.Interval(id='choropleth-interval', interval=50),
                     html.Br(),
                 ],
                 style={
                     'textAlign': 'center',
+                    # 'justify': 'center',
                     'color': colors['text'],
+                    "padding": "0px",    #<---------- here
+                    "margin": "0px"
                     # 'background': colors['background']
                 }
             ),
@@ -248,7 +272,7 @@ def set_display_children(value):
                '_____. There is a cool restaurant up here called _____. For a really cool old tavern down ' \
                'in the city, the Rothaus is awesome. In winter, there is also great skiing nearby. ' \
                'I did a trip for a couple days to Steffisalp and the views were incredible. ', \
-               html.Br(), html.Div(
+               html.Br(), html.Br(), html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.dornbirn_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
@@ -712,7 +736,7 @@ def set_display_children(value):
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
     if value == 'Valparaíso / Viña del Mar':
-        return 'Eat the ceviche. WOW !', \
+        return 'Enjoy the beautiful coastline and eat the fresh ceviche from the oceanside marketplace. WOW !!!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/chile/valpo3.JPG"},
