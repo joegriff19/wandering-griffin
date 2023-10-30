@@ -1,5 +1,8 @@
 import plotly.graph_objs as go
 import numpy as np
+import pycountry
+import pandas as pd
+import visited_countries
 
 fig = go.Figure(go.Scattergeo(
             # lat=[45.5017, 51.509865, 52.520008],
@@ -9,34 +12,64 @@ fig = go.Figure(go.Scattergeo(
 go.Layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)'),
 )
 
+# Create instances for each United Nations member state
+un_member_states = list(pycountry.countries)
+data = [[country.name, country.alpha_3] for country in un_member_states]
+df = pd.DataFrame(data)
+df.columns = ['Country', 'Iso_Code']
+df['Visited'] = df['Country'].apply(lambda x: 0 if x in visited_countries.visited_countries else 1)
+
+fig = go.Figure(data=go.Choropleth(
+    locations=df['Iso_Code'],
+    z=df['Visited'],
+    text=df['Country'],
+    colorscale=[
+        [0, "rgb(231, 231, 231)"],
+        # [1, "rgb(175, 225, 175)"],
+        [1, "rgb(175, 225, 175)"]],
+    autocolorscale=False,
+    reversescale=True,
+    showscale=False,
+    # marker_line_color='black',
+    # marker_line_width=0.5,
+    hovertemplate=df['Country'],
+    name=""),
+)
+
 fig.update_layout(
-    # height=1000,
-    margin=dict(l=0, r=0, t=0, b=0),
-        geo=dict(
-            bgcolor='rgba(0,0,0,0)',
-            # plot_bgcolor='rgba(0,0,0)',
-            projection_type='orthographic',
-            # center_lon=-180,
-            center_lat=0,
-            # projection_rotation_lon=-180,
-            projection_rotation_lat=10,
-            showland=True,
-            showcountries=True,
-            showocean=True,
-            showlakes=False,
-            landcolor='rgb(175, 225, 175)',
-            oceancolor='rgb(137, 207, 240)',
-            countrycolor='rgb(90, 90, 90)',
-            projection_scale=0.85,
-        ),
-    )
+    margin=dict(l=0, r=0, t=2, b=2),
+    hoverlabel=dict(
+        bgcolor="black",
+        font_size=15,
+        # font_family="Rockwell"
+    ),
+    paper_bgcolor='rgba(0,0,0,0)',
+    plot_bgcolor='rgba(0,0,0,0)',
+    # width=500, height=500,
+    geo=dict(
+        bgcolor='rgba(0,0,0,0)',
+        showcoastlines=True,
+        projection_type='orthographic',
+        center_lon=-25,
+        # center_lat=0,
+        projection_rotation_lat=15,
+        projection_rotation_lon=-25,
+        showland=True,
+        showlakes=False,
+        showocean=True,
+        showcountries=True,
+        landcolor='rgb(231, 231, 231)',
+        # countrycolor='rgb(204, 204, 204)',
+        oceancolor='rgb(137, 207, 240)',
+        showframe=True,
+        framewidth=1,
+        framecolor='black',  # couleur du contour
+    ),
+)
+
 fig.update_traces(
-        marker_line_width=1,
-        marker_line_color='white',
-        hovertemplate=(
-                '<b>%{customdata[0]} (%{customdata[1]})</b><br>' +
-                'Total number of Rockets launched: %{z}<br>'
-        )
+        marker_line_width=0.5,
+        marker_line_color='black',
     )
 lon_range = np.arange(-180, 180, 5)
 

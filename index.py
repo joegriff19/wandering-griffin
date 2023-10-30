@@ -1,8 +1,8 @@
 # Import Packages and other files for app
 from app import app, server #NEED THE IMPORT SERVER FOR RENDER
-from dash import dcc, html
+from dash import dcc, html, callback, clientside_callback
 import dash_bootstrap_components as dbc
-from dash.dependencies import Output, Input
+from dash.dependencies import Output, Input, State
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 from datetime import date
@@ -29,6 +29,9 @@ colors = {
 
 content = html.Div(id="page-content", children=[], style=CONTENT_STYLE)
 
+CHOROPLETH_INTERVAL = 50
+
+
 # define sidebar layout
 app.layout = html.Div([
    dcc.Location(id="url"),
@@ -43,7 +46,7 @@ index_layout = html.Div(
                     # html.Div(children="Wandering Griffin", style={"fontSize": "75px"}),
                     html.Div(children="Wandering Griffin Travel", className="wg"),
                     html.Br(),
-                    html.Div(children=dcc.Graph(
+                    dcc.Graph(
                         # id='choropleth-fig',
                         # className='graph-container',
                         # height=10, width=10,
@@ -60,31 +63,22 @@ index_layout = html.Div(
                             # 'displaylogo': False,
                             'scrollZoom': False,
                             'doubleClick': False,
-                            # 'staticPlot': True
-                        })),
+                            'staticPlot': False
+                        }),
+                    # dcc.Interval(id='choropleth-interval', interval=CHOROPLETH_INTERVAL),
+
                     # html.Div(children="travel recs", className="wg"),
                     # html.Div(children="🌎", style={"fontSize": "85px"}),
+                    html.Br(),
                     html.Div(children="I can't do everything but I can try!", className="powered"),
                     # html.Div(plot(globe.fig, filename='rotation.html', auto_play=True)),
-                    # dcc.Graph(
-                    #         # id='choropleth-fig',
-                    #           # className='graph-container',
-                    #           figure=globe.fig,
-                    #           responsive=True,
-                    #           config={
-                    #             'displayModeBar': True,
-                    #             'scrollZoom': False,
-                    #             'doubleClick': False,
-                    #             # 'staticPlot': True
-                    #               }),
-                    # # dcc.Interval(id='choropleth-interval', interval=50),
                     html.Br(),
                 ],
                 style={
                     'textAlign': 'center',
                     # 'justify': 'center',
                     'color': colors['text'],
-                    "padding": "0px",    #<---------- here
+                    "padding": "0px",
                     "margin": "0px"
                     # 'background': colors['background']
                 }
@@ -144,7 +138,8 @@ index_layout = html.Div(
 
     ])
 
-# page callback
+# page callbacks
+
 
 @app.callback(
     Output('page-content', 'children',),
@@ -161,7 +156,6 @@ def render_page_content(pathname):
            html.P(f"The pathname {pathname} was not recognized..."),
        ]
     )
-
 
 @app.callback(
     # Output('cities-dd', 'children'),
@@ -214,7 +208,7 @@ def set_display_children(value):
                "continued to decline in value, and because of this many Argentinians would rather store their " \
                "savings in USD rather than pesos. Thus, they are willing to trade you almost twice the current " \
                "exchange rate for your American dollars. This is very common and open on ‘Calle Florida.’ As soon as " \
-               "you walk down the street you will here people saying ‘cambia’ (‘change’ in English). Do this as soon " \
+               "you walk down the street you will here people saying ‘cambio’ (‘change’ in English). Do this as soon " \
                "as you get to Argentina and pay with cash for everything. By doing this everything in the country " \
                "essentially becomes 50% off! Even without this ‘discount,’ Airbnbs are still very cheap. Next — " \
                "absolutely go to a soccer game while you are here. The atmosphere is insane. There are 5 top league " \
@@ -1676,7 +1670,7 @@ def set_display_children(value):
                'Be absolutely sure to climb up the citadel to see the Liberty Statue ' \
                '(formerly the "Communism statue"). The view of the river and the city ' \
                'down below is amazing. Definitely go to the famous Széchenyi bath too.', \
-               html.Br(), \
+               html.Br(), html.Br(), \
                html.Div(
                    dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.budapest_geojson)],
