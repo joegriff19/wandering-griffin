@@ -296,7 +296,8 @@ def set_display_children(value):
                 items=[
                     {"src": "assets/austria/vienna.JPG"},
                     {"src": "assets/austria/vienna1.JPG"},
-                    # {"src": "assets/austria/vienna2.JPG"},
+                    {"src": "assets/austria/vienna2.JPG"},
+                    {"src": "assets/austria/vienna6.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -519,6 +520,7 @@ def set_display_children(value):
                     {"src": "assets/bosnia/mostar2.JPG"},
                     {"src": "assets/bosnia/mostar1.JPG"},
                     {"src": "assets/bosnia/mostar3.JPG"},
+                    {"src": "assets/bosnia/mostar.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -962,6 +964,12 @@ def set_display_children(value):
                     {"src": "assets/czechia/prg4.JPG"},
                     {"src": "assets/czechia/prg5.JPG"},
                     {"src": "assets/czechia/prg6.JPG"},
+                    {"src": "assets/czechia/prg7.JPG"},
+                    {"src": "assets/czechia/prg8.JPG"},
+                    {"src": "assets/czechia/prg9.JPG"},
+                    {"src": "assets/czechia/prg10.JPG"},
+                    {"src": "assets/czechia/prg11.JPG"},
+
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1671,7 +1679,19 @@ def set_display_children(value):
                'Be absolutely sure to climb up the citadel to see the Liberty Statue ' \
                '(formerly the "Communism Statue"). The view of the river and the city ' \
                'down below is amazing. Definitely go to the famous Széchenyi bath too.', \
-               html.Br(), html.Br(), \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/hungary/bud.JPG"},
+                    {"src": "assets/hungary/bud4.JPG"},
+                    {"src": "assets/hungary/bud6.JPG"},
+                    {"src": "assets/hungary/bud7.JPG"},
+                    {"src": "assets/hungary/bud5.JPG"},
+                    {"src": "assets/hungary/bud8.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ), html.Br(),\
                html.Div(
                    dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.budapest_geojson)],
@@ -2438,7 +2458,11 @@ def set_display_children(value):
                     {"src": "assets/slovakia/bratislava.JPG"},
                     {"src": "assets/slovakia/bratislava2.JPG"},
                     {"src": "assets/slovakia/bratislava1.JPG"},
-                    # {"src": "assets/slovakia/bratislava4.JPG"},
+                    {"src": "assets/slovakia/bratislava3.JPG"},
+                    {"src": "assets/slovakia/bratislava4.JPG"},
+                    {"src": "assets/slovakia/bratislava5.JPG"},
+                    {"src": "assets/slovakia/bratislava6.JPG"},
+                    {"src": "assets/slovakia/bratislava7.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -2462,7 +2486,9 @@ def set_display_children(value):
                     {"src": "assets/slovenia/lju1.JPG"},
                     {"src": "assets/slovenia/lju2.JPG"},
                     {"src": "assets/slovenia/lju3.JPG"},
-                    # {"src": "assets/slovenia/lju4.JPG"},
+                    {"src": "assets/slovenia/lju4.JPG"},
+                    {"src": "assets/slovenia/lju5.JPG"},
+                    {"src": "assets/slovenia/lju6.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -2639,9 +2665,13 @@ def set_display_children(value):
                'and / or Toledo. Both are cities with fascinating history, dating back much further than Madrid.',\
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
+                    {"src": "assets/spain/mad2.JPG"},
+                    {"src": "assets/spain/mad1.JPG"},
                     {"src": "assets/spain/mad.JPG"},
-                    # {"src": "assets/spain/mad1.JPG"},
                     {"src": "assets/spain/mad5.JPG"},
+                    {"src": "assets/spain/mad3.JPG"},
+                    {"src": "assets/spain/mad6.JPG"},
+
                 ],
                 interval=2000,
                 ride="carousel",
@@ -2726,6 +2756,7 @@ def set_display_children(value):
                     {"src": "assets/spain/seg2.JPG"},
                     {"src": "assets/spain/seg3.JPG"},
                     {"src": "assets/spain/seg.JPG"},
+                    {"src": "assets/spain/seg5.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -2832,7 +2863,14 @@ def set_display_children(value):
                'Lastly, make sure to try lots of different marzipan treats — to bring some back for friends! Toledo ' \
                'is known to make maybe the best marzipan in Europe. There is a shop that even has a maybe 10 foot ' \
                'tall Don Quijote made completely out of marzipan! It has some Guinness world record for this.', \
-               html.Br(), html.Br(), \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/spain/toledo.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ), html.Br(), \
                html.Div(
                    dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.toledo_geojson)],
@@ -2923,6 +2961,34 @@ def set_display_children(value):
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
 # USA
+    if value == 'Bonneville Salt Flats':
+        return 'More info to come', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/usa-ut/bonneville.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=coordinates.bonneville_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+    if value == 'Boston':
+        return 'More info to come', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/usa-ma/boston.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=coordinates.boston_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Champaign':
         return 'Long live the chief!', \
                html.Br(), html.Br(), dbc.Carousel(
@@ -3058,3 +3124,20 @@ def set_display_children(value):
                    dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.seattle_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
+    if value == 'Zion National Park':
+        return 'more info coming soon!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/usa-ut/zion.JPG"},
+                    {"src": "assets/usa-ut/zion1.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ), html.Br(), \
+               html.Div(
+                   dl.Map([dl.TileLayer(),
+                           dl.GeoJSON(data=coordinates.zion_geojson)],
+                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+

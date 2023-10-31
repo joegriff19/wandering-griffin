@@ -185,6 +185,8 @@ stockholm_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinat
 istanbul_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [28.9784, 41.0082]}}
 
 # usa coordinates
+bonneville_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-113.8352, 40.7787]}}
+boston_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-71.0589, 42.3601]}}
 champaign_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-88.2434, 40.1164]}}
 chicago_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-87.6298, 41.8781]}}
 copper_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-106.1613, 39.479]}}
@@ -196,3 +198,4 @@ missoula_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinate
 nyc_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-74.0060, 40.7128]}}
 san_francisco_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.4194, 37.7749]}}
 seattle_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.3321, 47.6062]}}
+zion_geojson = {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-113.0263, 37.2982]}}

@@ -46,6 +46,6 @@ all_options = {
     #            'Maine',v'Massachusetts', 'Michigan', 'Missouri', 'Montana', 'Nebraska', 'New Hampshire', 'New York',
     #            'North Carolina', 'Ohio', 'Pennsylvania', 'Tennessee', 'Utah', 'Vermont', 'West Virginia', 'Wisconsin',
     #            'West Virginia'],
-    'USA 🇺🇸': ['Champaign', 'Chicago', 'Copper Mountain', 'Dayton', 'Dubuque', 'Miami', 'Missoula', 'Milwaukee',
-               'NYC', 'San Francisco', 'Seattle'],
+    'USA 🇺🇸': ['Bonneville Salt Flats', 'Boston', 'Champaign', 'Chicago', 'Copper Mountain', 'Dayton', 'Dubuque', 'Miami', 'Missoula', 'Milwaukee',
+               'NYC', 'San Francisco', 'Seattle', 'Zion National Park'],
 }
