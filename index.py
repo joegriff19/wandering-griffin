@@ -1669,7 +1669,7 @@ def set_display_children(value):
         return 'Coolest parliament building in the world? The ruin pubs (makeshift pubs out of buildings ' \
                'that were damaged in WW2 and then abandoned) are really quirky, creative, and fun. ' \
                'Be absolutely sure to climb up the citadel to see the Liberty Statue ' \
-               '(formerly the "Communism statue"). The view of the river and the city ' \
+               '(formerly the "Communism Statue"). The view of the river and the city ' \
                'down below is amazing. Definitely go to the famous Széchenyi bath too.', \
                html.Br(), html.Br(), \
                html.Div(
