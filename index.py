@@ -45,7 +45,7 @@ index_layout = html.Div(
                 children=[
                     # html.Div(children="Wandering Griffin", style={"fontSize": "75px"}),
                     html.Div(children="Wandering Griffin Travel", className="wg"),
-                    html.Br(),
+                    # html.Br(),
                     dcc.Graph(
                         # id='choropleth-fig',
                         # className='graph-container',
@@ -69,8 +69,9 @@ index_layout = html.Div(
 
                     # html.Div(children="travel recs", className="wg"),
                     # html.Div(children="🌎", style={"fontSize": "85px"}),
-                    html.Br(),
+                    # html.Br(),
                     html.Div(children="I can't do everything but I can try!", className="powered"),
+                    html.Div(children=" ", style={"fontSize": "75px"}),
                     # html.Div(plot(globe.fig, filename='rotation.html', auto_play=True)),
                     html.Br(),
                 ],
