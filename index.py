@@ -320,7 +320,6 @@ def set_display_children(value):
                        url="https://youtu.be/x5OY6N37BNM",
                        controls=True,
                        width="100%",
-                       # height="100%",
                        height="200px",
                    )
                ]
@@ -466,7 +465,21 @@ def set_display_children(value):
         return 'A very small town outside of Cochabamba, this was the destination for the Solidarity Bridge ' \
                'mission trip where I joined as a Spanish interpreter. This is quite far off the beaten path and ' \
                'I would not recommend for tourism purposes, but this will always be a special place for me!', \
-               html.Br(), html.Br(), dbc.Carousel(
+               html.Br(), html.Br(), \
+               html.Div(
+                   style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                          "margin": "auto"},
+                   children=[
+                       dp.DashPlayer(
+                           id="player",
+                           url="https://youtu.be/Hhw77jS-VgE?si=mNlKwhH0KNP4ubUt",
+                           controls=True,
+                           width="100%",
+                           height="200px",
+                       )
+                   ]
+               ), \
+               html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/bolivia/cliza.JPG"},
                 ],
@@ -479,8 +492,22 @@ def set_display_children(value):
                            dl.GeoJSON(data=coordinates.cliza_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Cochabamba':
-        return 'el Cristo más grande', \
-               html.Br(), html.Br(), dbc.Carousel(
+        return 'el Cristo más grande! more to come!', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                          "margin": "auto"},
+                   children=[
+                       dp.DashPlayer(
+                           id="player",
+                           url="https://youtu.be/Hhw77jS-VgE?si=mNlKwhH0KNP4ubUt",
+                           controls=True,
+                           width="100%",
+                           height="200px",
+                       )
+                   ]
+               ), \
+               html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/bolivia/cochabamba.JPG"},
                     {"src": "assets/bolivia/cochabamba1.JPG"},
@@ -704,7 +731,6 @@ def set_display_children(value):
                            url="https://youtu.be/eQe3kmo47b8",
                            controls=True,
                            width="100%",
-                           # height="100%",
                            height="200px",
                        )
                    ]
@@ -1714,19 +1740,17 @@ def set_display_children(value):
 
     if value == 'Southern half of island':
         image_path = 'assets/iceland/hottub.JPG'
-        return 'so much to see in not enough time', \
+        return 'so much to see in not enough time -- lots more to come', \
                html.Br(), html.Br(), \
                html.Div(
                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
                           "margin": "auto"},
-                   # style={"width": "55%", "padding": "0px", 'margin': 'auto'},
                    children=[
                        dp.DashPlayer(
                            id="player",
                            url="https://youtu.be/6cJNYYk1n3I",
                            controls=True,
                            width="100%",
-                           # height="100%",
                            height="200px",
                        )
                    ]
@@ -2963,7 +2987,21 @@ def set_display_children(value):
 # USA
     if value == 'Bonneville Salt Flats':
         return 'More info to come', \
-               html.Br(), html.Br(), dbc.Carousel(
+               html.Br(), html.Br(), \
+               html.Div(
+                   style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                          "margin": "auto"},
+                   children=[
+                       dp.DashPlayer(
+                           id="player",
+                           url="https://youtu.be/ARB2FxUwGvU?si=tQyMJ2wkoTSY6Fq1",
+                           controls=True,
+                           width="100%",
+                           height="200px",
+                       )
+                   ]
+               ), \
+               html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/usa-ut/bonneville.JPG"},
                 ],
@@ -3040,7 +3078,22 @@ def set_display_children(value):
                            dl.GeoJSON(data=coordinates.milw_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Dayton':
-        return 'Go to the Wandering Griffin Pub! The namesake for this app!', html.Br(), html.Br(), \
+        return 'Go to the Wandering Griffin Pub! The namesake for this app!', \
+               html.Br(), html.Br(), \
+               html.Div(
+                   style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                          "margin": "auto"},
+                   children=[
+                       dp.DashPlayer(
+                           id="player",
+                           url="https://youtu.be/YyQi6PEiOJk?si=mT2A04PNZRMx7GDV",
+                           controls=True,
+                           width="100%",
+                           height="200px",
+                       )
+                   ]
+               ), \
+               html.Br(), \
                html.Div(
                    dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.dayton_geojson)],
@@ -3061,7 +3114,21 @@ def set_display_children(value):
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Miami':
         return 'Beautiful latino cultural melting pot. And of course the home of Messi! More info to come!', \
-               html.Br(), html.Br(), dbc.Carousel(
+               html.Br(), html.Br(), \
+               html.Div(
+                   style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                          "margin": "auto"},
+                   children=[
+                       dp.DashPlayer(
+                           id="player",
+                           url="https://youtu.be/n5q6gziq3KY?si=w35Q-qqbBTYBWYLv",
+                           controls=True,
+                           width="100%",
+                           height="200px",
+                       )
+                   ]
+               ), \
+               html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/usa-fl/miami.JPG"},
                 ],
