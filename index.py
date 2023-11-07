@@ -1,18 +1,27 @@
 # Import Packages and other files for app
+import index
 from app import app, server #NEED THE IMPORT SERVER FOR RENDER
-from dash import dcc, html, callback, clientside_callback
+from dash import dcc, html, callback, clientside_callback, State
 import dash_bootstrap_components as dbc
-from dash.dependencies import Output, Input, State
+from dash.dependencies import Output, Input
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 from datetime import date
 today = date.today()
 import dash_player as dp
 import dash_leaflet as dl
-from plotly.offline import plot
-import globe
 import coordinates
 import city_list
+import pycountry
+import visited_countries
+import pandas as pd
+
+# Create instances for each United Nations member state
+un_member_states = list(pycountry.countries)
+data = [[country.name, country.alpha_3] for country in un_member_states]
+df = pd.DataFrame(data)
+df.columns = ['Country', 'Iso_Code']
+df['Visited'] = df['Country'].apply(lambda x: 0 if x in visited_countries.visited_countries else 1)
 
 # padding for the page content
 CONTENT_STYLE = {
@@ -29,13 +38,14 @@ colors = {
 
 content = html.Div(id="page-content", children=[], style=CONTENT_STYLE)
 
-CHOROPLETH_INTERVAL = 50
+lon_deg = -28
+import globe
 
 
 # define sidebar layout
 app.layout = html.Div([
    dcc.Location(id="url"),
-   content
+   content,
 ])
 
 # index page layout
@@ -45,12 +55,9 @@ index_layout = html.Div(
                 children=[
                     # html.Div(children="Wandering Griffin", style={"fontSize": "75px"}),
                     html.Div(children="Wandering Griffin Travel", className="wg"),
-                    # html.Br(),
+                    html.Br(),
                     dcc.Graph(
-                        # id='choropleth-fig',
-                        # className='graph-container',
-                        # height=10, width=10,
-                        figure=globe.fig,
+                        id='rotating-globe',
                         animate=True,
                         responsive=True,
                         style={
@@ -60,12 +67,10 @@ index_layout = html.Div(
                         },
                         config={
                             'displayModeBar': False,
-                            # 'displaylogo': False,
-                            'scrollZoom': False,
+                            'scrollZoom': True,
                             'doubleClick': False,
-                            'staticPlot': False
                         }),
-                    # dcc.Interval(id='choropleth-interval', interval=CHOROPLETH_INTERVAL),
+                    dcc.Interval(id='update-rotation', interval=1000, n_intervals=0),
 
                     # html.Div(children="travel recs", className="wg"),
                     # html.Div(children="🌎", style={"fontSize": "85px"}),
@@ -141,6 +146,18 @@ index_layout = html.Div(
 
 # page callbacks
 
+@app.callback(
+    Output('rotating-globe', 'figure'),
+    [Input('update-rotation', 'n_intervals')]
+)
+def rotate_globe(_):
+    index.lon_deg = index.lon_deg + 5
+    x = index.lon_deg
+    print(index.lon_deg)
+    globe.fig.update_layout(geo=dict(center_lon=x, projection_rotation_lon=x))
+
+    return globe.fig
+
 
 @app.callback(
     Output('page-content', 'children',),
@@ -157,6 +174,7 @@ def render_page_content(pathname):
            html.P(f"The pathname {pathname} was not recognized..."),
        ]
     )
+
 
 @app.callback(
     # Output('cities-dd', 'children'),
