@@ -7,3 +7,4 @@ dash_leaflet
 numpy
 plotly
 pycountry
+dash_mantine_components

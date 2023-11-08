@@ -1,10 +1,7 @@
 import plotly.graph_objs as go
-import numpy as np
 import pycountry
 import pandas as pd
 import visited_countries
-import index
-from plotly.offline import plot
 
 # fig = go.Figure(go.Scattergeo(
 #             # lat=[45.5017, 51.509865, 52.520008],

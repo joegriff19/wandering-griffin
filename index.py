@@ -12,16 +12,7 @@ import dash_player as dp
 import dash_leaflet as dl
 import coordinates
 import city_list
-import pycountry
-import visited_countries
-import pandas as pd
-
-# Create instances for each United Nations member state
-un_member_states = list(pycountry.countries)
-data = [[country.name, country.alpha_3] for country in un_member_states]
-df = pd.DataFrame(data)
-df.columns = ['Country', 'Iso_Code']
-df['Visited'] = df['Country'].apply(lambda x: 0 if x in visited_countries.visited_countries else 1)
+import dash_mantine_components as dmc
 
 # padding for the page content
 CONTENT_STYLE = {
@@ -69,8 +60,9 @@ index_layout = html.Div(
                             'displayModeBar': False,
                             'scrollZoom': True,
                             'doubleClick': False,
-                        }),
-                    dcc.Interval(id='update-rotation', interval=10, n_intervals=0),
+                        },
+                    ),
+                    dcc.Interval(id='update-rotation', interval=100, n_intervals=0),
 
                     # html.Div(children="travel recs", className="wg"),
                     # html.Div(children="🌎", style={"fontSize": "85px"}),
@@ -151,7 +143,7 @@ index_layout = html.Div(
     [Input('update-rotation', 'n_intervals')]
 )
 def rotate_globe(_):
-    index.lon_deg = index.lon_deg + .1
+    index.lon_deg = index.lon_deg + .3
     x = index.lon_deg
     return globe.fig.update_layout(geo=dict(center_lon=x, projection_rotation_lon=x))
 
