@@ -38,7 +38,7 @@ colors = {
 
 content = html.Div(id="page-content", children=[], style=CONTENT_STYLE)
 
-lon_deg = -28
+lon_deg = -100
 import globe
 
 
@@ -58,7 +58,7 @@ index_layout = html.Div(
                     html.Br(),
                     dcc.Graph(
                         id='rotating-globe',
-                        animate=True,
+                        # animate=True,
                         responsive=True,
                         style={
                             # 'width': '20',
@@ -70,7 +70,7 @@ index_layout = html.Div(
                             'scrollZoom': True,
                             'doubleClick': False,
                         }),
-                    dcc.Interval(id='update-rotation', interval=1000, n_intervals=0),
+                    dcc.Interval(id='update-rotation', interval=10, n_intervals=0),
 
                     # html.Div(children="travel recs", className="wg"),
                     # html.Div(children="🌎", style={"fontSize": "85px"}),
@@ -151,12 +151,9 @@ index_layout = html.Div(
     [Input('update-rotation', 'n_intervals')]
 )
 def rotate_globe(_):
-    index.lon_deg = index.lon_deg + 5
+    index.lon_deg = index.lon_deg + .1
     x = index.lon_deg
-    print(index.lon_deg)
-    globe.fig.update_layout(geo=dict(center_lon=x, projection_rotation_lon=x))
-
-    return globe.fig
+    return globe.fig.update_layout(geo=dict(center_lon=x, projection_rotation_lon=x))
 
 
 @app.callback(
