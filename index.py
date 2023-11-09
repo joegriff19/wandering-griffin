@@ -1,18 +1,18 @@
 # Import Packages and other files for app
 import index
-from app import app, server #NEED THE IMPORT SERVER FOR RENDER
+from app import app, server  # NEED THE IMPORT SERVER FOR RENDER
 from dash import dcc, html, callback, clientside_callback, State
 import dash_bootstrap_components as dbc
 from dash.dependencies import Output, Input
 import warnings
-warnings.simplefilter(action='ignore', category=FutureWarning)
 from datetime import date
-today = date.today()
 import dash_player as dp
 import dash_leaflet as dl
 import coordinates
+import globe
 import city_list
-import dash_mantine_components as dmc
+today = date.today()
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # padding for the page content
 CONTENT_STYLE = {
@@ -28,10 +28,7 @@ colors = {
 }
 
 content = html.Div(id="page-content", children=[], style=CONTENT_STYLE)
-
 lon_deg = -50
-import globe
-
 
 # define sidebar layout
 app.layout = html.Div([
@@ -44,7 +41,6 @@ index_layout = html.Div(
     children=[
             html.Header(
                 children=[
-                    # html.Div(children="Wandering Griffin", style={"fontSize": "75px"}),
                     html.Div(children="Wandering Griffin Travel", className="wg"),
                     html.Br(),
                     dcc.Graph(
@@ -63,13 +59,8 @@ index_layout = html.Div(
                         },
                     ),
                     dcc.Interval(id='update-rotation', interval=1000, n_intervals=0),
-
-                    # html.Div(children="travel recs", className="wg"),
-                    # html.Div(children="🌎", style={"fontSize": "85px"}),
-                    # html.Br(),
                     html.Div(children="I can't do everything but I can try!", className="powered"),
                     html.Div(children=" ", style={"fontSize": "75px"}),
-                    # html.Div(plot(globe.fig, filename='rotation.html', auto_play=True)),
                     html.Br(),
                 ],
                 style={
@@ -81,11 +72,6 @@ index_layout = html.Div(
                     # 'background': colors['background']
                 }
             ),
-            # html.Br(),
-            # html.Div(children="I am blessed to have personally been to all of these places! "
-            #                   "These are all my recommendations from these experiences.",
-            #          style={"font-weight": "bold", 'textAlign': 'center', 'color': 'black'}),
-            # html.Br(),
             html.Div([
                 "Select a country",
                 dcc.Dropdown(
@@ -114,29 +100,28 @@ index_layout = html.Div(
             html.Div([
                 html.Div(id='city_info'),
                 html.Br(),
-                # html.Div(id='us-city-info'),
                 html.Div(children="If this was helpful, please consider buying me a beverage! Thank you!",
                          className="beverage"),
                 html.Div(children="🍻", style={"fontSize": "35px"}),
                 dbc.Button(children='My Venmo',
                            color="primary",
                            outline=True,  # more lightweight format
-                           # size="med",  # sm, lg
                            href="https://venmo.com/u/joegriff19")
             ], style={'textAlign': 'center',
                       'max-width': '900px',
                       'margin': 'auto',
                       # 'margin-left': '100px', 'margin-right': '100px',
                       'color': 'black',
-              # 'width': '50%',
-              # 'verticalAlign': 'middle'
-              # 'align-items': 'center', 'justify-content': 'center'
+                      # 'width': '50%',
+                      # 'verticalAlign': 'middle'
+                      # 'align-items': 'center', 'justify-content': 'center'
                       }
             ),
 
     ])
 
 # page callbacks
+
 
 @app.callback(
     Output('rotating-globe', 'figure'),
@@ -172,15 +157,7 @@ def render_page_content(pathname):
     prevent_initial_call=True
 )
 def set_cities_options(selected_country):
-    # if selected_country == 'Andorra':
-    #     return 'hit the slopes papi'
-    # else:
     return [{'label': i, 'value': i} for i in city_list.all_options[selected_country]]
-    # return 'Select a city / place in ', selected_country, dcc.Dropdown([{'label': i, 'value': i} for i in
-    #                                                                     all_options[selected_country]],
-    #                                                                    value=[],
-    #                                                                    searchable=False, clearable=False,
-    #                                                                    id='cities-dd'),
 
 
 @app.callback(
@@ -201,7 +178,7 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ), html.Br(),\
+                ), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.pal_geojson)],
@@ -226,7 +203,7 @@ def set_display_children(value):
                "and the atmosphere was still like nothing I had ever seen before. You can be sure to get legitimate " \
                "tickets by booking through this website: ", \
                html.A("https://landingpadba.com/", href="https://landingpadba.com/"), \
-               html.Br(), html.Br(),\
+               html.Br(), html.Br(), \
                "Santiago is the name of the guy who runs the company. He is from " \
                "Argentina and loves football. You will meet him and any others going to the game at a famous pizza " \
                "place. Buenos Aires has a huge Italian population and here you can try the super cheesy " \
@@ -237,7 +214,7 @@ def set_display_children(value):
                "not see a game at La Bombonera, we were still able to do a stadium visit. There was a very big " \
                "game while we were there though — the league game between Boca Juniors and River Plate, " \
                "known as the Súperclasico. These two teams are known to have perhaps the fiercest rivalry of " \
-               "any two sports teams on tehe planet. Every bar in the city was packed for game, and Boca " \
+               "any two sports teams on the planet. Every bar in the city was packed for game, and Boca " \
                "ended up winning. The streets near the stadium proceeded to celebrate all night long. We grabbed a " \
                "couple beers and joined the celebrations. This was one of the most fun experiences of my life!'", \
                html.Br(), html.Br(), dbc.Carousel(
@@ -256,7 +233,7 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ), html.Br(),\
+                ), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.ba_geojson)],
@@ -267,7 +244,7 @@ def set_display_children(value):
         return 'Home of the Rhombergs! My great-great grandpa, Franz Martin Rhomberg, came to the US ' \
                'from this small city in Austria. There are so many stores and other signs with the name Rhomberg ' \
                'still to this day — it was crazy to see! The other big Rhomberg highlight was seeing the ' \
-               'old ‘Kirchebuch,’ the ‘church book’ (since church and state used to be the same) ' \
+               'old ‘Kirchenbuch,’ the ‘church book’ (since church and state used to be the same) ' \
                'with my Rhomberg ancestors’ names written by hand all the way back to the 1400s. ' \
                'This was amazing to see. There are beautiful mountain views all over the city as it is ' \
                'surrounded by the Alps. For an amazing view of the city, go up the cable car to ' \
@@ -309,7 +286,7 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ), html.Br(),\
+                ), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.vienna_geojson)],
@@ -330,8 +307,8 @@ def set_display_children(value):
                        height="200px",
                    )
                ]
-           ), html.Br(),\
-                html.Div(
+           ), html.Br(), \
+           html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.eleuthera_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
@@ -344,7 +321,7 @@ def set_display_children(value):
 
 # Belgium
     if value == 'Antwerp':
-        return 'Beware of the Long Wapper', \
+        return 'Beware of the Long Wapper! more to come!', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/belgium/antwerp.JPG"},
@@ -397,7 +374,7 @@ def set_display_children(value):
                     ride="carousel",
                     className="carousel-fade"
                     ), html.Br(), \
-                    html.Div(
+                        html.Div(
                         dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.brussels_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
@@ -499,7 +476,7 @@ def set_display_children(value):
                            dl.GeoJSON(data=coordinates.cliza_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Cochabamba':
-        return 'el Cristo más grande! more to come!', \
+        return 'El Cristo más grande! More to come!', \
                html.Br(), html.Br(), \
                html.Div(
                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
@@ -730,7 +707,8 @@ def set_display_children(value):
                "Also the southern-most game of beer die ever was played in this park in Sept 2022.", \
                html.Br(), html.Br(), \
                html.Div(
-                   style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px", "margin": "auto"},
+                   style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                          "margin": "auto"},
                    # style={"width": "55%", "padding": "0px", 'margin': 'auto'},
                    children=[
                        dp.DashPlayer(
@@ -903,7 +881,7 @@ def set_display_children(value):
                            dl.GeoJSON(data=coordinates.motovun_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Vodnjan':
-        return "Olivessss", \
+        return "Olivessss! more to come!", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/croatia/olives.JPG"},
@@ -1085,12 +1063,13 @@ def set_display_children(value):
 # England
     if value == 'London':
         return "Yes it can be expensive but it is a really great city. Tons of history and of course... " \
-               "the world mecca for football. Currently, 7 of the 20 teams in the English Premier League " \
+               "the world mecca for football. Currently (2023-24), 7 of the 20 teams in the English Premier League " \
                "(the best league in the world) are in London. The atmosphere at second league (called " \
                "The Championship) games is also really fun and a lot cheaper than Premier League games. QPR is a " \
-               "second league team in London -- their games are really fun as well. " \
-               "During the season or in summer, also consider doing a stadium tour. My biased opinion would be " \
-               "Arsenal's Emirates Stadium (GO GUNNERS !) ", \
+               "second league team in London -- their games are so fun! It's a completely different feel than a  " \
+               "top league game as the stadium is much smaller and there are very few tourists at the games." \
+               "During the season or in summer, also consider doing a stadium tour of a Premier League team. My " \
+               "biased opinion would be Arsenal's Emirates Stadium (GO GUNNERS !) ", \
                html.Br(), html.Br(), \
                "Beyond football, be sure to go to Big Ben, Buckingham Palace, Harrod's (try a meat pie), " \
                "and Tower Bridge. Many people think that Tower Bridge is London Bridge, but no -- the famous pic is " \
@@ -1130,8 +1109,9 @@ def set_display_children(value):
                 ), html.Br(), \
                     html.Div(
                         dl.Map([dl.TileLayer(),
-                           dl.GeoJSON(data=coordinates.london_geojson)],
-                          style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+                                dl.GeoJSON(data=coordinates.london_geojson)],
+                               style={'height': '35vh', 'max-width': "400px", "margin": "auto"},
+                               center=[25, -40], zoom=1))
 
 # France
     if value == 'Colmar':
@@ -1235,7 +1215,7 @@ def set_display_children(value):
                "There are lots of sports here as well (to watch and play). The pro " \
                "basketball (Alba), soccer (2 teams: Hertha and Union), handball (Füchse), and ice hockey (Eisbären) " \
                "games all provide a very fun atmosphere. ", \
-               html.Br(), html.Br(),\
+               html.Br(), html.Br(), \
                "Be sure to eat a döner kebab (a variation of a Turkish " \
                "kebab that originated in Berlin -- the best place is Nefi's), currywurst (Curry 36 is great), and " \
                "vietnamese food (the duck at New Day is crazy good). For German food, 'Max & Moritz' is a " \
@@ -1382,7 +1362,7 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ), html.Br(),\
+                ), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.dresden_geojson)],
@@ -1416,7 +1396,7 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ), html.Br(), html.Br(),\
+                ), html.Br(), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.geng_geojson)],
@@ -1460,7 +1440,7 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ), html.Br(),\
+                ), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.ham_geojson)],
@@ -1500,7 +1480,7 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ), html.Br(),\
+                ), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.kiel_geojson)],
@@ -1516,7 +1496,7 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ), html.Br(),\
+                ), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.leip_geojson)],
@@ -1584,7 +1564,7 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ), html.Br(),\
+                ), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.munich_geojson)],
@@ -1642,7 +1622,7 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ), html.Br(),\
+                ), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.nur_geojson)],
@@ -1674,12 +1654,12 @@ def set_display_children(value):
                 html.Br(), html.Br(), \
                 "Rügen is famous for its steep chalk cliffs along the water — and they are indeed quite stunning! ", \
                 "There are two national parks on the island, the more famous being Jasmund. This is where the ", \
-                "famous ‘Königsstuhl’ can be found. You can drive here, but I would definitely recommend ", \
-                "taking a bike around the island! The cliffs are an easy bike ride from the nearby city of Sassnitz. ", \
+                "famous ‘Königsstuhl’ can be found. You can drive here, but I would definitely recommend taking a ", \
+                "bike around the island! The cliffs are an easy bike ride from the nearby city of Sassnitz. ", \
                 "Sassnitz is a really nice little city with nice cafes and restaurants. There is also a big, ", \
                 "long pier with a cool little green lighthouse at the end. There aren’t any beaches here though — ", \
-                "the best place for beaches and swimming is Binz. This is the main hotel / resort area of the island. ", \
-                "We didn’t end up making it here but this would certainly be a lovely place to stay.", \
+                "the best place for beaches and swimming is Binz. This is the main hotel / resort area of the ", \
+                "island. We didn’t end up making it here but this would certainly be a lovely place to stay.", \
                 html.Br(), html.Br(), \
                 html.Div(
                     dl.Map([dl.TileLayer(),
@@ -1688,7 +1668,7 @@ def set_display_children(value):
 
     if value == 'Stralsund':
         return 'Cool little port city on the Baltic sea. Home to the great Störtebeker brewery! The brewery was ' \
-               'named after the legendary pirate Klaus Störebeker, who was born just outside Stralsund.', \
+               'named after the legendary pirate Klaus Störtebeker, who was born just outside Stralsund.', \
                'If you are visiting Rügen, Stralsund is definitely worth a stop. It is also a great option to ', \
                'stay in Stralsund and explore Rügen during the day. There are really good train connections ', \
                'from the main train station in Stralsund to the different parts of the island of Rügen.', \
@@ -1724,7 +1704,7 @@ def set_display_children(value):
                 interval=2000,
                 ride="carousel",
                 className="carousel-fade"
-                ), html.Br(),\
+                ), html.Br(), \
                html.Div(
                    dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.budapest_geojson)],
@@ -1746,8 +1726,7 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
     if value == 'Southern half of island':
-        image_path = 'assets/iceland/hottub.JPG'
-        return 'so much to see in not enough time -- lots more to come', \
+        return 'so much to see in not enough time -- lots more to come!', \
                html.Br(), html.Br(), \
                html.Div(
                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
@@ -1796,8 +1775,18 @@ def set_display_children(value):
                            dl.GeoJSON(data=coordinates.cliffs_of_moher_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Dingle':
-        return 'Griffin family trip upcoming in October!', \
-               html.Br(), html.Br(), dbc.Carousel(
+        return ('This peninsula on the west coast of Ireland is absolutely stunning! The cliffs and coastline here '
+                'are similar to the Cliffs of Moher (not quite as dramatic though to be fair), not too far up the '
+                'coast from Dingle. The views from Inch Beach are really nice, but the views from our hike on the '
+                'northern coast of the peninsula were incredible. Also on the northern coast, you can find a beautiful '
+                'golf course called Castlegregory. The hole that runs along the massive beach was amazing!'), \
+                html.Br(), html.Br(), \
+                ('The city of Dingle is quite small and quite lovely! There are a number of fun pubs, including ____. '
+                 "Murphy's is a great local ice cream shop. "
+                 "Lastly, a little boat trip out of Dingle to see "
+                 "the nearby cliffs and caves from the water is also a great idea! This was very reasonably priced "
+                 "for a group as we paid for the entire boat, rather than per person."), \
+                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/ireland/dingle.JPG"},
                     {"src": "assets/ireland/dingle1.JPG"},
@@ -1809,12 +1798,26 @@ def set_display_children(value):
                 ride="carousel",
                 className="carousel-fade"
                 ), html.Br(), \
-               html.Div(
+                html.Div(
                    dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.dingle_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Dublin':
-        return 'There is just such a special charm to this city. Go and drink Guinness and enjoy. Sláinte!', \
+        return ('There is just such a special charm to this city! It was amazing to finally do a full Griffin family '
+                "trip here in October 2023. Dublin is not the biggest city and you don't need a ton of time here -- "
+                "but the more the better! Enjoy a walk along the River Liffey, through St. Stephens Green park, and "
+                "around the Trinity College campus. Here you can also see the Book of Kells!"
+                "Other things to see include the Dublin castle complex and St. Patrick's Cathedral, and of course "
+                "do the Guinness tour! The view from "
+                "the new Gravity Bar at the top of St. James' Gate (Guinness brewery) is beautiful. Additionally, "
+                "the Irish Whiskey Museum is also a great option -- the guy who led the tour was so good! "
+                "There is great craic (Irish word for fun!) at all the pubs. The live music "
+                "and Irish dancing is so fun. You can find plenty of lively bars and pubs (and the Molly Malone "
+                "statue) in the Temple Bar area, but be aware this is the most touristy area and prices are a bit "
+                "high. Definitely walk through though to see the atmosphere and all the Irish-themed decorations "
+                "and details! Some other good spots include Arthur's (down the street from "
+                "St. James's Gate) and the Brazen Head (arguably the oldest pub in the world, almost 1,000 years!)"
+                "Sláinte!"), \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/ireland/dublin.JPG"},
@@ -1839,7 +1842,10 @@ def set_display_children(value):
                            dl.GeoJSON(data=coordinates.dingle_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Tralee':
-        return 'Griffin family trip upcoming in October!', \
+        return ('The hometown of my Grandpa Séan! Tralee is the largest city in County Kerry, but it still pretty '
+                'small with just ___ people. The mountains of Kerry in the backdrop of the city are quite impressive! '
+                "I didn't realize they were so big! See the main square called An Chearnóg and the main street called"
+                "The Mall. Enjoy the local shops, bakeries, and pubs!"), \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/ireland/tralee.JPG"},
@@ -1858,7 +1864,7 @@ def set_display_children(value):
         return 'DO NOT immediately overlook Bergamo in favor of Milan. A lot of budget airlines that ' \
                'fly to "Milan" ' \
                'actually fly to the nearby city of Bergamo. It is a really cute city and they invented ' \
-               'Stracciatella gelato. Take the litte cable car up to the high part of the city and walk ' \
+               'Stracciatella gelato. Take the little cable car up to the high part of the city and walk ' \
                'around the ' \
                'fortress area. There is a great view to the south of the city right when you get off ' \
                'the cable car. ' \
@@ -2009,7 +2015,7 @@ def set_display_children(value):
                'the old Roman ruins, visit the Vatican(separate Italy page for this), and get your Lizzie McGuire ' \
                'on at the Trevi Fountain! The city is quite big with so many different neighborhoods, ' \
                'all deserving of some time being spent there. Trastevere is probably the most beloved neighborhood ' \
-               '-- beautiful and with many great resturants and bars. One very famous bar is Bar San Calisto. ' \
+               '-- beautiful and with many great restaurants and bars. One very famous bar is Bar San Calisto. ' \
                'Know that there are some Italian foods that are specifically Roman in origin and are best eaten in ' \
                'Rome. The traditional cheese here is pecorino romano rather than parmigiano reggiano. There are ' \
                'four classic Roman pastas that are all very connected, just with slight variations in ingredients -- ' \
@@ -2071,7 +2077,7 @@ def set_display_children(value):
                'go to the top of the tower there for great views of the city, take a boat ride (the boat usually ' \
                'has a fixed cost no matter the size of your group -- find some new friends to lower the cost per ' \
                "person!) Beyond St. Marco, don't necessarily worry about " \
-               "trying to see or do everything -- just enjoy the lovely ambiance of the canals and little streets.",\
+               "trying to see or do everything -- just enjoy the lovely ambiance of the canals and little streets.", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/italy/ven.JPG"},
@@ -2136,7 +2142,8 @@ def set_display_children(value):
                "market. Having a mariachi band step onto your boat and play a few songs while drinking beers, " \
                "eating elote, and floating down the river is just truly a beautiful life experience. " \
                "Be sure to have a good amount of cash for this. " \
-               "Also see the Frida Kahlo house and check out the Coyoacán market. It is 100% authentic and you can try " \
+               "Also see the Frida Kahlo house and check out the Coyoacán market. " \
+               "It is 100% authentic and you can try " \
                "ants, crickets, and even scorpions if you are feeling ambitious. It definitely helps to " \
                "speak some Spanish, as there are not a lot of tourists compared to beach or resort towns in Mexico." \
                'Mexico City is also home to the legendary Azteca football stadium, where the Mexico national ' \
@@ -2350,8 +2357,8 @@ def set_display_children(value):
                 items=[
                     {"src": "assets/peru/iquitos.PNG"},
                     {"src": "assets/peru/iquitos1.PNG"},
-                    {"src": "assets/peru/iquitos2.PNG"}, # need to adjust photo size ratio
-                    {"src": "assets/peru/iquitos3.PNG"}, # need to adjust photo size ratio
+                    {"src": "assets/peru/iquitos2.PNG"},  # need to adjust photo size ratio
+                    {"src": "assets/peru/iquitos3.PNG"},  # need to adjust photo size ratio
                 ],
                 interval=2000,
                 ride="carousel",
@@ -2556,7 +2563,7 @@ def set_display_children(value):
                '(on the touristy street of La Rambla), Arc de Triomf and the Parque de la Ciutadella (fun spot ' \
                "to rent little boats), the old Olympic Stadium, and if you're a soccer fan -- the Camp Nou, home " \
                "of FC Barcelona, and the largest soccer stadium in Europe with a capacity of 105,000! There are " \
-               "also plenty of great rooftop bars, just look some up online. " , \
+               "also plenty of great rooftop bars, just look some up online. ", \
                html.Br(), html.Br(), \
                "There is so much great food here. Maybe my favorite restaurant in the world is here and is " \
                "called El Glop (the one in the Gràcia neighborhood is the original and is the best. The chicken & " \
@@ -2691,7 +2698,7 @@ def set_display_children(value):
                'and the Broadway-like street of Gran Vía. Additionally, if you ' \
                "are a soccer fan, there are three teams in Madrid that play in the top league in Spain, " \
                "called Rayo Vallecano, Real Madrid, and Atlético de Madrid.", \
-                html.Br(), html.Br(),\
+                html.Br(), html.Br(), \
                'Some great restaurants/food spots include Cuevas el Secreto, El MiniBar (go for dinner),San Ginés ' \
                '(super famous hot chocolate and churros -- worth the wait!), Bar Postas or Casa Rúa famous for ' \
                'bocadillos de calamares / calamari sandwiches, Museo del Jamón (a bunch of locations, ' \
@@ -2700,20 +2707,19 @@ def set_display_children(value):
                'The view is amazing, it costs a few euros to go up but it is well worth it!', \
                html.Br(), html.Br(), \
                'Although there are tons of things to do in Madrid, definitely consider a day trip to either Segovia ' \
-               'and / or Toledo. Both are cities with fascinating history, dating back much further than Madrid.',\
+               'and / or Toledo. Both are cities with fascinating history, dating back much further than Madrid.', \
                html.Br(), html.Br(), dbc.Carousel(
-                items=[
-                    {"src": "assets/spain/mad2.JPG"},
-                    {"src": "assets/spain/mad1.JPG"},
-                    {"src": "assets/spain/mad.JPG"},
-                    {"src": "assets/spain/mad5.JPG"},
-                    {"src": "assets/spain/mad3.JPG"},
-                    {"src": "assets/spain/mad6.JPG"},
-
-                ],
-                interval=2000,
-                ride="carousel",
-                className="carousel-fade"
+                    items=[
+                        {"src": "assets/spain/mad2.JPG"},
+                        {"src": "assets/spain/mad1.JPG"},
+                        {"src": "assets/spain/mad.JPG"},
+                        {"src": "assets/spain/mad5.JPG"},
+                        {"src": "assets/spain/mad3.JPG"},
+                        {"src": "assets/spain/mad6.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
                 ),  html.Br(), \
                html.Div(
                    dl.Map([dl.TileLayer(),
@@ -3221,4 +3227,3 @@ def set_display_children(value):
                    dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.zion_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
-

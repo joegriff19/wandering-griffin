@@ -4,7 +4,5 @@ gunicorn
 dash-bootstrap-components
 dash_player
 dash_leaflet
-numpy
 plotly
 pycountry
-dash_mantine_components
