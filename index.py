@@ -117,7 +117,6 @@ index_layout = html.Div(
                       # 'align-items': 'center', 'justify-content': 'center'
                       }
             ),
-
     ])
 
 # page callbacks
