@@ -3,18 +3,26 @@ import pycountry
 import pandas as pd
 import visited_countries
 
-# fig = go.Figure(go.Scattergeo(
-#             # lat=[45.5017, 51.509865, 52.520008],
-#             # lon=[-73.5673, -0.118092, 13.404954 ],
-#             mode='markers',
-#             marker_color='red'),
-# go.Layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)'),
-# )
-
 # Create instances for each United Nations member state
 un_member_states = list(pycountry.countries)
 data = [[country.name, country.alpha_3] for country in un_member_states]
 df = pd.DataFrame(data)
+df.replace('Russian Federation', 'Russia', inplace=True)
+df.replace('Bolivia, Plurinational State of', 'Bolivia', inplace=True)
+df.replace('Venezuela, Bolivarian Republic of', 'Venezuela', inplace=True)
+df.replace('Congo, The Democratic Republic of the', 'Congo', inplace=True)
+df.replace('Bonaire, Sint Eustatius and Saba', 'Caribbean Netherlands', inplace=True)
+df.replace('Virgin Islands, U.S.', 'U.S. Virgin Islands', inplace=True)
+df.replace('Virgin Islands, British', 'British Virgin Islands', inplace=True)
+df.replace('Holy See (Vatican City State)', 'Vatican City', inplace=True)
+df.replace('Tanzania, United Republic of', 'Tanzania', inplace=True)
+df.replace('Taiwan, Province of China', 'Taiwan', inplace=True)
+df.replace('Sint Maarten (Dutch part)', 'Sint Maarten', inplace=True)
+df.replace('Saint Helena, Ascension and Tristan da Cunha', 'Saint Helena', inplace=True)
+df.replace('Moldova, Republic of', 'Moldova', inplace=True)
+df.replace('Viet Nam', 'Vietnam', inplace=True)
+df.replace('Iran, Islamic Republic of', 'Iran', inplace=True)
+df.replace("Lao People's Democratic Republic", 'Laos', inplace=True)
 df.columns = ['Country', 'Iso_Code']
 df['Visited'] = df['Country'].apply(lambda x: 0 if x in visited_countries.visited_countries else 1)
 

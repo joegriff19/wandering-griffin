@@ -48,7 +48,7 @@ index_layout = html.Div(
                         # animate=True,
                         responsive=True,
                         style={
-                            # 'width': '20',
+                            # 'width': '20vh',
                             'height': '40vh',
                             'padding-left': '10%', 'padding-right': '10%'
                         },
@@ -58,7 +58,8 @@ index_layout = html.Div(
                             'doubleClick': False,
                         },
                     ),
-                    dcc.Interval(id='update-rotation', interval=1000, n_intervals=0),
+                    # html.Br(),
+                    dcc.Interval(id='update-rotation', interval=100, n_intervals=0),
                     html.Div(children="I can't do everything but I can try!", className="powered"),
                     html.Div(children=" ", style={"fontSize": "75px"}),
                     html.Br(),
@@ -128,7 +129,7 @@ index_layout = html.Div(
     [Input('update-rotation', 'n_intervals')]
 )
 def rotate_globe(_):
-    index.lon_deg = index.lon_deg + 2
+    index.lon_deg = index.lon_deg + 1
     x = index.lon_deg
     return globe.fig.update_layout(geo=dict(center_lon=x, projection_rotation_lon=x))
 
@@ -188,7 +189,7 @@ def set_display_children(value):
     if value == 'Buenos Aires':
         return "The capital of Argentina! One of the most fun weekend trips of my life. Be sure to eat lots " \
                "of ‘parilla’ (grilled meat). The ‘choripan’ is a classic and is so good - a grilled chorizo sandwich " \
-               "with a chimmichurri sauce. You can (and should) enjoy delicious steak dinners for pretty cheap. " \
+               "with a chimichurri sauce. You can (and should) enjoy delicious steak dinners for pretty cheap. " \
                "Everything gets especially cheap if you take advantage of the ‘blue dollars.’ Argentinian pesos have " \
                "continued to decline in value, and because of this many Argentinians would rather store their " \
                "savings in USD rather than pesos. Thus, they are willing to trade you almost twice the current " \
@@ -296,7 +297,8 @@ def set_display_children(value):
     if value == 'Eleuthera':
         return 'ready for an epic sailing trip??', html.Br(), html.Br(), \
            html.Div(
-               style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px", "margin": "auto"},
+               style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                      "margin": "auto"},
                # style={"width": "55%", "padding": "0px", 'margin': 'auto'},
                children=[
                    dp.DashPlayer(
@@ -607,15 +609,15 @@ def set_display_children(value):
 
 # Canada
     if value == 'Banff':
-        return 'The color of the lake is really stunning', \
-                html.Br(), \
+        return 'The color of the lake is really stunning! More to come!', \
+                html.Br(), html.Br(), \
                     html.Div(
                         dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.banff_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Calgary':
-        return 'Cool, clean city', \
-                html.Br(), \
+        return 'Cool, clean city! More to come!', \
+                html.Br(), html.Br(), \
                     html.Div(
                         dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.calgary_geojson)],
@@ -1280,6 +1282,7 @@ def set_display_children(value):
                     {"src": "assets/germany/koln3.JPG"},
                     {"src": "assets/germany/koln4.JPG"},
                     {"src": "assets/germany/koln5.JPG"},
+                    {"src": "assets/germany/koln6.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1338,6 +1341,7 @@ def set_display_children(value):
                     {"src": "assets/germany/dor3.JPG"},
                     {"src": "assets/germany/dor4.JPG"},
                     {"src": "assets/germany/dor8.JPG"},
+                    {"src": "assets/germany/dor9.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -2126,7 +2130,7 @@ def set_display_children(value):
 # Mexico
     if value == 'Cancún':
         return 'The beaches in the Riviera Maya are beautiful. One can obviously come here to party, but ' \
-               'visitng the Mayan ruins and exploring nature are also amazing. Visit the Xel-Ha park and snorkel ' \
+               'visiting the Mayan ruins and exploring nature are also amazing. Visit the Xel-Ha park and snorkel ' \
                'through the waters and caves!', \
                 html.Br(), \
                 html.Div(
@@ -2560,7 +2564,7 @@ def set_display_children(value):
                'also note that to get to the area of the park with the famous bench, you need to book tickets -- it ' \
                'do is best to do so ahead of time!), Sagrada Familia church, the apartment buildings designed by ' \
                'the famous architect Gaudí (La Pedrera and Casa Batllo), Montjuic Park / Castle, La Boquería market ' \
-               '(on the touristy street of La Rambla), Arc de Triomf and the Parque de la Ciutadella (fun spot ' \
+               "(on the touristy street of La Rambla), Arc de Triomf and the Parque de la Ciutadella (fun spot " \
                "to rent little boats), the old Olympic Stadium, and if you're a soccer fan -- the Camp Nou, home " \
                "of FC Barcelona, and the largest soccer stadium in Europe with a capacity of 105,000! There are " \
                "also plenty of great rooftop bars, just look some up online. ", \
@@ -2699,7 +2703,7 @@ def set_display_children(value):
                "are a soccer fan, there are three teams in Madrid that play in the top league in Spain, " \
                "called Rayo Vallecano, Real Madrid, and Atlético de Madrid.", \
                 html.Br(), html.Br(), \
-               'Some great restaurants/food spots include Cuevas el Secreto, El MiniBar (go for dinner),San Ginés ' \
+               'Some great restaurants/food spots include Cuevas el Secreto, El MiniBar (go for dinner), San Ginés ' \
                '(super famous hot chocolate and churros -- worth the wait!), Bar Postas or Casa Rúa famous for ' \
                'bocadillos de calamares / calamari sandwiches, Museo del Jamón (a bunch of locations, ' \
                'great ham sandwiches), Bocadillos Oink (get a sandwich with Jamón Serrano -- soooo good), ' \
@@ -2770,7 +2774,7 @@ def set_display_children(value):
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'San Sebastián':
         return 'Beautiful city on the northern coast of Spain. It supposedly has the highest density of bars and ' \
-               'restuarants in the world. Take the Funicular Monte Igueldo up to Igeldo mendiko behatokia ' \
+               'restaurants in the world. Take the Funicular Monte Igueldo up to Igeldo mendiko behatokia ' \
                'to get an amazing view of the bay and city from above.', \
                html.Br(), html.Br(), \
                html.Div(
@@ -2957,7 +2961,7 @@ def set_display_children(value):
                html.Br(), html.Br(), \
                'To the south of ___ is ___. The view of the old town from ___ on this island (first pic below)' \
                'is perhaps the most famous in Stockholm! Right next to this viewpoint, check out a really unique ' \
-               "litle bridge connecting to someone's apartment! It's called ___"\
+               "little bridge connecting to someone's apartment! It's called ___"\
                'There are also a couple really cool restaurants / bars ' \
                'here that give you a bit of a view of the old town as well, including __ ' \
                'These are a great idea during the day or at night! ', \
@@ -2967,7 +2971,7 @@ def set_display_children(value):
                'called ___, and probably most importantly... ' \
                'MEATBALLS ! You need to go to the Meatballs for the People. No, they are not just meatballs. ' \
                'They are worth the wait. There are so many different kinds, so getting the sampler plate (comes ' \
-               'with amazing mashed potatos) is a great idea. ' \
+               'with amazing mashed potatoes) is a great idea. ' \
                'sample them all!', \
                html.Br(), html.Br(), \
                'Getting out on a boat is also highly recommended in Stockholm. This is a great way to see more of ' \
