@@ -3014,6 +3014,8 @@ def set_display_children(value):
                     {"src": "assets/turkey/ist3.JPG"},
                     {"src": "assets/turkey/ist4.JPG"},
                     {"src": "assets/turkey/ist5.JPG"},
+                    {"src": "assets/turkey/ist6.JPG"},
+                    {"src": "assets/turkey/ist7.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
