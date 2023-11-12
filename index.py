@@ -59,7 +59,7 @@ index_layout = html.Div(
                         },
                     ),
                     # html.Br(),
-                    dcc.Interval(id='update-rotation', interval=100, n_intervals=0),
+                    dcc.Interval(id='update-rotation', interval=500, n_intervals=0),
                     html.Div(children="I can't do everything but I can try!", className="powered"),
                     html.Div(children=" ", style={"fontSize": "75px"}),
                     html.Br(),
@@ -128,7 +128,7 @@ index_layout = html.Div(
     [Input('update-rotation', 'n_intervals')]
 )
 def rotate_globe(_):
-    index.lon_deg = index.lon_deg + 1
+    index.lon_deg = index.lon_deg + 2
     x = index.lon_deg
     return globe.fig.update_layout(geo=dict(center_lon=x, projection_rotation_lon=x))
 
