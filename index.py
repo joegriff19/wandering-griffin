@@ -43,6 +43,7 @@ index_layout = html.Div(
                 children=[
                     html.Div(children="Wandering Griffin Travel", className="wg"),
                     html.Br(),
+                    dcc.Interval(id='update-rotation', interval=500),
                     dcc.Graph(
                         id='rotating-globe',
                         # animate=True,
@@ -59,7 +60,6 @@ index_layout = html.Div(
                         },
                     ),
                     # html.Br(),
-                    dcc.Interval(id='update-rotation', interval=500, n_intervals=0),
                     html.Div(children="I can't do everything but I can try!", className="powered"),
                     html.Div(children=" ", style={"fontSize": "75px"}),
                     html.Br(),
@@ -128,7 +128,7 @@ index_layout = html.Div(
     [Input('update-rotation', 'n_intervals')]
 )
 def rotate_globe(_):
-    index.lon_deg = index.lon_deg + 2
+    index.lon_deg = index.lon_deg + 1
     x = index.lon_deg
     return globe.fig.update_layout(geo=dict(center_lon=x, projection_rotation_lon=x))
 
@@ -281,7 +281,12 @@ def set_display_children(value):
                     {"src": "assets/austria/vienna.JPG"},
                     {"src": "assets/austria/vienna1.JPG"},
                     {"src": "assets/austria/vienna2.JPG"},
+                    {"src": "assets/austria/vienna3.JPG"},
+                    {"src": "assets/austria/vienna4.JPG"},
+                    {"src": "assets/austria/vienna5.JPG"},
                     {"src": "assets/austria/vienna6.JPG"},
+                    {"src": "assets/austria/vienna7.JPG"},
+                    {"src": "assets/austria/vienna8.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
