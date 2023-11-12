@@ -3005,8 +3005,20 @@ def set_display_children(value):
 
 # Turkey
     if value == 'Istanbul':
-        return 'Trip with Zach upcoming in November!', \
-               html.Br(), html.Br(), \
+        return 'Amazing trip with Zach! more coming soon!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/turkey/ist.JPG"},
+                    {"src": "assets/turkey/ist1.JPG"},
+                    {"src": "assets/turkey/ist2.JPG"},
+                    {"src": "assets/turkey/ist3.JPG"},
+                    {"src": "assets/turkey/ist4.JPG"},
+                    {"src": "assets/turkey/ist5.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ), html.Br(), \
                html.Div(
                    dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.istanbul_geojson)],
