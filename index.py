@@ -70,7 +70,6 @@ index_layout = html.Div(
                     'color': colors['text'],
                     "padding": "0px",
                     "margin": "0px"
-                    # 'background': colors['background']
                 }
             ),
             html.Div([
