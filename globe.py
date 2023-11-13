@@ -23,7 +23,7 @@ df.replace('Moldova, Republic of', 'Moldova', inplace=True)
 df.replace('Viet Nam', 'Vietnam', inplace=True)
 df.replace('Iran, Islamic Republic of', 'Iran', inplace=True)
 df.replace("Lao People's Democratic Republic", 'Laos', inplace=True)
-df.replace("Syrian Arabic Republic", 'Syria', inplace=True)
+df.replace("Syrian Arab Republic", 'Syria', inplace=True)
 df.columns = ['Country', 'Iso_Code']
 df['Visited'] = df['Country'].apply(lambda x: 0 if x in visited_countries.visited_countries else 1)
 
