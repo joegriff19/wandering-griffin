@@ -1192,7 +1192,7 @@ def set_display_children(value):
     if value == 'Berlin':
         return "'Poor but sexy' has become the city's motto after the mayor said this back in 2003. " \
                "There is never a dull moment in Berlin. It's a very creative, unique, fun, and often quirky city " \
-               "with lots of history." \
+               "with lots of history. " \
                "There is so much to see, especially the Brandenburg Gate, the Berliner Dom (cathedral), the " \
                "Reichstag (national parliament), the Fernsehturm (TV tower), the Memorial to the Murdered Jews of " \
                "Europe, and the East Side Gallery (section of Berlin wall with famous murals). There are many " \
