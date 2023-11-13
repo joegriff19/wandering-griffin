@@ -1,7 +1,7 @@
 # Import Packages and other files for app
 import index
 from app import app, server  # NEED THE IMPORT SERVER FOR RENDER
-from dash import dcc, html, callback, clientside_callback, State
+from dash import dcc, html, clientside_callback, State
 import dash_bootstrap_components as dbc
 from dash.dependencies import Output, Input
 import warnings
