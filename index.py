@@ -43,7 +43,7 @@ index_layout = html.Div(
                 children=[
                     html.Div(children="Wandering Griffin Travel", className="wg"),
                     html.Br(),
-                    dcc.Interval(id='update-rotation', interval=200, n_intervals=0),
+                    dcc.Interval(id='update-rotation', interval=500, n_intervals=0),
                     dcc.Graph(
                         id='rotating-globe',
                         # animate=True,
