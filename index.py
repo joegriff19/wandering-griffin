@@ -127,7 +127,7 @@ index_layout = html.Div(
     [Input('update-rotation', 'n_intervals')]
 )
 def rotate_globe(_):
-    index.lon_deg = index.lon_deg + .5
+    index.lon_deg = index.lon_deg + 1
     x = index.lon_deg
     return globe.fig.update_layout(geo=dict(center_lon=x, projection_rotation_lon=x))
 
