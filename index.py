@@ -13,6 +13,12 @@ import globe
 import city_list
 today = date.today()
 warnings.simplefilter(action='ignore', category=FutureWarning)
+import dash_mantine_components as dmc
+from dash_iconify import DashIconify
+
+GITHUB = 'https://github.com/joegriff19'
+LINKEDIN = 'https://www.linkedin.com/in/joseph-m-griffin/'
+VENMO = 'https://venmo.com/u/joegriff19'
 
 # padding for the page content
 CONTENT_STYLE = {
@@ -99,14 +105,43 @@ index_layout = html.Div(
             ),
             html.Div([
                 html.Div(id='city_info'),
+                html.Div(children=[
+                        dmc.Group(
+                            children=[
+                                dmc.Anchor(
+                                    children=[DashIconify(
+                                        icon='line-md:github-loop', width=40)
+                                    ],
+                                    href=GITHUB
+                                ),
+                                dmc.Anchor(
+                                    children=[
+                                        DashIconify(
+                                            icon='ri:linkedin-fill', width=40)
+                                    ],
+                                    href=LINKEDIN
+                                )
+                            ], position='center'
+                        )
+                    ]),
                 html.Br(),
                 html.Div(children="If this was helpful, please consider buying me a beverage! Thank you!",
                          className="beverage"),
-                html.Div(children="🍻", style={"fontSize": "35px"}),
-                dbc.Button(children='My Venmo',
-                           color="primary",
-                           outline=True,  # more lightweight format
-                           href="https://venmo.com/u/joegriff19")
+                # html.Div(children="🍻", style={"fontSize": "35px"}),
+                html.Br(),
+                html.Div(children=[dmc.Anchor(
+                                    children=[
+                                        DashIconify(
+                                            icon='ion:logo-venmo', width=40)
+                                    ],
+                                    href=VENMO
+                                )
+                            ]),
+                    # , position='center')
+                # dbc.Button(children='My Venmo',
+                           # color="primary",
+                           # outline=True,  # more lightweight format
+                           # href="https://venmo.com/u/joegriff19")
             ], style={'textAlign': 'center',
                       'max-width': '900px',
                       'margin': 'auto',
