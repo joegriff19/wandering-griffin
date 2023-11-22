@@ -48,7 +48,6 @@ index_layout = html.Div(
             html.Header(
                 children=[
                     html.Div(children="Wandering Griffin Travel", className="wg"),
-                    html.Br(),
                     dcc.Interval(id='update-rotation', interval=500, n_intervals=0),
                     dcc.Graph(
                         id='rotating-globe',
@@ -65,10 +64,7 @@ index_layout = html.Div(
                             'doubleClick': False,
                         },
                     ),
-                    # html.Br(),
-                    html.Div(children="I can't do everything but I can try!", className="powered"),
-                    html.Div(children=" ", style={"fontSize": "75px"}),
-                    html.Br(),
+                    # html.Div(children="I can't do everything but I can try!", className="powered"),
                 ],
                 style={
                     'textAlign': 'center',
