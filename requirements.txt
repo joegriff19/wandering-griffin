@@ -8,3 +8,4 @@ plotly
 pycountry
 dash_mantine_components
 dash_iconify
+dash_extensions

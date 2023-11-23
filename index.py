@@ -11,14 +11,17 @@ import dash_leaflet as dl
 import coordinates
 import globe
 import city_list
-today = date.today()
-warnings.simplefilter(action='ignore', category=FutureWarning)
 import dash_mantine_components as dmc
 from dash_iconify import DashIconify
+import dash_extensions as de
+today = date.today()
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
 GITHUB = 'https://github.com/joegriff19'
 LINKEDIN = 'https://www.linkedin.com/in/joseph-m-griffin/'
 VENMO = 'https://venmo.com/u/joegriff19'
+# LOTTIE = 'https://assets5.lottiefiles.com/packages/lf20_GoeyCV7pi2.json'
+# options = dict(loop=True, autoplay=True, rendererSettings=dict(preserveAspectRatio='xMidYMid slice'))
 
 # padding for the page content
 CONTENT_STYLE = {
@@ -48,7 +51,9 @@ index_layout = html.Div(
             html.Header(
                 children=[
                     html.Div(children="Wandering Griffin Travel", className="wg"),
-                    dcc.Interval(id='update-rotation', interval=500, n_intervals=0),
+                    dcc.Interval(id='update-rotation', interval=1000, n_intervals=0),
+                    html.Div(children=([DashIconify(icon='line-md:sun-rising-filled-loop', width=50)]),
+                             style={'textAlign': 'center', 'padding-left': '20vh', 'color': '#FFA500'}),
                     dcc.Graph(
                         id='rotating-globe',
                         # animate=True,
@@ -56,7 +61,7 @@ index_layout = html.Div(
                         style={
                             # 'width': '20vh',
                             'height': '40vh',
-                            'padding-left': '10%', 'padding-right': '10%'
+                            # 'padding-left': '10%', 'padding-right': '10%'
                         },
                         config={
                             'displayModeBar': False,
@@ -64,6 +69,7 @@ index_layout = html.Div(
                             'doubleClick': False,
                         },
                     ),
+                    # html.Div(de.Lottie(options=options, width="50%", height="50%", url=LOTTIE, speed=1)),
                     # html.Div(children="I can't do everything but I can try!", className="powered"),
                 ],
                 style={
@@ -158,7 +164,7 @@ index_layout = html.Div(
     [Input('update-rotation', 'n_intervals')]
 )
 def rotate_globe(_):
-    index.lon_deg = index.lon_deg + 1
+    index.lon_deg = index.lon_deg + .5
     x = index.lon_deg
     return globe.fig.update_layout(geo=dict(center_lon=x, projection_rotation_lon=x))
 
