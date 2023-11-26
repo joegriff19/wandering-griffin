@@ -14,6 +14,8 @@ import city_list
 import dash_mantine_components as dmc
 from dash_iconify import DashIconify
 import dash_extensions as de
+import os
+from flask import send_from_directory
 today = date.today()
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
@@ -21,7 +23,8 @@ GITHUB = 'https://github.com/joegriff19'
 LINKEDIN = 'https://www.linkedin.com/in/joseph-m-griffin/'
 VENMO = 'https://venmo.com/u/joegriff19'
 # LOTTIE = 'https://assets5.lottiefiles.com/packages/lf20_GoeyCV7pi2.json'
-# options = dict(loop=True, autoplay=True, rendererSettings=dict(preserveAspectRatio='xMidYMid slice'))
+# LOTTIE = 'https://assets2.lottiefiles.com/packages/lf20_mDnmhAgZkb.json'
+options = dict(loop=True, autoplay=True, rendererSettings=dict(preserveAspectRatio='xMidYMid slice'))
 
 # padding for the page content
 CONTENT_STYLE = {
@@ -52,15 +55,24 @@ index_layout = html.Div(
                 children=[
                     html.Div(children="Wandering Griffin Travel", className="wg"),
                     dcc.Interval(id='update-rotation', interval=1000, n_intervals=0),
-                    html.Div(children=([DashIconify(icon='line-md:sun-rising-filled-loop', width=50)]),
-                             style={'textAlign': 'center', 'padding-left': '20vh', 'color': '#FFA500'}),
-                    dcc.Graph(
+                    html.Div([
+                        html.Div(
+                            children=(),
+                            style={'width': '59%', 'display': 'inline-block'}),
+                    #     html.Div(
+                    #         children=(de.Lottie(options=options, width="50%", height="50%", url="/loader", speed=1)),
+                    #         style={'width': '29%', 'display': 'inline-block'}),
+                        html.Div(children=([DashIconify(icon='line-md:sun-rising-filled-loop', width=60)]),
+                                 style={'textAlign': 'left', 'color': '#FFA500',
+                                        'width': '39%', 'display': 'inline-block'}),
+                    ]),
+                    html.Div(dcc.Graph(
                         id='rotating-globe',
                         # animate=True,
                         responsive=False,
                         style={
                             # 'width': '20vh',
-                            'height': '40vh',
+                            # 'height': '40vh',
                             # 'padding-left': '10%', 'padding-right': '10%'
                         },
                         config={
@@ -68,8 +80,9 @@ index_layout = html.Div(
                             'scrollZoom': False,
                             'doubleClick': False,
                         },
-                    ),
+                    )),
                     # html.Div(de.Lottie(options=options, width="50%", height="50%", url=LOTTIE, speed=1)),
+                    html.Div(de.Lottie(options=options, width="50%", height="50%", url="/loader", speed=1)),
                     # html.Div(children="I can't do everything but I can try!", className="powered"),
                 ],
                 style={
@@ -107,6 +120,7 @@ index_layout = html.Div(
             ),
             html.Div([
                 html.Div(id='city_info'),
+                html.Br(),
                 html.Div(children=[
                         dmc.Group(
                             children=[
@@ -159,12 +173,18 @@ index_layout = html.Div(
 # page callbacks
 
 
+@server.route("/loader", methods=['GET'])
+def serving_lottie_loader():
+    directory = os.path.join(os.getcwd(), "assets/lottie")
+    return send_from_directory(directory, "plane4.json")
+
+
 @app.callback(
     Output('rotating-globe', 'figure'),
     [Input('update-rotation', 'n_intervals')]
 )
 def rotate_globe(_):
-    index.lon_deg = index.lon_deg + .5
+    index.lon_deg = index.lon_deg + 1
     x = index.lon_deg
     return globe.fig.update_layout(geo=dict(center_lon=x, projection_rotation_lon=x))
 
