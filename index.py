@@ -66,31 +66,52 @@ index_layout = html.Div(
                                  style={'textAlign': 'left', 'color': '#FFA500',
                                         'width': '39%', 'display': 'inline-block'}),
                     ]),
-                    html.Div(children=(dcc.Graph(
+                    html.Div(dcc.Graph(
                         id='rotating-globe',
-                        # animate=True,
-                        responsive=False,
-                        style={
-                            # 'width': '100%',
-                            # 'height': '100%',
-                            # 'textAlign': 'center'
-                            'height': '35vh',
-                            # 'padding-left': '10%', 'padding-right': '10%'
-                        },
                         config={
                             'displayModeBar': False,
                             'scrollZoom': False,
                             'doubleClick': False,
                         },
-                    )), style={}
-                    ),
-                    # html.Div(de.Lottie(options=options, width="50%", height="50%", url=LOTTIE, speed=1)),
-                    html.Div(de.Lottie(options=options, width="12vh", height="12vh", url="/loader", speed=1)),
+                        style={
+                            'height': '42vh',
+                        }
+                    )),
+                    # html.Div(children=[dcc.Graph(
+                    #     figure=globe.fig,
+                    #     id='rotating-globe',
+                    #     # animate=True,
+                    #     responsive=False,
+                    #     style={
+                    #         # 'width': '20%',
+                    #         # 'height': '20%',
+                    #         # 'textAlign': 'center',
+                    #         # "align": "center",
+                    #         # "justify": "center",
+                    #         # 'horizontal-align': 'center',
+                    #         # 'height': '35vh',
+                    #         # 'margin-left': 'auto',
+                    #         # 'margin-right': 'auto',
+                    #         'padding-left': '31%',
+                    #         # 'padding-right': '50%'
+                    #     },
+                    #     config={
+                    #         'displayModeBar': False,
+                    #         'scrollZoom': False,
+                    #         'doubleClick': False,
+                    #     },
+                    # )],
+                        # style={"justify": "center",
+                        #        'textAlign': 'center',
+                        #        'horizontal-align': 'center'}
+                    # ),
+                    html.Div(de.Lottie(options=options, width="12vh", height="12vh", url="/loader", speed=1,
+                                       isClickToPauseDisabled=True)),
                     # html.Div(children="I can't do everything but I can try!", className="powered"),
                 ],
                 style={
                     'textAlign': 'center',
-                    # 'justify': 'center',
+                    'justify': 'center',
                     'color': colors['text'],
                     "padding": "0px",
                     "margin": "0px"
