@@ -62,17 +62,19 @@ index_layout = html.Div(
                     #     html.Div(
                     #         children=(de.Lottie(options=options, width="50%", height="50%", url="/loader", speed=1)),
                     #         style={'width': '29%', 'display': 'inline-block'}),
-                        html.Div(children=([DashIconify(icon='line-md:sun-rising-filled-loop', width=60)]),
+                        html.Div(children=([DashIconify(icon='line-md:sun-rising-filled-loop', width=40)]),
                                  style={'textAlign': 'left', 'color': '#FFA500',
                                         'width': '39%', 'display': 'inline-block'}),
                     ]),
-                    html.Div(dcc.Graph(
+                    html.Div(children=(dcc.Graph(
                         id='rotating-globe',
                         # animate=True,
                         responsive=False,
                         style={
-                            # 'width': '20vh',
-                            # 'height': '40vh',
+                            # 'width': '100%',
+                            # 'height': '100%',
+                            # 'textAlign': 'center'
+                            'height': '35vh',
                             # 'padding-left': '10%', 'padding-right': '10%'
                         },
                         config={
@@ -80,9 +82,10 @@ index_layout = html.Div(
                             'scrollZoom': False,
                             'doubleClick': False,
                         },
-                    )),
+                    )), style={}
+                    ),
                     # html.Div(de.Lottie(options=options, width="50%", height="50%", url=LOTTIE, speed=1)),
-                    html.Div(de.Lottie(options=options, width="50%", height="50%", url="/loader", speed=1)),
+                    html.Div(de.Lottie(options=options, width="12vh", height="12vh", url="/loader", speed=1)),
                     # html.Div(children="I can't do everything but I can try!", className="powered"),
                 ],
                 style={
