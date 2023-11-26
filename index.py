@@ -54,7 +54,7 @@ index_layout = html.Div(
             html.Header(
                 children=[
                     html.Div(children="Wandering Griffin Travel", className="wg"),
-                    dcc.Interval(id='update-rotation', interval=1000, n_intervals=0),
+                    dcc.Interval(id='update-rotation', interval=100, n_intervals=0),
                     html.Div([
                         html.Div(
                             children=(),
@@ -208,7 +208,7 @@ def serving_lottie_loader():
     [Input('update-rotation', 'n_intervals')]
 )
 def rotate_globe(_):
-    index.lon_deg = index.lon_deg + 1
+    index.lon_deg = index.lon_deg + .2
     x = index.lon_deg
     return globe.fig.update_layout(geo=dict(center_lon=x, projection_rotation_lon=x))
 
