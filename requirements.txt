@@ -10,3 +10,4 @@ dash_mantine_components
 dash_iconify
 dash_extensions
 flask
+dash_loading_spinners
