@@ -345,9 +345,22 @@ def set_display_children(value):
                'This was amazing to see. There are beautiful mountain views all over the city as it is ' \
                'surrounded by the Alps. For an amazing view of the city, go up the cable car to ' \
                '_____. There is a cool restaurant up here called _____. For a really cool old tavern down ' \
-               'in the city, the Rothaus is awesome. In winter, there is also great skiing nearby. ' \
+               'in the city, the Rothaus is awesome. In winter, there is also amazing skiing nearby. ' \
                'I did a trip for a couple days to Steffisalp and the views were incredible. ', \
-               html.Br(), html.Br(), html.Div(
+            html.Br(), html.Br(), dbc.Carousel(
+            items=[
+                {"src": "assets/austria/dornbirn.JPG"},
+                {"src": "assets/austria/dornbirn1.JPG"},
+                {"src": "assets/austria/dornbirn2.JPG"},
+                {"src": "assets/austria/steffi.JPG"},
+                {"src": "assets/austria/steffi1.JPG"},
+                {"src": "assets/austria/steffi2.JPG"},
+            ],
+            interval=2000,
+            ride="carousel",
+            className="carousel-fade"
+        ), html.Br(), \
+            html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.dornbirn_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
@@ -409,14 +422,35 @@ def set_display_children(value):
                        height="200px",
                    )
                ]
-           ), html.Br(), \
-           html.Div(
+           ), html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/bahamas/eleuthera.JPG"},
+                    {"src": "assets/bahamas/eleuthera1.JPG"},
+                    {"src": "assets/bahamas/eleuthera2.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ), html.Br(), \
+                html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.eleuthera_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
-    if value == 'New Providence (where Nassau is located)':
-        return 'explore Nassau, eat conch, go to the beach, and listen to Bob', html.Br(), html.Br(), \
-               html.Div(
+    if value == 'New Providence Island (where Nassau is located)':
+        return 'explore Nassau, eat conch, go to the beach, and listen to reggae!', \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/bahamas/nassau.JPG"},
+                    {"src": "assets/bahamas/nassau1.JPG"},
+                    {"src": "assets/bahamas/nassau2.JPG"},
+                    {"src": "assets/bahamas/nassau3.JPG"},
+                    {"src": "assets/bahamas/nassau4.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ), html.Br(), \
+                html.Div(
                    dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.nassau_geojson)],
                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
@@ -567,7 +601,13 @@ def set_display_children(value):
                ), \
                html.Br(), dbc.Carousel(
                 items=[
+                    {"src": "assets/bolivia/cliza5.JPG"},
                     {"src": "assets/bolivia/cliza.JPG"},
+                    {"src": "assets/bolivia/cliza1.JPG"},
+                    {"src": "assets/bolivia/cliza2.JPG"},
+                    {"src": "assets/bolivia/cliza3.JPG"},
+                    {"src": "assets/bolivia/cliza4.JPG"},
+
                 ],
                 interval=2000,
                 ride="carousel",
@@ -595,8 +635,11 @@ def set_display_children(value):
                ), \
                html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/bolivia/cochabamba.JPG"},
+                    {"src": "assets/bolivia/cochabamba2.JPG"},
                     {"src": "assets/bolivia/cochabamba1.JPG"},
+                    {"src": "assets/bolivia/cochabamba.JPG"},
+                    {"src": "assets/bolivia/cochabamba4.JPG"},
+                    {"src": "assets/bolivia/cochabamba3.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -617,6 +660,7 @@ def set_display_children(value):
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/bosnia/medj.JPG"},
+                    {"src": "assets/bosnia/medj1.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -634,6 +678,7 @@ def set_display_children(value):
                     {"src": "assets/bosnia/mostar1.JPG"},
                     {"src": "assets/bosnia/mostar3.JPG"},
                     {"src": "assets/bosnia/mostar.JPG"},
+                    {"src": "assets/bosnia/mostar5.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -661,6 +706,11 @@ def set_display_children(value):
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/bulgaria/sofia.JPG"},
+                    {"src": "assets/bulgaria/sofia1.JPG"},
+                    {"src": "assets/bulgaria/sofia2.JPG"},
+                    {"src": "assets/bulgaria/sofia3.JPG"},
+                    {"src": "assets/bulgaria/sofia4.JPG"},
+                    {"src": "assets/bulgaria/sofia5.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
