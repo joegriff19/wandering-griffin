@@ -161,7 +161,8 @@ index_layout = html.Div(
                             # spinner_style={"position": "absolute", "top": "-30px"}
                          # ),
                 dbc.Spinner(children=[html.Div(id='city_info')], size="lg", color="primary", type="border",
-                            delay_hide=2000, show_initially=False,
+                            # delay_hide=2000,
+                            show_initially=False,
                             spinner_style={"position": "absolute", "top": "-30px"}),
                 html.Br(),
                 html.Div(children=[
@@ -260,16 +261,21 @@ def set_cities_options(selected_country):
     prevent_initial_call=True
 )
 def set_display_children(value):
+    # sleep time for spinner to spin
+    if value is not None:
+        time.sleep(1.5)
     # Andorra
     if value == 'Pal Arinsal':
-        # time.sleep(2)
+        time.sleep(2)
         return 'Go skiing! Pyrenees mountains are beautiful and very affordable compared to the US. ' \
                'Only ~3-4 hour drive from Barcelona. The skiing is great and the ski town is very fun as well.', \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    {"src": "assets/andorra/Andorra-44.JPG"},
-                    {"src": "assets/andorra/Andorra-4.JPG"},
-                    {"src": "assets/andorra/Andorra-10.JPG"},
+                    {"src": "assets/andorra/andorra2.JPG"},
+                    {"src": "assets/andorra/andorra3.JPG"},
+                    {"src": "assets/andorra/andorra4.JPG"},
+                    {"src": "assets/andorra/andorra.JPG"},
+                    {"src": "assets/andorra/andorra1.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -760,7 +766,21 @@ def set_display_children(value):
 # Canada
     if value == 'Banff':
         return 'The color of the lake is really stunning! More to come!', \
-                html.Br(), html.Br(), \
+               html.Br(), html.Br(), dbc.Carousel(
+                items=[
+                    {"src": "assets/canada/banff.JPG"},
+                    {"src": "assets/canada/banff1.JPG"},
+                    {"src": "assets/canada/banff2.JPG"},
+                    {"src": "assets/canada/banff3.JPG"},
+                    {"src": "assets/canada/banff4.JPG"},
+                    {"src": "assets/canada/banff5.JPG"},
+                    {"src": "assets/canada/banff6.JPG"},
+                    {"src": "assets/canada/banff7.JPG"},
+                ],
+                interval=2000,
+                ride="carousel",
+                className="carousel-fade"
+                ), html.Br(), \
                     html.Div(
                         dl.Map([dl.TileLayer(),
                            dl.GeoJSON(data=coordinates.banff_geojson)],
@@ -978,11 +998,14 @@ def set_display_children(value):
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/croatia/np.JPG"},
-                    # {"src": "assets/croatia/np5.JPG"},
-                    # {"src": "assets/croatia/np6.JPG"},
-                    # {"src": "assets/croatia/np7.JPG"},
-                    # {"src": "assets/croatia/np8.JPG"},
-                    # {"src": "assets/croatia/np9.JPG"},
+                    {"src": "assets/croatia/np1.JPG"},
+                    {"src": "assets/croatia/np2.JPG"},
+                    {"src": "assets/croatia/np3.JPG"},
+                    {"src": "assets/croatia/np4.JPG"},
+                    {"src": "assets/croatia/np5.JPG"},
+                    {"src": "assets/croatia/np6.JPG"},
+                    {"src": "assets/croatia/np7.JPG"},
+                    {"src": "assets/croatia/np8.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1052,9 +1075,10 @@ def set_display_children(value):
                "really good. Very cute small town on the water. ", \
                html.Br(), html.Br(), dbc.Carousel(
                 items=[
-                    # {"src": "assets/croatia/opa.JPG"},
-                    # {"src": "assets/croatia/opa2.JPG"},
                     {"src": "assets/croatia/opa3.JPG"},
+                    {"src": "assets/croatia/opa2.JPG"},
+                    {"src": "assets/croatia/opa1.JPG"},
+                    {"src": "assets/croatia/opa.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
@@ -1392,6 +1416,7 @@ def set_display_children(value):
                     {"src": "assets/germany/berlin9.JPG"},
                     {"src": "assets/germany/berlin11.JPG"},
                     {"src": "assets/germany/berlin12.JPG"},
+                    {"src": "assets/germany/berlin13.JPG"},
                 ],
                 interval=2000,
                 ride="carousel",
