@@ -288,7 +288,7 @@ def set_display_children(value):
 
 # Argentina
     if value == 'Buenos Aires':
-        return "The capital of Argentina! One of the most fun weekend trips of my life. Be sure to eat lots " \
+        return "The capital of Argentina! One of the most fun weekends of my life. Be sure to eat lots " \
                "of ‘parilla’ (grilled meat). The ‘choripan’ is a classic and is so good - a grilled chorizo sandwich " \
                "with a chimichurri sauce. You can (and should) enjoy delicious steak dinners for pretty cheap. " \
                "Everything gets especially cheap if you take advantage of the ‘blue dollars.’ Argentinian pesos have " \
