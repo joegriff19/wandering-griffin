@@ -66,58 +66,55 @@ index_layout = html.Div(
                     # html.Div(dls.Hash(fullscreen=True), style={"height": "200px"}),
                     html.Div(children="Wandering Griffin Travel", className="wg"),
                     dcc.Interval(id='update-rotation', interval=500, n_intervals=0),
-                    html.Div([
-                        html.Div(
-                            children=(),
-                            style={'width': '59%', 'display': 'inline-block'}),
+                    # html.Div([
                     #     html.Div(
-                    #         children=(de.Lottie(options=options, width="50%", height="50%", url="/loader", speed=1)),
-                    #         style={'width': '29%', 'display': 'inline-block'}),
-                        html.Div(children=([DashIconify(icon='line-md:sun-rising-filled-loop', width=40)]),
-                                 style={'textAlign': 'left', 'color': '#FFA500',
-                                        'width': '39%', 'display': 'inline-block'}),
-                    ]),
-                    html.Div(dcc.Graph(
-                        id='rotating-globe',
-                        config={
-                            'displayModeBar': False,
-                            'scrollZoom': False,
-                            'doubleClick': False,
-                        },
-                        style={
-                            'height': '42vh',
-                        }
-                    )),
+                    #         children=(),
+                    #         style={'width': '65%', 'display': 'inline-block'}),
+                    # #     html.Div(
+                    # #         children=(de.Lottie(options=options, width="50%", height="50%", url="/loader", speed=1)),
+                    # #         style={'width': '29%', 'display': 'inline-block'}),
+                    #     html.Div(children=([DashIconify(icon='line-md:sun-rising-filled-loop', width=20)]),
+                    #              style={'textAlign': 'left', 'color': '#FFA500',
+                    #                     'width': '35%', 'display': 'inline-block'}),
+                    # ], style={'width': '100%', 'display': 'inline-block'}),
                     # html.Div(children=[dcc.Graph(
-                    #     figure=globe.fig,
                     #     id='rotating-globe',
-                    #     # animate=True,
-                    #     responsive=False,
-                    #     style={
-                    #         # 'width': '20%',
-                    #         # 'height': '20%',
-                    #         # 'textAlign': 'center',
-                    #         # "align": "center",
-                    #         # "justify": "center",
-                    #         # 'horizontal-align': 'center',
-                    #         # 'height': '35vh',
-                    #         # 'margin-left': 'auto',
-                    #         # 'margin-right': 'auto',
-                    #         'padding-left': '31%',
-                    #         # 'padding-right': '50%'
-                    #     },
                     #     config={
                     #         'displayModeBar': False,
                     #         'scrollZoom': False,
                     #         'doubleClick': False,
                     #     },
-                    # )],
-                        # style={"justify": "center",
-                        #        'textAlign': 'center',
-                        #        'horizontal-align': 'center'}
-                    # ),
-                    html.Div(de.Lottie(options=options, width="12vh", height="12vh", url="/loader", speed=1,
-                                       isClickToPauseDisabled=True)),
+                    #     style={
+                    #         'height': '42vh',
+                    #     }
+                    # )], style={'width': '100%', 'display': 'inline-block'}),
+                    # html.Div(de.Lottie(options=options, width="12vh", height="12vh", url="/loader", speed=1,
+                    #                    isClickToPauseDisabled=True)),
+
+                    html.Div(children=[
+                        # html.Div(
+                        #     children=(),
+                        #     style={'width': '20%', 'display': 'inline-block'}),
+                        html.Div(de.Lottie(options=options, width="10vh", height="10vh", url="/loader", speed=1,
+                                           isClickToPauseDisabled=True),
+                                 style={'width': '0%', 'display': 'inline-block', "position": "absolute", "top": "50px"}),
+                        html.Div(dcc.Graph(
+                            id='rotating-globe',
+                            config={
+                                'displayModeBar': False,
+                                'scrollZoom': False,
+                                'doubleClick': False,
+                            },
+                            style={
+                                'height': '45vh',
+                            }
+                        ), style={'width': '100%', 'display': 'inline-block'}
+                        ),
+                        # html.Div(
+                        #     children=(),
+                        #     style={'width': '0%', 'display': 'inline-block'}),
+                    ], style={'width': '100%', 'display': 'inline-block'}),
+
                     # html.Div(children="I can't do everything but I can try!", className="powered"),
                 ],
                 style={

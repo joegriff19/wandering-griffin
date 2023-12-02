@@ -46,7 +46,7 @@ fig = go.Figure(data=go.Choropleth(
 )
 
 fig.update_layout(
-    margin=dict(l=0, r=0, t=2, b=2),
+    margin=dict(l=1, r=1, t=2, b=2),
     hoverlabel=dict(
         bgcolor="black",
         font_size=15,
