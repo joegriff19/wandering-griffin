@@ -16,6 +16,12 @@
     font-family: Tratello;
 }
 
+.weather {
+    font-size: 18px;
+    font-style: italic;
+    font-family: Tratello;
+}
+
 .other {
     height: 600px;
     line-height: 60px;
@@ -24,4 +30,20 @@
 
 .pic {
     'height': '500px';
+}
+
+.table-weather{
+  border: 1px solid #55575D;
+  border-collapse: collapse;
+  width: 20%;
+  max-height: 500px;
+}
+
+.table-weather td{
+  border: 1px solid #55575D;
+}
+
+#weather
+{
+    white-space:pre-wrap;
 }

@@ -11,6 +11,7 @@ import dash_player as dp
 import dash_leaflet as dl
 import coordinates
 import globe
+import weather
 import city_list
 import dash_mantine_components as dmc
 from dash_iconify import DashIconify
@@ -20,7 +21,6 @@ from flask import send_from_directory
 import dash_loading_spinners as dls
 today = date.today()
 warnings.simplefilter(action='ignore', category=FutureWarning)
-
 
 GITHUB = 'https://github.com/joegriff19'
 LINKEDIN = 'https://www.linkedin.com/in/joseph-m-griffin/'
@@ -51,6 +51,10 @@ colors = {
 
 content = html.Div(id="page-content", children=[], style=CONTENT_STYLE)
 lon_deg = -50
+
+weather_categories=["temperature", "precip", "humidity", "cloudcover", "weather_descriptions",
+                    # "observation_time", "is_day", "feelslike", "uv_index","visibility", "wind_speed",
+                    ]
 
 # define sidebar layout
 app.layout = html.Div([
@@ -263,10 +267,10 @@ def set_display_children(value):
         time.sleep(1.5)
     # Andorra
     if value == 'Pal Arinsal':
-        time.sleep(2)
-        return 'Go skiing! Pyrenees mountains are beautiful and very affordable compared to the US. ' \
+        return ('Go skiing! Pyrenees mountains are beautiful and very affordable compared to the US. ' \
                'Only ~3-4 hour drive from Barcelona. The skiing is great and the ski town is very fun as well.', \
-               html.Br(), html.Br(), dbc.Carousel(
+                # html.Br(), html.Br(), html.Div(id="weather", children=weather.update_weather('London,%20United%20Kingdom'), className='weather'),
+                html.Br(), dbc.Carousel(
                 items=[
                     {"src": "assets/andorra/andorra2.JPG"},
                     {"src": "assets/andorra/andorra3.JPG"},
@@ -281,7 +285,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.pal_geojson)],
-                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
 # Argentina
     if value == 'Buenos Aires':
