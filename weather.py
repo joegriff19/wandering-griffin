@@ -3,7 +3,6 @@ import pandas as pd
 
 
 def update_weather(location):
-    print(location)
     request_str = 'http://api.weatherstack.com/current?access_key=d779aff91a964382a38b84e587262b7c&query={}&units=f'.format(location)
     weather_requests = requests.get(request_str)
     json_data = weather_requests.json()
@@ -25,3 +24,17 @@ def update_weather(location):
     # weather_str3 = 'The chance of precipitation is ', precip, '%\n'
 
     return weather_str + weather_str1
+
+
+def get_lat_lon(gj_file):
+    coordinates_str = str(gj_file['features'][0]['geometry']['coordinates'])
+    coordinates_str = coordinates_str[1:]
+    coordinates_str = coordinates_str[:-1]
+    coordinates_str = coordinates_str.split(", ")
+    lat = coordinates_str[1]
+    lon = coordinates_str[0]
+    lat = str(lat)
+    lon = str(lon)
+    lat_lon_str = lat + ',' + lon
+
+    return lat_lon_str
