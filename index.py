@@ -976,25 +976,26 @@ def set_display_children(value):
 
     if value == 'Valparaíso / Viña del Mar':
         lat_lon_str = weather.get_lat_lon(coordinates.valpa_geojson)
-        return ('Enjoy the beautiful coastline and eat the fresh ceviche from the oceanside marketplace. WOW !!! Also'
+        return ('Enjoy the beautiful coastline and eat the fresh ceviche from the oceanside marketplace. WOW !!! Also '
                 'be sure to see the Moai statue! This is one of only two Moai statues that have been removed from '
                 'their original location on Easter Island. The other can be found in the British Museum.',
-                html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/chile/valpo3.JPG"},
-                {"src": "assets/chile/valpo1.JPG"},
-                {"src": "assets/chile/valpo2.JPG"},
-                {"src": "assets/chile/valpo4.JPG"},
-                {"src": "assets/chile/valpo5.JPG"},
-                {"src": "assets/chile/valpo6.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(),
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/chile/valpo3.JPG"},
+                        {"src": "assets/chile/valpo1.JPG"},
+                        {"src": "assets/chile/valpo2.JPG"},
+                        {"src": "assets/chile/valpo4.JPG"},
+                        {"src": "assets/chile/valpo5.JPG"},
+                        {"src": "assets/chile/valpo6.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.valpa_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.valpa_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Valle Nevado':
         lat_lon_str = weather.get_lat_lon(coordinates.valle_nevado_geojson)
@@ -1453,7 +1454,7 @@ def set_display_children(value):
         lat_lon_str = weather.get_lat_lon(coordinates.stras_geojson)
         return ('Known as the ‘Capital of Christmas,’ Strasbourg is quite magical for Christmas. There are so many '
                 'lights and markets all over the city. Christmas season or not, be sure to walk around the ‘Petite '
-                'Paris’ area. It is really cute. More recs to come___. A day trip to Colmar is also a great idea, '
+                'Paris’ area. It is really cute. A day trip to Colmar is also a great idea, '
                 'especially during Christmas time.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -2493,111 +2494,117 @@ def set_display_children(value):
     # Mexico
     if value == 'Cancún':
         lat_lon_str = weather.get_lat_lon(coordinates.cancun_geojson)
-        return 'The beaches in the Riviera Maya are beautiful. One can obviously come here to party, but ' \
-               'visiting the Mayan ruins and exploring nature are also amazing. Visit the Xel-Ha park and snorkel ' \
-               'through the waters and caves!', \
-            html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.cancun_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('The beaches in the Riviera Maya are beautiful. One can obviously come here to party, but '
+                'visiting the Mayan ruins and exploring nature are also amazing. Visit the Xel-Ha park and snorkel '
+                'through the waters and caves!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(),dl.GeoJSON(data=coordinates.cancun_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Mexico City':
         lat_lon_str = weather.get_lat_lon(coordinates.mexico_city_geojson)
-        return "What a city. Weather is temperate year round. So much good cheap food. The tamales with mole " \
-               "just might change your life. Surprisingly there really don't seem to be too many tourists." \
-               "Obviously also get lots of tacos, but also try tortas, conchas, elote, and some fresh fruits " \
-               "like mango and chirimoya. " \
-               "Take a little trip on one of the little boats and get ready to see the world's largest floating " \
-               "market. Having a mariachi band step onto your boat and play a few songs while drinking beers, " \
-               "eating elote, and floating down the river is just truly a beautiful life experience. " \
-               "Be sure to have a good amount of cash for this. " \
-               "Also see the Frida Kahlo house and check out the Coyoacán market. " \
-               "It is 100% authentic and you can try " \
-               "ants, crickets, and even scorpions if you are feeling ambitious. It definitely helps to " \
-               "speak some Spanish, as there are not a lot of tourists compared to beach or resort towns in Mexico." \
-               'Mexico City is also home to the legendary Azteca football stadium, where the Mexico national ' \
-               'team plays as well as Club América. Seeing a game here is absolutely on my bucket list. ' \
-               'Lastly, Ubers are also really cheap which makes it easy to get around, as it is quite a big city.', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/mexico/cdmx.JPG"},
-                {"src": "assets/mexico/cdmx3.JPG"},
-                {"src": "assets/mexico/cdmx2.JPG"},
-                {"src": "assets/mexico/cdmx1.JPG"},
-                {"src": "assets/mexico/cdmx4.JPG"},
-                {"src": "assets/mexico/cdmx5.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.mexico_city_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ("What a city. Weather is temperate year round. So much good cheap food. The tamales with mole " \
+                "just might change your life. Surprisingly there really don't seem to be too many tourists." \
+                "Obviously also get lots of tacos, but also try tortas, conchas, elote, and some fresh fruits " \
+                "like mango and chirimoya. " \
+                "Take a little trip on one of the little boats and get ready to see the world's largest floating " \
+                "market. Having a mariachi band step onto your boat and play a few songs while drinking beers, " \
+                "eating elote, and floating down the river is just truly a beautiful life experience. " \
+                "Be sure to have a good amount of cash for this. " \
+                "Also see the Frida Kahlo house and check out the Coyoacán market. " \
+                "It is 100% authentic and you can try " \
+                "ants, crickets, and even scorpions if you are feeling ambitious. It definitely helps to " \
+                "speak some Spanish, as there are not a lot of tourists compared to beach or resort towns in Mexico." \
+                'Mexico City is also home to the legendary Azteca football stadium, where the Mexico national ' \
+                'team plays as well as Club América. Seeing a game here is absolutely on my bucket list. ' \
+                'Lastly, Ubers are also really cheap which makes it easy to get around, as it is quite a big city.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/mexico/cdmx.JPG"},
+                        {"src": "assets/mexico/cdmx3.JPG"},
+                        {"src": "assets/mexico/cdmx2.JPG"},
+                        {"src": "assets/mexico/cdmx1.JPG"},
+                        {"src": "assets/mexico/cdmx4.JPG"},
+                        {"src": "assets/mexico/cdmx5.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.mexico_city_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Montenegro
     if value == 'Kotor':
-        return "Just as cool as Dubrovnik but not as sexy. It's smaller and way more of an authentic feel. " \
-               "Not many tourists here.", \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/montenegro/kotor1.JPG"},
-                {"src": "assets/montenegro/kotor2.JPG"},
-                # {"src": "assets/montenegro/kotor3.JPG"},
-                {"src": "assets/montenegro/kotor4.JPG"},
-                {"src": "assets/montenegro/kotor5.JPG"},
-                {"src": "assets/montenegro/kotor6.JPG"},
-                {"src": "assets/montenegro/kotor7.JPG"},
-                {"src": "assets/montenegro/kotor8.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.kotor_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        lat_lon_str = weather.get_lat_lon(coordinates.kotor_geojson)
+        return ("Just as cool as Dubrovnik but not as sexy. It's smaller and way more of an authentic feel. " \
+               "Not many tourists here.",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/montenegro/kotor1.JPG"},
+                        {"src": "assets/montenegro/kotor2.JPG"},
+                        # {"src": "assets/montenegro/kotor3.JPG"},
+                        {"src": "assets/montenegro/kotor4.JPG"},
+                        {"src": "assets/montenegro/kotor5.JPG"},
+                        {"src": "assets/montenegro/kotor6.JPG"},
+                        {"src": "assets/montenegro/kotor7.JPG"},
+                        {"src": "assets/montenegro/kotor8.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.kotor_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Morocco
     if value == 'Tangier':
-        return 'Despite being just 17 miles from the southern coast of Spain, I felt more culture shock here than ' \
-               'anywhere in Europe. The newer part of th e city has a European ' \
-               'feel as this used to be the gateway from Europe to Africa (and vice versa) before air travel. ' \
-               'However, inside the old city walls of Tangier (the Kasbah) is a whole different story.' \
-               'Here, there are a number of locals who will ask you where you are going or if you want to eat ' \
-               'something. I think restaurants compensate them if they bring people to their restaurant. ' \
-               'If you are with a local though no one will bother you. Thus, getting a guide for a day is a good ' \
-               'idea and not too expensive. They will likely also set you up to go a nearby beach and ride camels, ' \
-               'which was such a fun, unique experience. We also visited the Cave of Hercules which was really cool! ' \
-               'The food there is so good -- the ' \
-               "'thousand-hole pancakes' and shakshouka (my favorite breakfast on the planet), " \
-               "chicken tagine (lamb or beef are also amazing), couscous (originally from Morocco and also " \
-               "their national dish), fish chermoula, and zaalouk (like baba ganoush). Be sure to visit Cafe Hafa. " \
-               "It overlooks the Bay of Tangier (and the Strait of Gibraltar) and you can see the " \
-               "southern tip of Spain on a clear day! This was also a favorite spot of Jimi Hendrix!", \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/morocco/tangier.JPG"},
-                {"src": "assets/morocco/tangier1.JPG"},
-                {"src": "assets/morocco/tangier2.JPG"},
-                {"src": "assets/morocco/tangier3.JPG"},
-                {"src": "assets/morocco/tangier4.JPG"},
-                {"src": "assets/morocco/tangier5.JPG"},
-                {"src": "assets/morocco/tangier6.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.tangier_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        lat_lon_str = weather.get_lat_lon(coordinates.tangier_geojson)
+        return ('Despite being just 17 miles from the southern coast of Spain, I felt more culture shock here than ' \
+                'anywhere in Europe. The newer part of th e city has a European ' \
+                'feel as this used to be the gateway from Europe to Africa (and vice versa) before air travel. ' \
+                'However, inside the old city walls of Tangier (the Kasbah) is a whole different story.' \
+                'Here, there are a number of locals who will ask you where you are going or if you want to eat ' \
+                'something. I think restaurants compensate them if they bring people to their restaurant. ' \
+                'If you are with a local though no one will bother you. Thus, getting a guide for a day is a good ' \
+                'idea and not too expensive. They will likely also set you up to go a nearby beach and ride camels, ' \
+                'which was such a fun, unique experience. We also visited the Cave of Hercules which was really cool! ' \
+                'The food there is so good -- the ' \
+                "'thousand-hole pancakes' and shakshouka (my favorite breakfast on the planet), " \
+                "chicken tagine (lamb or beef are also amazing), couscous (originally from Morocco and also " \
+                "their national dish), fish chermoula, and zaalouk (like baba ganoush). Be sure to visit Cafe Hafa. " \
+                "It overlooks the Bay of Tangier (and the Strait of Gibraltar) and you can see the " \
+                "southern tip of Spain on a clear day! This was also a favorite spot of Jimi Hendrix!",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/morocco/tangier.JPG"},
+                        {"src": "assets/morocco/tangier1.JPG"},
+                        {"src": "assets/morocco/tangier2.JPG"},
+                        {"src": "assets/morocco/tangier3.JPG"},
+                        {"src": "assets/morocco/tangier4.JPG"},
+                        {"src": "assets/morocco/tangier5.JPG"},
+                        {"src": "assets/morocco/tangier6.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.tangier_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Netherlands
     if value == 'Amsterdam':
+        lat_lon_str = weather.get_lat_lon(coordinates.amsterdam_geojson)
         return "A really great city. There's a lot more to the city than the red light district. There are so many " \
                "little canals and bridges and they are all so picturesque, especially in the Jordaan " \
                "neighborhood. Don't worry so much about seeing specific sights and just wander in the city " \
@@ -2638,6 +2645,7 @@ def set_display_children(value):
 
     # North Macedonia
     if value == 'Skopje':
+        lat_lon_str = weather.get_lat_lon(coordinates.skopje_geojson)
         return 'Really cool authentic Balkan city with not so many tourists. This was the home / birthplace ' \
                "of Alexander the Great. There is a huge statue of him on the main plaza, and it's funny there a big " \
                "sign for a Macedonian beer company right behind him -- CKOΠCKO (SKOPSKO). You'll notice that " \
@@ -2670,6 +2678,7 @@ def set_display_children(value):
 
     # Norway
     if value == 'Oslo':
+        lat_lon_str = weather.get_lat_lon(coordinates.oslo_geojson)
         return 'The capital of Norway! Oslo is so clean and all the infrastructure is so nice. ' \
                'Everything is quite expensive though… for example, the airport is far away but there is a ' \
                'really nice high speed train that takes you to the main train station in the center of the ' \
@@ -2711,6 +2720,7 @@ def set_display_children(value):
 
     # Peru
     if value == 'Lima':
+        lat_lon_str = weather.get_lat_lon(coordinates.lima_geojson)
         return 'more info to come!', \
             html.Br(), html.Br(), \
             html.Div(
@@ -2718,6 +2728,7 @@ def set_display_children(value):
                         dl.GeoJSON(data=coordinates.lima_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Iquitos':
+        lat_lon_str = weather.get_lat_lon(coordinates.iquitos_geojson)
         return 'The start of my Amazon river adventure. We flew here from Lima and took a boat about 50 miles down ' \
                'the Amazon. We then stayed in a few remote places in the rain forest before coming back to ' \
                'Iquitos. Really an adventure of a lifetime. If you have the opportunity to do something like this, ' \
@@ -2740,6 +2751,7 @@ def set_display_children(value):
 
     # Poland
     if value == 'Krakow':
+        lat_lon_str = weather.get_lat_lon(coordinates.krakow_geojson)
         return 'more info coming soon!', \
             html.Br(), html.Br(), dbc.Carousel(
             items=[
@@ -2765,6 +2777,7 @@ def set_display_children(value):
                         dl.GeoJSON(data=coordinates.krakow_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
     if value == 'Wrocław':
+        lat_lon_str = weather.get_lat_lon(coordinates.wroclaw_geojson)
         return 'Very pretty small city. The people were all very nice. Go to the market square and check out some ' \
                'of the cafes and restaurants. The Konspira restaurant is really great -- this is also a great option ' \
                'because there is a lot about the history of Wrocław and Poland on the walls of the ' \
@@ -2794,6 +2807,7 @@ def set_display_children(value):
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
     # Portugal
+    lat_lon_str = weather.get_lat_lon(coordinates.lisbon_geojson)
     if value == 'Lisbon':
         return 'Absolutely lovely city! More info to come!', \
             html.Br(), html.Br(), dbc.Carousel(
@@ -2820,7 +2834,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.lisbon_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Guincho Beach':
+        lat_lon_str = weather.get_lat_lon(coordinates.guincho_beach_geojson)
         return 'Not too far of a drive from Lisbon -- I was lucky to meet someone with a car and we drove here. ' \
                "There are big sand dunes next to the coast. There's also a couple cafes here where you can grab a" \
                "drink or a bite to eat. Sunset here over the ocean was just beautiful. ", \
@@ -2841,6 +2857,7 @@ def set_display_children(value):
 
     # Puerto Rico
     if value == 'Rincón':
+        lat_lon_str = weather.get_lat_lon(coordinates.rincon_geojson)
         return 'Beautiful! More info to come!', \
             html.Br(), html.Br(), dbc.Carousel(
             items=[
@@ -2855,7 +2872,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.rincon_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'San Juan':
+        lat_lon_str = weather.get_lat_lon(coordinates.san_juan_geojson)
         return 'So fun. More info to come!', \
             html.Br(), html.Br(), \
             html.Div(
@@ -2865,6 +2884,7 @@ def set_display_children(value):
 
     # Slovakia
     if value == 'Bratislava':
+        lat_lon_str = weather.get_lat_lon(coordinates.bratislava_geojson)
         return 'What a fun little city with a cool old town and a really cool citadel that overlooks the city and ' \
                'the river that runs through it.', \
             html.Br(), html.Br(), dbc.Carousel(
@@ -2889,6 +2909,7 @@ def set_display_children(value):
 
     # Slovenia
     if value == 'Ljubljana':
+        lat_lon_str = weather.get_lat_lon(coordinates.ljubljana_geojson)
         return 'The smallest European capital and what a cute little city it is. I went in October and the trees ' \
                'lining the river were beautiful colors. The city is very clean and the people are really nice. ' \
                'Climb up to the citadel to see the city from above. Eat some goulash. Great place for sunset as well.' \
@@ -2915,13 +2936,16 @@ def set_display_children(value):
 
     # Spain
     if value == 'Azpeitia':
+        lat_lon_str = weather.get_lat_lon(coordinates.azpeitia_geojson)
         return 'Birthplace of St. Ignatius and home to a large festival on July 31 each year for his feast day', \
             html.Br(), \
             html.Div(
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.azpeitia_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Barcelona':
+        lat_lon_str = weather.get_lat_lon(coordinates.barcelona_geojson)
         return 'PSA -- I am biased having studied abroad here but this is one of my favorite cities in the world! ' \
                'So much to do, see, and eat in this beautiful city on the Mediterranean Sea. Things to do include ' \
                'visiting the Bunkers del Carmel (amazing place for a picnic with stunning views of the city), the ' \
@@ -2992,21 +3016,27 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.barcelona_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Begur':
+        lat_lon_str = weather.get_lat_lon(coordinates.begur_geojson)
         return 'Really nice beaches if you want to visit nice beaches up the coast from Barcelona', \
             html.Br(), \
             html.Div(
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.begur_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Bilbao':
+        lat_lon_str = weather.get_lat_lon(coordinates.bilbao_geojson)
         return "Capital of the Basque country! I didn't spend too much time here but definitely worth a stop. ", \
             html.Br(), \
             html.Div(
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.bilbao_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Buñol':
+        lat_lon_str = weather.get_lat_lon(coordinates.bunol_geojson)
         return "Home of the world’s biggest food fight! It happens the last Wednesday of August every year. " \
                "It is a tiny town with probably little to no tourism for most of the year besides this weekend. " \
                "Trucks upon trucks bring tomatoes that weren’t quite up to Spain’s high standards to be sold for " \
@@ -3023,7 +3053,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.bunol_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Girona':
+        lat_lon_str = weather.get_lat_lon(coordinates.girona_geojson)
         return "Capital of the northern province of Catalonia! It's a cool little city if you want to visit another " \
                "Catalan city.", \
             html.Br(), html.Br(), \
@@ -3031,7 +3063,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.girona_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Granada':
+        lat_lon_str = weather.get_lat_lon(coordinates.granada_geojson)
         return 'Absolutely beautiful city. The Sierra Nevada mountains surround the city and the city itself is ' \
                'quite mountainous too. THe Alhambra castle complex is incredible. The south of Spain was controlled ' \
                'by the Moors for a long time, and each new leader would add a new addition to the Alhambra. However, ' \
@@ -3046,7 +3080,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.granada_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Irún':
+        lat_lon_str = weather.get_lat_lon(coordinates.irun_geojson)
         return 'This is the main city on the Spanish side of the Spain / France border near the coast. ' \
                'Definitely off the beaten path but really nice little city. The view from on top of the mountain ' \
                'at Jaizkibeleko V. Dorrea where you can see the Bidasoa river that divides Spain and France is ' \
@@ -3057,7 +3093,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.irun_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Madrid':
+        lat_lon_str = weather.get_lat_lon(coordinates.madrid_geojson)
         return 'The Spanish capital! Definitely a different feel than Barcelona but both are amazing cities. ' \
                'Tons of places to visit: Parque de Retiro (for sure see the central pond and the Palacio ' \
                'de Cristal here), Real Palacio, Las Ventas Plaza de Toros (tour is pretty cool to learn ' \
@@ -3094,7 +3132,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.madrid_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Málaga':
+        lat_lon_str = weather.get_lat_lon(coordinates.malaga_geojson)
         return 'Nice city on the Costa del Sol (Coast of the Sun)', \
             html.Br(), html.Br(), dbc.Carousel(
             items=[
@@ -3112,7 +3152,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.malaga_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Mallorca':
+        lat_lon_str = weather.get_lat_lon(coordinates.mallorca_geojson)
         return 'Beautiful island not far from Barcelona. You can actually take a ferry here from Barcelona, or it ' \
                'is a very quick flight. Many people come to enjoy some nice beaches and island tranquility, but ' \
                'there is also a German-speaking part of the island where many Germans come to party. There is a ' \
@@ -3122,7 +3164,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.mallorca_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Montserrat':
+        lat_lon_str = weather.get_lat_lon(coordinates.montserrat_geojson)
         return 'Beautiful and really uniquely shaped mountains that are only an hour or so by train inland from ' \
                'Barcelona.', \
             html.Br(), html.Br(), \
@@ -3130,14 +3174,18 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.montserrat_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Pineda de Mar':
+        lat_lon_str = weather.get_lat_lon(coordinates.pineda_de_mar_geojson)
         return 'more info coming soon!', \
             html.Br(), html.Br(), \
             html.Div(
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.pineda_de_mar_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'San Sebastián':
+        lat_lon_str = weather.get_lat_lon(coordinates.san_sebastian_geojson)
         return 'Beautiful city on the northern coast of Spain. It supposedly has the highest density of bars and ' \
                'restaurants in the world. Take the Funicular Monte Igueldo up to Igeldo mendiko behatokia ' \
                'to get an amazing view of the bay and city from above.', \
@@ -3146,14 +3194,18 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.san_sebastian_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Sitges':
+        lat_lon_str = weather.get_lat_lon(coordinates.sitges_geojson)
         return 'The carnaval capital of Spain!', \
             html.Br(), html.Br(), \
             html.Div(
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.sitges_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Segovia':
+        lat_lon_str = weather.get_lat_lon(coordinates.segovia_geojson)
         return 'Another small city with fascinating history, Segovia is a very old city that makes for an awesome ' \
                'day trip from Madrid. There is a Roman aqueduct that runs through the main plaza of the city that ' \
                'was built in the year 50! Enjoy a meal on the main plaza with this stunning backdrop. Get the ' \
@@ -3179,7 +3231,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.segovia_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Sevilla':
+        lat_lon_str = weather.get_lat_lon(coordinates.sevilla_geojson)
         return "Such a lovely city in the south of Spain (Andalusia). It’s a decent-sized city but " \
                "extremely walkable. One of the highlights (especially for Star Wars fans) is the " \
                "Plaza de España, which was featured as the main castle in the planet of Naboo in Star Wars! " \
@@ -3231,7 +3285,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.sevilla_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Tenerife':
+        lat_lon_str = weather.get_lat_lon(coordinates.tenerife_geojson)
         return 'Amazing island with incredibly diverse wildlife and landscapes. Temperatures here are consistently ' \
                'warm (but not too hot) year round. There are lots of nice beaches (including black sand beaches) and ' \
                'also many opportunities to get out on the water in a boat. We enjoyed an awesome boat trip with ' \
@@ -3263,7 +3319,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.tenerife_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Toledo':
+        lat_lon_str = weather.get_lat_lon(coordinates.toledo_geojson)
         return 'The original capital of Spain, Toledo is a very old city that makes for an awesome day trip from ' \
                'Madrid. It is a small city that is essentially on a little island, surrounded by city walls and a ' \
                'river / moat. It is known for its mixture or clash of cultures — catholics, jews, and muslims all ' \
@@ -3288,7 +3346,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.toledo_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Valencia':
+        lat_lon_str = weather.get_lat_lon(coordinates.valencia_geojson)
         return 'The birthplace of paella! Be sure to eat plenty of paella while you’re here. Valencia is on the ' \
                'eastern coast of Spain, but the city center is not quite on the coast. The coast and beaches are ' \
                'not too far but it takes a bit of effort to get there. There is plenty to do in Valencia though — ' \
@@ -3303,7 +3363,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.valencia_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Vilanova':
+        lat_lon_str = weather.get_lat_lon(coordinates.vilanova_geojson)
         return 'more info coming soon!', \
             html.Br(), html.Br(), \
             html.Div(
@@ -3313,6 +3375,7 @@ def set_display_children(value):
 
     # Sweden
     if value == 'Stockholm':
+        lat_lon_str = weather.get_lat_lon(coordinates.stockholm_geojson)
         return 'The Swedish capitol is absolutely beautiful! The city itself is made up of ___ islands and they ' \
                'definitely have a different feel. The center island with the old town (___) ' \
                'has some of the picturesque little streets that you may see in pictures online. ' \
@@ -3366,6 +3429,7 @@ def set_display_children(value):
 
     # Turkey
     if value == 'Istanbul':
+        lat_lon_str = weather.get_lat_lon(coordinates.istanbul_geojson)
         return 'Amazing trip with Zach! more coming soon!', \
             html.Br(), html.Br(), dbc.Carousel(
             items=[
@@ -3393,6 +3457,7 @@ def set_display_children(value):
 
     # USA
     if value == 'Bonneville Salt Flats':
+        lat_lon_str = weather.get_lat_lon(coordinates.bonneville_geojson)
         return 'More info to come', \
             html.Br(), html.Br(), \
             html.Div(
@@ -3420,7 +3485,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.bonneville_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Boston':
+        lat_lon_str = weather.get_lat_lon(coordinates.boston_geojson)
         return 'More info to come', \
             html.Br(), html.Br(), dbc.Carousel(
             items=[
@@ -3434,7 +3501,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.boston_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Champaign':
+        lat_lon_str = weather.get_lat_lon(coordinates.champaign_geojson)
         return 'Long live the chief!', \
             html.Br(), html.Br(), dbc.Carousel(
             items=[
@@ -3448,7 +3517,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.champaign_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Chicago':
+        lat_lon_str = weather.get_lat_lon(coordinates.chicago_geojson)
         return 'Home of the Digglers!', \
             html.Br(), html.Br(), dbc.Carousel(
             items=[
@@ -3462,7 +3533,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.chicago_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Copper Mountain':
+        lat_lon_str = weather.get_lat_lon(coordinates.copper_geojson)
         return 'awesome skiing', \
             html.Br(), html.Br(), dbc.Carousel(
             items=[
@@ -3478,13 +3551,17 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.copper_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Milwaukee':
+        lat_lon_str = weather.get_lat_lon(coordinates.milw_geojson)
         return 'lil Chicago', html.Br(), html.Br(), \
             html.Div(
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.milw_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Dayton':
+        lat_lon_str = weather.get_lat_lon(coordinates.dayton_geojson)
         return 'Go to the Wandering Griffin Pub! The namesake for this app!', \
             html.Br(), html.Br(), \
             html.Div(
@@ -3505,7 +3582,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.dayton_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Dubuque':
+        lat_lon_str = weather.get_lat_lon(coordinates.dubuque_geojson)
         return 'Jewel of the Mississippi!', \
             html.Br(), html.Br(), dbc.Carousel(
             items=[
@@ -3519,7 +3598,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.dubuque_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Miami':
+        lat_lon_str = weather.get_lat_lon(coordinates.miami_geojson)
         return 'Beautiful latino cultural melting pot. And of course the home of Messi! More info to come!', \
             html.Br(), html.Br(), \
             html.Div(
@@ -3547,7 +3628,9 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.miami_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Missoula':
+        lat_lon_str = weather.get_lat_lon(coordinates.missoula_geojson)
         return 'more info coming soon!', \
             html.Br(), html.Br(), dbc.Carousel(
             items=[
@@ -3561,21 +3644,27 @@ def set_display_children(value):
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.missoula_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'NYC':
+        lat_lon_str = weather.get_lat_lon(coordinates.nyc_geojson)
         return 'KATZ', \
             html.Br(), html.Br(), \
             html.Div(
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.nyc_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'San Francisco':
+        lat_lon_str = weather.get_lat_lon(coordinates.san_francisco_geojson)
         return 'more info coming soon!', \
             html.Br(), html.Br(), \
             html.Div(
                 dl.Map([dl.TileLayer(),
                         dl.GeoJSON(data=coordinates.san_francisco_geojson)],
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+
     if value == 'Seattle':
+        lat_lon_str = weather.get_lat_lon(coordinates.seattle_geojson)
         return 'more info coming soon!', \
             html.Br(), html.Br(), dbc.Carousel(
             items=[
@@ -3600,6 +3689,7 @@ def set_display_children(value):
                        style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
 
     if value == 'Zion National Park':
+        lat_lon_str = weather.get_lat_lon(coordinates.zion_geojson)
         return 'more info coming soon!', \
             html.Br(), html.Br(), dbc.Carousel(
             items=[
