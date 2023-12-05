@@ -3364,331 +3364,342 @@ def set_display_children(value):
     # Sweden
     if value == 'Stockholm':
         lat_lon_str = weather.get_lat_lon(coordinates.stockholm_geojson)
-        return 'The Swedish capitol is absolutely beautiful! The city itself is made up of ___ islands and they ' \
-               'definitely have a different feel. The center island with the old town (___) ' \
-               'has some of the picturesque little streets that you may see in pictures online. ' \
-               'There are some lovely cafes here. ___ on the water has nice views, awesome open-faced seafood ' \
-               'sandwiches, and the traditional Swedish cinnamon rolls that are so good! There are also ' \
-               'some great bars and restaurants. I loved the cozy little neighborhood restaurant called ___. ' \
-               'We also had so much fun drinking mead out of little ceramic mugs in the underground, ' \
-               'viking-themed bar here called ___. ' \
-               "The staff are dressed in 'viking' clothes, and there is also live 'viking' music! They have many " \
-               'different types of mead, but I think we preferred the classic.', \
-            html.Br(), html.Br(), \
-            'To the south of ___ is ___. The view of the old town from ___ on this island (first pic below)' \
-            'is perhaps the most famous in Stockholm! Right next to this viewpoint, check out a really unique ' \
-            "little bridge connecting to someone's apartment! It's called ___" \
-            'There are also a couple really cool restaurants / bars ' \
-            'here that give you a bit of a view of the old town as well, including __ ' \
-            'These are a great idea during the day or at night! ', \
-            html.Br(), html.Br(), \
-            'Also on ___, you can find a main shopping street (impressively clean), a great beach / swimming ' \
-            'area (with a cool dock bar called Loopen Bar), a really fun and quirky open air area / club ' \
-            'called ___, and probably most importantly... ' \
-            'MEATBALLS ! You need to go to the Meatballs for the People. No, they are not just meatballs. ' \
-            'They are worth the wait. There are so many different kinds, so getting the sampler plate (comes ' \
-            'with amazing mashed potatoes) is a great idea. ' \
-            'sample them all!', \
-            html.Br(), html.Br(), \
-            'Getting out on a boat is also highly recommended in Stockholm. This is a great way to see more of ' \
-            'the islands. We did the a quick tour of the main handful of islands near the old town island ___, ' \
-            'but there are many options that go much farther!', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/sweden/sto.JPG"},
-                {"src": "assets/sweden/sto1.JPG"},
-                {"src": "assets/sweden/sto2.JPG"},
-                {"src": "assets/sweden/sto3.JPG"},
-                {"src": "assets/sweden/sto4.JPG"},
-                {"src": "assets/sweden/sto5.JPG"},
-                {"src": "assets/sweden/sto6.JPG"},
-                {"src": "assets/sweden/sto7.JPG"},
-                {"src": "assets/sweden/sto9.JPG"},
-                {"src": "assets/sweden/sto10.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.stockholm_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('The Swedish capitol is absolutely beautiful! The city itself is made up of ___ islands and they '
+                'definitely have a different feel. The center island with the old town (___) '
+                'has some of the picturesque little streets that you may see in pictures online. '
+                'There are some lovely cafes here. ___ on the water has nice views, awesome open-faced seafood '
+                'sandwiches, and the traditional Swedish cinnamon rolls that are so good! There are also '
+                'some great bars and restaurants. I loved the cozy little neighborhood restaurant called ___. '
+                'We also had so much fun drinking mead out of little ceramic mugs in the underground, '
+                'viking-themed bar here called ___. '
+                "The staff are dressed in 'viking' clothes, and there is also live 'viking' music! They have many "
+                'different types of mead, but I think we preferred the classic.',
+                html.Br(), html.Br(),
+                'To the south of ___ is ___. The view of the old town from ___ on this island (first pic below)'
+                'is perhaps the most famous in Stockholm! Right next to this viewpoint, check out a really unique '
+                "little bridge connecting to someone's apartment! It's called ___"
+                'There are also a couple really cool restaurants / bars '
+                'here that give you a bit of a view of the old town as well, including __ '
+                'These are a great idea during the day or at night! ',
+                html.Br(), html.Br(),
+                'Also on ___, you can find a main shopping street (impressively clean), a great beach / swimming '
+                'area (with a cool dock bar called Loopen Bar), a really fun and quirky open air area / club '
+                'called ___, and probably most importantly... '
+                'MEATBALLS ! You need to go to the Meatballs for the People. No, they are not just meatballs. '
+                'They are worth the wait. There are so many different kinds, so getting the sampler plate (comes '
+                'with amazing mashed potatoes) is a great idea. '
+                'sample them all!',
+                html.Br(), html.Br(),
+                'Getting out on a boat is also highly recommended in Stockholm. This is a great way to see more of '
+                'the islands. We did the a quick tour of the main handful of islands near the old town island ___, '
+                'but there are many options that go much farther!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/sweden/sto.JPG"},
+                        {"src": "assets/sweden/sto1.JPG"},
+                        {"src": "assets/sweden/sto2.JPG"},
+                        {"src": "assets/sweden/sto3.JPG"},
+                        {"src": "assets/sweden/sto4.JPG"},
+                        {"src": "assets/sweden/sto5.JPG"},
+                        {"src": "assets/sweden/sto6.JPG"},
+                        {"src": "assets/sweden/sto7.JPG"},
+                        {"src": "assets/sweden/sto9.JPG"},
+                        {"src": "assets/sweden/sto10.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.stockholm_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Turkey
     if value == 'Istanbul':
         lat_lon_str = weather.get_lat_lon(coordinates.istanbul_geojson)
-        return 'Amazing trip with Zach! more coming soon!', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/turkey/ist.JPG"},
-                {"src": "assets/turkey/ist1.JPG"},
-                {"src": "assets/turkey/ist2.JPG"},
-                {"src": "assets/turkey/ist3.JPG"},
-                {"src": "assets/turkey/ist4.JPG"},
-                {"src": "assets/turkey/ist5.JPG"},
-                {"src": "assets/turkey/ist6.JPG"},
-                {"src": "assets/turkey/ist7.JPG"},
-                {"src": "assets/turkey/ist8.JPG"},
-                {"src": "assets/turkey/ist9.JPG"},
-                {"src": "assets/turkey/ist10.JPG"},
-
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.istanbul_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Amazing trip with Zach! more coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/turkey/ist.JPG"},
+                        {"src": "assets/turkey/ist1.JPG"},
+                        {"src": "assets/turkey/ist2.JPG"},
+                        {"src": "assets/turkey/ist3.JPG"},
+                        {"src": "assets/turkey/ist4.JPG"},
+                        {"src": "assets/turkey/ist5.JPG"},
+                        {"src": "assets/turkey/ist6.JPG"},
+                        {"src": "assets/turkey/ist7.JPG"},
+                        {"src": "assets/turkey/ist8.JPG"},
+                        {"src": "assets/turkey/ist9.JPG"},
+                        {"src": "assets/turkey/ist10.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.istanbul_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # USA
     if value == 'Bonneville Salt Flats':
         lat_lon_str = weather.get_lat_lon(coordinates.bonneville_geojson)
-        return 'More info to come', \
-            html.Br(), html.Br(), \
-            html.Div(
-                style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
-                       "margin": "auto"},
-                children=[
-                    dp.DashPlayer(
-                        id="player",
-                        url="https://youtu.be/ARB2FxUwGvU?si=tQyMJ2wkoTSY6Fq1",
-                        controls=True,
-                        width="100%",
-                        height="200px",
-                    )
-                ]
-            ), \
-            html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/usa-ut/bonneville.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.bonneville_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('More info to come',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://youtu.be/ARB2FxUwGvU?si=tQyMJ2wkoTSY6Fq1",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-ut/bonneville.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.bonneville_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Boston':
         lat_lon_str = weather.get_lat_lon(coordinates.boston_geojson)
-        return 'More info to come', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/usa-ma/boston.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.boston_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('More info to come',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-ma/boston.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.boston_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Champaign':
         lat_lon_str = weather.get_lat_lon(coordinates.champaign_geojson)
-        return 'Long live the chief!', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/usa-il/champaign.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.champaign_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Long live the chief!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-il/champaign.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.champaign_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Chicago':
         lat_lon_str = weather.get_lat_lon(coordinates.chicago_geojson)
-        return 'Home of the Digglers!', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/usa-il/chicago.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.chicago_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Home of the world-famous Digglers!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-il/chicago.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.chicago_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Copper Mountain':
         lat_lon_str = weather.get_lat_lon(coordinates.copper_geojson)
-        return 'awesome skiing', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/usa-co/copper.JPG"},
-                {"src": "assets/usa-co/copper2.JPG"},
-                {"src": "assets/usa-co/copper3.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.copper_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('awesome skiing',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-co/copper.JPG"},
+                        {"src": "assets/usa-co/copper2.JPG"},
+                        {"src": "assets/usa-co/copper3.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.copper_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Milwaukee':
         lat_lon_str = weather.get_lat_lon(coordinates.milw_geojson)
-        return 'lil Chicago', html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.milw_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('lil Chicago',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.milw_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Dayton':
         lat_lon_str = weather.get_lat_lon(coordinates.dayton_geojson)
-        return 'Go to the Wandering Griffin Pub! The namesake for this app!', \
-            html.Br(), html.Br(), \
-            html.Div(
-                style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
-                       "margin": "auto"},
-                children=[
-                    dp.DashPlayer(
-                        id="player",
-                        url="https://youtu.be/YyQi6PEiOJk?si=mT2A04PNZRMx7GDV",
-                        controls=True,
-                        width="100%",
-                        height="200px",
-                    )
-                ]
-            ), \
-            html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.dayton_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Home of the Wandering Griffin Pub! The namesake for this app!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://youtu.be/YyQi6PEiOJk?si=mT2A04PNZRMx7GDV",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dayton_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Dubuque':
         lat_lon_str = weather.get_lat_lon(coordinates.dubuque_geojson)
-        return 'Jewel of the Mississippi!', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/usa-ia/dbq.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.dubuque_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Jewel of the Mississippi!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-ia/dbq.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dubuque_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Miami':
         lat_lon_str = weather.get_lat_lon(coordinates.miami_geojson)
-        return 'Beautiful latino cultural melting pot. And of course the home of Messi! More info to come!', \
-            html.Br(), html.Br(), \
-            html.Div(
-                style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
-                       "margin": "auto"},
-                children=[
-                    dp.DashPlayer(
-                        id="player",
-                        url="https://youtu.be/n5q6gziq3KY?si=w35Q-qqbBTYBWYLv",
-                        controls=True,
-                        width="100%",
-                        height="200px",
-                    )
-                ]
-            ), \
-            html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/usa-fl/miami.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.miami_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Beautiful latino cultural melting pot. And of course the home of Messi! More info to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://youtu.be/n5q6gziq3KY?si=w35Q-qqbBTYBWYLv",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ),
+                html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-fl/miami.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.miami_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Missoula':
         lat_lon_str = weather.get_lat_lon(coordinates.missoula_geojson)
-        return 'more info coming soon!', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/usa-mt/missoula.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.missoula_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('more info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-mt/missoula.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.missoula_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'NYC':
         lat_lon_str = weather.get_lat_lon(coordinates.nyc_geojson)
-        return 'KATZ', \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.nyc_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('KATZ',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.nyc_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'San Francisco':
         lat_lon_str = weather.get_lat_lon(coordinates.san_francisco_geojson)
-        return 'more info coming soon!', \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.san_francisco_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('more info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=coordinates.san_francisco_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Seattle':
         lat_lon_str = weather.get_lat_lon(coordinates.seattle_geojson)
-        return 'more info coming soon!', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/usa-wa/seattle.JPG"},
-                {"src": "assets/usa-wa/seattle1.JPG"},
-                {"src": "assets/usa-wa/seattle2.JPG"},
-                {"src": "assets/usa-wa/seattle3.JPG"},
-                {"src": "assets/usa-wa/seattle7.JPG"},
-                {"src": "assets/usa-wa/seattle4.JPG"},
-                {"src": "assets/usa-wa/seattle5.JPG"},
-                {"src": "assets/usa-wa/seattle8.JPG"},
-                {"src": "assets/usa-wa/seattle6.JPG"},
-                {"src": "assets/usa-wa/seattle9.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.seattle_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('more info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-wa/seattle.JPG"},
+                        {"src": "assets/usa-wa/seattle1.JPG"},
+                        {"src": "assets/usa-wa/seattle2.JPG"},
+                        {"src": "assets/usa-wa/seattle3.JPG"},
+                        {"src": "assets/usa-wa/seattle7.JPG"},
+                        {"src": "assets/usa-wa/seattle4.JPG"},
+                        {"src": "assets/usa-wa/seattle5.JPG"},
+                        {"src": "assets/usa-wa/seattle8.JPG"},
+                        {"src": "assets/usa-wa/seattle6.JPG"},
+                        {"src": "assets/usa-wa/seattle9.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.seattle_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Zion National Park':
         lat_lon_str = weather.get_lat_lon(coordinates.zion_geojson)
-        return 'more info coming soon!', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/usa-ut/zion.JPG"},
-                {"src": "assets/usa-ut/zion1.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.zion_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('more info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-ut/zion.JPG"},
+                        {"src": "assets/usa-ut/zion1.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.zion_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
