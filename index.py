@@ -287,8 +287,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.pal_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.pal_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Argentina
@@ -345,22 +344,21 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.ba_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.ba_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Austria
     if value == 'Dornbirn':
         lat_lon_str = weather.get_lat_lon(coordinates.dornbirn_geojson)
-        return ('Home of the Rhombergs! My great-great grandpa, Franz Martin Rhomberg, came to the US ' \
-                'from this small city in Austria. There are so many stores and other signs with the name Rhomberg ' \
-                'still to this day — it was crazy to see! The other big Rhomberg highlight was seeing the ' \
-                'old ‘Kirchenbuch,’ the ‘church book’ (since church and state used to be the same) ' \
-                'with my Rhomberg ancestors’ names written by hand all the way back to the 1400s. ' \
-                'This was amazing to see. There are beautiful mountain views all over the city as it is ' \
-                'surrounded by the Alps. For an amazing view of the city, go up the cable car to ' \
-                '_____. There is a cool restaurant up here called _____. For a really cool old tavern down ' \
-                'in the city, the Rothaus is awesome. In winter, there is also amazing skiing nearby. ' \
+        return ('Home of the Rhombergs! My great-great grandpa, Franz Martin Rhomberg, came to the US '
+                'from this small city in Austria. There are so many stores and other signs with the name Rhomberg '
+                'still to this day — it was crazy to see! The other big Rhomberg highlight was seeing the '
+                'old ‘Kirchenbuch,’ the ‘church book’ (since church and state used to be the same) '
+                'with my Rhomberg ancestors’ names written by hand all the way back to the 1400s. '
+                'This was amazing to see. There are beautiful mountain views all over the city as it is '
+                'surrounded by the Alps. For an amazing view of the city, go up the cable car to '
+                '_____. There is a cool restaurant up here called _____. For a really cool old tavern down '
+                'in the city, the Rothaus is awesome. In winter, there is also amazing skiing nearby. '
                 'I did a trip for a couple days to Steffisalp and the views were incredible. ',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -376,28 +374,27 @@ def set_display_children(value):
                     interval=2000,
                     ride="carousel",
                     className="carousel-fade"
-                ), html.Br(), \
+                ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.dornbirn_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dornbirn_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Vienna':
         lat_lon_str = weather.get_lat_lon(coordinates.vienna_geojson)
-        return ('A very grand city! The capital of Austria is very impressive. The Hofburg Palace and the main ' \
-                'cathedral on Stephansplatz are the big ' \
-                'highlights, but there is so much more to see! Even beyond the main sightseeing spots, ' \
-                'there are so many beautiful buildings that I feel could be the main tourist attraction ' \
-                'in many other cities. However, there are just so many of these beautiful buildings that many ' \
-                'don’t get the attention they probably deserve.', \
-                html.Br(), html.Br(), \
-                'The cafe scene is huge here. There are many ' \
-                'cafes all over the city — it is a very popular activity to stop at a cafe for coffee and a ' \
-                'piece of cake (or one of many other pastries / dishes). These cafes range from very casual to ' \
-                'quite grand with high ceilings and ornate decorations. The cafe scene ties in with the artsy side ' \
-                'of the city. There is a lot of history here with music and with theatre. Mozart lived here much ' \
-                'of his life and had a huge influence on the city. It is highly recommended to visit the opera house ' \
-                'to see a show if possible.', \
-                html.Br(), html.Br(), \
+        return ('A very grand city! The capital of Austria is very impressive. The Hofburg Palace and the main '
+                'cathedral on Stephansplatz are the big '
+                'highlights, but there is so much more to see! Even beyond the main sightseeing spots, '
+                'there are so many beautiful buildings that I feel could be the main tourist attraction '
+                'in many other cities. However, there are just so many of these beautiful buildings that many '
+                'don’t get the attention they probably deserve.',
+                html.Br(), html.Br(),
+                'The cafe scene is huge here. There are many '
+                'cafes all over the city — it is a very popular activity to stop at a cafe for coffee and a '
+                'piece of cake (or one of many other pastries / dishes). These cafes range from very casual to '
+                'quite grand with high ceilings and ornate decorations. The cafe scene ties in with the artsy side '
+                'of the city. There is a lot of history here with music and with theatre. Mozart lived here much '
+                'of his life and had a huge influence on the city. It is highly recommended to visit the opera house '
+                'to see a show if possible.',
+                html.Br(), html.Br(),
                 'There is a lot of great food in Vienna. Be sure to try Wiener Schnitzel and Kaiserschmarrn (little '
                 'pancake bites served with an apple sauce). Other favorites include goulasch, sausage (great street '
                 'food), and pumpkin soup (in the fall). There is plenty to do in a few days in Vienna, '
@@ -420,10 +417,9 @@ def set_display_children(value):
                     interval=2000,
                     ride="carousel",
                     className="carousel-fade"
-                ), html.Br(), \
+                ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.vienna_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.vienna_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Bahamas
@@ -444,19 +440,19 @@ def set_display_children(value):
                             height="200px",
                         )
                     ]
-                ), html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/bahamas/eleuthera.JPG"},
-                {"src": "assets/bahamas/eleuthera1.JPG"},
-                {"src": "assets/bahamas/eleuthera2.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(),
+                ), html.Br(), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/bahamas/eleuthera.JPG"},
+                        {"src": "assets/bahamas/eleuthera1.JPG"},
+                        {"src": "assets/bahamas/eleuthera2.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.eleuthera_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.eleuthera_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'New Providence Island (where Nassau is located)':
         lat_lon_str = weather.get_lat_lon(coordinates.nassau_geojson)
@@ -476,8 +472,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.nassau_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.nassau_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Belgium
@@ -501,27 +496,26 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.antwerp_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.antwerp_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Brussels':
         lat_lon_str = weather.get_lat_lon(coordinates.brussels_geojson)
-        return ('It is often suggested to skip Brussels (Band visit other Belgian cities such as Ghent or Antwerp... ' \
-                'and while I love these smaller cities of Belgium, I definitely would NOT recommend immediately ' \
-                'skipping Brussels for other cities in Belgium. The center of Brussels is really nice. The town hall ' \
-                'of Brussels is amazing. There are more than 300 little statues on the exterior depicting saints ' \
-                'and other historical figures. In addition to the town hall, the Grand Square (Grand Place in French) ' \
-                'has a number of other buildings that are much more stunning in person than in pictures, especially ' \
-                'because all the gold accents -- they really stand out in person. I would highly recommend restaurant ' \
-                'Fin de Siècle (amazing Flemish Carbonnade) and Le Bistro - Porte de Hal (amazing oyster buckets ' \
-                'and beer selection here). There are also a couple really nice cafes in the Parc de Bruxelles park in ' \
-                'front of the Brussels Palace, called Kiosk Radio and Woodpecker Parc Royal. ' \
-                'Would definitely recommend coming for a beverage and  / or some food when the weather is nice. ' \
-                'It is also absolutely necessary to try the Belgian waffles (in the Liege style, they are somewhat ' \
-                "circular in shape). The best ones are from the yellow food trucks called 'Gaufres Chaudes.' You can " \
-                "find one (or two) in front of the palace, and another one next to the Ferris wheel. Don't forget the " \
-                'Delirium Village -- it is really fun and gets quite lively in the evenings! Lastly, a couple of the ' \
+        return ('It is often suggested to skip Brussels (Band visit other Belgian cities such as Ghent or Antwerp... '
+                'and while I love these smaller cities of Belgium, I definitely would NOT recommend immediately '
+                'skipping Brussels for other cities in Belgium. The center of Brussels is really nice. The town hall '
+                'of Brussels is amazing. There are more than 300 little statues on the exterior depicting saints '
+                'and other historical figures. In addition to the town hall, the Grand Square (Grand Place in French) '
+                'has a number of other buildings that are much more stunning in person than in pictures, especially '
+                'because all the gold accents -- they really stand out in person. I would highly recommend restaurant '
+                'Fin de Siècle (amazing Flemish Carbonnade) and Le Bistro - Porte de Hal (amazing oyster buckets '
+                'and beer selection here). There are also a couple really nice cafes in the Parc de Bruxelles park in '
+                'front of the Brussels Palace, called Kiosk Radio and Woodpecker Parc Royal. '
+                'Would definitely recommend coming for a beverage and  / or some food when the weather is nice. '
+                'It is also absolutely necessary to try the Belgian waffles (in the Liege style, they are somewhat '
+                "circular in shape). The best ones are from the yellow food trucks called 'Gaufres Chaudes.' You can "
+                "find one (or two) in front of the palace, and another one next to the Ferris wheel. Don't forget the "
+                'Delirium Village -- it is really fun and gets quite lively in the evenings! Lastly, a couple of the '
                 "funniest and weirdest statues are the 'manneken pis' (peeing boy) and 'het zinneke' (peeing dog).",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -541,18 +535,17 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.brussels_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.brussels_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Leuven':
         lat_lon_str = weather.get_lat_lon(coordinates.leuven_geojson)
-        return ('What a fun little town really close to Brussels. It is easily accessible via the train system;' \
-                'the ride takes less than 30 minutes from Brussels. The main attraction in Leuven is the Town Hall, ' \
-                'and wow it is actually quite stunning. There are 236 little statues on the exterior depicting saints ' \
-                'and other historical figures. Be sure to also check out the other main plaza, Oude Markt.' \
-                'Enjoy some Stella Artois -- it is brewed here! You can actually visit the brewery, it is not far ' \
-                'at all from the center of the city or the main train station. Be sure to book a tour ahead of ' \
+        return ('What a fun little town really close to Brussels. It is easily accessible via the train system;'
+                'the ride takes less than 30 minutes from Brussels. The main attraction in Leuven is the Town Hall, '
+                'and wow it is actually quite stunning. There are 236 little statues on the exterior depicting saints '
+                'and other historical figures. Be sure to also check out the other main plaza, Oude Markt.'
+                'Enjoy some Stella Artois -- it is brewed here! You can actually visit the brewery, it is not far '
+                'at all from the center of the city or the main train station. Be sure to book a tour ahead of '
                 'time though as the time slots fill up.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -570,28 +563,27 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.leuven_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.leuven_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Ghent':
         lat_lon_str = weather.get_lat_lon(coordinates.ghent_geojson)
-        return ('I absolutely loved my time here. It is such a cute little city. The main area of the city feels like ' \
-                'something out of a Harry Potter movie! The canal lined with classic Belgian architecture houses, ' \
-                'the bridge, the castle (Gravensteen), and the grand churches all make for really stunning and ' \
-                "impressive views. Be sure to walk across St. Michael's Bridge and walk along the canal (Korenlei) " \
-                "to get the best views." \
-                'On top of all this -- the beer here is amazing! There is a very ' \
-                'One of the best beers in the world (Delirium Tremens) is made ' \
-                'just outside of Ghent. If you have a few hours, definitely make the little trip to visit -- the ' \
-                'brewery that makes Delirium is called Huyghe. It is still family-owned and I even got to meet and ' \
+        return ('I absolutely loved my time here. It is such a cute little city. The main area of the city feels like '
+                'something out of a Harry Potter movie! The canal lined with classic Belgian architecture houses, '
+                'the bridge, the castle (Gravensteen), and the grand churches all make for really stunning and '
+                "impressive views. Be sure to walk across St. Michael's Bridge and walk along the canal (Korenlei) "
+                "to get the best views."
+                'On top of all this -- the beer here is amazing! There is a very '
+                'One of the best beers in the world (Delirium Tremens) is made '
+                'just outside of Ghent. If you have a few hours, definitely make the little trip to visit -- the '
+                'brewery that makes Delirium is called Huyghe. It is still family-owned and I even got to meet and '
                 'have a beer with the CEO!',
                 html.Br(), html.Br(),
-                'Back in the city of Ghent, be sure to also visit ' \
-                "the 'Friday Market Square' -- a nice plaza surrounded by beautiful buildings in the classic Belgian" \
-                "/ Dutch style, and also where one of the coolest breweries / beer bars can be found! They have a " \
-                "fun / funny ny tradition where if you order their house blonde beer (which is insanely good) " \
-                "in the 1.5 liter pour, you have to give the barman a shoe as a deposit for the science experiment-" \
-                "looking beer glass! Not only that, but the shoes then go in a basket which is raised to the " \
+                'Back in the city of Ghent, be sure to also visit '
+                "the 'Friday Market Square' -- a nice plaza surrounded by beautiful buildings in the classic Belgian"
+                "/ Dutch style, and also where one of the coolest breweries / beer bars can be found! They have a "
+                "fun / funny ny tradition where if you order their house blonde beer (which is insanely good) "
+                "in the 1.5 liter pour, you have to give the barman a shoe as a deposit for the science experiment-"
+                "looking beer glass! Not only that, but the shoes then go in a basket which is raised to the "
                 "ceiling and it rings a bell. Enjoy the picture below!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -612,8 +604,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.ghent_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.ghent_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Bolivia
@@ -636,24 +627,23 @@ def set_display_children(value):
                             height="200px",
                         )
                     ]
-                ),
-                html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/bolivia/cliza5.JPG"},
-                {"src": "assets/bolivia/cliza.JPG"},
-                {"src": "assets/bolivia/cliza1.JPG"},
-                {"src": "assets/bolivia/cliza2.JPG"},
-                {"src": "assets/bolivia/cliza3.JPG"},
-                {"src": "assets/bolivia/cliza4.JPG"},
+                ), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/bolivia/cliza5.JPG"},
+                        {"src": "assets/bolivia/cliza.JPG"},
+                        {"src": "assets/bolivia/cliza1.JPG"},
+                        {"src": "assets/bolivia/cliza2.JPG"},
+                        {"src": "assets/bolivia/cliza3.JPG"},
+                        {"src": "assets/bolivia/cliza4.JPG"},
 
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(),
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.cliza_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.cliza_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Cochabamba':
         lat_lon_str = weather.get_lat_lon(coordinates.cocha_geojson)
@@ -672,22 +662,21 @@ def set_display_children(value):
                             height="200px",
                         )
                     ]
-                ),
-                html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/bolivia/cochabamba2.JPG"},
-                {"src": "assets/bolivia/cochabamba1.JPG"},
-                {"src": "assets/bolivia/cochabamba.JPG"},
-                {"src": "assets/bolivia/cochabamba4.JPG"},
-                {"src": "assets/bolivia/cochabamba3.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
+                ), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/bolivia/cochabamba2.JPG"},
+                        {"src": "assets/bolivia/cochabamba1.JPG"},
+                        {"src": "assets/bolivia/cochabamba.JPG"},
+                        {"src": "assets/bolivia/cochabamba4.JPG"},
+                        {"src": "assets/bolivia/cochabamba3.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.cocha_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.cocha_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Bosnia & Herzegovina
@@ -710,8 +699,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.medj_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.medj_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Mostar':
         lat_lon_str = weather.get_lat_lon(coordinates.mostar_geojson)
@@ -731,8 +719,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.mostar_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.mostar_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Bulgaria
@@ -766,8 +753,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.sofia_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.sofia_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Varna':
         lat_lon_str = weather.get_lat_lon(coordinates.varna_geojson)
@@ -805,8 +791,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.varna_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.varna_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Canada
@@ -831,8 +816,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.banff_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.banff_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Calgary':
         lat_lon_str = weather.get_lat_lon(coordinates.calgary_geojson)
@@ -840,8 +824,7 @@ def set_display_children(value):
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.calgary_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.calgary_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Chile
@@ -880,8 +863,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.puertonat_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.puertonat_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Santiago':
         lat_lon_str = weather.get_lat_lon(coordinates.sant_geojson)
@@ -920,8 +902,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.sant_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.sant_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Torres del Paine NP (Patagonia)':
@@ -970,8 +951,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.torres_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.torres_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Valparaíso / Viña del Mar':
@@ -1026,8 +1006,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.valle_nevado_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.valle_nevado_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Croatia
@@ -1059,8 +1038,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.dubrovnik_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dubrovnik_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Plitvice Lakes National Park':
         lat_lon_str = weather.get_lat_lon(coordinates.plitvice_geojson)
@@ -1084,8 +1062,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.plitvice_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.plitvice_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Pula':
         lat_lon_str = weather.get_lat_lon(coordinates.pula_geojson)
@@ -1107,8 +1084,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.pula_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.pula_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Motovun':
         lat_lon_str = weather.get_lat_lon(coordinates.motovun_geojson)
@@ -1130,8 +1106,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.motovun_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.motovun_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Vodnjan':
         lat_lon_str = weather.get_lat_lon(coordinates.vodnjan_geojson)
@@ -1151,8 +1126,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.vodnjan_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.vodnjan_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Opatija':
         lat_lon_str = weather.get_lat_lon(coordinates.opatija_geojson)
@@ -1173,8 +1147,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.opatija_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.opatija_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Rovinj':
         lat_lon_str = weather.get_lat_lon(coordinates.rovinj_geojson)
@@ -1192,8 +1165,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.rovinj_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.rovinj_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Zagreb':
         lat_lon_str = weather.get_lat_lon(coordinates.zagreb_geojson)
@@ -1212,8 +1184,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.zagreb_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.zagreb_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Czechia
@@ -1841,7 +1812,7 @@ def set_display_children(value):
                 'and with all the people, music, food, and beer it really is quite the amazing and unique experience.',
                 html.Br(), html.Br(),
                 'Beyond Oktoberfest -- it is '
-                'the capital of Bavaria. Very pretty city. Bavaria is home to some beautiful mountains (the Alps), ' \
+                'the capital of Bavaria. Very pretty city. Bavaria is home to some beautiful mountains (the Alps), '
                 'the fairytale-like castle called Neuschwanstein that inspired the Disney castle, one of the '
                 'most successful (but annoying) football teams in the world in Bayern Munich, '
                 'and also home to some of the best beers in the world. '
@@ -2052,18 +2023,18 @@ def set_display_children(value):
     # Iceland
     if value == 'Reykjavik':
         lat_lon_str = weather.get_lat_lon(coordinates.reykjavik_geojson)
-        return ("Cool city but don't stay too long -- get out and explore the nature in the 'Land of Fire and Ice.'" \
-                "There are some unique foods here that are really good and you should try." \
-                "Go to Íslenski Barinn restaurant. They had an amazing whale fin steak and a crazy " \
-                "good reindeer burger. We didn't see puffin on a menu but it is also eaten here." \
-                "See the rainbow road. Check out the Viking church and go to the top of it. Bæjarins Beztu Pylsur is " \
-                "also a fun hot dog spot made famous by Bill Clinton -- Forbes called it the world's most " \
+        return ("Cool city but don't stay too long -- get out and explore the nature in the 'Land of Fire and Ice.'"
+                "There are some unique foods here that are really good and you should try."
+                "Go to Íslenski Barinn restaurant. They had an amazing whale fin steak and a crazy "
+                "good reindeer burger. We didn't see puffin on a menu but it is also eaten here."
+                "See the rainbow road. Check out the Viking church and go to the top of it. Bæjarins Beztu Pylsur is "
+                "also a fun hot dog spot made famous by Bill Clinton -- Forbes called it the world's most "
                 "famous hot dog vendor! They're made of lamb and definitely worth a try!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.reykjavik_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Southern half of island':
         lat_lon_str = weather.get_lat_lon(coordinates.vik_geojson)
@@ -2084,17 +2055,16 @@ def set_display_children(value):
                     ]
                 ),
                 html.Br(), dbc.Carousel(
-                    items=[
-                        {"src": "assets/iceland/hotspring.JPG"},
-                        {"src": "assets/iceland/hottub.JPG"},
-                    ],
-                    interval=2000,
-                    ride="carousel",
-                    className="carousel-fade"
-                ), html.Br(),
+            items=[
+                {"src": "assets/iceland/hotspring.JPG"},
+                {"src": "assets/iceland/hottub.JPG"},
+            ],
+            interval=2000,
+            ride="carousel",
+            className="carousel-fade"
+        ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),
-                            dl.GeoJSON(data=coordinates.vik_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.vik_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Ireland
@@ -2134,16 +2104,16 @@ def set_display_children(value):
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
-                items=[
-                    {"src": "assets/ireland/dingle.JPG"},
-                    {"src": "assets/ireland/dingle1.JPG"},
-                    {"src": "assets/ireland/dingle2.JPG"},
-                    {"src": "assets/ireland/dingle4.JPG"},
-                    {"src": "assets/ireland/dingle5.JPG"},
-                ],
-                interval=2000,
-                ride="carousel",
-                className="carousel-fade"
+                    items=[
+                        {"src": "assets/ireland/dingle.JPG"},
+                        {"src": "assets/ireland/dingle1.JPG"},
+                        {"src": "assets/ireland/dingle2.JPG"},
+                        {"src": "assets/ireland/dingle4.JPG"},
+                        {"src": "assets/ireland/dingle5.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
                 ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dingle_geojson)],
@@ -2185,7 +2155,7 @@ def set_display_children(value):
                     interval=2000,
                     ride="carousel",
                     className="carousel-fade"
-            ), html.Br(),
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dingle_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -2213,20 +2183,20 @@ def set_display_children(value):
     if value == 'Bergamo':
         lat_lon_str = weather.get_lat_lon(coordinates.bergamo_geojson)
         return ('DO NOT immediately overlook Bergamo in favor of Milan. A lot of budget airlines that ' \
-               'fly to "Milan" ' \
-               'actually fly to the nearby city of Bergamo. It is a really cute city and they invented ' \
-               'Stracciatella gelato. Take the little cable car up to the high part of the city and walk ' \
-               'around the ' \
-               'fortress area. There is a great view to the south of the city right when you get off ' \
-               'the cable car. ' \
-               'There is also a restaurant / cafe right there as well with really nice views. ' \
-               'Climb the rest of the ' \
-               'way up and you can also get the view the opposite direction (north), where you can ' \
-               'actually see the ' \
-               'mountains of Switzerland not too far away! Circolino is a great restaurant -- you can ' \
-               'get a 3 course ' \
-               'meal with wine for just 15 euros (as of 2023). Be sure to have some risotto, ' \
-               'more traditional than pasta in the north of Italy.',
+                'fly to "Milan" ' \
+                'actually fly to the nearby city of Bergamo. It is a really cute city and they invented ' \
+                'Stracciatella gelato. Take the little cable car up to the high part of the city and walk ' \
+                'around the ' \
+                'fortress area. There is a great view to the south of the city right when you get off ' \
+                'the cable car. ' \
+                'There is also a restaurant / cafe right there as well with really nice views. ' \
+                'Climb the rest of the ' \
+                'way up and you can also get the view the opposite direction (north), where you can ' \
+                'actually see the ' \
+                'mountains of Switzerland not too far away! Circolino is a great restaurant -- you can ' \
+                'get a 3 course ' \
+                'meal with wine for just 15 euros (as of 2023). Be sure to have some risotto, ' \
+                'more traditional than pasta in the north of Italy.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -2242,19 +2212,19 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Florence':
         lat_lon_str = weather.get_lat_lon(coordinates.florence_geojson)
-        return ('Such a lovely city. The Arno river runs right through the city and the sun sets ' \
-                'beautifully over it (at least in April when I went!). DO NOT come here without ' \
-                "visiting the world famous sandwich shop All'Antico at least once... I would recommend coming " \
-                "multiple times! For just 5 " \
-                "euros (in 2017) you can get a huge sandwich on lovely bread topped high with the freshest " \
-                "mozzarella, tomatoes, and prosciutto, finished with this black truffle sauce that is " \
-                "just too good. There will likely be a line but trust me it is so worth it!" \
-                "Definitely visit the cathedral. You can also go up the tower for some great views. " \
-                "Also next to the cathedral is another great spot for more great sandwiches and food -- there is a " \
-                "very nice little cafe here called Panini Toscani. Also be sure to climb up to the " \
-                "Michelangelo plaza with a bottle of wine to get beautiful views of the whole city, " \
-                "with the cathedral taking center stage. For a fun bar, go to Red Garter. Lastly, you are " \
-                "in Tuscany, so a day trip to visit vineyards is also a great idea. There are a number of " \
+        return ('Such a lovely city. The Arno river runs right through the city and the sun sets '
+                'beautifully over it (at least in April when I went!). DO NOT come here without '
+                "visiting the world famous sandwich shop All'Antico at least once... I would recommend coming "
+                "multiple times! For just 5 "
+                "euros (in 2017) you can get a huge sandwich on lovely bread topped high with the freshest "
+                "mozzarella, tomatoes, and prosciutto, finished with this black truffle sauce that is "
+                "just too good. There will likely be a line but trust me it is so worth it!"
+                "Definitely visit the cathedral. You can also go up the tower for some great views. "
+                "Also next to the cathedral is another great spot for more great sandwiches and food -- there is a "
+                "very nice little cafe here called Panini Toscani. Also be sure to climb up to the "
+                "Michelangelo plaza with a bottle of wine to get beautiful views of the whole city, "
+                "with the cathedral taking center stage. For a fun bar, go to Red Garter. Lastly, you are "
+                "in Tuscany, so a day trip to visit vineyards is also a great idea. There are a number of "
                 "options for this, just look online on Viator or Airbnb Experiences.",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -2373,21 +2343,21 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Rome':
         lat_lon_str = weather.get_lat_lon(coordinates.rome_geojson)
-        return ('So much fascinating history here. The food scene is also incredible. Be sure to visit the coliseum, ' \
-                'the old Roman ruins, visit the Vatican(separate Italy page for this), and get your Lizzie McGuire ' \
-                'on at the Trevi Fountain! The city is quite big with so many different neighborhoods, ' \
-                'all deserving of some time being spent there. Trastevere is probably the most beloved neighborhood ' \
-                '-- beautiful and with many great restaurants and bars. One very famous bar is Bar San Calisto. ' \
-                'Know that there are some Italian foods that are specifically Roman in origin and are best eaten in ' \
-                'Rome. The traditional cheese here is pecorino romano rather than parmigiano reggiano. There are ' \
-                'four classic Roman pastas that are all very connected, just with slight variations in ingredients -- ' \
-                "cacio e pepe (pecorino and pepper), pasta alla gricia (pecorino, pepper, and  guanciale), " \
-                "carbonara (pecorino, pepper, egg, and  guanciale), and pasta all'amatriciana " \
-                "(pecorino, pepper, tomatoes, and  guanciale). Hopefully you have time to try all of these!" \
-                "Unlike Neopolitan pizza, Roman pizza styles can actually vary quite a bit. " \
-                "Bonci Pizzarium is the most famous -- you will probably recognize the logo. Bonci Pizzarium is " \
-                "an easy stop before or after visiting the Vatican. Piccolo Buco is " \
-                "an easy stop before or after visiting the Trevi Fountain. Other great pizza spots include Sbanco " \
+        return ('So much fascinating history here. The food scene is also incredible. Be sure to visit the coliseum, '
+                'the old Roman ruins, visit the Vatican(separate Italy page for this), and get your Lizzie McGuire '
+                'on at the Trevi Fountain! The city is quite big with so many different neighborhoods, '
+                'all deserving of some time being spent there. Trastevere is probably the most beloved neighborhood '
+                '-- beautiful and with many great restaurants and bars. One very famous bar is Bar San Calisto. '
+                'Know that there are some Italian foods that are specifically Roman in origin and are best eaten in '
+                'Rome. The traditional cheese here is pecorino romano rather than parmigiano reggiano. There are '
+                'four classic Roman pastas that are all very connected, just with slight variations in ingredients -- '
+                "cacio e pepe (pecorino and pepper), pasta alla gricia (pecorino, pepper, and  guanciale), "
+                "carbonara (pecorino, pepper, egg, and  guanciale), and pasta all'amatriciana "
+                "(pecorino, pepper, tomatoes, and  guanciale). Hopefully you have time to try all of these!"
+                "Unlike Neopolitan pizza, Roman pizza styles can actually vary quite a bit. "
+                "Bonci Pizzarium is the most famous -- you will probably recognize the logo. Bonci Pizzarium is "
+                "an easy stop before or after visiting the Vatican. Piccolo Buco is "
+                "an easy stop before or after visiting the Trevi Fountain. Other great pizza spots include Sbanco "
                 "(serving Birrificio del Ducato craft beers!), Tonda, and Trapizzino (multiple locations).",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -2410,13 +2380,13 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Vatican 🇻🇦':
         lat_lon_str = weather.get_lat_lon(coordinates.vatican_geojson)
-        return ('Definitely worth some time on your visit to Rome, especially as a Catholic. The main plaza (St. ' \
-               "Peter's Square) with St. Peter's Basilica is " \
-               'really nice, but also be sure to see the Sistine Chapel (famous for Michelangelo painting on ' \
-               'ceiling of God and Adam reaching out to each other, picture below) and check out some of the museums ' \
-               'as well. Be sure to make a stop at Bonci Pizzarium before or after your visit. They are world famous ' \
-               '(you will probably recognize the logo) for their pizza but they have other food options as well. ' \
-               'There will likely be a line but it will be worth the wait!',
+        return ('Definitely worth some time on your visit to Rome, especially as a Catholic. The main plaza (St. '
+                "Peter's Square) with St. Peter's Basilica is "
+                'really nice, but also be sure to see the Sistine Chapel (famous for Michelangelo painting on '
+                'ceiling of God and Adam reaching out to each other, picture below) and check out some of the museums '
+                'as well. Be sure to make a stop at Bonci Pizzarium before or after your visit. They are world famous '
+                '(you will probably recognize the logo) for their pizza but they have other food options as well. '
+                'There will likely be a line but it will be worth the wait!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -2428,7 +2398,6 @@ def set_display_children(value):
                         {"src": "assets/italy/vat3.JPG"},
                         {"src": "assets/italy/vat4.JPG"},
                         {"src": "assets/italy/vat5.JPG"},
-
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2439,10 +2408,10 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Venice':
         lat_lon_str = weather.get_lat_lon(coordinates.venice_geojson)
-        return ('It is definitely as charming as everyone says it is. Visit the main plaza (St. Marco) and church, ' \
-                'go to the top of the tower there for great views of the city, take a boat ride (the boat usually ' \
-                'has a fixed cost no matter the size of your group -- find some new friends to lower the cost per ' \
-                "person!) Beyond St. Marco, don't necessarily worry about " \
+        return ('It is definitely as charming as everyone says it is. Visit the main plaza (St. Marco) and church, '
+                'go to the top of the tower there for great views of the city, take a boat ride (the boat usually '
+                'has a fixed cost no matter the size of your group -- find some new friends to lower the cost per '
+                "person!) Beyond St. Marco, don't necessarily worry about "
                 "trying to see or do everything -- just enjoy the lovely ambiance of the canals and little streets.",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -2470,7 +2439,7 @@ def set_display_children(value):
                 'not get enough attention. Verona boasts a large coliseum-like arena that is actually older than '
                 'the coliseum. The Adige river that runs through the city is really nice. Climb up the hill to '
                 'Castel San Pietro for stunning sunset views over the city. Also go to this little pizza spot called '
-                'Wallet Pizza ' \
+                'Wallet Pizza '
                 'for really cheap and ridiculously good pizzas that are made fresh and cook in literally one minute. '
                 'Be sure to have some risotto, more traditional than pasta in the north of Italy. I also had '
                 'legitimately life-changing amaretto gelato at a little shop called Gelateria Ponte Pietra Verona. '
@@ -2500,24 +2469,24 @@ def set_display_children(value):
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(),dl.GeoJSON(data=coordinates.cancun_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.cancun_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Mexico City':
         lat_lon_str = weather.get_lat_lon(coordinates.mexico_city_geojson)
-        return ("What a city. Weather is temperate year round. So much good cheap food. The tamales with mole " \
-                "just might change your life. Surprisingly there really don't seem to be too many tourists." \
-                "Obviously also get lots of tacos, but also try tortas, conchas, elote, and some fresh fruits " \
-                "like mango and chirimoya. " \
-                "Take a little trip on one of the little boats and get ready to see the world's largest floating " \
-                "market. Having a mariachi band step onto your boat and play a few songs while drinking beers, " \
-                "eating elote, and floating down the river is just truly a beautiful life experience. " \
-                "Be sure to have a good amount of cash for this. " \
-                "Also see the Frida Kahlo house and check out the Coyoacán market. " \
-                "It is 100% authentic and you can try " \
-                "ants, crickets, and even scorpions if you are feeling ambitious. It definitely helps to " \
-                "speak some Spanish, as there are not a lot of tourists compared to beach or resort towns in Mexico." \
-                'Mexico City is also home to the legendary Azteca football stadium, where the Mexico national ' \
-                'team plays as well as Club América. Seeing a game here is absolutely on my bucket list. ' \
+        return ("What a city. Weather is temperate year round. So much good cheap food. The tamales with mole "
+                "just might change your life. Surprisingly there really don't seem to be too many tourists."
+                "Obviously also get lots of tacos, but also try tortas, conchas, elote, and some fresh fruits "
+                "like mango and chirimoya. "
+                "Take a little trip on one of the little boats and get ready to see the world's largest floating "
+                "market. Having a mariachi band step onto your boat and play a few songs while drinking beers, "
+                "eating elote, and floating down the river is just truly a beautiful life experience. "
+                "Be sure to have a good amount of cash for this. "
+                "Also see the Frida Kahlo house and check out the Coyoacán market. "
+                "It is 100% authentic and you can try "
+                "ants, crickets, and even scorpions if you are feeling ambitious. It definitely helps to "
+                "speak some Spanish, as there are not a lot of tourists compared to beach or resort towns in Mexico."
+                'Mexico City is also home to the legendary Azteca football stadium, where the Mexico national '
+                'team plays as well as Club América. Seeing a game here is absolutely on my bucket list. '
                 'Lastly, Ubers are also really cheap which makes it easy to get around, as it is quite a big city.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -2541,8 +2510,8 @@ def set_display_children(value):
     # Montenegro
     if value == 'Kotor':
         lat_lon_str = weather.get_lat_lon(coordinates.kotor_geojson)
-        return ("Just as cool as Dubrovnik but not as sexy. It's smaller and way more of an authentic feel. " \
-               "Not many tourists here.",
+        return ("Just as cool as Dubrovnik but not as sexy. It's smaller and way more of an authentic feel. "
+                "Not many tourists here.",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -2567,20 +2536,20 @@ def set_display_children(value):
     # Morocco
     if value == 'Tangier':
         lat_lon_str = weather.get_lat_lon(coordinates.tangier_geojson)
-        return ('Despite being just 17 miles from the southern coast of Spain, I felt more culture shock here than ' \
-                'anywhere in Europe. The newer part of th e city has a European ' \
-                'feel as this used to be the gateway from Europe to Africa (and vice versa) before air travel. ' \
-                'However, inside the old city walls of Tangier (the Kasbah) is a whole different story.' \
-                'Here, there are a number of locals who will ask you where you are going or if you want to eat ' \
-                'something. I think restaurants compensate them if they bring people to their restaurant. ' \
-                'If you are with a local though no one will bother you. Thus, getting a guide for a day is a good ' \
-                'idea and not too expensive. They will likely also set you up to go a nearby beach and ride camels, ' \
-                'which was such a fun, unique experience. We also visited the Cave of Hercules which was really cool! ' \
-                'The food there is so good -- the ' \
-                "'thousand-hole pancakes' and shakshouka (my favorite breakfast on the planet), " \
-                "chicken tagine (lamb or beef are also amazing), couscous (originally from Morocco and also " \
-                "their national dish), fish chermoula, and zaalouk (like baba ganoush). Be sure to visit Cafe Hafa. " \
-                "It overlooks the Bay of Tangier (and the Strait of Gibraltar) and you can see the " \
+        return ('Despite being just 17 miles from the southern coast of Spain, I felt more culture shock here than '
+                'anywhere in Europe. The newer part of th e city has a European '
+                'feel as this used to be the gateway from Europe to Africa (and vice versa) before air travel. '
+                'However, inside the old city walls of Tangier (the Kasbah) is a whole different story.'
+                'Here, there are a number of locals who will ask you where you are going or if you want to eat '
+                'something. I think restaurants compensate them if they bring people to their restaurant. '
+                'If you are with a local though no one will bother you. Thus, getting a guide for a day is a good '
+                'idea and not too expensive. They will likely also set you up to go a nearby beach and ride camels, '
+                'which was such a fun, unique experience. We also visited the Cave of Hercules which was really cool! '
+                'The food there is so good -- the '
+                "'thousand-hole pancakes' and shakshouka (my favorite breakfast on the planet), "
+                "chicken tagine (lamb or beef are also amazing), couscous (originally from Morocco and also "
+                "their national dish), fish chermoula, and zaalouk (like baba ganoush). Be sure to visit Cafe Hafa. "
+                "It overlooks the Bay of Tangier (and the Strait of Gibraltar) and you can see the "
                 "southern tip of Spain on a clear day! This was also a favorite spot of Jimi Hendrix!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -2605,773 +2574,792 @@ def set_display_children(value):
     # Netherlands
     if value == 'Amsterdam':
         lat_lon_str = weather.get_lat_lon(coordinates.amsterdam_geojson)
-        return "A really great city. There's a lot more to the city than the red light district. There are so many " \
-               "little canals and bridges and they are all so picturesque, especially in the Jordaan " \
-               "neighborhood. Don't worry so much about seeing specific sights and just wander in the city " \
-               "and enjoy. Go to Winkel 43 to try the famous Dutch " \
-               "apple pie. Go to Heertje Friet for fries and bitterballen (these are incredible). Fish sandwiches " \
-               "from little stands on the street are also a fantastic choice. " \
-               "Take some kind of boat trip -- most boats have some history / fun facts and have drinks " \
-               "on board. They aren't too expensive either. " \
-               "Walk along the port and also for a nice walk through Vondelpark. " \
-               "Go to a coffee shop if that's your vibe haha. Bulldog " \
-               "is the most famous coffee shop chain but the more tranquil little coffee shops on the canals are " \
-               "really awesome. If you are looking for a wild party, come for King's Day. " \
-               "It happens yearly on the king's birthday, April 27. The whole city dresses in orange and there " \
-               "is lots of drinking and music everywhere. Was quite the experience... would absolutely recommend! " \
-               "Lastly, the Anne Frank house is also one of the main tourist attractions -- personally I have not " \
-               "been. Unless you want to wait a long time to go, you need to reserve tickets in advance.", \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/netherlands/ams3.JPG"},
-                {"src": "assets/netherlands/ams.JPG"},
-                {"src": "assets/netherlands/ams2.JPG"},
-                {"src": "assets/netherlands/ams4.JPG"},
-                {"src": "assets/netherlands/ams5.JPG"},
-                {"src": "assets/netherlands/ams6.JPG"},
-                {"src": "assets/netherlands/ams7.JPG"},
-                {"src": "assets/netherlands/ams8.JPG"},
-                {"src": "assets/netherlands/ams9.JPG"},
-                {"src": "assets/netherlands/ams10.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.amsterdam_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ("A really great city. There's a lot more to the city than the red light district. There are so many "
+                "little canals and bridges and they are all so picturesque, especially in the Jordaan "
+                "neighborhood. Don't worry so much about seeing specific sights and just wander in the city "
+                "and enjoy. Go to Winkel 43 to try the famous Dutch "
+                "apple pie. Go to Heertje Friet for fries and bitterballen (these are incredible). Fish sandwiches "
+                "from little stands on the street are also a fantastic choice. "
+                "Take some kind of boat trip -- most boats have some history / fun facts and have drinks "
+                "on board. They aren't too expensive either. "
+                "Walk along the port and also for a nice walk through Vondelpark. "
+                "Go to a coffee shop if that's your vibe haha. Bulldog "
+                "is the most famous coffee shop chain but the more tranquil little coffee shops on the canals are "
+                "really awesome. If you are looking for a wild party, come for King's Day. "
+                "It happens yearly on the king's birthday, April 27. The whole city dresses in orange and there "
+                "is lots of drinking and music everywhere. Was quite the experience... would absolutely recommend! "
+                "Lastly, the Anne Frank house is also one of the main tourist attractions -- personally I have not "
+                "been. Unless you want to wait a long time to go, you need to reserve tickets in advance.",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/netherlands/ams3.JPG"},
+                        {"src": "assets/netherlands/ams.JPG"},
+                        {"src": "assets/netherlands/ams2.JPG"},
+                        {"src": "assets/netherlands/ams4.JPG"},
+                        {"src": "assets/netherlands/ams5.JPG"},
+                        {"src": "assets/netherlands/ams6.JPG"},
+                        {"src": "assets/netherlands/ams7.JPG"},
+                        {"src": "assets/netherlands/ams8.JPG"},
+                        {"src": "assets/netherlands/ams9.JPG"},
+                        {"src": "assets/netherlands/ams10.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.amsterdam_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # North Macedonia
     if value == 'Skopje':
         lat_lon_str = weather.get_lat_lon(coordinates.skopje_geojson)
-        return 'Really cool authentic Balkan city with not so many tourists. This was the home / birthplace ' \
-               "of Alexander the Great. There is a huge statue of him on the main plaza, and it's funny there a big " \
-               "sign for a Macedonian beer company right behind him -- CKOΠCKO (SKOPSKO). You'll notice that " \
-               "most everything is written with the cyrillic alphabet rather than the latin alphabet, so it does " \
-               "help to learn a bit about the cyrillic alphabet. " \
-               "The Alexander the Great statue is just one of seemingly hundreds of statues in the city. Keep an " \
-               "eye out as you walk around for other statues, they are fun. " \
-               "Be sure to climb up to the fortress that overlooks the city. Ideally for sunset. There's an " \
-               "amazing view of the city and the snow-covered mountains in the background. " \
-               "The old town / bazaar is really cool. Just walk around and explore. I went to ___ and it was really " \
-               "good. Get the kebap and the Shopsko salad. " \
-               "Prices for everything are pretty " \
-               'cheap. My hostel was only 10 euros per night (8 bed dorm in Hi Skopje Hostel). The woman who ' \
-               'runs the place was so nice ' \
-               'and gave great recommendations. She also shared some of her homemade rakija, a local liquor. ', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/macedonia/skopje.JPG"},
-                {"src": "assets/macedonia/skopje3.JPG"},
-                {"src": "assets/macedonia/skopje2.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.skopje_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Really cool authentic Balkan city with not so many tourists. This was the home / birthplace '
+                "of Alexander the Great. There is a huge statue of him on the main plaza, and it's funny there a big "
+                "sign for a Macedonian beer company right behind him -- CKOΠCKO (SKOPSKO). You'll notice that "
+                "most everything is written with the cyrillic alphabet rather than the latin alphabet, so it does "
+                "help to learn a bit about the cyrillic alphabet. "
+                "The Alexander the Great statue is just one of seemingly hundreds of statues in the city. Keep an "
+                "eye out as you walk around for other statues, they are fun. "
+                "Be sure to climb up to the fortress that overlooks the city. Ideally for sunset. There's an "
+                "amazing view of the city and the snow-covered mountains in the background. "
+                "The old town / bazaar is really cool. Just walk around and explore. I went to ___ and it was really "
+                "good. Get the kebap and the Shopsko salad. "
+                "Prices for everything are pretty "
+                'cheap. My hostel was only 10 euros per night (8 bed dorm in Hi Skopje Hostel). The woman who '
+                'runs the place was so nice '
+                'and gave great recommendations. She also shared some of her homemade rakija, a local liquor. ',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/macedonia/skopje.JPG"},
+                        {"src": "assets/macedonia/skopje3.JPG"},
+                        {"src": "assets/macedonia/skopje2.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.skopje_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Norway
     if value == 'Oslo':
         lat_lon_str = weather.get_lat_lon(coordinates.oslo_geojson)
-        return 'The capital of Norway! Oslo is so clean and all the infrastructure is so nice. ' \
-               'Everything is quite expensive though… for example, the airport is far away but there is a ' \
-               'really nice high speed train that takes you to the main train station in the center of the ' \
-               'city in just 20 minutes, but costs ~$20. Right near the main train station is the national ' \
-               'opera house right on the water. The architecture is really cool and unique — the street ' \
-               'becomes the bridge which eventually becomes the roof of the building! You can walk up to ' \
-               'the top of it for some great views of the fjord. Along this fjord there are a couple great ' \
-               'spots for food and drinks called SALT and Vippa. It there are some really nice areas of the ' \
-               'city on the water. There are also a number of really cool floating docks. They have outdoor ' \
-               'areas for enjoying the sun and jumping in the fjord and also indoor saunas! The sauna culture ' \
-               'is big here. There is also a sauna at SALT that is supposed to be cool. ' \
-               'Somewhere near the train station is a good place to stay. I stayed in K7 Hostel and it was ' \
-               'decent but pricey (~$75 per night for a dorm bed). The first highlight of my trip was the ' \
-               'hike I did to Vettakollen. I took the local train about 20 minutes to the Vettakollen stop' \
-               ' and then it was maybe a 20-30 minute hike up to a viewpoint for amazing views of the city ' \
-               'and the Oslo fjord! The next highlight (also the main reason for my trip) was seeing Norway ' \
-               'play against Cyprus in a qualifying game for the 2024 European football championships! ' \
-               'Norway won 3-1, Erling Haaland scored two goals, and Martin Ødegaard had a great game as well.', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/norway/oslo.JPG"},
-                {"src": "assets/norway/oslo2.JPG"},
-                {"src": "assets/norway/oslo3.JPG"},
-                {"src": "assets/norway/oslo4.JPG"},
-                {"src": "assets/norway/oslo5.JPG"},
-                {"src": "assets/norway/oslo6.JPG"},
-                {"src": "assets/norway/oslo7.JPG"},
-                {"src": "assets/norway/oslo8.JPG"},
-                {"src": "assets/norway/oslo9.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.oslo_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('The capital of Norway! Oslo is so clean and all the infrastructure is so nice. '
+                'Everything is quite expensive though… for example, the airport is far away but there is a '
+                'really nice high speed train that takes you to the main train station in the center of the '
+                'city in just 20 minutes, but costs ~$20. Right near the main train station is the national '
+                'opera house right on the water. The architecture is really cool and unique — the street '
+                'becomes the bridge which eventually becomes the roof of the building! You can walk up to '
+                'the top of it for some great views of the fjord. Along this fjord there are a couple great '
+                'spots for food and drinks called SALT and Vippa. It there are some really nice areas of the '
+                'city on the water. There are also a number of really cool floating docks. They have outdoor '
+                'areas for enjoying the sun and jumping in the fjord and also indoor saunas! The sauna culture '
+                'is big here. There is also a sauna at SALT that is supposed to be cool. '
+                'Somewhere near the train station is a good place to stay. I stayed in K7 Hostel and it was '
+                'decent but pricey (~$75 per night for a dorm bed). The first highlight of my trip was the '
+                'hike I did to Vettakollen. I took the local train about 20 minutes to the Vettakollen stop'
+                ' and then it was maybe a 20-30 minute hike up to a viewpoint for amazing views of the city '
+                'and the Oslo fjord! The next highlight (also the main reason for my trip) was seeing Norway '
+                'play against Cyprus in a qualifying game for the 2024 European football championships! '
+                'Norway won 3-1, Erling Haaland scored two goals, and Martin Ødegaard had a great game as well.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/norway/oslo.JPG"},
+                        {"src": "assets/norway/oslo2.JPG"},
+                        {"src": "assets/norway/oslo3.JPG"},
+                        {"src": "assets/norway/oslo4.JPG"},
+                        {"src": "assets/norway/oslo5.JPG"},
+                        {"src": "assets/norway/oslo6.JPG"},
+                        {"src": "assets/norway/oslo7.JPG"},
+                        {"src": "assets/norway/oslo8.JPG"},
+                        {"src": "assets/norway/oslo9.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.oslo_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Peru
     if value == 'Lima':
         lat_lon_str = weather.get_lat_lon(coordinates.lima_geojson)
-        return 'more info to come!', \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.lima_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('more info to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.lima_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Iquitos':
         lat_lon_str = weather.get_lat_lon(coordinates.iquitos_geojson)
-        return 'The start of my Amazon river adventure. We flew here from Lima and took a boat about 50 miles down ' \
-               'the Amazon. We then stayed in a few remote places in the rain forest before coming back to ' \
-               'Iquitos. Really an adventure of a lifetime. If you have the opportunity to do something like this, ' \
-               'DO IT !', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/peru/iquitos.PNG"},
-                {"src": "assets/peru/iquitos1.PNG"},
-                {"src": "assets/peru/iquitos2.PNG"},  # need to adjust photo size ratio
-                {"src": "assets/peru/iquitos3.PNG"},  # need to adjust photo size ratio
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.iquitos_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('The start of my Amazon river adventure. We flew here from Lima and took a boat about 50 miles down '
+                'the Amazon. We then stayed in a few remote places in the rain forest before coming back to '
+                'Iquitos. Really an adventure of a lifetime. If you have the opportunity to do something like this, '
+                'DO IT !',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/peru/iquitos.PNG"},
+                        {"src": "assets/peru/iquitos1.PNG"},
+                        {"src": "assets/peru/iquitos2.PNG"},  # need to adjust photo size ratio
+                        {"src": "assets/peru/iquitos3.PNG"},  # need to adjust photo size ratio
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.iquitos_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Poland
     if value == 'Krakow':
         lat_lon_str = weather.get_lat_lon(coordinates.krakow_geojson)
-        return 'more info coming soon!', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/poland/kra.JPG"},
-                {"src": "assets/poland/kra2.JPG"},
-                {"src": "assets/poland/kra3.JPG"},
-                {"src": "assets/poland/kra4.JPG"},
-                {"src": "assets/poland/kra5.JPG"},
-                {"src": "assets/poland/kra6.JPG"},
-                {"src": "assets/poland/kra7.JPG"},
-                {"src": "assets/poland/kra8.JPG"},
-                {"src": "assets/poland/kra9.JPG"},
-                {"src": "assets/poland/kra10.JPG"},
-                {"src": "assets/poland/kra11.JPG"},
-                {"src": "assets/poland/kra12.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.krakow_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('more info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/poland/kra.JPG"},
+                        {"src": "assets/poland/kra2.JPG"},
+                        {"src": "assets/poland/kra3.JPG"},
+                        {"src": "assets/poland/kra4.JPG"},
+                        {"src": "assets/poland/kra5.JPG"},
+                        {"src": "assets/poland/kra6.JPG"},
+                        {"src": "assets/poland/kra7.JPG"},
+                        {"src": "assets/poland/kra8.JPG"},
+                        {"src": "assets/poland/kra9.JPG"},
+                        {"src": "assets/poland/kra10.JPG"},
+                        {"src": "assets/poland/kra11.JPG"},
+                        {"src": "assets/poland/kra12.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.krakow_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Wrocław':
         lat_lon_str = weather.get_lat_lon(coordinates.wroclaw_geojson)
-        return 'Very pretty small city. The people were all very nice. Go to the market square and check out some ' \
-               'of the cafes and restaurants. The Konspira restaurant is really great -- this is also a great option ' \
-               'because there is a lot about the history of Wrocław and Poland on the walls of the ' \
-               'restaurant and in the menu. Definitely get pierogi. Soups are very good and traditional too. ' \
-               'Be on the lookout for the hundreds of little gnomes around the city as you walk around. They are ' \
-               'really fun and funny. They are a recent project that is inspired by ____. Lastly, go north of the ' \
-               'market square and walk around the river / island area -- the churches there are really nice as well.', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/poland/wro.JPG"},
-                {"src": "assets/poland/wro1.JPG"},
-                {"src": "assets/poland/wro2.JPG"},
-                {"src": "assets/poland/wro3.JPG"},
-                {"src": "assets/poland/wro4.JPG"},
-                {"src": "assets/poland/wro5.JPG"},
-                {"src": "assets/poland/wro6.JPG"},
-                {"src": "assets/poland/wro7.JPG"},
-                {"src": "assets/poland/wro8.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.wroclaw_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Very pretty small city. The people were all very nice. Go to the market square and check out some ' \
+                'of the cafes and restaurants. The Konspira restaurant is really great -- this is also a great option ' \
+                'because there is a lot about the history of Wrocław and Poland on the walls of the ' \
+                'restaurant and in the menu. Definitely get pierogi. Soups are very good and traditional too. ' \
+                'Be on the lookout for the hundreds of little gnomes around the city as you walk around. They are ' \
+                'really fun and funny. They are a recent project that is inspired by ____. Lastly, go north of the ' \
+                'market square and walk around the river / island area -- the churches there are really nice as well.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/poland/wro.JPG"},
+                        {"src": "assets/poland/wro1.JPG"},
+                        {"src": "assets/poland/wro2.JPG"},
+                        {"src": "assets/poland/wro3.JPG"},
+                        {"src": "assets/poland/wro4.JPG"},
+                        {"src": "assets/poland/wro5.JPG"},
+                        {"src": "assets/poland/wro6.JPG"},
+                        {"src": "assets/poland/wro7.JPG"},
+                        {"src": "assets/poland/wro8.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.wroclaw_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Portugal
     lat_lon_str = weather.get_lat_lon(coordinates.lisbon_geojson)
     if value == 'Lisbon':
-        return 'Absolutely lovely city! More info to come!', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/portugal/lisbon.JPG"},
-                {"src": "assets/portugal/lisbon1.JPG"},
-                {"src": "assets/portugal/lisbon2.JPG"},
-                {"src": "assets/portugal/lisbon3.JPG"},
-                {"src": "assets/portugal/lisbon4.JPG"},
-                {"src": "assets/portugal/lisbon5.JPG"},
-                {"src": "assets/portugal/lisbon6.JPG"},
-                {"src": "assets/portugal/lisbon7.JPG"},
-                {"src": "assets/portugal/lisbon8.JPG"},
-                {"src": "assets/portugal/lisbon9.JPG"},
-                {"src": "assets/portugal/lisbon10.JPG"},
-                {"src": "assets/portugal/lisbon11.JPG"},
-                {"src": "assets/portugal/lisbon12.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.lisbon_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Absolutely lovely city! More info to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/portugal/lisbon.JPG"},
+                        {"src": "assets/portugal/lisbon1.JPG"},
+                        {"src": "assets/portugal/lisbon2.JPG"},
+                        {"src": "assets/portugal/lisbon3.JPG"},
+                        {"src": "assets/portugal/lisbon4.JPG"},
+                        {"src": "assets/portugal/lisbon5.JPG"},
+                        {"src": "assets/portugal/lisbon6.JPG"},
+                        {"src": "assets/portugal/lisbon7.JPG"},
+                        {"src": "assets/portugal/lisbon8.JPG"},
+                        {"src": "assets/portugal/lisbon9.JPG"},
+                        {"src": "assets/portugal/lisbon10.JPG"},
+                        {"src": "assets/portugal/lisbon11.JPG"},
+                        {"src": "assets/portugal/lisbon12.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.lisbon_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Guincho Beach':
         lat_lon_str = weather.get_lat_lon(coordinates.guincho_beach_geojson)
-        return 'Not too far of a drive from Lisbon -- I was lucky to meet someone with a car and we drove here. ' \
-               "There are big sand dunes next to the coast. There's also a couple cafes here where you can grab a" \
-               "drink or a bite to eat. Sunset here over the ocean was just beautiful. ", \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/portugal/guincho.JPG"},
-                {"src": "assets/portugal/guincho1.JPG"},
-                {"src": "assets/portugal/guincho2.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.guincho_beach_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Not too far of a drive from Lisbon -- I was lucky to meet someone with a car and we drove here. '
+               "There are big sand dunes next to the coast. There's also a couple cafes here where you can grab a"
+               "drink or a bite to eat. Sunset here over the ocean was just beautiful. ",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/portugal/guincho.JPG"},
+                        {"src": "assets/portugal/guincho1.JPG"},
+                        {"src": "assets/portugal/guincho2.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.guincho_beach_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Puerto Rico
     if value == 'Rincón':
         lat_lon_str = weather.get_lat_lon(coordinates.rincon_geojson)
-        return 'Beautiful! More info to come!', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/pr/rincon.JPG"},
-                {"src": "assets/pr/rincon2.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.rincon_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Beautiful! More info to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/pr/rincon.JPG"},
+                        {"src": "assets/pr/rincon2.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.rincon_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'San Juan':
         lat_lon_str = weather.get_lat_lon(coordinates.san_juan_geojson)
-        return 'So fun. More info to come!', \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.san_juan_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('So fun. More info to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.san_juan_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Slovakia
     if value == 'Bratislava':
         lat_lon_str = weather.get_lat_lon(coordinates.bratislava_geojson)
-        return 'What a fun little city with a cool old town and a really cool citadel that overlooks the city and ' \
-               'the river that runs through it.', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/slovakia/bratislava.JPG"},
-                {"src": "assets/slovakia/bratislava2.JPG"},
-                {"src": "assets/slovakia/bratislava1.JPG"},
-                {"src": "assets/slovakia/bratislava3.JPG"},
-                {"src": "assets/slovakia/bratislava4.JPG"},
-                {"src": "assets/slovakia/bratislava5.JPG"},
-                {"src": "assets/slovakia/bratislava6.JPG"},
-                {"src": "assets/slovakia/bratislava7.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.bratislava_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('What a fun little city with a cool old town and a really cool citadel that overlooks the city and '
+               'the river that runs through it.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/slovakia/bratislava.JPG"},
+                        {"src": "assets/slovakia/bratislava2.JPG"},
+                        {"src": "assets/slovakia/bratislava1.JPG"},
+                        {"src": "assets/slovakia/bratislava3.JPG"},
+                        {"src": "assets/slovakia/bratislava4.JPG"},
+                        {"src": "assets/slovakia/bratislava5.JPG"},
+                        {"src": "assets/slovakia/bratislava6.JPG"},
+                        {"src": "assets/slovakia/bratislava7.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.bratislava_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Slovenia
     if value == 'Ljubljana':
         lat_lon_str = weather.get_lat_lon(coordinates.ljubljana_geojson)
-        return 'The smallest European capital and what a cute little city it is. I went in October and the trees ' \
-               'lining the river were beautiful colors. The city is very clean and the people are really nice. ' \
-               'Climb up to the citadel to see the city from above. Eat some goulash. Great place for sunset as well.' \
-               "Fun fact: George W Bush the second landed here for some conference and greeted the people of " \
-               "'Slovakia.'", \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/slovenia/lju.JPG"},
-                {"src": "assets/slovenia/lju1.JPG"},
-                {"src": "assets/slovenia/lju2.JPG"},
-                {"src": "assets/slovenia/lju3.JPG"},
-                {"src": "assets/slovenia/lju4.JPG"},
-                {"src": "assets/slovenia/lju5.JPG"},
-                {"src": "assets/slovenia/lju6.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.ljubljana_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('The smallest European capital and what a cute little city it is. I went in October and the trees '
+                'lining the river were beautiful colors. The city is very clean and the people are really nice. '
+                'Climb up to the citadel to see the city from above. Eat some goulash. Great place for sunset as well.'
+                "Fun fact: George W Bush the second landed here for some conference and greeted the people of "
+                "'Slovakia.'",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/slovenia/lju.JPG"},
+                        {"src": "assets/slovenia/lju1.JPG"},
+                        {"src": "assets/slovenia/lju2.JPG"},
+                        {"src": "assets/slovenia/lju3.JPG"},
+                        {"src": "assets/slovenia/lju4.JPG"},
+                        {"src": "assets/slovenia/lju5.JPG"},
+                        {"src": "assets/slovenia/lju6.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.ljubljana_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Spain
     if value == 'Azpeitia':
         lat_lon_str = weather.get_lat_lon(coordinates.azpeitia_geojson)
-        return 'Birthplace of St. Ignatius and home to a large festival on July 31 each year for his feast day', \
-            html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.azpeitia_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Birthplace of St. Ignatius and home to a large festival on July 31 each year for his feast day',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.azpeitia_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Barcelona':
         lat_lon_str = weather.get_lat_lon(coordinates.barcelona_geojson)
-        return 'PSA -- I am biased having studied abroad here but this is one of my favorite cities in the world! ' \
-               'So much to do, see, and eat in this beautiful city on the Mediterranean Sea. Things to do include ' \
-               'visiting the Bunkers del Carmel (amazing place for a picnic with stunning views of the city), the ' \
-               'beach (Ciutat Vella is much less crowded than Barceloneta), Parc Güell (get your Cheetah Girls on! ' \
-               'also note that to get to the area of the park with the famous bench, you need to book tickets -- it ' \
-               'do is best to do so ahead of time!), Sagrada Familia church, the apartment buildings designed by ' \
-               'the famous architect Gaudí (La Pedrera and Casa Batllo), Montjuic Park / Castle, La Boquería market ' \
-               "(on the touristy street of La Rambla), Arc de Triomf and the Parque de la Ciutadella (fun spot " \
-               "to rent little boats), the old Olympic Stadium, and if you're a soccer fan -- the Camp Nou, home " \
-               "of FC Barcelona, and the largest soccer stadium in Europe with a capacity of 105,000! There are " \
-               "also plenty of great rooftop bars, just look some up online. ", \
-            html.Br(), html.Br(), \
-            "There is so much great food here. Maybe my favorite restaurant in the world is here and is " \
-            "called El Glop (the one in the Gràcia neighborhood is the original and is the best. The chicken & " \
-            "vegetable paella is incredible. Also get the crema catalana (similar to a Crème Brûlée) for " \
-            "dessert. My other favorite place to eat is at either Sol Soler or Niña. They are right next " \
-            "to each other on the lovely Plaça del Sol and share the same kitchen. This plaza is an awesome " \
-            "neighborhood spot and it fills up every evening with people socializing. There are" \
-            "also empanada places nearby if you want to grab an empanada and enjoy the atmosphere! " \
-            "Some other great dinner " \
-            "spots include Taverna la Llesca, La Pubilla, Arume Restaurante (duck paella is amazing), and " \
-            "La Pepita. Another awesome place is Surfhouse Barcelona right on the beach -- it is a bit touristy " \
-            "but the food is great, and there is often live music next to the outdoor seating area! One more food " \
-            "place that is really cool and more upscale is El Nacional.", \
-            html.Br(), html.Br(), \
-            "Barcelona has what was my absolute favorite bar in the world -- Gato Negro! It has changed a bit " \
-            "unfortunately, but it is still a really cool spot with great cheap local beer on draft (Moritz)." \
-            "There are lots of other really fun little bars in Gràcia as well." \
-            "Barcelona also has a big party scene -- there are many clubs on the beach which are a bit touristy " \
-            "but really cool. These include Opium, Pacha, and Shoko. Besides the beach clubs, there is Otto Zutz, " \
-            "Razzmatazz (huge, known to be probably the best club', and Jamboree (dance club). There are also " \
-            "some really fun salsa clubs." \
-            "For an upbeat atmosphere but not clubs, there is Oveja Negra (two locations, one is more casual " \
-            "and the other " \
-            "is more of a beer hall), Dow Jones (drink prices change like stocks), and Espit Chupitos " \
-            "(cool shot bar).", \
-            html.Br(), html.Br(), \
-            "Outside of Barcelona, there is even more to do! Up the coast from Barcelona is the beautiful 'Costa" \
-            "Brava,' with a number of cute little towns, nice beaches, and really cool coves for swimming. " \
-            "You can also take a train inland to go for a really cool hike and visit Montserrat, where there are " \
-            "some really uniquely shaped mountains. Lastly, in winter you can even go skiing -- it is just " \
-            "a few hours drive to the tiny country of Andorra, on the border of Spain and France, " \
-            "up in the Pyrenees mountains. It is absolutely beautiful here and the skiing is great. I have " \
-            "another page on Andorra.", \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/spain/bcn.JPG"},
-                {"src": "assets/spain/bcn1.JPG"},
-                {"src": "assets/spain/bcn2.JPG"},
-                {"src": "assets/spain/bcn3.JPG"},
-                {"src": "assets/spain/bcn4.JPG"},
-                {"src": "assets/spain/bcn5.JPG"},
-                {"src": "assets/spain/bcn6.JPG"},
-                {"src": "assets/spain/bcn7.JPG"},
-                {"src": "assets/spain/bcn9.JPG"},
-                {"src": "assets/spain/bcn10.JPG"},
-                {"src": "assets/spain/bcn11.JPG"},
-                {"src": "assets/spain/bcn12.JPG"},
-                {"src": "assets/spain/bcn13.JPG"},
-                {"src": "assets/spain/bcn14.JPG"},
-                {"src": "assets/spain/bcn15.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.barcelona_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('PSA -- I am biased having studied abroad here but this is one of my favorite cities in the world! '
+                'So much to do, see, and eat in this beautiful city on the Mediterranean Sea. Things to do include '
+                'visiting the Bunkers del Carmel (amazing place for a picnic with stunning views of the city), the '
+                'beach (Ciutat Vella is much less crowded than Barceloneta), Parc Güell (get your Cheetah Girls on! '
+                'also note that to get to the area of the park with the famous bench, you need to book tickets -- it '
+                'do is best to do so ahead of time!), Sagrada Familia church, the apartment buildings designed by '
+                'the famous architect Gaudí (La Pedrera and Casa Batllo), Montjuic Park / Castle, La Boquería market '
+                "(on the touristy street of La Rambla), Arc de Triomf and the Parque de la Ciutadella (fun spot "
+                "to rent little boats), the old Olympic Stadium, and if you're a soccer fan -- the Camp Nou, home "
+                "of FC Barcelona, and the largest soccer stadium in Europe with a capacity of 105,000! There are "
+                "also plenty of great rooftop bars, just look some up online. ",
+                html.Br(), html.Br(),
+                "There is so much great food here. Maybe my favorite restaurant in the world is here and is "
+                "called El Glop (the one in the Gràcia neighborhood is the original and is the best. The chicken & "
+                "vegetable paella is incredible. Also get the crema catalana (similar to a Crème Brûlée) for "
+                "dessert. My other favorite place to eat is at either Sol Soler or Niña. They are right next "
+                "to each other on the lovely Plaça del Sol and share the same kitchen. This plaza is an awesome "
+                "neighborhood spot and it fills up every evening with people socializing. There are"
+                "also empanada places nearby if you want to grab an empanada and enjoy the atmosphere! "
+                "Some other great dinner "
+                "spots include Taverna la Llesca, La Pubilla, Arume Restaurante (duck paella is amazing), and "
+                "La Pepita. Another awesome place is Surfhouse Barcelona right on the beach -- it is a bit touristy "
+                "but the food is great, and there is often live music next to the outdoor seating area! One more food "
+                "place that is really cool and more upscale is El Nacional.",
+                html.Br(), html.Br(),
+                "Barcelona has what was my absolute favorite bar in the world -- Gato Negro! It has changed a bit "
+                "unfortunately, but it is still a really cool spot with great cheap local beer on draft (Moritz)."
+                "There are lots of other really fun little bars in Gràcia as well."
+                "Barcelona also has a big party scene -- there are many clubs on the beach which are a bit touristy "
+                "but really cool. These include Opium, Pacha, and Shoko. Besides the beach clubs, there is Otto Zutz, "
+                "Razzmatazz (huge, known to be probably the best club', and Jamboree (dance club). There are also "
+                "some really fun salsa clubs."
+                "For an upbeat atmosphere but not clubs, there is Oveja Negra (two locations, one is more casual "
+                "and the other "
+                "is more of a beer hall), Dow Jones (drink prices change like stocks), and Espit Chupitos "
+                "(cool shot bar).",
+                html.Br(), html.Br(),
+                "Outside of Barcelona, there is even more to do! Up the coast from Barcelona is the beautiful 'Costa"
+                "Brava,' with a number of cute little towns, nice beaches, and really cool coves for swimming. "
+                "You can also take a train inland to go for a really cool hike and visit Montserrat, where there are "
+                "some really uniquely shaped mountains. Lastly, in winter you can even go skiing -- it is just "
+                "a few hours drive to the tiny country of Andorra, on the border of Spain and France, "
+                "up in the Pyrenees mountains. It is absolutely beautiful here and the skiing is great. I have "
+                "another page on Andorra.",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/bcn.JPG"},
+                        {"src": "assets/spain/bcn1.JPG"},
+                        {"src": "assets/spain/bcn2.JPG"},
+                        {"src": "assets/spain/bcn3.JPG"},
+                        {"src": "assets/spain/bcn4.JPG"},
+                        {"src": "assets/spain/bcn5.JPG"},
+                        {"src": "assets/spain/bcn6.JPG"},
+                        {"src": "assets/spain/bcn7.JPG"},
+                        {"src": "assets/spain/bcn9.JPG"},
+                        {"src": "assets/spain/bcn10.JPG"},
+                        {"src": "assets/spain/bcn11.JPG"},
+                        {"src": "assets/spain/bcn12.JPG"},
+                        {"src": "assets/spain/bcn13.JPG"},
+                        {"src": "assets/spain/bcn14.JPG"},
+                        {"src": "assets/spain/bcn15.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.barcelona_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Begur':
         lat_lon_str = weather.get_lat_lon(coordinates.begur_geojson)
-        return 'Really nice beaches if you want to visit nice beaches up the coast from Barcelona', \
-            html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.begur_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Really nice beaches if you want to visit nice beaches up the coast from Barcelona',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.begur_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Bilbao':
         lat_lon_str = weather.get_lat_lon(coordinates.bilbao_geojson)
-        return "Capital of the Basque country! I didn't spend too much time here but definitely worth a stop. ", \
-            html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.bilbao_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ("Capital of the Basque country! I didn't spend too much time here but definitely worth a stop. ",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.bilbao_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Buñol':
         lat_lon_str = weather.get_lat_lon(coordinates.bunol_geojson)
-        return "Home of the world’s biggest food fight! It happens the last Wednesday of August every year. " \
-               "It is a tiny town with probably little to no tourism for most of the year besides this weekend. " \
-               "Trucks upon trucks bring tomatoes that weren’t quite up to Spain’s high standards to be sold for " \
-               "consumption. These trucks then push through the super narrow streets -- there are even people / " \
-               "staff in front of the trucks to push the crowds off to the side so the trucks can get through. As " \
-               "the trucks pass, people standing on the truck throw and shovel tomatoes into the crowds. People " \
-               "in turn throw these tomatoes around again and again. By the end, the entire street becomes a river " \
-               "of tomato mush. Make sure you wear a shirt that you don’t mind throwing out. Also, you 100% want to " \
-               "wear ski goggles or lab goggles, especially if you are tall. Tall people are going to get caught " \
-               "in the tomato crossfire a lot more! It is quite the experience and was a lot of fun, but I probably " \
-               "don't need to go again.", \
-            html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.bunol_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ("Home of the world’s biggest food fight! It happens the last Wednesday of August every year. "
+                "It is a tiny town with probably little to no tourism for most of the year besides this weekend. "
+                "Trucks upon trucks bring tomatoes that weren’t quite up to Spain’s high standards to be sold for "
+                "consumption. These trucks then push through the super narrow streets -- there are even people / "
+                "staff in front of the trucks to push the crowds off to the side so the trucks can get through. As "
+                "the trucks pass, people standing on the truck throw and shovel tomatoes into the crowds. People "
+                "in turn throw these tomatoes around again and again. By the end, the entire street becomes a river "
+                "of tomato mush. Make sure you wear a shirt that you don’t mind throwing out. Also, you 100% want to "
+                "wear ski goggles or lab goggles, especially if you are tall. Tall people are going to get caught "
+                "in the tomato crossfire a lot more! It is quite the experience and was a lot of fun, but I probably "
+                "don't need to go again.",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.bunol_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Girona':
         lat_lon_str = weather.get_lat_lon(coordinates.girona_geojson)
-        return "Capital of the northern province of Catalonia! It's a cool little city if you want to visit another " \
-               "Catalan city.", \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.girona_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ("Capital of the northern province of Catalonia! It's a cool little city if you want to visit another " 
+               "Catalan city.",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.girona_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Granada':
         lat_lon_str = weather.get_lat_lon(coordinates.granada_geojson)
-        return 'Absolutely beautiful city. The Sierra Nevada mountains surround the city and the city itself is ' \
-               'quite mountainous too. THe Alhambra castle complex is incredible. The south of Spain was controlled ' \
-               'by the Moors for a long time, and each new leader would add a new addition to the Alhambra. However, ' \
-               "when the 'Reconquista' culminated in 1492 and Spain once again took control of Granada, " \
-               "King Ferdinand and Queen Isabella chose not have the Muslim palace destroyed, but rather " \
-               'added their own addition and touches. The resulting structures, that still stand today, are ' \
-               'incredible. The gardens there are also so beautiful. ' \
-               'Granada has a strong tapas tradition -- meaning that whenever you order drinks you are almost always' \
-               'served a tapa to go with the drinks. The food in general is also great.', \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.granada_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Absolutely beautiful city. The Sierra Nevada mountains surround the city and the city itself is '
+                'quite mountainous too. THe Alhambra castle complex is incredible. The south of Spain was controlled '
+                'by the Moors for a long time, and each new leader would add a new addition to the Alhambra. However, '
+                "when the 'Reconquista' culminated in 1492 and Spain once again took control of Granada, "
+                "King Ferdinand and Queen Isabella chose not have the Muslim palace destroyed, but rather "
+                'added their own addition and touches. The resulting structures, that still stand today, are '
+                'incredible. The gardens there are also so beautiful. '
+                'Granada has a strong tapas tradition -- meaning that whenever you order drinks you are almost always'
+                'served a tapa to go with the drinks. The food in general is also great.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.granada_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Irún':
         lat_lon_str = weather.get_lat_lon(coordinates.irun_geojson)
-        return 'This is the main city on the Spanish side of the Spain / France border near the coast. ' \
-               'Definitely off the beaten path but really nice little city. The view from on top of the mountain ' \
-               'at Jaizkibeleko V. Dorrea where you can see the Bidasoa river that divides Spain and France is ' \
-               'absolutely beautiful. You can also walk along this river in the city as well, there are plenty ' \
-               'of nice bars, restaurants, and shops here!', \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.irun_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('This is the main city on the Spanish side of the Spain / France border near the coast. '
+                'Definitely off the beaten path but really nice little city. The view from on top of the mountain '
+                'at Jaizkibeleko V. Dorrea where you can see the Bidasoa river that divides Spain and France is '
+                'absolutely beautiful. You can also walk along this river in the city as well, there are plenty '
+                'of nice bars, restaurants, and shops here!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.irun_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Madrid':
         lat_lon_str = weather.get_lat_lon(coordinates.madrid_geojson)
-        return 'The Spanish capital! Definitely a different feel than Barcelona but both are amazing cities. ' \
-               'Tons of places to visit: Parque de Retiro (for sure see the central pond and the Palacio ' \
-               'de Cristal here), Real Palacio, Las Ventas Plaza de Toros (tour is pretty cool to learn ' \
-               'about bullfighting history), Puerta del Sol Plaza (famous bear and cherry tree statue), Plaza Mayor, ' \
-               'famous art museums (El Prado and Reina Sofia), Templo de Debod (Egyptian temple from 200BC, ' \
-               'awesome spot for sunset), Siete Tetas (nice park a little outside the city, also good for sunset), ' \
-               'and the Broadway-like street of Gran Vía. Additionally, if you ' \
-               "are a soccer fan, there are three teams in Madrid that play in the top league in Spain, " \
-               "called Rayo Vallecano, Real Madrid, and Atlético de Madrid.", \
-            html.Br(), html.Br(), \
-            'Some great restaurants/food spots include Cuevas el Secreto, El MiniBar (go for dinner), San Ginés ' \
-            '(super famous hot chocolate and churros -- worth the wait!), Bar Postas or Casa Rúa famous for ' \
-            'bocadillos de calamares / calamari sandwiches, Museo del Jamón (a bunch of locations, ' \
-            'great ham sandwiches), Bocadillos Oink (get a sandwich with Jamón Serrano -- soooo good), ' \
-            'and the Basque restaurant Maitetxe. Also be sure to visit the Círculo de Bellas Artes Terrace. ' \
-            'The view is amazing, it costs a few euros to go up but it is well worth it!', \
-            html.Br(), html.Br(), \
-            'Although there are tons of things to do in Madrid, definitely consider a day trip to either Segovia ' \
-            'and / or Toledo. Both are cities with fascinating history, dating back much further than Madrid.', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/spain/mad2.JPG"},
-                {"src": "assets/spain/mad1.JPG"},
-                {"src": "assets/spain/mad.JPG"},
-                {"src": "assets/spain/mad5.JPG"},
-                {"src": "assets/spain/mad3.JPG"},
-                {"src": "assets/spain/mad6.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.madrid_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('The Spanish capital! Definitely a different feel than Barcelona but both are amazing cities. '
+                'Tons of places to visit: Parque de Retiro (for sure see the central pond and the Palacio '
+                'de Cristal here), Real Palacio, Las Ventas Plaza de Toros (tour is pretty cool to learn '
+                'about bullfighting history), Puerta del Sol Plaza (famous bear and cherry tree statue), Plaza Mayor, '
+                'famous art museums (El Prado and Reina Sofia), Templo de Debod (Egyptian temple from 200BC, '
+                'awesome spot for sunset), Siete Tetas (nice park a little outside the city, also good for sunset), '
+                'and the Broadway-like street of Gran Vía. Additionally, if you '
+                "are a soccer fan, there are three teams in Madrid that play in the top league in Spain, "
+                "called Rayo Vallecano, Real Madrid, and Atlético de Madrid.",
+                html.Br(), html.Br(),
+                'Some great restaurants/food spots include Cuevas el Secreto, El MiniBar (go for dinner), San Ginés '
+                '(super famous hot chocolate and churros -- worth the wait!), Bar Postas or Casa Rúa famous for '
+                'bocadillos de calamares / calamari sandwiches, Museo del Jamón (a bunch of locations, '
+                'great ham sandwiches), Bocadillos Oink (get a sandwich with Jamón Serrano -- soooo good), '
+                'and the Basque restaurant Maitetxe. Also be sure to visit the Círculo de Bellas Artes Terrace. '
+                'The view is amazing, it costs a few euros to go up but it is well worth it!',
+                html.Br(), html.Br(),
+                'Although there are tons of things to do in Madrid, definitely consider a day trip to either Segovia '
+                'and / or Toledo. Both are cities with fascinating history, dating back much further than Madrid.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/mad2.JPG"},
+                        {"src": "assets/spain/mad1.JPG"},
+                        {"src": "assets/spain/mad.JPG"},
+                        {"src": "assets/spain/mad5.JPG"},
+                        {"src": "assets/spain/mad3.JPG"},
+                        {"src": "assets/spain/mad6.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.madrid_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Málaga':
         lat_lon_str = weather.get_lat_lon(coordinates.malaga_geojson)
-        return 'Nice city on the Costa del Sol (Coast of the Sun)', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/spain/mal.JPG"},
-                {"src": "assets/spain/mal1.JPG"},
-                # {"src": "assets/spain/mal2.JPG"},
-                {"src": "assets/spain/mal3.JPG"},
-                {"src": "assets/spain/mal4.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.malaga_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Nice city on the Costa del Sol (Coast of the Sun)',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/mal.JPG"},
+                        {"src": "assets/spain/mal1.JPG"},
+                        # {"src": "assets/spain/mal2.JPG"},
+                        {"src": "assets/spain/mal3.JPG"},
+                        {"src": "assets/spain/mal4.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.malaga_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Mallorca':
         lat_lon_str = weather.get_lat_lon(coordinates.mallorca_geojson)
-        return 'Beautiful island not far from Barcelona. You can actually take a ferry here from Barcelona, or it ' \
-               'is a very quick flight. Many people come to enjoy some nice beaches and island tranquility, but ' \
-               'there is also a German-speaking part of the island where many Germans come to party. There is a ' \
-               'whole German genre of music made for partying on Mallorca.', \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.mallorca_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Beautiful island not far from Barcelona. You can actually take a ferry here from Barcelona, or it '
+                'is a very quick flight. Many people come to enjoy some nice beaches and island tranquility, but '
+                'there is also a German-speaking part of the island where many Germans come to party. There is a '
+                'whole German genre of music made for partying on Mallorca.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.mallorca_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Montserrat':
         lat_lon_str = weather.get_lat_lon(coordinates.montserrat_geojson)
-        return 'Beautiful and really uniquely shaped mountains that are only an hour or so by train inland from ' \
-               'Barcelona.', \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.montserrat_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Beautiful and really uniquely shaped mountains that are only an hour or so by train inland from '
+                'Barcelona.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.montserrat_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Pineda de Mar':
         lat_lon_str = weather.get_lat_lon(coordinates.pineda_de_mar_geojson)
-        return 'more info coming soon!', \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.pineda_de_mar_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('more info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.pineda_de_mar_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'San Sebastián':
         lat_lon_str = weather.get_lat_lon(coordinates.san_sebastian_geojson)
-        return 'Beautiful city on the northern coast of Spain. It supposedly has the highest density of bars and ' \
-               'restaurants in the world. Take the Funicular Monte Igueldo up to Igeldo mendiko behatokia ' \
-               'to get an amazing view of the bay and city from above.', \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.san_sebastian_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Beautiful city on the northern coast of Spain. It supposedly has the highest density of bars and '
+                'restaurants in the world. Take the Funicular Monte Igueldo up to Igeldo mendiko behatokia '
+                'to get an amazing view of the bay and city from above.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=coordinates.san_sebastian_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Sitges':
         lat_lon_str = weather.get_lat_lon(coordinates.sitges_geojson)
-        return 'The carnaval capital of Spain!', \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.sitges_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('The carnaval capital of Spain!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.sitges_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Segovia':
         lat_lon_str = weather.get_lat_lon(coordinates.segovia_geojson)
-        return 'Another small city with fascinating history, Segovia is a very old city that makes for an awesome ' \
-               'day trip from Madrid. There is a Roman aqueduct that runs through the main plaza of the city that ' \
-               'was built in the year 50! Enjoy a meal on the main plaza with this stunning backdrop. Get the ' \
-               'cochinillo — a delicacy that is most famous in Segovia. This is a slow roasted suckling pig that ' \
-               'is crazy tender and flavourful. Get the marzipan cake for dessert. This was amazing as well. Enjoy ' \
-               'a walk along the aqueduct.  Don’t forget to admire the castle — it looks like something out of a ' \
-               'fairytale. Enjoy the architecture as you stroll around the rest of the city. Check out the city ' \
-               'gates as well. ', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/spain/seg4.JPG"},
-                {"src": "assets/spain/seg1.JPG"},
-                {"src": "assets/spain/seg2.JPG"},
-                {"src": "assets/spain/seg3.JPG"},
-                {"src": "assets/spain/seg.JPG"},
-                {"src": "assets/spain/seg5.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.segovia_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Another small city with fascinating history, Segovia is a very old city that makes for an awesome '
+                'day trip from Madrid. There is a Roman aqueduct that runs through the main plaza of the city that '
+                'was built in the year 50! Enjoy a meal on the main plaza with this stunning backdrop. Get the '
+                'cochinillo — a delicacy that is most famous in Segovia. This is a slow roasted suckling pig that '
+                'is crazy tender and flavourful. Get the marzipan cake for dessert. This was amazing as well. Enjoy '
+                'a walk along the aqueduct.  Don’t forget to admire the castle — it looks like something out of a '
+                'fairytale. Enjoy the architecture as you stroll around the rest of the city. Check out the city '
+                'gates as well. ',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/seg4.JPG"},
+                        {"src": "assets/spain/seg1.JPG"},
+                        {"src": "assets/spain/seg2.JPG"},
+                        {"src": "assets/spain/seg3.JPG"},
+                        {"src": "assets/spain/seg.JPG"},
+                        {"src": "assets/spain/seg5.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.segovia_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Sevilla':
         lat_lon_str = weather.get_lat_lon(coordinates.sevilla_geojson)
-        return "Such a lovely city in the south of Spain (Andalusia). It’s a decent-sized city but " \
-               "extremely walkable. One of the highlights (especially for Star Wars fans) is the " \
-               "Plaza de España, which was featured as the main castle in the planet of Naboo in Star Wars! " \
-               "Regardless of the Star Wars connection, it is so picturesque with the canal, the bridge, " \
-               "the little boats, and the ceramic tiles. ", \
-            html.Br(), html.Br(), \
-            "Other main things to do and see include the main cathedral (inside you can see " \
-            "Christopher Columbus’ tomb), the Royal Alcázar (the Muslim influences are really cool to see, " \
-            "and the gardens are beautiful), and the giant mushrooms! The Setas de Sevilla is a large " \
-            "wooden structure in the shape of mushrooms with a rooftop walkway and really nice views " \
-            "from the top. In December, there is actually an ice skating rink below the structure, " \
-            "which I found pretty fun since it can still be quite warm and sunny in winter. Additionally, " \
-            "something that is a must for Sevilla is seeing a flamenco show! There is a great traditional " \
-            "place called La Carbonería — I would highly recommend. Be sure to also visit the neighborhood " \
-            "of Triana across the Canal de Alfonso XIII from the center of Sevilla. Triana is really " \
-            "interesting as it used to be the area where all the Jews, Muslims, and gypsies lived " \
-            "(while the Catholics lived in the center). Today, it is a very creative and artistic area. " \
-            "This is a great place to explore some markets (especially the Mercado de Triana) and buy " \
-            "some beautiful colorful ceramics as a gift or as a souvenir! On your way to/from Triana, " \
-            "you can also pass the old bullfighting arena (Plaza de Toros) of the city. Lastly, if you " \
-            "are a soccer fan, there are two teams in Sevilla that play in the top league in Spain, " \
-            "called Real Betis Balompié and Sevilla FC.", \
-            html.Br(), html.Br(), \
-            "One of the great things about Andalusia is that it is very customary to receive complimentary " \
-            "tapas when you order a drink! The food and drink scene in general is so great here — laid back " \
-            "yet very lively. Also, as with most places in Spain, be aware that dinner is eaten very late " \
-            "here (9pm at the earliest). Some great restaurants include La Santa (right next to Las Setas), " \
-            "La Taberna, Taberna Coloniales, and Las Golondrinas (Triana). There is also a rooftop bar with " \
-            "amazing views of the main cathedral called La Terraza del EME.", \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/spain/sev.JPG"},
-                {"src": "assets/spain/sev1.JPG"},
-                {"src": "assets/spain/sev2.JPG"},
-                {"src": "assets/spain/sev3.JPG"},
-                {"src": "assets/spain/sev4.JPG"},
-                {"src": "assets/spain/sev5.JPG"},
-                {"src": "assets/spain/sev10.JPG"},
-                {"src": "assets/spain/sev11.JPG"},
-                {"src": "assets/spain/sev6.JPG"},
-                {"src": "assets/spain/sev7.JPG"},
-                {"src": "assets/spain/sev9.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.sevilla_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ("Such a lovely city in the south of Spain (Andalusia). It’s a decent-sized city but "
+                "extremely walkable. One of the highlights (especially for Star Wars fans) is the "
+                "Plaza de España, which was featured as the main castle in the planet of Naboo in Star Wars! "
+                "Regardless of the Star Wars connection, it is so picturesque with the canal, the bridge, "
+                "the little boats, and the ceramic tiles. ",
+                html.Br(), html.Br(),
+                "Other main things to do and see include the main cathedral (inside you can see "
+                "Christopher Columbus’ tomb), the Royal Alcázar (the Muslim influences are really cool to see, "
+                "and the gardens are beautiful), and the giant mushrooms! The Setas de Sevilla is a large "
+                "wooden structure in the shape of mushrooms with a rooftop walkway and really nice views "
+                "from the top. In December, there is actually an ice skating rink below the structure, "
+                "which I found pretty fun since it can still be quite warm and sunny in winter. Additionally, "
+                "something that is a must for Sevilla is seeing a flamenco show! There is a great traditional "
+                "place called La Carbonería — I would highly recommend. Be sure to also visit the neighborhood "
+                "of Triana across the Canal de Alfonso XIII from the center of Sevilla. Triana is really "
+                "interesting as it used to be the area where all the Jews, Muslims, and gypsies lived "
+                "(while the Catholics lived in the center). Today, it is a very creative and artistic area. "
+                "This is a great place to explore some markets (especially the Mercado de Triana) and buy "
+                "some beautiful colorful ceramics as a gift or as a souvenir! On your way to/from Triana, "
+                "you can also pass the old bullfighting arena (Plaza de Toros) of the city. Lastly, if you "
+                "are a soccer fan, there are two teams in Sevilla that play in the top league in Spain, "
+                "called Real Betis Balompié and Sevilla FC.",
+                html.Br(), html.Br(),
+                "One of the great things about Andalusia is that it is very customary to receive complimentary "
+                "tapas when you order a drink! The food and drink scene in general is so great here — laid back "
+                "yet very lively. Also, as with most places in Spain, be aware that dinner is eaten very late "
+                "here (9pm at the earliest). Some great restaurants include La Santa (right next to Las Setas), "
+                "La Taberna, Taberna Coloniales, and Las Golondrinas (Triana). There is also a rooftop bar with "
+                "amazing views of the main cathedral called La Terraza del EME.",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/sev.JPG"},
+                        {"src": "assets/spain/sev1.JPG"},
+                        {"src": "assets/spain/sev2.JPG"},
+                        {"src": "assets/spain/sev3.JPG"},
+                        {"src": "assets/spain/sev4.JPG"},
+                        {"src": "assets/spain/sev5.JPG"},
+                        {"src": "assets/spain/sev10.JPG"},
+                        {"src": "assets/spain/sev11.JPG"},
+                        {"src": "assets/spain/sev6.JPG"},
+                        {"src": "assets/spain/sev7.JPG"},
+                        {"src": "assets/spain/sev9.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.sevilla_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Tenerife':
         lat_lon_str = weather.get_lat_lon(coordinates.tenerife_geojson)
-        return 'Amazing island with incredibly diverse wildlife and landscapes. Temperatures here are consistently ' \
-               'warm (but not too hot) year round. There are lots of nice beaches (including black sand beaches) and ' \
-               'also many opportunities to get out on the water in a boat. We enjoyed an awesome boat trip with ' \
-               'captain José -- we were lucky to see tons of ____ whales (size-wise they ' \
-               'look much more like dolphins than whales, but still so cool)! There are also some really cool ' \
-               'natural swimming pools made up of natural rock formations along the coast, definitely try to visit ' \
-               'one! The center of the island is the Teide Volcano. The volcano and ' \
-               'the surrounding area make up Teide National Park. One of the most memorable experiences of my life ' \
-               'was a Teide day-trip excursion -- we went up the volcano by bus and watched the sunset from the ' \
-               'top of the volcano, above the clouds! This was absolutely stunning. We then enjoyed a ' \
-               'wonderful dinner at a nearby restaurant, and lastly we found a secluded spot to stargaze. ' \
-               'This was equally stunning! This is supposed to ' \
-               'be one of the best places in the world to stargaze as it is an island, and the thick clouds beneath ' \
-               'us traps much of the light from the cities below the clouds.', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/spain/tenerife.JPG"},
-                {"src": "assets/spain/tenerife1.JPG"},
-                {"src": "assets/spain/tenerife2.JPG"},
-                {"src": "assets/spain/tenerife3.JPG"},
-                {"src": "assets/spain/tenerife4.JPG"},
-                {"src": "assets/spain/tenerife5.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.tenerife_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('Amazing island with incredibly diverse wildlife and landscapes. Temperatures here are consistently '
+                'warm (but not too hot) year round. There are lots of nice beaches (including black sand beaches) and '
+                'also many opportunities to get out on the water in a boat. We enjoyed an awesome boat trip with '
+                'captain José -- we were lucky to see tons of ____ whales (size-wise they '
+                'look much more like dolphins than whales, but still so cool)! There are also some really cool '
+                'natural swimming pools made up of natural rock formations along the coast, definitely try to visit '
+                'one! The center of the island is the Teide Volcano. The volcano and '
+                'the surrounding area make up Teide National Park. One of the most memorable experiences of my life '
+                'was a Teide day-trip excursion -- we went up the volcano by bus and watched the sunset from the '
+                'top of the volcano, above the clouds! This was absolutely stunning. We then enjoyed a '
+                'wonderful dinner at a nearby restaurant, and lastly we found a secluded spot to stargaze. '
+                'This was equally stunning! This is supposed to '
+                'be one of the best places in the world to stargaze as it is an island, and the thick clouds beneath '
+                'us traps much of the light from the cities below the clouds.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/tenerife.JPG"},
+                        {"src": "assets/spain/tenerife1.JPG"},
+                        {"src": "assets/spain/tenerife2.JPG"},
+                        {"src": "assets/spain/tenerife3.JPG"},
+                        {"src": "assets/spain/tenerife4.JPG"},
+                        {"src": "assets/spain/tenerife5.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.tenerife_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Toledo':
         lat_lon_str = weather.get_lat_lon(coordinates.toledo_geojson)
-        return 'The original capital of Spain, Toledo is a very old city that makes for an awesome day trip from ' \
-               'Madrid. It is a small city that is essentially on a little island, surrounded by city walls and a ' \
-               'river / moat. It is known for its mixture or clash of cultures — catholics, jews, and muslims all ' \
-               'coexisted here for many, many years until the ______ in 1492, the declaration that required any ' \
-               'non-Catholics in Spain to either convert or leave the country. Over 500 years later, there is ' \
-               'still a mosque and a synagogue that still stand today. Toledo is also famed as the city where Don ' \
-               'Quijote starts his journey in the fictional books by Miguel Cervantes. The citadel that sits atop ' \
-               'the city is very cool. Enjoy the old bridge as you enter the old city, and also be sure to make ' \
-               'the 20 (?) minute walk south along the opposite side of the river to get a great view of the city. ' \
-               'Lastly, make sure to try lots of different marzipan treats — to bring some back for friends! Toledo ' \
-               'is known to make maybe the best marzipan in Europe. There is a shop that even has a maybe 10 foot ' \
-               'tall Don Quijote made completely out of marzipan! It has some Guinness world record for this.', \
-            html.Br(), html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/spain/toledo.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.toledo_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('The original capital of Spain, Toledo is a very old city that makes for an awesome day trip from '
+                'Madrid. It is a small city that is essentially on a little island, surrounded by city walls and a '
+                'river / moat. It is known for its mixture or clash of cultures — catholics, jews, and muslims all '
+                'coexisted here for many, many years until the ______ in 1492, the declaration that required any '
+                'non-Catholics in Spain to either convert or leave the country. Over 500 years later, there is '
+                'still a mosque and a synagogue that still stand today. Toledo is also famed as the city where Don '
+                'Quijote starts his journey in the fictional books by Miguel Cervantes. The citadel that sits atop '
+                'the city is very cool. Enjoy the old bridge as you enter the old city, and also be sure to make '
+                'the 20 (?) minute walk south along the opposite side of the river to get a great view of the city. '
+                'Lastly, make sure to try lots of different marzipan treats — to bring some back for friends! Toledo '
+                'is known to make maybe the best marzipan in Europe. There is a shop that even has a maybe 10 foot '
+                'tall Don Quijote made completely out of marzipan! It has some Guinness world record for this.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/toledo.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.toledo_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Valencia':
         lat_lon_str = weather.get_lat_lon(coordinates.valencia_geojson)
-        return 'The birthplace of paella! Be sure to eat plenty of paella while you’re here. Valencia is on the ' \
-               'eastern coast of Spain, but the city center is not quite on the coast. The coast and beaches are ' \
-               'not too far but it takes a bit of effort to get there. There is plenty to do in Valencia though — ' \
-               'starting off with the Ciudad de Artes y Ciencias (City of Arts and Sciences). The buildings in this ' \
-               'area look super futuristic and are really impressive. They look like they could be space ships from ' \
-               'the next Star Wars movie. In reality they are actually museums, hence the name of the area. There ' \
-               'are some very nice parks in the city. There is also a cool market area where you can eat and drink. ' \
-               'Lastly, if you are here in August, make the little trip to Buñol for La Tomatina, the world’s ' \
-               'biggest food fight! Select Buñol for more info about that.', \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.valencia_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('The birthplace of paella! Be sure to eat plenty of paella while you’re here. Valencia is on the '
+                'eastern coast of Spain, but the city center is not quite on the coast. The coast and beaches are '
+                'not too far but it takes a bit of effort to get there. There is plenty to do in Valencia though — '
+                'starting off with the Ciudad de Artes y Ciencias (City of Arts and Sciences). The buildings in this '
+                'area look super futuristic and are really impressive. They look like they could be space ships from '
+                'the next Star Wars movie. In reality they are actually museums, hence the name of the area. There '
+                'are some very nice parks in the city. There is also a cool market area where you can eat and drink. '
+                'Lastly, if you are here in August, make the little trip to Buñol for La Tomatina, the world’s '
+                'biggest food fight! Select Buñol for more info about that.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.valencia_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Vilanova':
         lat_lon_str = weather.get_lat_lon(coordinates.vilanova_geojson)
-        return 'more info coming soon!', \
-            html.Br(), html.Br(), \
-            html.Div(
-                dl.Map([dl.TileLayer(),
-                        dl.GeoJSON(data=coordinates.vilanova_geojson)],
-                       style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1))
+        return ('more info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.vilanova_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Sweden
     if value == 'Stockholm':
