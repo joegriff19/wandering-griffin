@@ -70,6 +70,7 @@ index_layout = html.Div(
             children=[
                 # html.Div(dls.Hash(fullscreen=True), style={"height": "200px"}),
                 html.Div(children="Wandering Griffin Travel", className="wg"),
+                html.Br(),
                 dcc.Interval(id='update-rotation', interval=500, n_intervals=0),
                 # html.Div([
                 #     html.Div(
@@ -102,7 +103,7 @@ index_layout = html.Div(
                     #     style={'width': '20%', 'display': 'inline-block'}),
                     html.Div(de.Lottie(options=options, width="10vh", height="10vh", url="/loader", speed=1,
                                        isClickToPauseDisabled=True),
-                             style={'display': 'inline-block', "position": "absolute", "top": "43px"}),
+                             style={'display': 'inline-block', "position": "absolute", "top": "55px"}),
                     html.Div(dcc.Graph(
                         id='rotating-globe',
                         config={
