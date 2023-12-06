@@ -102,7 +102,7 @@ index_layout = html.Div(
                     #     style={'width': '20%', 'display': 'inline-block'}),
                     html.Div(de.Lottie(options=options, width="10vh", height="10vh", url="/loader", speed=1,
                                        isClickToPauseDisabled=True),
-                             style={'width': '0%', 'display': 'inline-block', "position": "absolute", "top": "50px"}),
+                             style={'display': 'inline-block', "position": "absolute", "top": "43px"}),
                     html.Div(dcc.Graph(
                         id='rotating-globe',
                         config={
@@ -111,14 +111,11 @@ index_layout = html.Div(
                             'doubleClick': False,
                         },
                         style={
-                            'height': '45vh',
+                            'height': '40vh',
                         }
-                    ), style={'width': '100%', 'display': 'inline-block'}
+                    ), style={'width': '40vh', 'display': 'inline-block'}
                     ),
-                    # html.Div(
-                    #     children=(),
-                    #     style={'width': '0%', 'display': 'inline-block'}),
-                ], style={'width': '100%', 'display': 'inline-block'}),
+                ]),
 
                 # html.Div(children="I can't do everything but I can try!", className="powered"),
             ],
@@ -3104,7 +3101,7 @@ def set_display_children(value):
                         {"src": "assets/spain/mad1.JPG"},
                         {"src": "assets/spain/mad.JPG"},
                         {"src": "assets/spain/mad5.JPG"},
-                        {"src": "assets/spain/mad3.JPG"},
+                        {"src": "assets/spain/mad4.JPG"},
                         {"src": "assets/spain/mad6.JPG"},
                     ],
                     interval=2000,
