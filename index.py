@@ -53,10 +53,6 @@ colors = {
 content = html.Div(id="page-content", children=[], style=CONTENT_STYLE)
 lon_deg = -50
 
-weather_categories = ["temperature", "precip", "humidity", "cloudcover", "weather_descriptions",
-                      # "observation_time", "is_day", "feelslike", "uv_index","visibility", "wind_speed",
-                      ]
-
 # define sidebar layout
 app.layout = html.Div([
     dcc.Location(id="url"),
