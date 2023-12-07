@@ -1370,6 +1370,22 @@ def set_display_children(value):
                 'you enter the city!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/france/colmar.JPG"},
+                        {"src": "assets/france/colmar1.JPG"},
+                        {"src": "assets/france/colmar2.JPG"},
+                        {"src": "assets/france/colmar3.JPG"},
+                        {"src": "assets/france/colmar4.JPG"},
+                        {"src": "assets/france/colmar5.JPG"},
+                        {"src": "assets/france/colmar6.JPG"},
+
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ),
+                html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.colmar_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -1425,7 +1441,14 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/france/strasbourg.JPG"},
+                        {"src": "assets/germany/strasbourg.JPG"},
+                        {"src": "assets/germany/strasbourg1.JPG"},
+                        {"src": "assets/germany/strasbourg2.JPG"},
+                        {"src": "assets/germany/strasbourg3.JPG"},
+                        {"src": "assets/germany/strasbourg4.JPG"},
+                        {"src": "assets/germany/strasbourg5.JPG"},
+                        {"src": "assets/germany/strasbourg6.JPG"},
+
                     ],
                     interval=2000,
                     ride="carousel",
@@ -1624,10 +1647,13 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/germany/dresden_new.JPG"},
+                        {"src": "assets/germany/dresden5.JPG"},
+                        {"src": "assets/germany/dresden1.JPG"},
                         {"src": "assets/germany/dresden.JPG"},
                         {"src": "assets/germany/dresden2.JPG"},
                         {"src": "assets/germany/dresden3.JPG"},
+                        {"src": "assets/germany/dresden4.JPG"},
+                        {"src": "assets/germany/dresden6.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -1668,6 +1694,9 @@ def set_display_children(value):
                 dbc.Carousel(
                     items=[
                         {"src": "assets/germany/gengenbach.JPG"},
+                        {"src": "assets/germany/gengenbach1.JPG"},
+                        {"src": "assets/germany/gengenbach2.JPG"},
+                        {"src": "assets/germany/gengenbach3.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -1982,6 +2011,17 @@ def set_display_children(value):
         return ('Was only here briefly but the main Christmas market was nice',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/germany/stuttgart.JPG"},
+                        {"src": "assets/germany/stuttgart1.JPG"},
+                        {"src": "assets/germany/stuttgart2.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ),
+                html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.stutt_geojson)],
