@@ -52,6 +52,13 @@ def update_weather(location):
     global json_path
     # json_path = 'snowman.json'
     json_path = get_weather_image(weather_code)
+    if is_day == 'no':
+        if json_path == 'sun.json':
+            json_path = 'moon.json'
+        if json_path == 'partly_cloudy.json':
+            json_path = 'moon_cloudy.json'
+        if json_path == 'sun_snow.json':
+            json_path = 'snow_night.json'
 
     return (html.Div(final_weather_str),
             html.Div(de.Lottie(options=options, width="10vh", height="10vh", url="/loader2", speed=1,
@@ -76,7 +83,7 @@ def get_weather_image(code):
                       [308, 'rain.json'], [305, 'rain.json'], [302, 'rain.json'],
                       [299, 'rain.json'], [296, 'sun_shower.json'], [293, 'rain.json'],
                       [284, 'rain.json'], [281, 'rain.json'], [266, 'rain.json'],
-                      [263, 'sun_shower.json'], [260, 'cloudy.json'], [248, 'cloudy.json'],
+                      [263, 'sun_shower.json'], [260, 'fog.json'], [248, 'fog.json'],
                       [230, 'snowman.json'], [227, 'sun_snow.json'], [200, 'lightning.json'],
                       [185, 'rain.json'], [182, 'rain.json'], [179, 'sun_snow.json'],
                       [176, 'sun_shower.json'], [143, 'cloudy.json'], [122, 'cloudy.json'],
