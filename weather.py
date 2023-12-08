@@ -64,6 +64,9 @@ def update_weather(location):
             html.Div(de.Lottie(options=options, width="10vh", height="10vh", url="/loader2", speed=1,
                                isClickToPauseDisabled=True)))
 
+    # # to avoid using api unnecessarily
+    # return 'weather here'
+
 
 @server.route("/loader2", methods=['GET'])
 def serving_lottie_loader2():

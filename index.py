@@ -372,6 +372,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dornbirn_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Vienna':
         lat_lon_str = weather.get_lat_lon(coordinates.vienna_geojson)
         return ('A very grand city! The capital of Austria is very impressive. The Hofburg Palace and the main '
@@ -448,6 +449,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.eleuthera_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'New Providence Island (where Nassau is located)':
         lat_lon_str = weather.get_lat_lon(coordinates.nassau_geojson)
         return ('explore Nassau, eat conch, go to the beach, and listen to reggae!',
@@ -559,6 +561,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.leuven_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Ghent':
         lat_lon_str = weather.get_lat_lon(coordinates.ghent_geojson)
         return ('I absolutely loved my time here. It is such a cute little city. The main area of the city feels like '
@@ -639,6 +642,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.cliza_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Cochabamba':
         lat_lon_str = weather.get_lat_lon(coordinates.cocha_geojson)
         return ('El Cristo más grande! More to come!',
@@ -685,8 +689,15 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/bosnia/medj.JPG"},
+                        {"src": "assets/bosnia/medj4.JPG"},
+                        {"src": "assets/bosnia/medj8.JPG"},
                         {"src": "assets/bosnia/medj1.JPG"},
+                        {"src": "assets/bosnia/medj5.JPG"},
+                        {"src": "assets/bosnia/medj6.JPG"},
+                        {"src": "assets/bosnia/medj2.JPG"},
+                        {"src": "assets/bosnia/medj.JPG"},
+                        {"src": "assets/bosnia/medj3.JPG"},
+                        {"src": "assets/bosnia/medj7.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -695,6 +706,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.medj_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Mostar':
         lat_lon_str = weather.get_lat_lon(coordinates.mostar_geojson)
         return ('more info coming soon!',
@@ -749,6 +761,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.sofia_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Varna':
         lat_lon_str = weather.get_lat_lon(coordinates.varna_geojson)
         return ("I would so highly recommend this little gem of a city on the Black Sea. Enjoy the beaches and the "
@@ -798,6 +811,8 @@ def set_display_children(value):
                     items=[
                         {"src": "assets/canada/banff.JPG"},
                         {"src": "assets/canada/banff1.JPG"},
+                        {"src": "assets/canada/banff9.JPG"},
+                        {"src": "assets/canada/banff8.JPG"},
                         {"src": "assets/canada/banff2.JPG"},
                         {"src": "assets/canada/banff3.JPG"},
                         {"src": "assets/canada/banff4.JPG"},
@@ -812,11 +827,21 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.banff_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Calgary':
         lat_lon_str = weather.get_lat_lon(coordinates.calgary_geojson)
         return ('Cool, clean city! More to come!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/canada/calgary1.JPG"},
+                        {"src": "assets/canada/calgary.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.calgary_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -824,21 +849,21 @@ def set_display_children(value):
     # Chile
     if value == 'Puerto Natales (Patagonia)':
         lat_lon_str = weather.get_lat_lon(coordinates.puertonat_geojson)
-        return ('One of the southernmost cities in the world! If you are going to Torres del Paine National Park,' \
-                'you will likely fly here and stop here before (and after) your time in the park. ' \
-                'The airport is quick and cheap 10 minute ride to / from the city. The park is farther, ' \
-                'about a 1.5-2 hour drive from Puerto Natales, but there are multiple bus options for this. ' \
-                'In Puerto Natales, we stayed in the Lili Patagónicos hostel and very much enjoyed it. ' \
+        return ('One of the southernmost cities in the world! If you are going to Torres del Paine National Park, '
+                'you will likely fly here and stop here before (and after) your time in the park. '
+                'The airport is quick and cheap 10 minute ride to / from the city. The park is farther, '
+                'about a 1.5-2 hour drive from Puerto Natales, but there are multiple bus options for this. '
+                'In Puerto Natales, we stayed in the Lili Patagónicos hostel and very much enjoyed it. '
                 'They offered had hiking and climbing equipment rentals, as well as luggage storage. ',
                 html.Br(), html.Br(),
-                'It’s not a big city, but it has everything you could want and it is very walkable. ' \
-                'There is a full grocery store where you can stock up on snacks for your hike, ' \
-                'really nice restaurants, and lovely views here as well. Be sure to walk along the water ' \
-                'and see the  Monumento al Milodón, the Monumento de la Mano, the Monumento al Viento, ' \
-                'and the beautiful mountains in the distance over the water. We really enjoyed the Restaurante el ' \
-                'Bote and Mesita Grande restaurants. Be sure to try a couple unique local foods: the guanaco ' \
-                'and the centolla crab. Chilean sea bass is also amazing! Lastly, be sure to try the Austral ' \
-                'Calafate beer! It is a delicious local beer made with local calafate berries ' \
+                'It’s not a big city, but it has everything you could want and it is very walkable. '
+                'There is a full grocery store where you can stock up on snacks for your hike, '
+                'really nice restaurants, and lovely views here as well. Be sure to walk along the water '
+                'and see the  Monumento al Milodón, the Monumento de la Mano, the Monumento al Viento, '
+                'and the beautiful mountains in the distance over the water. We really enjoyed the Restaurante el '
+                'Bote and Mesita Grande restaurants. Be sure to try a couple unique local foods: the guanaco '
+                'and the centolla crab. Chilean sea bass is also amazing! Lastly, be sure to try the Austral '
+                'Calafate beer! It is a delicious local beer made with local calafate berries '
                 '(similar to blueberries).',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -859,23 +884,24 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.puertonat_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Santiago':
         lat_lon_str = weather.get_lat_lon(coordinates.sant_geojson)
         return ('The capital of Chile! An absolutely beautiful city with the stunning backdrop of the Andes '
                 'mountains everywhere you look. Be sure to eat lots of ‘parilla’ (grilled meat). You can (and '
                 'should) enjoy delicious steak dinners for pretty cheap. Also be sure to drink lots of pisco sours… '
-                'they are so delicious. Pisco is a local liquor invented in Chile (unless you ask a Peruvian). ' \
-                'Airbnbs are also very cheap. Definitely go up to ___ to get some stunning views of the city and ' \
-                'the mountains. You can take a funicular to get up, and I’d recommend walking down. When walking ' \
-                'down, you will come to a big ‘Chile’ sign that is a great photo op with the city in the background, ' \
-                'and the large __ tower right in the center. This is the tallest building in South America. I would ' \
-                'also recommend going to the top of this building. You get pretty stunning 360 degree views of the ' \
-                'city. Cultural appropriation is also encouraged with some traditional Chilean outfits as a photo op! ' \
-                'Please let me know if you go — a professor I almost worked for would love to host you for a Chilean ' \
-                '‘parilla’ dinner! Dr. Juan Calderón studied in the US and really enjoyed his time there. ' \
-                'He hosted my friends and I when we went and it was really lovely. He is a really great guy and ' \
-                'he also speaks fluent English. If you are looking for nightlife, I don’t think you will find it. ' \
-                'Santiago is lovely but is a bit of a ‘sleepy’ city. Lastly, I would highly recommend a day trip ' \
+                'they are so delicious. Pisco is a local liquor invented in Chile (unless you ask a Peruvian). '
+                'Airbnbs are also very cheap. Definitely go up to ___ to get some stunning views of the city and '
+                'the mountains. You can take a funicular to get up, and I’d recommend walking down. When walking '
+                'down, you will come to a big ‘Chile’ sign that is a great photo op with the city in the background, '
+                'and the large __ tower right in the center. This is the tallest building in South America. I would '
+                'also recommend going to the top of this building. You get pretty stunning 360 degree views of the '
+                'city. Cultural appropriation is also encouraged with some traditional Chilean outfits as a photo op! '
+                'Please let me know if you go — a professor I almost worked for would love to host you for a Chilean '
+                '‘parilla’ dinner! Dr. Juan Calderón studied in the US and really enjoyed his time there. '
+                'He hosted my friends and I when we went and it was really lovely. He is a really great guy and '
+                'he also speaks fluent English. If you are looking for nightlife, I don’t think you will find it. '
+                'Santiago is lovely but is a bit of a ‘sleepy’ city. Lastly, I would highly recommend a day trip '
                 'to the coast (Valparaíso / Viña del Mar) and to nearby wine country. Skiing is also a fantastic '
                 'option if you are there in winter.',
                 html.Br(), html.Br(),
@@ -957,12 +983,12 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/chile/valpo6.JPG"},
                         {"src": "assets/chile/valpo3.JPG"},
                         {"src": "assets/chile/valpo1.JPG"},
                         {"src": "assets/chile/valpo2.JPG"},
                         {"src": "assets/chile/valpo4.JPG"},
                         {"src": "assets/chile/valpo5.JPG"},
-                        {"src": "assets/chile/valpo6.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -1198,7 +1224,7 @@ def set_display_children(value):
                 "drinks more than one beer per person per day! There are a few beers you will commonly see "
                 "throughout the city. First, Pilsner Urquell -- this is the original pilsner-style beer, "
                 "and the name of the style itself comes from the Czech city where this beer was brewed, called Plzen. "
-                "BE SURE to try a fresh Pilsner Urquell on draft from a bronze tank -- you will thank me later!"
+                "BE SURE to try a fresh Pilsner Urquell on draft from a bronze tank -- you will thank me later! "
                 "Next is Staropramen -- also a good beer. Be sure to try the Staropramen Unfiltered! Then there is "
                 "Budweiser -- no, not from St Louis. Someone from Anheuser Busch came to the Czech Republic to "
                 "learn more about brewing and tried the original Budweiser. The guy liked the name and found "
@@ -1954,7 +1980,7 @@ def set_display_children(value):
         return ('The remains of the Sachsenhausen concentration camp can be found here. It has been converted into '
                 'a memorial / museum and it is really well done.'
                 'There is so much to read, see, and learn here. It is naturally difficult to learn about all the '
-                'atrocities that occurred here, but I would recommend a visit.'
+                'atrocities that occurred here, but I would recommend a visit. '
                 'It is an easy day trip from Berlin.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -2215,20 +2241,20 @@ def set_display_children(value):
     # Italy
     if value == 'Bergamo':
         lat_lon_str = weather.get_lat_lon(coordinates.bergamo_geojson)
-        return ('DO NOT immediately overlook Bergamo in favor of Milan. A lot of budget airlines that ' \
-                'fly to "Milan" ' \
-                'actually fly to the nearby city of Bergamo. It is a really cute city and they invented ' \
-                'Stracciatella gelato. Take the little cable car up to the high part of the city and walk ' \
-                'around the ' \
-                'fortress area. There is a great view to the south of the city right when you get off ' \
-                'the cable car. ' \
-                'There is also a restaurant / cafe right there as well with really nice views. ' \
-                'Climb the rest of the ' \
-                'way up and you can also get the view the opposite direction (north), where you can ' \
-                'actually see the ' \
-                'mountains of Switzerland not too far away! Circolino is a great restaurant -- you can ' \
-                'get a 3 course ' \
-                'meal with wine for just 15 euros (as of 2023). Be sure to have some risotto, ' \
+        return ('DO NOT immediately overlook Bergamo in favor of Milan. A lot of budget airlines that '
+                'fly to "Milan" '
+                'actually fly to the nearby city of Bergamo. It is a really cute city and they invented '
+                'Stracciatella gelato. Take the little cable car up to the high part of the city and walk '
+                'around the '
+                'fortress area. There is a great view to the south of the city right when you get off '
+                'the cable car. '
+                'There is also a restaurant / cafe right there as well with really nice views. '
+                'Climb the rest of the '
+                'way up and you can also get the view the opposite direction (north), where you can '
+                'actually see the '
+                'mountains of Switzerland not too far away! Circolino is a great restaurant -- you can '
+                'get a 3 course '
+                'meal with wine for just 15 euros (as of 2023). Be sure to have some risotto, '
                 'more traditional than pasta in the north of Italy.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -2339,7 +2365,7 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/italy/milan.JPG"},
+                        # {"src": "assets/italy/milan.JPG"},
                         {"src": "assets/italy/milan7.JPG"},
                         {"src": "assets/italy/milan3.JPG"},
                         {"src": "assets/italy/milan4.JPG"},
@@ -2364,7 +2390,6 @@ def set_display_children(value):
                 dbc.Carousel(
                     items=[
                         {"src": "assets/italy/pf1.JPG"},
-                        {"src": "assets/italy/pf.JPG"},
                         {"src": "assets/italy/pf2.JPG"},
                     ],
                     interval=2000,
@@ -2507,17 +2532,18 @@ def set_display_children(value):
     if value == 'Mexico City':
         lat_lon_str = weather.get_lat_lon(coordinates.mexico_city_geojson)
         return ("What a city. Weather is temperate year round. So much good cheap food. The tamales with mole "
-                "just might change your life. Surprisingly there really don't seem to be too many tourists."
+                "just might change your life. Surprisingly there really don't seem to be too many tourists. "
                 "Obviously also get lots of tacos, but also try tortas, conchas, elote, and some fresh fruits "
                 "like mango and chirimoya. "
-                "Take a little trip on one of the little boats and get ready to see the world's largest floating "
+                "Make sure to go to the Xochimilco Floating Gardens! Take a little trip on one of the little boats "
+                "and get ready to see the world's largest floating "
                 "market. Having a mariachi band step onto your boat and play a few songs while drinking beers, "
-                "eating elote, and floating down the river is just truly a beautiful life experience. "
-                "Be sure to have a good amount of cash for this. "
+                "eating elote, and cruising down the river while the sun is shining down "
+                "is just truly a beautiful life experience. Note -- be sure to have a good amount of cash for this. "
                 "Also see the Frida Kahlo house and check out the Coyoacán market. "
                 "It is 100% authentic and you can try "
                 "ants, crickets, and even scorpions if you are feeling ambitious. It definitely helps to "
-                "speak some Spanish, as there are not a lot of tourists compared to beach or resort towns in Mexico."
+                "speak some Spanish, as there are not a lot of tourists compared to beach or resort towns in Mexico. "
                 'Mexico City is also home to the legendary Azteca football stadium, where the Mexico national '
                 'team plays as well as Club América. Seeing a game here is absolutely on my bucket list. '
                 'Lastly, Ubers are also really cheap which makes it easy to get around, as it is quite a big city.',
@@ -2543,15 +2569,16 @@ def set_display_children(value):
     # Montenegro
     if value == 'Kotor':
         lat_lon_str = weather.get_lat_lon(coordinates.kotor_geojson)
-        return ("Just as cool as Dubrovnik but not as sexy. It's smaller and way more of an authentic feel. "
-                "Not many tourists here.",
+        return ("Just as cool as Dubrovnik but not as sexy. I absolutely loved it. It's smaller and way more of "
+                "an authentic feel. Not many tourists here. I had some incredible seafood at ____. "
+                "After we ordered, the woman working there walked down "
+                "the dock, pulled a trap / cage out of the water, and the food was on our plate some 15 minutes later!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/montenegro/kotor1.JPG"},
                         {"src": "assets/montenegro/kotor2.JPG"},
-                        # {"src": "assets/montenegro/kotor3.JPG"},
                         {"src": "assets/montenegro/kotor4.JPG"},
                         {"src": "assets/montenegro/kotor5.JPG"},
                         {"src": "assets/montenegro/kotor6.JPG"},
