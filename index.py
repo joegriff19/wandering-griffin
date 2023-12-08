@@ -260,7 +260,7 @@ def set_cities_options(selected_country):
 def set_display_children(value):
     # sleep time for spinner to spin
     if value is not None:
-        time.sleep(1.5)
+        time.sleep(2)
     # Andorra
     if value == 'Pal Arinsal':
         lat_lon_str = weather.get_lat_lon(coordinates.pal_geojson)
@@ -1447,8 +1447,6 @@ def set_display_children(value):
                         {"src": "assets/france/strasbourg3.JPG"},
                         {"src": "assets/france/strasbourg4.JPG"},
                         {"src": "assets/france/strasbourg5.JPG"},
-                        {"src": "assets/france/strasbourg6.JPG"},
-
                     ],
                     interval=2000,
                     ride="carousel",
@@ -1654,6 +1652,7 @@ def set_display_children(value):
                         {"src": "assets/germany/dresden3.JPG"},
                         {"src": "assets/germany/dresden4.JPG"},
                         {"src": "assets/germany/dresden6.JPG"},
+                        {"src": "assets/germany/dresden7.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2596,6 +2595,8 @@ def set_display_children(value):
                         {"src": "assets/morocco/tangier4.JPG"},
                         {"src": "assets/morocco/tangier5.JPG"},
                         {"src": "assets/morocco/tangier6.JPG"},
+                        {"src": "assets/morocco/tangier7.JPG"},
+                        {"src": "assets/morocco/tangier8.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",

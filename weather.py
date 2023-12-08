@@ -39,7 +39,7 @@ def update_weather(location):
     # weather_icons = weather_icons.strip("[]")
     # print(weather_icons)
 
-    weather_str = 'Current weather: ', weather_descriptions, ', '
+    weather_str = 'Current weather: \n', weather_descriptions, ', '
     weather_str1 = temp, '°F ('
     weather_str2 = c_temp, '°C)'
     final_weather_str = weather_str + weather_str1 + weather_str2
