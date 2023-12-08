@@ -1441,13 +1441,13 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/germany/strasbourg.JPG"},
-                        {"src": "assets/germany/strasbourg1.JPG"},
-                        {"src": "assets/germany/strasbourg2.JPG"},
-                        {"src": "assets/germany/strasbourg3.JPG"},
-                        {"src": "assets/germany/strasbourg4.JPG"},
-                        {"src": "assets/germany/strasbourg5.JPG"},
-                        {"src": "assets/germany/strasbourg6.JPG"},
+                        {"src": "assets/france/strasbourg.JPG"},
+                        {"src": "assets/france/strasbourg1.JPG"},
+                        {"src": "assets/france/strasbourg2.JPG"},
+                        {"src": "assets/france/strasbourg3.JPG"},
+                        {"src": "assets/france/strasbourg4.JPG"},
+                        {"src": "assets/france/strasbourg5.JPG"},
+                        {"src": "assets/france/strasbourg6.JPG"},
 
                     ],
                     interval=2000,
