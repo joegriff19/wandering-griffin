@@ -2135,6 +2135,7 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/ireland/moher4.JPG"},
                         {"src": "assets/ireland/moher.JPG"},
                         {"src": "assets/ireland/moher1.JPG"},
                         {"src": "assets/ireland/moher2.JPG"},
@@ -2192,24 +2193,26 @@ def set_display_children(value):
                 "statue) in the Temple Bar area, but be aware this is the most touristy area and prices are a bit "
                 "high. Definitely walk through though to see the atmosphere and all the Irish-themed decorations "
                 "and details! Some other good spots include Arthur's (down the street from "
-                "St. James's Gate) and the Brazen Head (arguably the oldest pub in the world, almost 1,000 years!)"
+                "St. James's Gate) and the Brazen Head (arguably the oldest pub in the world, almost 1,000 years!). "
                 "Sláinte!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/ireland/dublin8.JPG"},
+                        {"src": "assets/ireland/dublin11.JPG"},
+                        {"src": "assets/ireland/dublin13.JPG"},
+                        {"src": "assets/ireland/dublin2.JPG"},
+                        {"src": "assets/ireland/dublin10.JPG"},
                         {"src": "assets/ireland/dublin.JPG"},
                         {"src": "assets/ireland/dublin1.JPG"},
-                        {"src": "assets/ireland/dublin2.JPG"},
                         {"src": "assets/ireland/dublin3.JPG"},
                         {"src": "assets/ireland/dublin4.JPG"},
-                        {"src": "assets/ireland/dublin5.JPG"},
-                        {"src": "assets/ireland/dublin6.JPG"},
-                        {"src": "assets/ireland/dublin7.JPG"},
-                        {"src": "assets/ireland/dublin8.JPG"},
                         {"src": "assets/ireland/dublin9.JPG"},
-                        {"src": "assets/ireland/dublin10.JPG"},
-                        {"src": "assets/ireland/dublin11.JPG"},
+                        {"src": "assets/ireland/dublin6.JPG"},
+                        {"src": "assets/ireland/dublin5.JPG"},
+                        {"src": "assets/ireland/dublin12.JPG"},
+                        {"src": "assets/ireland/dublin7.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
