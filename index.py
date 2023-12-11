@@ -1178,7 +1178,10 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/croatia/rov4.JPG"},
+                        {"src": "assets/croatia/rov.JPG"},
+                        {"src": "assets/croatia/rov1.JPG"},
+                        {"src": "assets/croatia/rov2.JPG"},
+                        {"src": "assets/croatia/rov3.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -1896,7 +1899,6 @@ def set_display_children(value):
                         {"src": "assets/germany/munich10.JPG"},
                         {"src": "assets/germany/munich.JPG"},
                         {"src": "assets/germany/munich1.JPG"},
-                        {"src": "assets/germany/munich2.JPG"},
                         {"src": "assets/germany/munich3.JPG"},
                         {"src": "assets/germany/munich4.JPG"},
                         {"src": "assets/germany/munich5.JPG"},
@@ -1904,6 +1906,12 @@ def set_display_children(value):
                         {"src": "assets/germany/munich7.JPG"},
                         {"src": "assets/germany/munich8.JPG"},
                         {"src": "assets/germany/munich9.JPG"},
+                        {"src": "assets/germany/munich11.JPG"},
+                        {"src": "assets/germany/munich12.JPG"},
+                        {"src": "assets/germany/munich13.JPG"},
+                        {"src": "assets/germany/munich14.JPG"},
+                        {"src": "assets/germany/munich15.JPG"},
+                        {"src": "assets/germany/munich2.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -1984,6 +1992,20 @@ def set_display_children(value):
                 'It is an easy day trip from Berlin.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/germany/oran.JPG"},
+                        {"src": "assets/germany/oran4.JPG"},
+                        {"src": "assets/germany/oran1.JPG"},
+                        {"src": "assets/germany/oran2.JPG"},
+                        {"src": "assets/germany/oran3.JPG"},
+                        {"src": "assets/germany/oran5.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ),
+                html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.oran_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -1994,6 +2016,18 @@ def set_display_children(value):
                 'castles and parks / gardens! Easy day trip (or fun bike trip) from Berlin!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/germany/pots.JPG"},
+                        {"src": "assets/germany/pots1.JPG"},
+                        {"src": "assets/germany/pots2.JPG"},
+                        {"src": "assets/germany/pots3.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ),
+                html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.pots_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -2014,6 +2048,22 @@ def set_display_children(value):
                 "island. We didn’t end up making it here but this would certainly be a lovely place to stay.",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/germany/rugen.JPG"},
+                        {"src": "assets/germany/rugen1.JPG"},
+                        {"src": "assets/germany/rugen2.JPG"},
+                        {"src": "assets/germany/rugen3.JPG"},
+                        {"src": "assets/germany/rugen4.JPG"},
+                        {"src": "assets/germany/rugen5.JPG"},
+                        {"src": "assets/germany/rugen6.JPG"},
+                        {"src": "assets/germany/rugen7.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ),
+                html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.rugen_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -2027,6 +2077,22 @@ def set_display_children(value):
                 'from the main train station in Stralsund to the different parts of the island of Rügen.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/germany/stral5.JPG"},
+                        {"src": "assets/germany/stral6.JPG"},
+                        {"src": "assets/germany/stral1.JPG"},
+                        {"src": "assets/germany/stral2.JPG"},
+                        {"src": "assets/germany/stral3.JPG"},
+                        {"src": "assets/germany/stral4.JPG"},
+                        {"src": "assets/germany/stral.JPG"},
+
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ),
+                html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.stral_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -3168,9 +3234,16 @@ def set_display_children(value):
                         {"src": "assets/spain/mad2.JPG"},
                         {"src": "assets/spain/mad1.JPG"},
                         {"src": "assets/spain/mad.JPG"},
+                        {"src": "assets/spain/mad3.JPG"},
                         {"src": "assets/spain/mad5.JPG"},
                         {"src": "assets/spain/mad4.JPG"},
                         {"src": "assets/spain/mad6.JPG"},
+                        {"src": "assets/spain/mad7.JPG"},
+                        {"src": "assets/spain/mad8.JPG"},
+                        {"src": "assets/spain/mad9.JPG"},
+                        {"src": "assets/spain/mad10.JPG"},
+                        {"src": "assets/spain/mad11.JPG"},
+                        {"src": "assets/spain/mad12.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",

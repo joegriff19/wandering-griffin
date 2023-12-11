@@ -100,13 +100,6 @@ def get_weather_image(code):
 
     return weather_image_name
 
-# df_region_level = pd.DataFrame(region_level_mapping, columns=['Entity', 'Region_Level'])
-#
-# for i in range(len(df_region_level)):
-#     if self.analysis_parameters.entity == df_region_level.Entity[i]:
-#         dwh_region_level = df_region_level.Region_Level[i]
-#
-# return dwh_region_level
 
 def get_lat_lon(gj_file):
     coordinates_str = str(gj_file['features'][0]['geometry']['coordinates'])
