@@ -7,7 +7,6 @@ import os
 import dash_extensions as de
 from app import server
 from flask import send_from_directory
-
 options = dict(loop=True, autoplay=True, rendererSettings=dict(preserveAspectRatio='xMidYMid slice'))
 
 
