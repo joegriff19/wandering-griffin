@@ -1321,17 +1321,48 @@ def set_display_children(value):
         return ('more info to come!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
-                html.Div(
-                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.quito_geojson)],
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/ecuador/quito.JPG"},
+                        {"src": "assets/ecuador/quito2.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.quito_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Galapagos Islands':
         lat_lon_str = weather.get_lat_lon(coordinates.galapagos_geojson)
         return ("Maybe the coolest place I've ever been. Week-long cruise with daily snorkeling. We saw penguins, "
                 "sea lions, sting rays, sharks, and more sea turtles than you could ever imagine.",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
-                html.Div(
-                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.galapagos_geojson)],
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/ecuador/galapagos.JPG"},
+                        {"src": "assets/ecuador/galapagos1.JPG"},
+                        {"src": "assets/ecuador/galapagos2.JPG"},
+                        {"src": "assets/ecuador/galapagos3.JPG"},
+                        {"src": "assets/ecuador/galapagos4.JPG"},
+                        {"src": "assets/ecuador/galapagos5.JPG"},
+                        {"src": "assets/ecuador/galapagos6.JPG"},
+                        {"src": "assets/ecuador/galapagos7.JPG"},
+                        {"src": "assets/ecuador/galapagos8.JPG"},
+                        {"src": "assets/ecuador/galapagos9.JPG"},
+                        {"src": "assets/ecuador/galapagos10.JPG"},
+                        {"src": "assets/ecuador/galapagos11.JPG"},
+                        {"src": "assets/ecuador/galapagos12.JPG"},
+                        {"src": "assets/ecuador/galapagos13.JPG"},
+                        {"src": "assets/ecuador/galapagos14.JPG"},
+                        {"src": "assets/ecuador/galapagos15.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.galapagos_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # England
@@ -2842,8 +2873,22 @@ def set_display_children(value):
                     items=[
                         {"src": "assets/peru/iquitos.PNG"},
                         {"src": "assets/peru/iquitos1.PNG"},
-                        {"src": "assets/peru/iquitos2.PNG"},  # need to adjust photo size ratio
-                        {"src": "assets/peru/iquitos3.PNG"},  # need to adjust photo size ratio
+                        {"src": "assets/peru/iquitos2.PNG"},
+                        {"src": "assets/peru/iquitos3.PNG"},
+                        {"src": "assets/peru/iquitos18.JPG"},
+                        {"src": "assets/peru/iquitos5.JPG"},
+                        {"src": "assets/peru/iquitos7.JPG"},
+                        {"src": "assets/peru/iquitos8.JPG"},
+                        {"src": "assets/peru/iquitos9.JPG"},
+                        {"src": "assets/peru/iquitos10.JPG"},
+                        {"src": "assets/peru/iquitos11.JPG"},
+                        {"src": "assets/peru/iquitos12.JPG"},
+                        {"src": "assets/peru/iquitos13.JPG"},
+                        {"src": "assets/peru/iquitos14.JPG"},
+                        {"src": "assets/peru/iquitos15.JPG"},
+                        {"src": "assets/peru/iquitos16.JPG"},
+                        {"src": "assets/peru/iquitos17.JPG"},
+                        {"src": "assets/peru/iquitos19.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
