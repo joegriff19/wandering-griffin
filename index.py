@@ -1565,10 +1565,8 @@ def set_display_children(value):
                 dbc.Carousel(
                     items=[
                         {"src": "assets/germany/berlin10.JPG"},
-                        {"src": "assets/germany/berlin.JPG"},
-                        {"src": "assets/germany/berlin2.JPG"},
+                        {"src": "assets/germany/berlin14.JPG"},
                         {"src": "assets/germany/berlin3.JPG"},
-                        {"src": "assets/germany/berlin1.JPG"},
                         {"src": "assets/germany/berlin5.JPG"},
                         {"src": "assets/germany/berlin6.JPG"},
                         {"src": "assets/germany/berlin7.JPG"},
@@ -1578,6 +1576,9 @@ def set_display_children(value):
                         {"src": "assets/germany/berlin11.JPG"},
                         {"src": "assets/germany/berlin12.JPG"},
                         {"src": "assets/germany/berlin13.JPG"},
+                        {"src": "assets/germany/berlin.JPG"},
+                        {"src": "assets/germany/berlin2.JPG"},
+                        {"src": "assets/germany/berlin1.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2179,8 +2180,8 @@ def set_display_children(value):
     # Iceland
     if value == 'Reykjavik':
         lat_lon_str = weather.get_lat_lon(coordinates.reykjavik_geojson)
-        return ("Cool city but don't stay too long -- get out and explore the nature in the 'Land of Fire and Ice.'"
-                "There are some unique foods here that are really good and you should try."
+        return ("Cool city but don't stay too long -- get out and explore the nature in the 'Land of Fire and Ice.' "
+                "There are some unique foods here that are really good and you should try. "
                 "Go to Íslenski Barinn restaurant. They had an amazing whale fin steak and a crazy "
                 "good reindeer burger. We didn't see puffin on a menu but it is also eaten here."
                 "See the rainbow road. Check out the Viking church and go to the top of it. Bæjarins Beztu Pylsur is "
@@ -2188,6 +2189,16 @@ def set_display_children(value):
                 "famous hot dog vendor! They're made of lamb and definitely worth a try!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/iceland/rey1.JPG"},
+                        {"src": "assets/iceland/rey.JPG"},
+                        {"src": "assets/iceland/rey2.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.reykjavik_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -2209,16 +2220,30 @@ def set_display_children(value):
                             height="200px",
                         )
                     ]
-                ),
-                html.Br(), dbc.Carousel(
-            items=[
-                {"src": "assets/iceland/hotspring.JPG"},
-                {"src": "assets/iceland/hottub.JPG"},
-            ],
-            interval=2000,
-            ride="carousel",
-            className="carousel-fade"
-        ), html.Br(),
+                ), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/iceland/south15.JPG"},
+                        {"src": "assets/iceland/south14.JPG"},
+                        {"src": "assets/iceland/south.JPG"},
+                        {"src": "assets/iceland/south1.JPG"},
+                        {"src": "assets/iceland/south3.JPG"},
+                        {"src": "assets/iceland/south4.JPG"},
+                        {"src": "assets/iceland/south5.JPG"},
+                        {"src": "assets/iceland/south6.JPG"},
+                        {"src": "assets/iceland/south7.JPG"},
+                        {"src": "assets/iceland/south8.JPG"},
+                        {"src": "assets/iceland/south9.JPG"},
+                        {"src": "assets/iceland/south10.JPG"},
+                        {"src": "assets/iceland/south11.JPG"},
+                        {"src": "assets/iceland/south12.JPG"},
+                        {"src": "assets/iceland/south13.JPG"},
+                        {"src": "assets/iceland/south2.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.vik_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -2322,13 +2347,19 @@ def set_display_children(value):
         lat_lon_str = weather.get_lat_lon(coordinates.tralee_geojson)
         return ('The hometown of my Grandpa Séan! Tralee is the largest city in County Kerry, but it still pretty '
                 'small with just ___ people. The mountains of Kerry in the backdrop of the city are quite impressive! '
-                "I didn't realize they were so big! See the main square called An Chearnóg and the main street called"
+                "I didn't realize they were so big! See the main square called An Chearnóg and the main street called "
                 "The Mall. Enjoy the local shops, bakeries, and pubs!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/ireland/tralee.JPG"},
+                        {"src": "assets/ireland/tralee6.JPG"},
+                        {"src": "assets/ireland/tralee1.JPG"},
+                        {"src": "assets/ireland/tralee2.JPG"},
+                        {"src": "assets/ireland/tralee3.JPG"},
+                        {"src": "assets/ireland/tralee4.JPG"},
+                        {"src": "assets/ireland/tralee5.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",

@@ -26,19 +26,12 @@ def update_weather(location):
         weather_code = weather_df.current['weather_code']
         is_day = weather_df.current['is_day']
 
-    # print(weather_code)
-    # print(is_day)
-
     c_temp = int((temp-32) / 1.8)
 
     weather_descriptions = str(weather_descriptions)
     weather_descriptions = weather_descriptions.strip("[]")
     weather_descriptions = weather_descriptions.strip("'")
     weather_descriptions = weather_descriptions.lower()
-
-    # weather_icons = str(weather_icons)
-    # weather_icons = weather_icons.strip("[]")
-    # print(weather_icons)
 
     weather_str = 'Current weather: \n', weather_descriptions, ', '
     weather_str1 = temp, '°F ('
