@@ -2902,11 +2902,11 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/peru/iquitos.PNG"},
-                        {"src": "assets/peru/iquitos1.PNG"},
-                        {"src": "assets/peru/iquitos2.PNG"},
-                        {"src": "assets/peru/iquitos3.PNG"},
+                        {"src": "assets/peru/iquitos.JPG"},
+                        {"src": "assets/peru/iquitos1.JPG"},
                         {"src": "assets/peru/iquitos18.JPG"},
+                        {"src": "assets/peru/iquitos2.JPG"},
+                        {"src": "assets/peru/iquitos4.JPG"},
                         {"src": "assets/peru/iquitos5.JPG"},
                         {"src": "assets/peru/iquitos7.JPG"},
                         {"src": "assets/peru/iquitos8.JPG"},
