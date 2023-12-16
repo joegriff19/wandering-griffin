@@ -568,17 +568,17 @@ def set_display_children(value):
                 'something out of a Harry Potter movie! The canal lined with classic Belgian architecture houses, '
                 'the bridge, the castle (Gravensteen), and the grand churches all make for really stunning and '
                 "impressive views. Be sure to walk across St. Michael's Bridge and walk along the canal (Korenlei) "
-                "to get the best views."
-                'On top of all this -- the beer here is amazing! There is a very '
+                "to get the best views.On top of all this -- the beer here is amazing! "
                 'One of the best beers in the world (Delirium Tremens) is made '
-                'just outside of Ghent. If you have a few hours, definitely make the little trip to visit -- the '
+                'just outside of Ghent. If you have a few hours, definitely make the little trip to visit. The '
                 'brewery that makes Delirium is called Huyghe. It is still family-owned and I even got to meet and '
                 'have a beer with the CEO!',
                 html.Br(), html.Br(),
                 'Back in the city of Ghent, be sure to also visit '
-                "the 'Friday Market Square' -- a nice plaza surrounded by beautiful buildings in the classic Belgian"
-                "/ Dutch style, and also where one of the coolest breweries / beer bars can be found! They have a "
-                "fun / funny ny tradition where if you order their house blonde beer (which is insanely good) "
+                "the 'Friday Market Square.' It's a really nice plaza surrounded by beautiful buildings in the "
+                "classic Belgian / Dutch style, and also where one of the coolest breweries / beer bars -- "
+                "called Dulle Griet -- can be found! They have a "
+                "fun / funny tradition where if you order their house blonde beer (which is ridiculously good) "
                 "in the 1.5 liter pour, you have to give the barman a shoe as a deposit for the science experiment-"
                 "looking beer glass! Not only that, but the shoes then go in a basket which is raised to the "
                 "ceiling and it rings a bell. Enjoy the picture below!",
