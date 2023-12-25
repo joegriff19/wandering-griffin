@@ -1579,6 +1579,7 @@ def set_display_children(value):
                         {"src": "assets/germany/berlin.JPG"},
                         {"src": "assets/germany/berlin2.JPG"},
                         {"src": "assets/germany/berlin1.JPG"},
+                        {"src": "assets/germany/berlin15.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -3219,6 +3220,18 @@ def set_display_children(value):
         return ("Capital of the Basque country! I didn't spend too much time here but definitely worth a stop. ",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/bilbao.JPG"},
+                        {"src": "assets/spain/bilbao1.JPG"},
+                        {"src": "assets/spain/bilbao2.JPG"},
+                        {"src": "assets/spain/bilbao3.JPG"},
+                        {"src": "assets/spain/bilbao4.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.bilbao_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -3245,9 +3258,21 @@ def set_display_children(value):
     if value == 'Girona':
         lat_lon_str = weather.get_lat_lon(coordinates.girona_geojson)
         return ("Capital of the northern province of Catalonia! It's a cool little city if you want to visit another " 
-               "Catalan city.",
+                "Catalan city.",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/girona.JPG"},
+                        # {"src": "assets/spain/girona1.JPG"},
+                        {"src": "assets/spain/girona2.JPG"},
+                        {"src": "assets/spain/girona3.JPG"},
+                        {"src": "assets/spain/girona4.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.girona_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -3271,13 +3296,22 @@ def set_display_children(value):
 
     if value == 'Irún':
         lat_lon_str = weather.get_lat_lon(coordinates.irun_geojson)
-        return ('This is the main city on the Spanish side of the Spain / France border near the coast. '
+        return ('This is the main coastal city on the Spanish side of the Spain / France border. '
                 'Definitely off the beaten path but really nice little city. The view from on top of the mountain '
                 'at Jaizkibeleko V. Dorrea where you can see the Bidasoa river that divides Spain and France is '
                 'absolutely beautiful. You can also walk along this river in the city as well, there are plenty '
                 'of nice bars, restaurants, and shops here!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/irun.JPG"},
+                        {"src": "assets/spain/irun1.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.irun_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -3388,6 +3422,18 @@ def set_display_children(value):
                 'to get an amazing view of the bay and city from above.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/sanseb.JPG"},
+                        {"src": "assets/spain/sanseb1.JPG"},
+                        {"src": "assets/spain/sanseb2.JPG"},
+                        {"src": "assets/spain/sanseb3.JPG"},
+                        {"src": "assets/spain/sanseb4.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.san_sebastian_geojson)],
@@ -3633,7 +3679,7 @@ def set_display_children(value):
     # Turkey
     if value == 'Istanbul':
         lat_lon_str = weather.get_lat_lon(coordinates.istanbul_geojson)
-        return ('Amazing trip with Zach! more coming soon!',
+        return ('Amazing trip with Zach! more info coming soon!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
