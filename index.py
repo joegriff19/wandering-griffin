@@ -106,6 +106,8 @@ index_layout = html.Div(
                             'displayModeBar': False,
                             'scrollZoom': False,
                             'doubleClick': False,
+                            # 'autosizable': True,
+                            # 'fillFrame': False,
                         },
                         style={
                             'height': '40vh',
@@ -3329,10 +3331,11 @@ def set_display_children(value):
                 "called Rayo Vallecano, Real Madrid, and Atlético de Madrid.",
                 html.Br(), html.Br(),
                 'Some great restaurants/food spots include Cuevas el Secreto, El MiniBar (go for dinner), San Ginés '
-                '(super famous hot chocolate and churros -- worth the wait!), Bar Postas or Casa Rúa famous for '
-                'bocadillos de calamares / calamari sandwiches, Museo del Jamón (a bunch of locations, '
+                '(super famous hot chocolate and churros -- worth the wait!), Bar Postas and Casa Rúa (famous for '
+                'bocadillos de calamares / calamari sandwiches), Museo del Jamón (a bunch of locations, '
                 'great ham sandwiches), Bocadillos Oink (get a sandwich with Jamón Serrano -- soooo good), '
-                'and the Basque restaurant Maitetxe. Also be sure to visit the Círculo de Bellas Artes Terrace. '
+                'and the Basque restaurant Maitetxe. There are also a number of locations of Tiki Taco with pretty '
+                'great tacos starting at 1 euro! Also be sure to visit the Círculo de Bellas Artes Terrace. '
                 'The view is amazing, it costs a few euros to go up but it is well worth it!',
                 html.Br(), html.Br(),
                 'Although there are tons of things to do in Madrid, definitely consider a day trip to either Segovia '
@@ -3354,6 +3357,7 @@ def set_display_children(value):
                         {"src": "assets/spain/mad10.JPG"},
                         {"src": "assets/spain/mad11.JPG"},
                         {"src": "assets/spain/mad12.JPG"},
+                        {"src": "assets/spain/mad13.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",

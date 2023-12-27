@@ -52,6 +52,7 @@ fig.update_layout(
         font_size=15,
         # font_family="Rockwell"
     ),
+    dragmode=False,
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)',
     # width=500, height=500,
