@@ -3336,7 +3336,9 @@ def set_display_children(value):
                 'great ham sandwiches), Bocadillos Oink (get a sandwich with Jamón Serrano -- soooo good), '
                 'and the Basque restaurant Maitetxe. There are also a number of locations of Tiki Taco with pretty '
                 'great tacos starting at 1 euro! Also be sure to visit the Círculo de Bellas Artes Terrace. '
-                'The view is amazing, it costs a few euros to go up but it is well worth it!',
+                'The view is amazing, it costs a few euros to go up but it is well worth it! Lastly, a visit to Botín, '
+                'the oldest restaurant in the world (1725), is absolutely worth a visit! It is often completely '
+                'booked though so make a reservation ahead of time. ',
                 html.Br(), html.Br(),
                 'Although there are tons of things to do in Madrid, definitely consider a day trip to either Segovia '
                 'and / or Toledo. Both are cities with fascinating history, dating back much further than Madrid.',
