@@ -3295,7 +3295,7 @@ def set_display_children(value):
                 'fantastic spot for sunset!',
                 html.Br(), html.Br(),
                 'Granada has a strong tapas tradition -- whenever you order drinks you are almost always '
-                'served a complementary tapa with the drinks. The food in general is also really great.',
+                'served a complementary tapa with the drinks. The food in general is also really great. ',
                 'Some good bars / restaurants include Taberna La Tana and Cervecería Arrabal. There are a lot of nice '
                 'local spots near here (Plaza de los Campos). ',
                 "If you haven't seen one in Andalucía (where flamenco was born), definitely see a flamenco show! "
@@ -3315,6 +3315,7 @@ def set_display_children(value):
                         {"src": "assets/spain/granada8.JPG"},
                         {"src": "assets/spain/granada9.JPG"},
                         {"src": "assets/spain/granada10.JPG"},
+                        {"src": "assets/spain/granada11.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
