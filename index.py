@@ -235,17 +235,17 @@ def render_page_content(pathname):
     if pathname == '/':
         return index_layout
     # If the user tries to reach a different page, return a 404 message
-    return dbc.Jumbotron(
-        [
-            html.H1("404: Not found", className="text-danger"),
-            html.Hr(),
-            html.P(f"The pathname {pathname} was not recognized..."),
-        ]
-    )
+    else:
+        return dbc.Container(
+            [
+                html.H1("404: Page not found", className="text-danger"),
+                html.P(
+                    "Please return to the home page",
+                    className="lead",
+                )])
 
 
 @app.callback(
-    # Output('cities-dd', 'children'),
     Output('cities-dd', 'options'),
     Input('countries-dd', 'value'),
     prevent_initial_call=True
@@ -3282,16 +3282,44 @@ def set_display_children(value):
     if value == 'Granada':
         lat_lon_str = weather.get_lat_lon(coordinates.granada_geojson)
         return ('Absolutely beautiful city. The Sierra Nevada mountains surround the city and the city itself is '
-                'quite mountainous too. THe Alhambra castle complex is incredible. The south of Spain was controlled '
+                'quite mountainous too. The Alhambra castle complex is incredible. The south of Spain was controlled '
                 'by the Moors for a long time, and each new leader would add a new addition to the Alhambra. However, '
-                "when the 'Reconquista' culminated in 1492 and Spain once again took control of Granada, "
-                "King Ferdinand and Queen Isabella chose not have the Muslim palace destroyed, but rather "
+                "when the 'reconquista' culminated in 1492 and Spain once again took control of Granada, "
+                "King Ferdinand and Queen Isabella chose not to have the Muslim palace destroyed, but rather "
                 'added their own addition and touches. The resulting structures, that still stand today, are '
-                'incredible. The gardens there are also so beautiful. '
-                'Granada has a strong tapas tradition -- meaning that whenever you order drinks you are almost always'
-                'served a tapa to go with the drinks. The food in general is also great.',
+                'incredible. The gardens there are also so beautiful. Thus, be sure to to visit the Alhambra, '
+                'the Palacios Nazaríes, the Jardines del Generalife, and the Alcazaba (awesome views of the city '
+                'below from here). These are all amazing and are truly all worth a visit. I would definitely '
+                'recommend a guided tour of some sort as there is so much fascinating history. For beautiful views of '
+                'the Alhambra from the city, be sure to stop by the Plaza / Mirador de San Nicolás. This is also a '
+                'fantastic spot for sunset!',
+                html.Br(), html.Br(),
+                'Granada has a strong tapas tradition -- whenever you order drinks you are almost always '
+                'served a complementary tapa with the drinks. The food in general is also really great.',
+                'Some good bars / restaurants include Taberna La Tana and Cervecería Arrabal. There are a lot of nice '
+                'local spots near here (Plaza de los Campos). ',
+                "If you haven't seen one in Andalucía (where flamenco was born), definitely see a flamenco show! "
+                "Venta el Gallo is a really great place to have dinner and see a show. Make a reservation beforehand. ",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/granada.JPG"},
+                        {"src": "assets/spain/granada1.JPG"},
+                        {"src": "assets/spain/granada2.JPG"},
+                        {"src": "assets/spain/granada3.JPG"},
+                        {"src": "assets/spain/granada4.JPG"},
+                        {"src": "assets/spain/granada5.JPG"},
+                        {"src": "assets/spain/granada6.JPG"},
+                        {"src": "assets/spain/granada7.JPG"},
+                        {"src": "assets/spain/granada8.JPG"},
+                        {"src": "assets/spain/granada9.JPG"},
+                        {"src": "assets/spain/granada10.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.granada_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
