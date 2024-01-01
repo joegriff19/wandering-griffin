@@ -239,10 +239,16 @@ def render_page_content(pathname):
         return dbc.Container(
             [
                 html.H1("404: Page not found", className="text-danger"),
-                html.P(
-                    "Please return to the home page",
-                    className="lead",
-                )])
+                html.P("Please return to the home page", className="lead"),
+                dbc.Button(children='Wandering Griffin Travel Home Page', id='home', href='/')
+            ],
+            style={
+                'textAlign': 'center',
+                'justify': 'center',
+                "padding": "0px",
+                "margin": "0px"
+            }
+        )
 
 
 @app.callback(
