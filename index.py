@@ -3287,7 +3287,7 @@ def set_display_children(value):
                 "when the 'reconquista' culminated in 1492 and Spain once again took control of Granada, "
                 "King Ferdinand and Queen Isabella chose not to have the Muslim palace destroyed, but rather "
                 'added their own addition and touches. The resulting structures, that still stand today, are '
-                'incredible. The gardens there are also so beautiful. Thus, be sure to to visit the Alhambra, '
+                'incredible. The gardens there are also so beautiful. Thus, be sure to visit the Alhambra, '
                 'the Palacios Nazaríes, the Jardines del Generalife, and the Alcazaba (awesome views of the city '
                 'below from here). These are all amazing and are truly all worth a visit. I would definitely '
                 'recommend a guided tour of some sort as there is so much fascinating history. For beautiful views of '
