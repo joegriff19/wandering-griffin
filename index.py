@@ -3159,7 +3159,7 @@ def set_display_children(value):
                 "vegetable paella is incredible. Also get the crema catalana (similar to a Crème Brûlée) for "
                 "dessert. My other favorite place to eat is at either Sol Soler or Niña. They are right next "
                 "to each other on the lovely Plaça del Sol and share the same kitchen. This plaza is an awesome "
-                "neighborhood spot and it fills up every evening with people socializing. There are"
+                "neighborhood spot and it fills up every evening with people socializing. There are "
                 "also empanada places nearby if you want to grab an empanada and enjoy the atmosphere! "
                 "Some other great dinner "
                 "spots include Taverna la Llesca, La Pubilla, Arume Restaurante (duck paella is amazing), and "
@@ -3168,8 +3168,8 @@ def set_display_children(value):
                 "place that is really cool and more upscale is El Nacional.",
                 html.Br(), html.Br(),
                 "Barcelona has what was my absolute favorite bar in the world -- Gato Negro! It has changed a bit "
-                "unfortunately, but it is still a really cool spot with great cheap local beer on draft (Moritz)."
-                "There are lots of other really fun little bars in Gràcia as well."
+                "unfortunately, but it is still a really cool spot with great cheap local beer on draft (Moritz). "
+                "There are lots of other really fun little bars in Gràcia as well. "
                 "Barcelona also has a big party scene -- there are many clubs on the beach which are a bit touristy "
                 "but really cool. These include Opium, Pacha, and Shoko. Besides the beach clubs, there is Otto Zutz, "
                 "Razzmatazz (huge, known to be probably the best club', and Jamboree (dance club). There are also "
@@ -3179,7 +3179,7 @@ def set_display_children(value):
                 "is more of a beer hall), Dow Jones (drink prices change like stocks), and Espit Chupitos "
                 "(cool shot bar).",
                 html.Br(), html.Br(),
-                "Outside of Barcelona, there is even more to do! Up the coast from Barcelona is the beautiful 'Costa"
+                "Outside of Barcelona, there is even more to do! Up the coast from Barcelona is the beautiful 'Costa "
                 "Brava,' with a number of cute little towns, nice beaches, and really cool coves for swimming. "
                 "You can also take a train inland to go for a really cool hike and visit Montserrat, where there are "
                 "some really uniquely shaped mountains. Lastly, in winter you can even go skiing -- it is just "
@@ -3205,6 +3205,7 @@ def set_display_children(value):
                         {"src": "assets/spain/bcn13.JPG"},
                         {"src": "assets/spain/bcn14.JPG"},
                         {"src": "assets/spain/bcn15.JPG"},
+                        {"src": "assets/spain/bcn16.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
