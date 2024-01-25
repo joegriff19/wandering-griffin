@@ -3257,6 +3257,84 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.bunol_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
+    if value == 'Córdoba':
+        lat_lon_str = weather.get_lat_lon(coordinates.cordoba_geojson)
+        return ("More info coming soon!",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://youtu.be/RWcc6PvSgwg",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/cor.JPG"},
+                        {"src": "assets/spain/cor1.JPG"},
+                        {"src": "assets/spain/cor2.JPG"},
+                        {"src": "assets/spain/cor3.JPG"},
+                        {"src": "assets/spain/cor4.JPG"},
+                        {"src": "assets/spain/cor5.JPG"},
+                        {"src": "assets/spain/cor6.JPG"},
+                        {"src": "assets/spain/cor7.JPG"},
+                        {"src": "assets/spain/cor8.JPG"},
+                        {"src": "assets/spain/cor9.JPG"},
+                        {"src": "assets/spain/cor10.JPG"},
+                        {"src": "assets/spain/cor11.JPG"},
+                        {"src": "assets/spain/cor12.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.cordoba_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'El Escorial':
+        lat_lon_str = weather.get_lat_lon(coordinates.elescorial_geojson)
+        return ("More info coming soon!",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://youtu.be/lsj5ICooNB4",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/esco.JPG"},
+                        {"src": "assets/spain/esco1.JPG"},
+                        {"src": "assets/spain/esco2.JPG"},
+                        {"src": "assets/spain/esco3.JPG"},
+                        {"src": "assets/spain/esco4.JPG"},
+                        {"src": "assets/spain/esco5.JPG"},
+                        {"src": "assets/spain/esco6.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.elescorial_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Girona':
         lat_lon_str = weather.get_lat_lon(coordinates.girona_geojson)
         return ("Capital of the northern province of Catalonia! It's a cool little city if you want to visit another " 
@@ -3347,6 +3425,34 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.irun_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
+    if value == 'Jaén':
+        lat_lon_str = weather.get_lat_lon(coordinates.jaen_geojson)
+        return ("More info coming soon!",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/jaen.JPG"},
+                        {"src": "assets/spain/jaen1.JPG"},
+                        {"src": "assets/spain/jaen2.JPG"},
+                        {"src": "assets/spain/jaen3.JPG"},
+                        {"src": "assets/spain/jaen4.JPG"},
+                        {"src": "assets/spain/jaen5.JPG"},
+                        {"src": "assets/spain/jaen6.JPG"},
+                        {"src": "assets/spain/jaen7.JPG"},
+                        {"src": "assets/spain/jaen8.JPG"},
+                        {"src": "assets/spain/jaen9.JPG"},
+                        {"src": "assets/spain/jaen10.JPG"},
+                        {"src": "assets/spain/jaen11.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.jaen_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Madrid':
         lat_lon_str = weather.get_lat_lon(coordinates.madrid_geojson)
         return ('The Spanish capital! Definitely a different feel than Barcelona but both are amazing cities. '
@@ -3389,6 +3495,8 @@ def set_display_children(value):
                         {"src": "assets/spain/mad11.JPG"},
                         {"src": "assets/spain/mad12.JPG"},
                         {"src": "assets/spain/mad13.JPG"},
+                        {"src": "assets/spain/mad14.JPG"},
+                        {"src": "assets/spain/mad15.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
