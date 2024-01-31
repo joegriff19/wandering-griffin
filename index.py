@@ -1240,6 +1240,7 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/czechia/prg12.JPG"},
                         {"src": "assets/czechia/prg.JPG"},
                         {"src": "assets/czechia/prg1.JPG"},
                         {"src": "assets/czechia/prg2.JPG"},
