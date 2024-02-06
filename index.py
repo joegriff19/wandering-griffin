@@ -1375,7 +1375,7 @@ def set_display_children(value):
                 "(the best league in the world) are in London. The atmosphere at second league (called "
                 "The Championship) games is also really fun and a lot cheaper than Premier League games. QPR is a "
                 "second league team in London -- their games are so fun! It's a completely different feel than a  "
-                "top league game as the stadium is much smaller and there are very few tourists at the games."
+                "top league game as the stadium is much smaller and there are very few tourists at the games. "
                 "During the season or in summer, also consider doing a stadium tour of a Premier League team. My "
                 "biased opinion would be Arsenal's Emirates Stadium (GO GUNNERS !) ",
                 html.Br(), html.Br(),
