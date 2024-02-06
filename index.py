@@ -1869,6 +1869,8 @@ def set_display_children(value):
                         {"src": "assets/germany/leipzig.JPG"},
                         {"src": "assets/germany/leipzig2.JPG"},
                         {"src": "assets/germany/leipzig1.JPG"},
+                        {"src": "assets/germany/leipzig3.JPG"},
+                        {"src": "assets/germany/leipzig4.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2394,7 +2396,11 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/italy/berg1.JPG"},
                         {"src": "assets/italy/bergamo.JPG"},
+                        {"src": "assets/italy/berg2.JPG"},
+                        {"src": "assets/italy/berg3.JPG"},
+                        {"src": "assets/italy/berg4.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
