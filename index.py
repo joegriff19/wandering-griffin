@@ -3887,6 +3887,11 @@ def set_display_children(value):
                 dbc.Carousel(
                     items=[
                         {"src": "assets/usa-ma/boston.JPG"},
+                        {"src": "assets/usa-ma/boston1.JPG"},
+                        {"src": "assets/usa-ma/boston2.JPG"},
+                        {"src": "assets/usa-ma/boston3.JPG"},
+                        {"src": "assets/usa-ma/boston4.JPG"},
+                        {"src": "assets/usa-ma/boston5.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
