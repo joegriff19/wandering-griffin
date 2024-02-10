@@ -646,7 +646,12 @@ def set_display_children(value):
 
     if value == 'Cochabamba':
         lat_lon_str = weather.get_lat_lon(coordinates.cocha_geojson)
-        return ('El Cristo más grande! More to come!',
+        return ('I only spent a day in this beautiful, bustling city in Bolivia, but I absolutely loved it. '
+                'There is a massive Christ statue that overlooks the city — almost twice the size as the more '
+                'well-known Cristo in Brazil! Visiting the statue, you will realize just how massive it is, '
+                'and you will also get incredible views of the surrounding mountains and the city below. I heard '
+                'some lovely music from the very kind locals, and I ate a salteña that '
+                'I still dream about to this day. I hope to be back some day!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
@@ -1320,7 +1325,10 @@ def set_display_children(value):
     # Ecuador
     if value == 'Quito':
         lat_lon_str = weather.get_lat_lon(coordinates.quito_geojson)
-        return ('more info to come!',
+        return ('I didn’t spend much time in Quito — but the most memorable moments were definitely the outdoor '
+                'equator museum experience and taking the teleférico up to the ___. And how can I forget — '
+                'eating the local delicacy (in Ecuador and in Peru) of ‘cuy’ aka guinea pig. It was a long time ago '
+                'and I don’t really remember how it tasted, but I definitely ate all that was on my plate!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
