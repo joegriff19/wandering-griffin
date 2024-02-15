@@ -374,22 +374,74 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dornbirn_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
+    if value == 'Innsbruck':
+        lat_lon_str = weather.get_lat_lon(coordinates.innsbruck_geojson)
+        return ('Very cute city in the Austrian Alps -- the mountains surrounding the city are beautiful. Innsbruck '
+                'is very close to some world-class ski destinations, including St. Anton! See the St. Anton page for '
+                'more about St. Anton, just over an hour from Innsbruck by train. The train ride through the Alps is '
+                'stunning... as was the flight over the Alps into Innsbruck!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/austria/inn.JPG"},
+                        {"src": "assets/austria/inn1.JPG"},
+                        {"src": "assets/austria/inn2.JPG"},
+                        {"src": "assets/austria/inn3.JPG"},
+                        {"src": "assets/austria/inn4.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.innsbruck_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'St. Anton':
+        lat_lon_str = weather.get_lat_lon(coordinates.stanton_geojson)
+        return ('Amazing ski destination in the Austrian Alps! Not only is St. Anton known for world-class skiing, but '
+                'it is also known for its apres ski! There are some very cool spots to have a drink at the end of the '
+                'day, especially Krazy Kanguruh and Mooserwirt. During the day skiing, we really enjoyed stopping at '
+                'Arlberg Thaja for lunch. If you can fly to Innsbruck, St. Anton is an easy (and beautiful) train ride '
+                'from there, just over an hour. The train drops off right in the middle of the ski town.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/austria/stanton.JPG"},
+                        {"src": "assets/austria/stanton1.JPG"},
+                        {"src": "assets/austria/stanton2.JPG"},
+                        {"src": "assets/austria/stanton3.JPG"},
+                        {"src": "assets/austria/stanton4.JPG"},
+                        {"src": "assets/austria/stanton5.JPG"},
+                        {"src": "assets/austria/stanton6.JPG"},
+                        {"src": "assets/austria/stanton7.JPG"},
+                        {"src": "assets/austria/stanton8.JPG"},
+                        {"src": "assets/austria/stanton9.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.stanton_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Vienna':
         lat_lon_str = weather.get_lat_lon(coordinates.vienna_geojson)
         return ('A very grand city! The capital of Austria is very impressive. The Hofburg Palace and the main '
-                'cathedral on Stephansplatz are the big '
-                'highlights, but there is so much more to see! Even beyond the main sightseeing spots, '
-                'there are so many beautiful buildings that I feel could be the main tourist attraction '
-                'in many other cities. However, there are just so many of these beautiful buildings that many '
-                'don’t get the attention they probably deserve.',
+                'cathedral on Stephansplatz are the big highlights, but there is so much more to see! Even beyond '
+                'the main sightseeing spots, there are so many beautiful buildings that I feel could be the main '
+                'tourist attraction in many other cities. However, there are just so many of these beautiful '
+                'buildings that many don’t get the attention they probably deserve.',
                 html.Br(), html.Br(),
-                'The cafe scene is huge here. There are many '
-                'cafes all over the city — it is a very popular activity to stop at a cafe for coffee and a '
-                'piece of cake (or one of many other pastries / dishes). These cafes range from very casual to '
-                'quite grand with high ceilings and ornate decorations. The cafe scene ties in with the artsy side '
-                'of the city. There is a lot of history here with music and with theatre. Mozart lived here much '
-                'of his life and had a huge influence on the city. It is highly recommended to visit the opera house '
-                'to see a show if possible.',
+                'The cafe scene is huge here. There are many cafes all over the city — it is a very popular activity '
+                'to stop at a cafe for coffee and a piece of cake (or one of many other pastries / dishes). '
+                'These cafes range from very casual to quite grand with high ceilings and ornate decorations. '
+                'The cafe scene ties in with the artsy side of the city. There is a lot of history here with music '
+                'and with theatre. Mozart lived here much of his life and had a huge influence on the city. It is '
+                'highly recommended to visit the opera house to see a show there if you have the time.',
                 html.Br(), html.Br(),
                 'There is a lot of great food in Vienna. Be sure to try Wiener Schnitzel and Kaiserschmarrn (little '
                 'pancake bites served with an apple sauce). Other favorites include goulasch, sausage (great street '
@@ -3943,6 +3995,7 @@ def set_display_children(value):
                 dbc.Carousel(
                     items=[
                         {"src": "assets/usa-il/chicago.JPG"},
+                        {"src": "assets/usa-il/chicago1.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",

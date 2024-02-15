@@ -6,6 +6,8 @@ ba_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "co
 
 # austria coordinates
 dornbirn_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.7438, 47.4124]}}]}
+innsbruck_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.4041, 47.2692]}}]}
+stanton_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.2682, 47.1296]}}]}
 vienna_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [16.3738, 48.2082]}}]}
 
 # bahamas coordinates

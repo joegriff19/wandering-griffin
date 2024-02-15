@@ -1,7 +1,7 @@
 all_options = {
     'Andorra 🇦🇩': ['Pal Arinsal'],
     'Argentina 🇦🇷': ['Buenos Aires'],
-    'Austria 🇦🇹': ['Dornbirn', 'Vienna'],
+    'Austria 🇦🇹': ['Dornbirn', 'Innsbruck', 'St. Anton', 'Vienna'],
     'Bahamas 🇧🇸': ['Eleuthera', 'New Providence Island (where Nassau is located)'],
     'Belgium 🇧🇪': ['Antwerp', 'Brussels', 'Ghent', 'Leuven'],
     'Bolivia 🇧🇴': ['Cliza', 'Cochabamba'],
