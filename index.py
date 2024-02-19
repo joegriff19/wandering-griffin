@@ -1461,16 +1461,28 @@ def set_display_children(value):
                 "So... lots to do here. I could definitely live here!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://youtu.be/GvvtZIwh4Bs?si=tgWtAsruN7Ff2e89",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/england/london.JPG"},
                         # {"src": "assets/england/london6.JPG"},
                         {"src": "assets/england/london7.JPG"},
                         {"src": "assets/england/london3.JPG"},
-                        # {"src": "assets/england/london4.JPG"},
+                        {"src": "assets/england/london4.JPG"},
                         {"src": "assets/england/london1.JPG"},
-                        {"src": "assets/england/london8.JPG"},
-                        # {"src": "assets/england/london5.JPG"},
+                        {"src": "assets/england/london5.JPG"},
                         {"src": "assets/england/london2.JPG"},
                     ],
                     interval=2000,
@@ -3602,6 +3614,16 @@ def set_display_children(value):
                 'whole German genre of music made for partying on Mallorca.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/mall1.JPG"},
+                        {"src": "assets/spain/mall2.JPG"},
+                        {"src": "assets/spain/mall3.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.mallorca_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
