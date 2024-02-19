@@ -1392,7 +1392,8 @@ def set_display_children(value):
                     ride="carousel",
                     className="carousel-fade"
                 ), html.Br(),
-                html.Div(                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.quito_geojson)],
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.quito_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Galapagos Islands':
@@ -1403,6 +1404,7 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/ecuador/galapagos16.JPG"},
                         {"src": "assets/ecuador/galapagos.JPG"},
                         {"src": "assets/ecuador/galapagos1.JPG"},
                         {"src": "assets/ecuador/galapagos2.JPG"},
@@ -1424,7 +1426,8 @@ def set_display_children(value):
                     ride="carousel",
                     className="carousel-fade"
                 ), html.Br(),
-                html.Div(                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.galapagos_geojson)],
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.galapagos_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # England
@@ -1476,10 +1479,11 @@ def set_display_children(value):
                 ), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/england/london.JPG"},
-                        # {"src": "assets/england/london6.JPG"},
-                        {"src": "assets/england/london7.JPG"},
                         {"src": "assets/england/london3.JPG"},
+                        {"src": "assets/england/london8.JPG"},
+                        {"src": "assets/england/london6.JPG"},
+                        {"src": "assets/england/london7.JPG"},
+                        {"src": "assets/england/london.JPG"},
                         {"src": "assets/england/london4.JPG"},
                         {"src": "assets/england/london1.JPG"},
                         {"src": "assets/england/london5.JPG"},
