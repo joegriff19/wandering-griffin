@@ -2386,7 +2386,7 @@ def set_display_children(value):
         return ('There is just such a special charm to this city! It was amazing to finally do a full Griffin family '
                 "trip here in October 2023. Dublin is not the biggest city and you don't need a ton of time here -- "
                 "but the more the better! Enjoy a walk along the River Liffey, through St. Stephens Green park, and "
-                "around the Trinity College campus. Here you can also see the Book of Kells!"
+                "around the Trinity College campus. Here you can also see the Book of Kells! "
                 "Other things to see include the Dublin castle complex and St. Patrick's Cathedral, and of course "
                 "do the Guinness tour! The view from "
                 "the new Gravity Bar at the top of St. James' Gate (Guinness brewery) is beautiful. Additionally, "
@@ -3616,6 +3616,12 @@ def set_display_children(value):
                 'is a very quick flight. Many people come to enjoy some nice beaches and island tranquility, but '
                 'there is also a German-speaking part of the island where many Germans come to party. There is a '
                 'whole German genre of music made for partying on Mallorca.',
+                html.Br(), html.Br(),
+                'I stayed a bit outside of the capital in Rotes Velles. There were some really nice beaches and '
+                'swim coves here. The main beach is called "Platja de Santa Ponça." I assume it is '
+                'much less busy than the capital. There was also a perfect sunset spot here called "El '
+                'Chiringuito," as you can see in the pics below. I also enjoyed a delicious meal at '
+                'La Porteña Parrilla Argentina.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
