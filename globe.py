@@ -75,34 +75,4 @@ fig.update_layout(
         framewidth=1,
         framecolor='black',  # couleur du contour
     ),
-    # updatemenus=[dict(type='buttons', showactive=False,
-    #                             y=1,
-    #                             x=1.2,
-    #                             xanchor='right',
-    #                             yanchor='top',
-    #                             pad=dict(t=0, r=10),
-    #                             buttons=[dict(label='Play',
-    #                                           method='animate',
-    #                                           args=[None,
-    #                                                 dict(frame=dict(duration=50,
-    #                                                                 redraw=True),
-    #                                                      transition=dict(duration=0),
-    #                                                      fromcurrent=True,
-    #                                                      mode='immediate')
-    #                                                ])
-    #                                     ])
-    #         ]
 )
-
-# fig.update_traces(
-#         marker_line_width=0.5,
-#         marker_line_color='black',
-#     )
-# lon_range = np.arange(-100, 260, 25)
-#
-# frames = [go.Frame(layout=dict(geo_center_lon=lon,
-#                                geo_projection_rotation_lon =lon
-#                            )) for lon in lon_range]
-
-# fig.update(frames=frames)
-    # plot(fig, filename='rotation.html', auto_play=True)

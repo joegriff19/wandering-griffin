@@ -3055,14 +3055,36 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.krakow_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Szczecin':
+        lat_lon_str = weather.get_lat_lon(coordinates.szczecin_geojson)
+        return ('Happy birthday Jay! More info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/poland/kra.JPG"},
+                        # {"src": "assets/poland/kra2.JPG"},
+                        # {"src": "assets/poland/kra3.JPG"},
+                        # {"src": "assets/poland/kra4.JPG"},
+                        # {"src": "assets/poland/kra5.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.szczecin_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Wrocław':
         lat_lon_str = weather.get_lat_lon(coordinates.wroclaw_geojson)
-        return ('Very pretty small city. The people were all very nice. Go to the market square and check out some ' \
-                'of the cafes and restaurants. The Konspira restaurant is really great -- this is also a great option ' \
-                'because there is a lot about the history of Wrocław and Poland on the walls of the ' \
-                'restaurant and in the menu. Definitely get pierogi. Soups are very good and traditional too. ' \
-                'Be on the lookout for the hundreds of little gnomes around the city as you walk around. They are ' \
-                'really fun and funny. They are a recent project that is inspired by ____. Lastly, go north of the ' \
+        return ('Very pretty small city. The people were all very nice. Go to the market square and check out some '
+                'of the cafes and restaurants. The Konspira restaurant is really great -- this is also a great option '
+                'because there is a lot about the history of Wrocław and Poland on the walls of the '
+                'restaurant and in the menu. Definitely get pierogi. Soups are very good and traditional too. '
+                'Be on the lookout for the hundreds of little gnomes around the city as you walk around. They are '
+                'really fun and funny. They are a recent project that is inspired by ____. Lastly, go north of the '
                 'market square and walk around the river / island area -- the churches there are really nice as well.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),

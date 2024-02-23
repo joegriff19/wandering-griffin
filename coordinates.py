@@ -141,6 +141,7 @@ iquitos_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point"
 
 # poland coordinates
 krakow_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [19.9449, 50.0647]}}]}
+szczecin_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [14.5528, 53.4285]}}]}
 wroclaw_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [17.0385, 51.1079]}}]}
 
 # portugal coordinates

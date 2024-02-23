@@ -32,7 +32,7 @@ all_options = {
     'North Macedonia 🇲🇰': ['Skopje'],
     'Norway 🇳🇴': ['Oslo'],
     'Peru 🇵🇪': ['Lima', 'Iquitos'],
-    'Poland 🇵🇱': ['Krakow', 'Wrocław'],
+    'Poland 🇵🇱': ['Krakow', 'Szczecin', 'Wrocław'],
     'Portugal 🇵🇹': ['Guincho Beach', 'Lisbon'],
     'Puerto Rico 🇵🇷': ['Rincón', 'San Juan'],
     'Slovakia 🇸🇰': ['Bratislava'],
