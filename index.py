@@ -407,6 +407,19 @@ def set_display_children(value):
                 'from there, just over an hour. The train drops off right in the middle of the ski town.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://youtu.be/_z3_E0NGoMQ?si=kPNHZD6b66IODlLA",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/austria/stanton.JPG"},
