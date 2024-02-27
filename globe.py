@@ -72,7 +72,7 @@ fig.update_layout(
         # countrycolor='rgb(204, 204, 204)',
         oceancolor='rgb(137, 207, 240)',
         showframe=True,
-        framewidth=1,
+        framewidth=2,
         framecolor='black',  # couleur du contour
     ),
 )

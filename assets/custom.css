@@ -47,3 +47,17 @@
 {
     white-space:pre-wrap;
 }
+
+.Select-control {
+    background-color: rgb(44, 50, 56) !important;
+    color: rgb(2, 204, 255);
+  }
+
+.Select-menu-outer {
+    background-color: rgb(44, 50, 56);
+    color: rgb(2, 204, 255);
+}
+
+.Select-value-label {
+    color: rgb(2, 204, 255) !important;
+}

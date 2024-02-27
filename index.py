@@ -40,7 +40,9 @@ CONTENT_STYLE = {
 # Index Page Layout
 colors = {
     # 'background': '#ffffff',
-    'text': '#0000CD'
+    # 'text': '#0000CD'
+    'text': '#ffffff',
+
 }
 
 content = html.Div(id="page-content", children=[], style=CONTENT_STYLE)
@@ -134,7 +136,7 @@ index_layout = html.Div(
         ], style={
             'textAlign': 'center',
             # 'margin-left': '100px', 'margin-right': '100px',
-            'color': 'black',
+            'color': 'text',
             # "display": "flex",
             'max-width': '500px',
             'margin': 'auto'
@@ -161,14 +163,14 @@ index_layout = html.Div(
                     children=[
                         dmc.Anchor(
                             children=[DashIconify(
-                                icon='line-md:github-loop', width=40)
+                                icon='line-md:github-loop', width=40, color="#FF69B4")
                             ],
                             href=GITHUB
                         ),
                         dmc.Anchor(
                             children=[
                                 DashIconify(
-                                    icon='ri:linkedin-fill', width=40)
+                                    icon='ri:linkedin-fill', width=40, color="#FF69B4")
                             ],
                             href=LINKEDIN
                         )
@@ -183,7 +185,7 @@ index_layout = html.Div(
             html.Div(children=[dmc.Anchor(
                 children=[
                     DashIconify(
-                        icon='ion:logo-venmo', width=40)
+                        icon='ion:logo-venmo', width=40, color="#FF69B4")
                 ],
                 href=VENMO
             )
@@ -192,7 +194,7 @@ index_layout = html.Div(
                   'max-width': '900px',
                   'margin': 'auto',
                   # 'margin-left': '100px', 'margin-right': '100px',
-                  'color': 'black',
+                  'color': 'text',
                   # 'width': '50%',
                   # 'verticalAlign': 'middle'
                   # 'align-items': 'center', 'justify-content': 'center'
