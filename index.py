@@ -3065,11 +3065,11 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/poland/kra.JPG"},
-                        # {"src": "assets/poland/kra2.JPG"},
-                        # {"src": "assets/poland/kra3.JPG"},
-                        # {"src": "assets/poland/kra4.JPG"},
-                        # {"src": "assets/poland/kra5.JPG"},
+                        {"src": "assets/poland/szcz.JPG"},
+                        {"src": "assets/poland/szcz1.JPG"},
+                        {"src": "assets/poland/szcz2.JPG"},
+                        {"src": "assets/poland/szcz3.JPG"},
+                        {"src": "assets/poland/szcz4.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
