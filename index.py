@@ -116,7 +116,7 @@ index_layout = html.Div(
             style={
                 'textAlign': 'center',
                 'justify': 'center',
-                'color': colors['text'],
+                'color': 'white',
                 "padding": "0px",
                 "margin": "0px"
             }
@@ -136,7 +136,7 @@ index_layout = html.Div(
         ], style={
             'textAlign': 'center',
             # 'margin-left': '100px', 'margin-right': '100px',
-            'color': 'text',
+            'color': 'white',
             # "display": "flex",
             'max-width': '500px',
             'margin': 'auto'
