@@ -153,7 +153,7 @@ index_layout = html.Div(
             # size="lg", color="primary", type="border",
             # spinner_style={"position": "absolute", "top": "-30px"}
             # ),
-            dbc.Spinner(children=[html.Div(id='city_info')], size="lg", color="primary", type="border",
+            dbc.Spinner(children=[html.Div(id='city_info')], size="lg", color="#02ccff", type="border",
                         # delay_hide=2000,
                         show_initially=False,
                         spinner_style={"position": "absolute", "top": "-30px"}),
