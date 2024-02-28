@@ -518,7 +518,7 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.eleuthera_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
-    if value == 'New Providence Island (where Nassau is located)':
+    if value == 'Nassau':
         lat_lon_str = weather.get_lat_lon(coordinates.nassau_geojson)
         return ('explore Nassau, eat conch, go to the beach, and listen to reggae!',
                 html.Br(), html.Br(),
