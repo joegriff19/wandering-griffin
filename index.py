@@ -526,6 +526,7 @@ def set_display_children(value):
                 dbc.Carousel(
                     items=[
                         {"src": "assets/bahamas/nassau.JPG"},
+                        {"src": "assets/bahamas/nassau.JPG"},
                         {"src": "assets/bahamas/nassau1.JPG"},
                         {"src": "assets/bahamas/nassau2.JPG"},
                         {"src": "assets/bahamas/nassau3.JPG"},
@@ -3185,6 +3186,18 @@ def set_display_children(value):
         return ('So fun. More info to come!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/pr/sj.JPG"},
+                        {"src": "assets/pr/sj1.JPG"},
+                        {"src": "assets/pr/sj2.JPG"},
+                        {"src": "assets/pr/sj3.JPG"},
+                        {"src": "assets/pr/sj4.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.san_juan_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
