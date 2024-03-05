@@ -16,7 +16,8 @@ options = dict(loop=True, autoplay=True, rendererSettings=dict(preserveAspectRat
 
 def update_weather(location):
     # request_str = 'http://api.weatherstack.com/current?access_key=d779aff91a964382a38b84e587262b7c&query={}&units=f'.format(location)
-    request_str = 'http://api.weatherstack.com/current?access_key=2fe2e07f4f30b307d9317f34983b8a99&query={}&units=f'.format(location)
+    # request_str = 'http://api.weatherstack.com/current?access_key=2fe2e07f4f30b307d9317f34983b8a99&query={}&units=f'.format(location)
+    request_str = 'http://api.weatherstack.com/current?access_key=3cbe6ef6364221e7bffdc404aac972c2&query={}&units=f'.format(location)
     weather_requests = requests.get(request_str)
     json_data = weather_requests.json()
     weather_df = pd.DataFrame(json_data)
