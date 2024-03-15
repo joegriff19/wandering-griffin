@@ -3259,9 +3259,20 @@ def set_display_children(value):
     # Spain
     if value == 'Azpeitia':
         lat_lon_str = weather.get_lat_lon(coordinates.azpeitia_geojson)
-        return ('Birthplace of St. Ignatius and home to a large festival on July 31 each year for his feast day',
+        return ('Birthplace of St. Ignatius and home to a large festival on July 31 each year for his feast day.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/azp.JPG"},
+                        {"src": "assets/spain/azp1.JPG"},
+                        {"src": "assets/spain/azp2.JPG"},
+                        {"src": "assets/spain/azp3.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.azpeitia_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -3343,9 +3354,18 @@ def set_display_children(value):
 
     if value == 'Begur':
         lat_lon_str = weather.get_lat_lon(coordinates.begur_geojson)
-        return ('Really nice beaches if you want to visit nice beaches up the coast from Barcelona',
+        return ("Really nice beaches up the coast from Barcelona on the 'Costa Brava.'",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/begur.JPG"},
+                        {"src": "assets/spain/begur1.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.begur_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -3703,6 +3723,18 @@ def set_display_children(value):
         return ('more info coming soon!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/mont.JPG"},
+                        {"src": "assets/spain/mont1.JPG"},
+                        {"src": "assets/spain/mont2.JPG"},
+                        {"src": "assets/spain/mont3.JPG"},
+                        {"src": "assets/spain/mont4.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.pineda_de_mar_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -3899,6 +3931,24 @@ def set_display_children(value):
                 'Lastly, if you are here in August, make the little trip to Buñol for La Tomatina, the world’s '
                 'biggest food fight! Select Buñol for more info about that.',
                 html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/val.JPG"},
+                        {"src": "assets/spain/val1.JPG"},
+                        {"src": "assets/spain/val2.JPG"},
+                        {"src": "assets/spain/val3.JPG"},
+                        {"src": "assets/spain/val4.JPG"},
+                        {"src": "assets/spain/val5.JPG"},
+                        {"src": "assets/spain/val6.JPG"},
+                        {"src": "assets/spain/val7.JPG"},
+                        {"src": "assets/spain/val8.JPG"},
+                        {"src": "assets/spain/val9.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.valencia_geojson)],
