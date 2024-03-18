@@ -1475,9 +1475,7 @@ def set_display_children(value):
                 "the flavors more (which is scientifically true). If you like Guinness, "
                 "try the London Black beer -- it's a modern take on an old English style dark porter. If you have "
                 "time, there is a whole strip of breweries (Brew by Numbers, Anspach & Hobday, and more) all right "
-                "under the train, it's a cool setup. ",
-                html.Br(), html.Br(),
-                "So... lots to do here. I could definitely live here!",
+                "under the train, it's a really cool setup. ",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
@@ -1495,15 +1493,18 @@ def set_display_children(value):
                 ), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/england/london9.JPG"},
+                        {"src": "assets/england/london11.JPG"},
                         {"src": "assets/england/london3.JPG"},
-                        {"src": "assets/england/london8.JPG"},
                         {"src": "assets/england/london6.JPG"},
                         {"src": "assets/england/london7.JPG"},
                         {"src": "assets/england/london.JPG"},
+                        {"src": "assets/england/london8.JPG"},
                         {"src": "assets/england/london4.JPG"},
                         {"src": "assets/england/london1.JPG"},
                         {"src": "assets/england/london5.JPG"},
-                        {"src": "assets/england/london2.JPG"},
+                        {"src": "assets/england/london12.JPG"},
+                        {"src": "assets/england/london13.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2416,10 +2417,24 @@ def set_display_children(value):
                 "Sláinte!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://youtube.com/shorts/uUhn6I7OCi4?si=f4B9EkqDq8ZM59tk",
+                controls=True,
+                width="100%",
+                height="200px",
+                )
+        ]
+        ), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/ireland/dublin8.JPG"},
                         {"src": "assets/ireland/dublin11.JPG"},
+                        {"src": "assets/ireland/dublin15.JPG"},
                         {"src": "assets/ireland/dublin13.JPG"},
                         {"src": "assets/ireland/dublin2.JPG"},
                         {"src": "assets/ireland/dublin10.JPG"},
@@ -2431,7 +2446,9 @@ def set_display_children(value):
                         {"src": "assets/ireland/dublin6.JPG"},
                         {"src": "assets/ireland/dublin5.JPG"},
                         {"src": "assets/ireland/dublin12.JPG"},
-                        {"src": "assets/ireland/dublin7.JPG"},
+                        # {"src": "assets/ireland/dublin7.JPG"},
+                        {"src": "assets/ireland/dublin14.JPG"},
+                        {"src": "assets/ireland/dublin16.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
