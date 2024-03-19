@@ -2433,6 +2433,7 @@ def set_display_children(value):
         ), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/ireland/dublin17.JPG"},
                         {"src": "assets/ireland/dublin8.JPG"},
                         {"src": "assets/ireland/dublin11.JPG"},
                         {"src": "assets/ireland/dublin15.JPG"},
