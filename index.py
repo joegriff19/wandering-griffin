@@ -1464,7 +1464,8 @@ def set_display_children(value):
                 "across the Tower Bridge as well."
                 "Also enjoy Hyde Park (a bike ride here is great). One of the best areas in the city is "
                 "Camden Market. The area is cute with some little canals, and there are tons of "
-                "stands / vendors. You can find just about any cuisine here. Enjoy some food and drinks here. ",
+                "stands / vendors. You can find just about any cuisine here. Enjoy some food and drinks here. Another "
+                "cute area -- with a market on the street and colorful houses -- is Notting Hill.",
                 html.Br(), html.Br(),
                 "There is a lot of great beer in London. There are lots of awesome "
                 "old-timey pubs: The Toucan, The Cross Keys, The Harp, The Seven Stars, The Blackfriar, and more. "
