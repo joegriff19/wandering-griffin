@@ -1449,7 +1449,7 @@ def set_display_children(value):
     # England
     if value == 'London':
         lat_lon_str = weather.get_lat_lon(coordinates.london_geojson)
-        return ("Yes it can be expensive but it is a really great city. Tons of history and of course... "
+        return ("The home of the enemy! Tons of history and of course... "
                 "the world mecca for football. Currently (2023-24), 7 of the 20 teams in the English Premier League "
                 "(the best league in the world) are in London. The atmosphere at second league (called "
                 "The Championship) games is also really fun and a lot cheaper than Premier League games. QPR is a "
@@ -1477,6 +1477,8 @@ def set_display_children(value):
                 "try the London Black beer -- it's a modern take on an old English style dark porter. If you have "
                 "time, there is a whole strip of breweries (Brew by Numbers, Anspach & Hobday, and more) all right "
                 "under the train, it's a really cool setup. ",
+                html.Br(), html.Br(),
+                "London can be expensive but it's a really great city with lots to do!"
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
