@@ -1478,7 +1478,7 @@ def set_display_children(value):
                 "time, there is a whole strip of breweries (Brew by Numbers, Anspach & Hobday, and more) all right "
                 "under the train, it's a really cool setup. ",
                 html.Br(), html.Br(),
-                "London can be expensive but it's a really great city with lots to do!"
+                "London can be expensive but it's a really great city with lots to do!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
