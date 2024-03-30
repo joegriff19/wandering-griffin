@@ -77,6 +77,7 @@ dort_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "
 dresden_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.7373, 51.0504]}}]}
 duss_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.7735, 51.2277]}}]}
 flens_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.447, 54.7937]}}]}
+frank_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.6821, 50.1109]}}]}
 geng_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.0096, 48.4098]}}]}
 ham_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.9872, 53.5488]}}]}
 kiel_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.1228, 54.3233]}}]}

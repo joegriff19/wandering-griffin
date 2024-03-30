@@ -1722,6 +1722,10 @@ def set_display_children(value):
                         {"src": "assets/germany/koln4.JPG"},
                         {"src": "assets/germany/koln5.JPG"},
                         {"src": "assets/germany/koln6.JPG"},
+                        {"src": "assets/germany/koln6.JPG"},
+                        {"src": "assets/germany/koln6.JPG"},
+                        {"src": "assets/germany/koln8.JPG"},
+                        {"src": "assets/germany/koln9.JPG"}
                     ],
                     interval=2000,
                     ride="carousel",
@@ -1844,6 +1848,51 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.flens_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Frankfurt am Main':
+        lat_lon_str = weather.get_lat_lon(coordinates.frank_geojson)
+        return ("Often known for having a big airport and having one of the largest stock exchanges in the world, "
+                "Frankfurt is much more than that! It is indeed a big business center of Germany and of Europe, and "
+                "it has maybe the most skyscrapers of any city in Europe. For that reason, a funny nickname of the "
+                "city is 'Mainhattan,' inspired by of course Manhattan and the river running through Frankfurt, "
+                "called the Main.",
+                html.Br(), html.Br(),
+                "In contrast to the skyscrapers and the modern side of the city, the old city (Altstadt) and the Alt "
+                "Sachsenhausen neighborhoods show a much older side to the city. Frankfurt was "
+                "originally founded by the Romans, inspiring the Rome-sounding name of the old town square, Römerberg. "
+                "On this square and in this area you will find a number of buildings in the traditional architecture "
+                "style, definitely walk around this area. You can also go to the rooftop terrace of the ___ shopping "
+                "complex -- you get a nice view of the skyline!",
+                html.Br(), html.Br(),
+                "The Alt Sachsenhausen neighborhood also has a unique history, and it is known for its old-school "
+                "taverns that serve the traditional drink from Frankfurt. Similar to cider, it is called Äpfelwein. "
+                "You will see it all over the city, but it is best to drink it from one of the spots in this "
+                "neighborhood! Dauth-Schneider is a great place with a really nice outdoor seating area both in "
+                "front and behind the tavern! They have lots of good traditional food options as well. ",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/germany/frank.JPG"},
+                        {"src": "assets/germany/frank1.JPG"},
+                        {"src": "assets/germany/frank2.JPG"},
+                        {"src": "assets/germany/frank3.JPG"},
+                        {"src": "assets/germany/frank4.JPG"},
+                        {"src": "assets/germany/frank5.JPG"},
+                        {"src": "assets/germany/frank6.JPG"},
+                        {"src": "assets/germany/frank7.JPG"},
+                        {"src": "assets/germany/frank8.JPG"},
+                        {"src": "assets/germany/frank9.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ),
+                html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.flens_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Gengenbach':
         lat_lon_str = weather.get_lat_lon(coordinates.geng_geojson)
         return ('Largest advent calendar in the world! Really nice small town in the middle of the Black Forest. '
