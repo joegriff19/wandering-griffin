@@ -4115,9 +4115,11 @@ def set_display_children(value):
                 html.Br(), html.Br(),
                 'There is plenty of great food to try as well. Definitely get a full Turkish breakfast! Ours was '
                 'awesome at Galata Süheyla. For a snacks / treats, try a simit (Turkish bagel), baklava, '
-                'and Turkish ice cream (warning -- the ice cream people often play tricks with you). '
+                'and Turkish ice cream (FYI -- the ice cream people often play ',
+                html.A("fun little tricks", href="https://www.youtube.com/watch?v=Jx_NjpeBqQw"),
+                ' with you). '
                 'For lunch / dinner, have börek and some different grilled meats, köfte, and kebabs. '
-                'Lastly, be sure to try a döner sandwich (or two or three) that inspired the Berliner döner. '
+                'Lastly, be sure to try the döner sandwich (or two or three) that inspired the Berliner döner. '
                 'The original döner is typically more focused on the quality of the meat, and there is much less '
                 "vegetables / sauces added to the sandwich. You'll have to decide for yourself which is better ;)",
                 html.Br(), html.Br(),
