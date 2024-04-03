@@ -1722,8 +1722,6 @@ def set_display_children(value):
                         {"src": "assets/germany/koln4.JPG"},
                         {"src": "assets/germany/koln5.JPG"},
                         {"src": "assets/germany/koln6.JPG"},
-                        {"src": "assets/germany/koln6.JPG"},
-                        {"src": "assets/germany/koln6.JPG"},
                         {"src": "assets/germany/koln8.JPG"},
                         {"src": "assets/germany/koln9.JPG"}
                     ],
@@ -4091,13 +4089,43 @@ def set_display_children(value):
     # Turkey
     if value == 'Istanbul':
         lat_lon_str = weather.get_lat_lon(coordinates.istanbul_geojson)
-        return ('Amazing trip with Zach! more info coming soon!',
+        return ('My first time in Asia! Even if I only spent a few hours on the Asian (Anatolian) side of '
+                'the city... Istanbul is the only metropolis in the world that sits on two different continents, '
+                'separated by the Bosphorus Strait. There are many public transportation boats that you can easily '
+                'use to cross the strait -- and you absolutely should! Istanbul is massive. It is the 5th largest city '
+                'in the world. You will certainly notice some differences in various parts of the city, and '
+                'especially when you switch continents! '
+                'There is a ton of history here, from the city of Byzantine to Constantinople to Istanbul. The age '
+                'of some of the structures and artifacts was truly astonishing for me. I would '
+                'definitely recommend a walking tour here.',
+                html.Br(), html.Br(),
+                'The European side has many more historical sights to see and '
+                'feels more traditional, while the Asian side feels more relaxed and less touristy, '
+                'also offering a number of bars and more nightlife. Definitely explore the neighborhood of Kadıköy, '
+                'and within Kadıköy be sure to go the Moda area. The park and walkway on the water is really nice. '
+                'On the European side, you will find the most famous tourist attractions, including the Hagia Sophia '
+                'Grand Mosque (previously the largest Christian church in the world for 1,000 years! And from '
+                '"From Russia with Love"), the Blue Mosque, the Spice Bazaar and the Grand Bazaar, '
+                'the Basilica Cistern (also from "From Russia with Love"), the Topkapı palace, and the Galata Tower '
+                '(we really liked staying in the Galata neighborhood).',
+                html.Br(), html.Br(),
+                'A trip to Istanbul would not be complete without visiting a hammam. These are the traditional '
+                'Turkish baths / spas. You can get a 2+ hour visit including a massage and tea starting around 40 USD. '
+                'This is a lovely experience, and also a great cultural experience! Zach and I loved the Ağa Hamamı.',
+                html.Br(), html.Br(),
+                'There is plenty of great food to try as well. Definitely get a full Turkish breakfast! Ours was '
+                'awesome at Galata Süheyla. For a snacks / treats, try a simit (Turkish bagel), baklava, '
+                'and Turkish ice cream (warning -- the ice cream people often play tricks with you). '
+                'For lunch / dinner, have börek and some different grilled meats, köfte, and kebabs. '
+                'Lastly, be sure to try a döner sandwich (or two or three) that inspired the Berliner döner. '
+                'The original döner is typically more focused on the quality of the meat, and there is much less '
+                "vegetables / sauces added to the sandwich. You'll have to decide for yourself which is better ;)",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/turkey/ist.JPG"},
-                        {"src": "assets/turkey/ist1.JPG"},
+                        {"src": "assets/turkey/ist11.JPG"},
                         {"src": "assets/turkey/ist2.JPG"},
                         {"src": "assets/turkey/ist3.JPG"},
                         {"src": "assets/turkey/ist4.JPG"},
@@ -4107,6 +4135,8 @@ def set_display_children(value):
                         {"src": "assets/turkey/ist8.JPG"},
                         {"src": "assets/turkey/ist9.JPG"},
                         {"src": "assets/turkey/ist10.JPG"},
+                        {"src": "assets/turkey/ist12.JPG"},
+                        {"src": "assets/turkey/ist1.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
