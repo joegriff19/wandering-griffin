@@ -4119,9 +4119,9 @@ def set_display_children(value):
                 html.A("fun little tricks", href="https://www.youtube.com/watch?v=Jx_NjpeBqQw"),
                 ' with you). '
                 'For lunch / dinner, have börek and some different grilled meats, köfte, and kebabs. '
-                'Lastly, be sure to try the döner sandwich (or two or three) that inspired the Berliner döner. '
-                'The original döner is typically more focused on the quality of the meat, and there is much less '
-                "vegetables / sauces added to the sandwich. You'll have to decide for yourself which is better ;)",
+                'Lastly, be sure to try the döner kebab (or two or three) that inspired the Berliner döner '
+                'kebab. The original Turkish döner is typically more focused on the meat itself, and there is much '
+                "less vegetables / sauces added to it. You'll have to decide for yourself which is better ;)",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
