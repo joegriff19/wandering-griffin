@@ -12,7 +12,7 @@ all_options = {
                  'Valparaíso / Viña del Mar'],
     'Croatia 🇭🇷': ['Dubrovnik', 'Motovun', 'Opatija', 'Plitvice Lakes National Park', 'Pula', 'Rovinj',
                    'Vodnjan', 'Zagreb'],
-    'Czechia 🇨🇿': ['Prague'],
+    'Czechia 🇨🇿': ['Pilsen', 'Prague'],
     'Denmark 🇩🇰': ['Copenhagen'],
     'Ecuador 🇪🇨': ['Galapagos Islands', 'Quito'],
     'England 🏴󠁧󠁢󠁥󠁮󠁧󠁿': ['London'],

@@ -1015,7 +1015,6 @@ def set_display_children(value):
                 html.Div(
                     style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
                            "margin": "auto"},
-                    # style={"width": "55%", "padding": "0px", 'margin': 'auto'},
                     children=[
                         dp.DashPlayer(
                             id="player",
@@ -1285,11 +1284,36 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Czechia
+    if value == 'Pilsen':
+        lat_lon_str = weather.get_lat_lon(coordinates.pilsen_geojson)
+        return ('amazing day here! more info to come',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/czechia/pils.JPG"},
+                        {"src": "assets/czechia/pils1.JPG"},
+                        {"src": "assets/czechia/pils2.JPG"},
+                        {"src": "assets/czechia/pils3.JPG"},
+                        {"src": "assets/czechia/pils4.JPG"},
+                        {"src": "assets/czechia/pils5.JPG"},
+                        {"src": "assets/czechia/pils6.JPG"},
+                        {"src": "assets/czechia/pils7.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ),
+                html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.pilsen_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Prague':
         lat_lon_str = weather.get_lat_lon(coordinates.prague_geojson)
-        return ('One of my favorite cities! It is relatively cheap compared to more western European capital cities '
-                "definitely has a different feel. Stay near the old town. The city is very walkable and you shouldn't "
-                "really need any taxis or public transport to get around. Your first stop should be "
+        return ('One of my favorite cities in the world! It is relatively cheap compared to western European capitals '
+                "and definitely has a different feel. Stay near the old town. The city is very walkable and you "
+                "shouldn't really need any taxis or public transport to get around. Your first stop should be "
                 "the main square in the old town, with the world's oldest functioning astrological clock and a really "
                 "cool gothic church called the Church of Our Lady Before Tyn. There is also a really nice Christmas "
                 "market here in the winter. The next main attraction is the "
@@ -1300,9 +1324,11 @@ def set_display_children(value):
                 "beer in the world -- approximately 500 12-ounce beers per person per year! No other country "
                 "drinks more than one beer per person per day! There are a few beers you will commonly see "
                 "throughout the city. First, Pilsner Urquell -- this is the original pilsner-style beer, "
-                "and the name of the style itself comes from the Czech city where this beer was brewed, called Plzen. "
+                "and the name of the style itself comes from the Czech city where this beer was brewed, called Pilsen. "
                 "BE SURE to try a fresh Pilsner Urquell on draft from a bronze tank -- you will thank me later! "
-                "Next is Staropramen -- also a good beer. Be sure to try the Staropramen Unfiltered! Then there is "
+                "Next is Staropramen -- also a good beer. Be sure to try the Staropramen Unfiltered! You can "
+                "also do a tour of the Staropramen brewery in Prague, but to be honest it was maybe the most "
+                "underwhelming brewery tour I have ever done. The beer at the end was still good though! Then there is "
                 "Budweiser -- no, not from St Louis. Someone from Anheuser Busch came to the Czech Republic to "
                 "learn more about brewing and tried the original Budweiser. The guy liked the name and found "
                 "out that the brewery, despite having brewed beer for nearly a thousand years, had never "
@@ -1311,6 +1337,20 @@ def set_display_children(value):
                 "be sure to try the real Budweiser!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://youtu.be/OwpKn6PT5vM?si=qCBFyWW4EBzjy8Ry",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ),
+                html.Br(), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/czechia/prg12.JPG"},
@@ -1320,12 +1360,15 @@ def set_display_children(value):
                         {"src": "assets/czechia/prg3.JPG"},
                         {"src": "assets/czechia/prg4.JPG"},
                         {"src": "assets/czechia/prg5.JPG"},
-                        {"src": "assets/czechia/prg6.JPG"},
+                        {"src": "assets/czechia/prg14.JPG"},
+                        {"src": "assets/czechia/prg13.JPG"},
                         {"src": "assets/czechia/prg7.JPG"},
                         {"src": "assets/czechia/prg8.JPG"},
                         {"src": "assets/czechia/prg9.JPG"},
                         {"src": "assets/czechia/prg10.JPG"},
                         {"src": "assets/czechia/prg11.JPG"},
+                        {"src": "assets/czechia/prg15.JPG"},
+                        {"src": "assets/czechia/prg6.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -1339,15 +1382,15 @@ def set_display_children(value):
     # Denmark
     if value == 'Copenhagen':
         lat_lon_str = weather.get_lat_lon(coordinates.copen_geojson)
-        return ('The capital of Denmark! It is very fun to walk or bike around this city as it is full of parks '
+        return ('The capital of Denmark! Copenhagen is a great city for walking or biking as it is full of parks '
                 'and waterways. My mom and I really enjoyed a bike tour of the city! '
                 'Be sure to walk around Nyhaven and see the most famous view of the city! '
                 'Perhaps the next most famous sight to see is The Little Mermaid statue. '
-                'The statue itself is actually quite small, but it is still fun to see. A visit to the '
-                'Carlsberg brewery is very fun. Don’t be alarmed by the swastikas on the elephants as you '
+                'The statue itself is actually quite small, but it is still nice to see. A visit to the '
+                'Carlsberg brewery is a good time. Don’t be alarmed by the swastikas on the elephants as you '
                 'enter the brewery — they have been there long before WW2! The swastika is an ancient '
                 'symbol of good fortune, not something created by Nazi Germany. Very close by to Carlsberg are '
-                'the beautiful Frederiksberg Gardens -- beautiful, massive city park with the Frederiksberg Palace. '
+                'the beautiful Frederiksberg Gardens -- lovely, massive city park with the Frederiksberg Palace. '
                 'Be sure to also see the Christiansborg Palace, the Rosenborg Castle, and the Amalienborg Castle -- '
                 "this is the residence of the Danish Royal Family to this day! It's fun to see the guards dressed "
                 'up in uniform outside guarding the palace. The Tivoli Garden is also '
