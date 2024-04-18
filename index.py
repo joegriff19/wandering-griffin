@@ -8,7 +8,7 @@ import warnings
 from datetime import date
 import time
 import dash_player as dp
-import dash_leaflet as dl
+# import dash_leaflet as dl
 import coordinates
 import globe
 import weather
@@ -1299,6 +1299,11 @@ def set_display_children(value):
                         {"src": "assets/czechia/pils5.JPG"},
                         {"src": "assets/czechia/pils6.JPG"},
                         {"src": "assets/czechia/pils7.JPG"},
+                        {"src": "assets/czechia/pils8.JPG"},
+                        {"src": "assets/czechia/pils9.JPG"},
+                        {"src": "assets/czechia/pils10.JPG"},
+                        {"src": "assets/czechia/pils11.JPG"},
+
                     ],
                     interval=2000,
                     ride="carousel",
