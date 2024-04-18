@@ -1286,7 +1286,7 @@ def set_display_children(value):
     # Czechia
     if value == 'Pilsen':
         lat_lon_str = weather.get_lat_lon(coordinates.pilsen_geojson)
-        return ('amazing day here! more info to come',
+        return ('The birthplace of Pilsner beer! Amazing day here! More info to come',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
