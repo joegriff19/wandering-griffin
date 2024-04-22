@@ -94,7 +94,7 @@ index_layout = html.Div(
                     #     style={'width': '20%', 'display': 'inline-block'}),
                     html.Div(de.Lottie(options=options, width="10vh", height="10vh", url="/loader", speed=1,
                                        isClickToPauseDisabled=True),
-                             style={'display': 'inline-block', "position": "absolute", "top": "55px"}),
+                             style={'display': 'inline-block', "position": "absolute", "top": "60px"}),
                     html.Div(dcc.Graph(
                         id='rotating-globe',
                         config={
@@ -163,14 +163,14 @@ index_layout = html.Div(
                     children=[
                         dmc.Anchor(
                             children=[DashIconify(
-                                icon='line-md:github-loop', width=40, color="#FF69B4")
+                                icon='line-md:github-loop', width=40, color="#02ccff")
                             ],
                             href=GITHUB
                         ),
                         dmc.Anchor(
                             children=[
                                 DashIconify(
-                                    icon='ri:linkedin-fill', width=40, color="#FF69B4")
+                                    icon='ri:linkedin-fill', width=40, color="#02ccff")
                             ],
                             href=LINKEDIN
                         )
@@ -185,9 +185,10 @@ index_layout = html.Div(
             html.Div(children=[dmc.Anchor(
                 children=[
                     DashIconify(
-                        icon='ion:logo-venmo', width=40, color="#FF69B4")
+                        icon='ion:logo-venmo', width=40, color="#02ccff")
                 ],
                 href=VENMO
+                # pink color #FF69B4
             )
             ]),
         ], style={'textAlign': 'center',
@@ -209,7 +210,7 @@ index_layout = html.Div(
 @server.route("/loader", methods=['GET'])
 def serving_lottie_loader():
     directory = os.path.join(os.getcwd(), "assets/lottie")
-    return send_from_directory(directory, "plane4.json")
+    return send_from_directory(directory, "plane1.json")
 
 
 @app.callback(
