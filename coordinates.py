@@ -126,7 +126,15 @@ mexico_city_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Po
 kotor_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [18.7712, 42.4247]}}]}
 
 # morocco coordinates
+ait_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-7.1319, 31.0470]}}]}
+casablanca_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-7.5898, 33.5731]}}]}
+ifrane_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-5.2371, 33.5630]}}]}
+fes_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-5.0078, 34.0181]}}]}
+marrakech_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-7.9898, 31.6225]}}]}
+merzouga_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-4.0134, 31.0802]}}]}
+rabat_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-6.8539, 34.0084]}}]}
 tangier_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-5.8325, 35.7595]}}]}
+todgha_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-5.33, 31.33]}}]}
 
 # netherlands coordinates
 amsterdam_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [4.8979, 52.3772]}}]}

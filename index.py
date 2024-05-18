@@ -1,7 +1,7 @@
 # Import Packages and other files for app
 import index
 from app import app, server  # NEED THE IMPORT SERVER FOR RENDER
-from dash import dcc, html, clientside_callback, State
+from dash import dcc, html # clientside_callback, State (not being used)
 import dash_bootstrap_components as dbc
 from dash.dependencies import Output, Input
 import warnings
@@ -18,7 +18,7 @@ from dash_iconify import DashIconify
 import dash_extensions as de
 import os
 from flask import send_from_directory
-import dash_loading_spinners as dls
+# import dash_loading_spinners as dls
 
 today = date.today()
 warnings.simplefilter(action='ignore', category=FutureWarning)
@@ -1002,9 +1002,9 @@ def set_display_children(value):
 
     if value == 'Torres del Paine NP (Patagonia)':
         lat_lon_str = weather.get_lat_lon(coordinates.torres_geojson)
-        return ('"The W" trail was stunning from start to finish. The Torres on the last morning was an amazing end. ' \
-                'About 50 miles in 4 days. The refugios are really fun to stay in. We stayed at Francés the first ' \
-                'two nights and then Chileno on the last night. Breakfast and dinner ' \
+        return ('"The W" trail was stunning from start to finish. The Torres on the last morning was an amazing end. '
+                'About 50 miles in 4 days. The refugios are really fun to stay in. We stayed at Francés the first '
+                'two nights and then Chileno on the last night. Breakfast and dinner '
                 'there is a bit expensive but worth it for the convenience. You can bring snacks as lunch and to get '
                 'you through the day until dinner. There are tons of rivers and streams with freshly melted glacier '
                 "water that you can drink, so you don't need to bring any water with you. This was really nice. "
@@ -1266,7 +1266,7 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Zagreb':
         lat_lon_str = weather.get_lat_lon(coordinates.zagreb_geojson)
-        return ('Cool to see the Croatian capital with more of the Germanic influences, compared to the more Italian ' \
+        return ('Cool to see the Croatian capital with more of the Germanic influences, compared to the more Italian '
                 'feel on the coast.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -1287,7 +1287,25 @@ def set_display_children(value):
     # Czechia
     if value == 'Pilsen':
         lat_lon_str = weather.get_lat_lon(coordinates.pilsen_geojson)
-        return ('The birthplace of Pilsner beer! Amazing day here! More info to come',
+        return ('The birthplace of Pilsner beer! The Pilsner Urquell brewery is definitely the most popular reason '
+                'to visit Pilsen, but Pilsen is also home to the second largest synagogue in Europe -- it is quite '
+                'beautiful. You can also get a great view of the synagogue from atop the St. Bartholomew church '
+                '(it costs just a few Euros to go up). You can see the entire city from atop the church, including '
+                'the FC Pilsen stadium and the Pilsner Urquell brewery. The church can be found at the center of the '
+                'Republic Square, the main square in the city. There are several nice cafes surround the cafe, and '
+                "there is also a farmers' market held here on certain days.",
+                html.Br(), html.Br(),
+                'The Pilsner Urquell visit is really great. Although the Pilsner Urquell brewery officially dates '
+                'to 1842, beer has been brewed in Pilsen since the 13th century. On the tour you get a nice bit of '
+                'history, you get to see the different parts of the brewery, and you get to try some of the fresh '
+                'unpasteurized beer from the wooden barrels underground! ',
+                html.Br(), html.Br(),
+                "Additionally, there are several 'beer spa' options in Pilsen. This is also possible in Prague, but "
+                "they are definitely less expensive in Pilsen. We went a bit outside Pilsen to Purkmistr, a really "
+                "cool hotel / spa / brewery / restaurant / beer garden in a lovely rural setting. The beer spa was "
+                "such a fun, unique experience. We had our own personal beer bathtubs along with our own personal beer "
+                "taps! After the baths, there was a nice relaxation room (where we were offered more beer). The "
+                "massage at the end was the cherry on top. Would absolutely recommend!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -1304,7 +1322,6 @@ def set_display_children(value):
                         {"src": "assets/czechia/pils9.JPG"},
                         {"src": "assets/czechia/pils10.JPG"},
                         {"src": "assets/czechia/pils11.JPG"},
-
                     ],
                     interval=2000,
                     ride="carousel",
@@ -1518,7 +1535,7 @@ def set_display_children(value):
                 html.Br(), html.Br(),
                 "There is a lot of great beer in London. There are lots of awesome "
                 "old-timey pubs: The Toucan, The Cross Keys, The Harp, The Seven Stars, The Blackfriar, and more. "
-                "Hop Locker is also a sweet beer bar by the river. " \
+                "Hop Locker is also a sweet beer bar by the river. "
                 "Many pubs and bars will also have a good fish & chips. Make sure to try some cask ales / real ales. "
                 "They are known as Britain's national drink. It's a unique beer style to the UK. But be warned, "
                 "the beers are not served very cold. The idea is so you can taste "
@@ -1711,6 +1728,7 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/germany/berlin16.JPG"},
                         {"src": "assets/germany/berlin10.JPG"},
                         {"src": "assets/germany/berlin14.JPG"},
                         {"src": "assets/germany/berlin3.JPG"},
@@ -1968,7 +1986,7 @@ def set_display_children(value):
                 'seafood you are in luck, the fresh fish sandwiches (Fischbrötchen) are so good -- go to Brücke 37 '
                 'at the port. Also at the port you will see the iconic new concert hall called the Elbphilharmonie, '
                 'with its roof resembling and reflecting the waves of the water below. Go up to the top of the '
-                'nearby church, ____ to get great views of the port and of the concert hall. Be sure to walk '
+                'nearby church, St. Michaelis,  to get great views of the port and of the concert hall. Be sure to walk '
                 'through the Speicherstadt, the beautiful storage area for all incoming goods coming by boat '
                 'to the city. Have a drink at the little castle in this area, called the Wasserschloss. Also be sure '
                 'to visit the Hamburger version of the Amsterdam red light district, St. Pauli. '
@@ -2153,38 +2171,38 @@ def set_display_children(value):
 
     if value == 'Nuremberg':
         lat_lon_str = weather.get_lat_lon(coordinates.nur_geojson)
-        return ("I really enjoyed this city (spelled Nürnberg in German FYI) in the north of Bavaria! " \
-                "Important to note though that this was not always part of Bavaria -- Nuremberg used to be the main " \
-                "city of the region of Franconia. You will notice all of the city flags and details around the city " \
-                "are red rather than the typical Bavarian blue. Nuremberg holds great significance throughout history " \
-                "-- in the Holy Roman Empire and in Nazi Germany. The massive 'Nuremberg rallies' were held just " \
-                "outside the city at the Zepellinfeld, which is an easy visit (20 minute bus/tram or 10 minute S-Bahn " \
-                "train ride) from Nuremberg. Following WW2, the 'Nuremberg trials' were held here. There is a really " \
-                "cool memorial, called the Street of Human Rights, that has big pillars with the Universal " \
-                "Declaration of Human Rights written in tons of different languages from across the globe inscribed " \
-                "on each. Much of the city was ultimately bombed, but there were relatively very " \
-                "few people who died here -- thanks to beer! A large underground cellar and tunnel complex had been " \
-                "in use since the 14th century to brew and store beer, and many citizens took shelter here during " \
+        return ("I really enjoyed this city (spelled Nürnberg in German FYI) in the north of Bavaria! "
+                "Important to note though that this was not always part of Bavaria -- Nuremberg used to be the main "
+                "city of the region of Franconia. You will notice all of the city flags and details around the city "
+                "are red rather than the typical Bavarian blue. Nuremberg holds great significance throughout history "
+                "-- in the Holy Roman Empire and in Nazi Germany. The massive 'Nuremberg rallies' were held just "
+                "outside the city at the Zepellinfeld, which is an easy visit (20 minute bus/tram or 10 minute S-Bahn "
+                "train ride) from Nuremberg. Following WW2, the 'Nuremberg trials' were held here. There is a really "
+                "cool memorial, called the Street of Human Rights, that has big pillars with the Universal "
+                "Declaration of Human Rights written in tons of different languages from across the globe inscribed "
+                "on each. Much of the city was ultimately bombed, but there were relatively very "
+                "few people who died here -- thanks to beer! A large underground cellar and tunnel complex had been "
+                "in use since the 14th century to brew and store beer, and many citizens took shelter here during "
                 "WW2. I took a tour of the complex and really enjoyed it.",
                 html.Br(), html.Br(),
-                "The traditional style of buildings is really " \
-                "nice -- the Albrecht-Dürer-Straße is especially picturesque! Besides this, be sure to see the main " \
-                "cathedral, the Handwerkerhof (made to resemble medieval Nuremberg)," \
+                "The traditional style of buildings is really "
+                "nice -- the Albrecht-Dürer-Straße is especially picturesque! Besides this, be sure to see the main "
+                "cathedral, the Handwerkerhof (made to resemble medieval Nuremberg),"
                 "the Schöner Brunnen fountain, and climb up to the 11th century castle complex.",
                 html.Br(), html.Br(),
-                "There is a lot of really great food and beer here. First, you have to try the Nürnberger Bratwurst. " \
-                "They are quite small in size so you can definitely eat a few at least. Go to this traditional " \
-                "bratwurst restaurant -- 'Bratwursthäusle bei St. Sebald.' " \
-                "Obviously try the bratwurst, and round out the meal with sauerkraut, a pretzel, and a beer! " \
-                "It is also quite common around the city to be able to get three little bratwurst in a roll with " \
-                "mustard, this is known as 'drei im Weggla.' These are also really good and only cost a few euros. " \
-                "Another part of the friendly rivalry between Franconia and traditional Bavaria -- which part of " \
-                "the pig leg is the local delicacy. In Franconia, it is the Schäufele (shoulder), and in Bavaria " \
-                "it is the ham hock (Schweinshaxe). Both are great -- but try the Schäufele when you're here! " \
-                "I had an absolutely delicious sampler plate (that included it) at Hütt'n. Right next door, join in " \
-                "on a very fun tradition in the city -- people gather and sit on the sloped road in front of Cafe " \
-                "Wanderer to enjoy a beer around happy hour every evening. Lastly, be sure to try the local " \
-                "Lebkuchen (gingerbread) at Wicklein, the world's oldest gingerbread store -- they have been making " \
+                "There is a lot of really great food and beer here. First, you have to try the Nürnberger Bratwurst. "
+                "They are quite small in size so you can definitely eat a few at least. Go to this traditional "
+                "bratwurst restaurant -- 'Bratwursthäusle bei St. Sebald.' "
+                "Obviously try the bratwurst, and round out the meal with sauerkraut, a pretzel, and a beer! "
+                "It is also quite common around the city to be able to get three little bratwurst in a roll with "
+                "mustard, this is known as 'drei im Weggla.' These are also really good and only cost a few euros. "
+                "Another part of the friendly rivalry between Franconia and traditional Bavaria -- which part of "
+                "the pig leg is the local delicacy. In Franconia, it is the Schäufele (shoulder), and in Bavaria "
+                "it is the ham hock (Schweinshaxe). Both are great -- but try the Schäufele when you're here! "
+                "I had an absolutely delicious sampler plate (that included it) at Hütt'n. Right next door, join in "
+                "on a very fun tradition in the city -- people gather and sit on the sloped road in front of Cafe "
+                "Wanderer to enjoy a beer around happy hour every evening. Lastly, be sure to try the local "
+                "Lebkuchen (gingerbread) at Wicklein, the world's oldest gingerbread store -- they have been making "
                 "gingerbread since 1615!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -2448,7 +2466,7 @@ def set_display_children(value):
     # Ireland
     if value == 'Cliffs of Moher':
         lat_lon_str = weather.get_lat_lon(coordinates.cliffs_of_moher_geojson)
-        return ('Awesome (big) day trip from Dublin. They are amazing. My trip also included cool little stops at ' \
+        return ('Awesome (big) day trip from Dublin. They are amazing. My trip also included cool little stops at '
                 'castles ___ and ___.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -2523,12 +2541,12 @@ def set_display_children(value):
                         dp.DashPlayer(
                             id="player",
                             url="https://youtube.com/shorts/uUhn6I7OCi4?si=f4B9EkqDq8ZM59tk",
-                controls=True,
-                width="100%",
-                height="200px",
-                )
-        ]
-        ), html.Br(),
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/ireland/dublin17.JPG"},
@@ -2943,6 +2961,135 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Morocco
+    if value == 'Aït Benhaddou':
+        lat_lon_str = weather.get_lat_lon(coordinates.ait_geojson)
+        return ('more to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/morocco/__.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.ait_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Casablanca':
+        lat_lon_str = weather.get_lat_lon(coordinates.casablanca_geojson)
+        return ('more to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/morocco/casablanca.JPG"},
+                        {"src": "assets/morocco/casablanca1.JPG"},
+                        {"src": "assets/morocco/casablanca2.JPG"},
+                        {"src": "assets/morocco/casablanca3.JPG"},
+                        {"src": "assets/morocco/casablanca4.JPG"},
+                        {"src": "assets/morocco/casablanca5.JPG"},
+                        # {"src": "assets/morocco/casablanca6.JPG"},
+                        {"src": "assets/morocco/casablanca7.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.casablanca_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Fes':
+        lat_lon_str = weather.get_lat_lon(coordinates.fes_geojson)
+        return ('more to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/morocco/fes.JPG"},
+                        {"src": "assets/morocco/fes1.JPG"},
+                        {"src": "assets/morocco/fes2.JPG"},
+                        {"src": "assets/morocco/fes3.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.fes_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Ifrane National Park':
+        lat_lon_str = weather.get_lat_lon(coordinates.ifrane_geojson)
+        return ('more to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/morocco/__.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.ifrane_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Marrakech':
+        lat_lon_str = weather.get_lat_lon(coordinates.marrakech_geojson)
+        return ('more to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/morocco/__.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.marrakech_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Merzouga':
+        lat_lon_str = weather.get_lat_lon(coordinates.merzouga_geojson)
+        return ('more to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/morocco/__.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.merzouga_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Rabat':
+        lat_lon_str = weather.get_lat_lon(coordinates.rabat_geojson)
+        return ('more to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/morocco/__.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.rabat_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Tangier':
         lat_lon_str = weather.get_lat_lon(coordinates.tangier_geojson)
         return ('Despite being just 17 miles from the southern coast of Spain, I felt more culture shock here than '
@@ -2980,6 +3127,23 @@ def set_display_children(value):
                 ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.tangier_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Todgha Gorge':
+        lat_lon_str = weather.get_lat_lon(coordinates.todgha_geojson)
+        return ('more to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/morocco/__.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.todgha_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Netherlands
@@ -3231,7 +3395,8 @@ def set_display_children(value):
     # Portugal
     lat_lon_str = weather.get_lat_lon(coordinates.lisbon_geojson)
     if value == 'Lisbon':
-        return ('Absolutely lovely city! More info to come!',
+        return ('Absolutely lovely city! The capital of Portugal is a very walkable city that sits on the water with '
+                'good food, good pastries, good wine, and lots of sunshine.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -3261,8 +3426,8 @@ def set_display_children(value):
     if value == 'Guincho Beach':
         lat_lon_str = weather.get_lat_lon(coordinates.guincho_beach_geojson)
         return ('Not too far of a drive from Lisbon -- I was lucky to meet someone with a car and we drove here. '
-               "There are big sand dunes next to the coast. There's also a couple cafes here where you can grab a"
-               "drink or a bite to eat. Sunset here over the ocean was just beautiful. ",
+                'There are big sand dunes next to the coast. There are also a couple cafes here where you can grab a'
+                'drink or a bite to eat. Sunset here over the ocean was just beautiful. ',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -3323,7 +3488,7 @@ def set_display_children(value):
     if value == 'Bratislava':
         lat_lon_str = weather.get_lat_lon(coordinates.bratislava_geojson)
         return ('What a fun little city with a cool old town and a really cool citadel that overlooks the city and '
-               'the river that runs through it.',
+                'the river that runs through it.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -3389,8 +3554,8 @@ def set_display_children(value):
                     interval=2000,
                     ride="carousel",
                     className="carousel-fade"
-                ), html.Br(),                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
-                html.Div(
+                ), html.Br(), html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
+                html.Br(), html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.azpeitia_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
@@ -3482,8 +3647,8 @@ def set_display_children(value):
                     interval=2000,
                     ride="carousel",
                     className="carousel-fade"
-                ), html.Br(),                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
-                html.Div(
+                ), html.Br(), html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
+                html.Br(), html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.begur_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
@@ -3760,7 +3925,7 @@ def set_display_children(value):
                         {"src": "assets/spain/mad6.JPG"},
                         {"src": "assets/spain/mad7.JPG"},
                         {"src": "assets/spain/mad8.JPG"},
-                        {"src": "assets/spain/mad9.JPG"},
+                        # {"src": "assets/spain/mad9.JPG"},
                         {"src": "assets/spain/mad10.JPG"},
                         {"src": "assets/spain/mad11.JPG"},
                         {"src": "assets/spain/mad12.JPG"},
@@ -3851,8 +4016,8 @@ def set_display_children(value):
                     interval=2000,
                     ride="carousel",
                     className="carousel-fade"
-                ), html.Br(),                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
-                html.Div(
+                ), html.Br(), html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
+                html.Br(), html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.pineda_de_mar_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
