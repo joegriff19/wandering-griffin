@@ -15,70 +15,70 @@ options = dict(loop=True, autoplay=True, rendererSettings=dict(preserveAspectRat
 
 
 def update_weather(location):
-    # # request_str = 'http://api.weatherstack.com/current?access_key=d779aff91a964382a38b84e587262b7c&query={}&units=f'.format(location)
-    # # request_str = 'http://api.weatherstack.com/current?access_key=2fe2e07f4f30b307d9317f34983b8a99&query={}&units=f'.format(location)
-    # request_str = 'http://api.weatherstack.com/current?access_key=3cbe6ef6364221e7bffdc404aac972c2&query={}&units=f'.format(location)
-    # weather_requests = requests.get(request_str)
-    # json_data = weather_requests.json()
-    # weather_df = pd.DataFrame(json_data)
-    # # print(weather_df)
-    # for i in range(len(weather_df)):
-    #     temp = weather_df.current['temperature']
-    #     # precip = weather_df.current['precip']
-    #     # cloudcover = weather_df.current['cloudcover']
-    #     weather_descriptions = weather_df.current['weather_descriptions']
-    #     weather_code = weather_df.current['weather_code']
-    #     is_day = weather_df.current['is_day']
-    #     time = weather_df.current['observation_time']
-    #
-    # c_temp = int((temp-32) / 1.8)
-    #
-    # weather_descriptions = str(weather_descriptions)
-    # weather_descriptions = weather_descriptions.strip("[]")
-    # weather_descriptions = weather_descriptions.strip("'")
-    # weather_descriptions = weather_descriptions.lower()
-    #
-    # weather_str = 'Current weather:\n', weather_descriptions, ', '
-    # weather_str1 = temp, '°F ('
-    # weather_str2 = c_temp, '°C)'
-    # final_weather_str = weather_str + weather_str1 + weather_str2
-    #
-    # time_str = 'Local time:'
-    #
-    # # weather_icon = html.Img(src=dash.get_asset_url(weather_icons))
-    # # print(weather_icon)
-    # # weather_image_name = get_weather_image(weather_code)
-    # # weather_image_name = 'line-md:github-loop'
-    #
-    # # split lat_lon_str into lat and lon
-    # coordinates_split = location.split(",")
-    # lat = float(coordinates_split[0])
-    # lon = float(coordinates_split[1])
-    #
-    # # Find timezone based on longitude and latitude
-    # tf = TimezoneFinder(in_memory=True)
-    # local_time_zone = tf.timezone_at(lng=lon, lat=lat)
-    # test_naive = pd.to_datetime(time)
-    # test_UTC = test_naive.tz_localize('UTC')
-    # test_local = test_UTC.tz_convert(local_time_zone)
-    # time_final = test_local.strftime('%I:%M %p')
-    #
-    # global json_path
-    # json_path = get_weather_image(weather_code)
-    # if is_day == 'no':
-    #     if json_path == 'sun.json':
-    #         json_path = 'moon.json'
-    #     if json_path == 'partly_cloudy.json':
-    #         json_path = 'moon_cloudy.json'
-    #     if json_path == 'sun_snow.json':
-    #         json_path = 'snow_night.json'
-    #
-    # return (html.Div(time_str), html.Div(time_final), html.Div(final_weather_str),
-    #         html.Div(de.Lottie(options=options, width="10vh", height="10vh", url="/loader2", speed=1,
-    #                            isClickToPauseDisabled=True)))
+    # request_str = 'http://api.weatherstack.com/current?access_key=d779aff91a964382a38b84e587262b7c&query={}&units=f'.format(location)
+    # request_str = 'http://api.weatherstack.com/current?access_key=2fe2e07f4f30b307d9317f34983b8a99&query={}&units=f'.format(location)
+    request_str = 'http://api.weatherstack.com/current?access_key=3cbe6ef6364221e7bffdc404aac972c2&query={}&units=f'.format(location)
+    weather_requests = requests.get(request_str)
+    json_data = weather_requests.json()
+    weather_df = pd.DataFrame(json_data)
+    # print(weather_df)
+    for i in range(len(weather_df)):
+        temp = weather_df.current['temperature']
+        # precip = weather_df.current['precip']
+        # cloudcover = weather_df.current['cloudcover']
+        weather_descriptions = weather_df.current['weather_descriptions']
+        weather_code = weather_df.current['weather_code']
+        is_day = weather_df.current['is_day']
+        time = weather_df.current['observation_time']
 
-    # # to avoid using api unnecessarily
-    return location
+    c_temp = int((temp-32) / 1.8)
+
+    weather_descriptions = str(weather_descriptions)
+    weather_descriptions = weather_descriptions.strip("[]")
+    weather_descriptions = weather_descriptions.strip("'")
+    weather_descriptions = weather_descriptions.lower()
+
+    weather_str = 'Current weather:\n', weather_descriptions, ', '
+    weather_str1 = temp, '°F ('
+    weather_str2 = c_temp, '°C)'
+    final_weather_str = weather_str + weather_str1 + weather_str2
+
+    time_str = 'Local time:'
+
+    # weather_icon = html.Img(src=dash.get_asset_url(weather_icons))
+    # print(weather_icon)
+    # weather_image_name = get_weather_image(weather_code)
+    # weather_image_name = 'line-md:github-loop'
+
+    # split lat_lon_str into lat and lon
+    coordinates_split = location.split(",")
+    lat = float(coordinates_split[0])
+    lon = float(coordinates_split[1])
+
+    # Find timezone based on longitude and latitude
+    tf = TimezoneFinder(in_memory=True)
+    local_time_zone = tf.timezone_at(lng=lon, lat=lat)
+    test_naive = pd.to_datetime(time)
+    test_UTC = test_naive.tz_localize('UTC')
+    test_local = test_UTC.tz_convert(local_time_zone)
+    time_final = test_local.strftime('%I:%M %p')
+
+    global json_path
+    json_path = get_weather_image(weather_code)
+    if is_day == 'no':
+        if json_path == 'sun.json':
+            json_path = 'moon.json'
+        if json_path == 'partly_cloudy.json':
+            json_path = 'moon_cloudy.json'
+        if json_path == 'sun_snow.json':
+            json_path = 'snow_night.json'
+
+    return (html.Div(time_str), html.Div(time_final), html.Div(final_weather_str),
+            html.Div(de.Lottie(options=options, width="10vh", height="10vh", url="/loader2", speed=1,
+                               isClickToPauseDisabled=True)))
+
+    # # # to avoid using api unnecessarily
+    # return location
 
 
 @server.route("/loader2", methods=['GET'])
