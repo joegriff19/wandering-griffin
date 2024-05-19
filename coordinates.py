@@ -128,7 +128,8 @@ kotor_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", 
 # morocco coordinates
 ait_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-7.1319, 31.0470]}}]}
 casablanca_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-7.5898, 33.5731]}}]}
-ifrane_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-5.2371, 33.5630]}}]}
+erg_chebbi_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-3.9678, 31.1458]}}]}
+ifrane_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-5.2371, 31.1]}}]}
 fes_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-5.0078, 34.0181]}}]}
 marrakech_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-7.9898, 31.6225]}}]}
 merzouga_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-4.0134, 31.0802]}}]}

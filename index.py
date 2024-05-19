@@ -2968,7 +2968,11 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/morocco/__.JPG"},
+                        {"src": "assets/morocco/ait.JPG"},
+                        {"src": "assets/morocco/ait1.JPG"},
+                        {"src": "assets/morocco/ait2.JPG"},
+                        {"src": "assets/morocco/ait3.JPG"},
+                        {"src": "assets/morocco/ait4.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2991,8 +2995,10 @@ def set_display_children(value):
                         {"src": "assets/morocco/casablanca3.JPG"},
                         {"src": "assets/morocco/casablanca4.JPG"},
                         {"src": "assets/morocco/casablanca5.JPG"},
-                        # {"src": "assets/morocco/casablanca6.JPG"},
+                        {"src": "assets/morocco/casablanca6.JPG"},
                         {"src": "assets/morocco/casablanca7.JPG"},
+                        {"src": "assets/morocco/casablanca8.JPG"},
+                        {"src": "assets/morocco/casablanca9.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -3000,6 +3006,35 @@ def set_display_children(value):
                 ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.casablanca_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Erg Chebbi (Sahara Desert)':
+        lat_lon_str = weather.get_lat_lon(coordinates.erg_chebbi_geojson)
+        return ('more to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/morocco/sahara.JPG"},
+                        {"src": "assets/morocco/sahara1.JPG"},
+                        {"src": "assets/morocco/sahara2.JPG"},
+                        {"src": "assets/morocco/sahara3.JPG"},
+                        {"src": "assets/morocco/sahara4.JPG"},
+                        {"src": "assets/morocco/sahara5.JPG"},
+                        {"src": "assets/morocco/sahara6.JPG"},
+                        {"src": "assets/morocco/sahara7.JPG"},
+                        {"src": "assets/morocco/sahara8.JPG"},
+                        {"src": "assets/morocco/sahara9.JPG"},
+                        {"src": "assets/morocco/sahara10.JPG"},
+                        {"src": "assets/morocco/sahara11.JPG"},
+                        {"src": "assets/morocco/sahara12.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.erg_chebbi_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Fes':
@@ -3013,6 +3048,8 @@ def set_display_children(value):
                         {"src": "assets/morocco/fes1.JPG"},
                         {"src": "assets/morocco/fes2.JPG"},
                         {"src": "assets/morocco/fes3.JPG"},
+                        {"src": "assets/morocco/fes4.JPG"},
+                        {"src": "assets/morocco/fes5.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -3029,7 +3066,7 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/morocco/__.JPG"},
+                        {"src": "assets/morocco/ifrane.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -3041,12 +3078,45 @@ def set_display_children(value):
 
     if value == 'Marrakech':
         lat_lon_str = weather.get_lat_lon(coordinates.marrakech_geojson)
-        return ('more to come!',
+        return ('What a cool city — the small, bustling streets lined with markets feel straight out of a movie. '
+                'Although the entire city feels very authentic and traditional, there are many tourists in the '
+                'city as well. Although the city and lifestyle here are very different from the western world '
+                '(be prepared for some culture shock!), Marrakech is a very safe city and you will see many other '
+                'tourists around looking very comfortable and wearing non-conservative clothing. A walking tour is a '
+                'great way to meet a local guide and become more familiar with the city, the culture, and the history.',
+                html.Br(), html.Br(),
+                "For dinner, Nomad Restaurant and Cafe Restaurant Dar L'hssira are great options. Nomad was "
+                "nice and a bit more modern, while Dar L'hssira was more traditional and casual. "
+                "Both have awesome rooftops.",
+                html.Br(), html.Br(),
+                'There are so many cool cafes and rooftops all around the city. There are a number of great rooftops '
+                'around the main plaza (Jemaa el-Fnaa), including Hôtel Restaurant Café de France, Zeitoun Café, '
+                'and Argana. You can get a great view for sunset from these rooftop cafes. ',
+                html.Br(), html.Br(),
+                'There is a lot going on at the Jemaa el-Fnaa plaza! You will see live music / drum circles, dancers, '
+                'henna artists, snake charmers, monkeys (for tourism purposes, not wild), and there are tons of food '
+                'and juice stands. Even more food stands are set up in the evening to serve dinner. We went in '
+                'May and there was also a large stage set up with live music and dancing every night. ',
+                html.Br(), html.Br(),
+                'I would also 100% recommend the riad (hotel) where we stayed -- The Central House Marrakech Medina. '
+                'As the name suggests, the location is great. The place itself is also perfect with a pool, rooftop, '
+                'bar, buffet breakfast, and several excursion / experience / entertainment options, including '
+                'day trips, cooking classes, henna, trivia, etc. ',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/morocco/__.JPG"},
+                        {"src": "assets/morocco/marr.JPG"},
+                        {"src": "assets/morocco/marr1.JPG"},
+                        {"src": "assets/morocco/marr2.JPG"},
+                        {"src": "assets/morocco/marr3.JPG"},
+                        {"src": "assets/morocco/marr4.JPG"},
+                        {"src": "assets/morocco/marr5.JPG"},
+                        {"src": "assets/morocco/marr6.JPG"},
+                        {"src": "assets/morocco/marr7.JPG"},
+                        {"src": "assets/morocco/marr8.JPG"},
+                        {"src": "assets/morocco/marr9.JPG"},
+                        {"src": "assets/morocco/marr10.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -3063,7 +3133,13 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/morocco/__.JPG"},
+                        {"src": "assets/morocco/merzouga.JPG"},
+                        {"src": "assets/morocco/merzouga1.JPG"},
+                        {"src": "assets/morocco/merzouga2.JPG"},
+                        {"src": "assets/morocco/merzouga3.JPG"},
+                        {"src": "assets/morocco/merzouga4.JPG"},
+                        {"src": "assets/morocco/merzouga5.JPG"},
+                        {"src": "assets/morocco/merzouga6.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -3080,7 +3156,13 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/morocco/__.JPG"},
+                        {"src": "assets/morocco/rabat.JPG"},
+                        {"src": "assets/morocco/rabat1.JPG"},
+                        {"src": "assets/morocco/rabat2.JPG"},
+                        {"src": "assets/morocco/rabat3.JPG"},
+                        {"src": "assets/morocco/rabat4.JPG"},
+                        {"src": "assets/morocco/rabat5.JPG"},
+                        {"src": "assets/morocco/rabat6.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -3136,7 +3218,7 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/morocco/__.JPG"},
+                        {"src": "assets/morocco/todgha.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
