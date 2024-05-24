@@ -3154,6 +3154,19 @@ def set_display_children(value):
         return ('more to come!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://www.youtube.com/watch?v=ZqM_oeGWFsY",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/morocco/rabat.JPG"},
