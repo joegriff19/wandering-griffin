@@ -271,7 +271,7 @@ def set_display_children(value):
         return ('Go skiing! Pyrenees mountains are beautiful and very affordable compared to the US. '
                 'Only ~3-4 hour drive from Barcelona. The skiing is great and the ski town is very fun as well.',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.pal_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/andorra/andorra2.JPG"},
@@ -290,7 +290,6 @@ def set_display_children(value):
 
     # Argentina
     if value == 'Buenos Aires':
-        lat_lon_str = weather.get_lat_lon(coordinates.ba_geojson)
         return ("The capital of Argentina! One of the most fun weekends of my life. Be sure to eat lots "
                 "of ‘parilla’ (grilled meat). The ‘choripan’ is a classic and is so good - a grilled chorizo sandwich "
                 "with a chimichurri sauce. You can (and should) enjoy delicious steak dinners for pretty cheap. "
@@ -323,7 +322,7 @@ def set_display_children(value):
                 "ended up winning. The streets near the stadium proceeded to celebrate all night long. We grabbed a "
                 "couple beers and joined the celebrations. This was one of the most fun experiences of my life!",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.ba_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/argentina/ba9.JPG"},
@@ -347,7 +346,6 @@ def set_display_children(value):
 
     # Austria
     if value == 'Dornbirn':
-        lat_lon_str = weather.get_lat_lon(coordinates.dornbirn_geojson)
         return ('Home of the Rhombergs! My great-great grandpa, Franz Martin Rhomberg, came to the US '
                 'from this small city in Austria. There are so many stores and other signs with the name Rhomberg '
                 'still to this day — it was crazy to see! The other big Rhomberg highlight was seeing the '
@@ -359,7 +357,7 @@ def set_display_children(value):
                 'in the city, the Rothaus is awesome. In winter, there is also amazing skiing nearby. '
                 'I did a trip for a couple days to Steffisalp and the views were incredible. ',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.dornbirn_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/austria/dornbirn.JPG"},
@@ -378,13 +376,12 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Innsbruck':
-        lat_lon_str = weather.get_lat_lon(coordinates.innsbruck_geojson)
         return ('Very cute city in the Austrian Alps -- the mountains surrounding the city are beautiful. Innsbruck '
                 'is very close to some world-class ski destinations, including St. Anton! See the St. Anton page for '
                 'more about St. Anton, just over an hour from Innsbruck by train. The train ride through the Alps is '
                 'stunning... as was the flight over the Alps into Innsbruck!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.innsbruck_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/austria/inn.JPG"},
@@ -402,14 +399,13 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'St. Anton':
-        lat_lon_str = weather.get_lat_lon(coordinates.stanton_geojson)
         return ('Amazing ski destination in the Austrian Alps! Not only is St. Anton known for world-class skiing, but '
                 'it is also known for its apres ski! There are some very cool spots to have a drink at the end of the '
                 'day, especially Krazy Kanguruh and Mooserwirt. During the day skiing, we really enjoyed stopping at '
                 'Arlberg Thaja for lunch. If you can fly to Innsbruck, St. Anton is an easy (and beautiful) train ride '
                 'from there, just over an hour. The train drops off right in the middle of the ski town.',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.stanton_geojson)), className='weather'), html.Br(),
                 html.Div(
                     style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
                            "margin": "auto"},
@@ -445,7 +441,6 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Vienna':
-        lat_lon_str = weather.get_lat_lon(coordinates.vienna_geojson)
         return ('A very grand city! The capital of Austria is very impressive. The Hofburg Palace and the main '
                 'cathedral on Stephansplatz are the big highlights, but there is so much more to see! Even beyond '
                 'the main sightseeing spots, there are so many beautiful buildings that I feel could be the main '
@@ -465,7 +460,7 @@ def set_display_children(value):
                 'but for a really fun day trip option, go to Bratislava, the capital of Slovakia! '
                 'It is very close, less than an hour away by train or bus. I loved doing a full day trip here.',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.vienna_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/austria/vienna.JPG"},
@@ -488,10 +483,9 @@ def set_display_children(value):
 
     # Bahamas
     if value == 'Eleuthera':
-        lat_lon_str = weather.get_lat_lon(coordinates.eleuthera_geojson)
         return ('ready for an epic sailing trip??',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.eleuthera_geojson)), className='weather'), html.Br(),
                 html.Div(
                     style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
                            "margin": "auto"},
@@ -520,10 +514,9 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Nassau':
-        lat_lon_str = weather.get_lat_lon(coordinates.nassau_geojson)
         return ('explore Nassau, eat conch, go to the beach, and listen to reggae!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.nassau_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/bahamas/nassau.JPG"},
@@ -543,10 +536,9 @@ def set_display_children(value):
 
     # Belgium
     if value == 'Antwerp':
-        lat_lon_str = weather.get_lat_lon(coordinates.antwerp_geojson)
         return ('Beware of the Long Wapper! more to come!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.antwerp_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/belgium/antwerp.JPG"},
@@ -566,7 +558,6 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Brussels':
-        lat_lon_str = weather.get_lat_lon(coordinates.brussels_geojson)
         return ('It is often suggested to skip Brussels (Band visit other Belgian cities such as Ghent or Antwerp... '
                 'and while I love these smaller cities of Belgium, I definitely would NOT recommend immediately '
                 'skipping Brussels for other cities in Belgium. The center of Brussels is really nice. The town hall '
@@ -584,7 +575,7 @@ def set_display_children(value):
                 'Delirium Village -- it is really fun and gets quite lively in the evenings! Lastly, a couple of the '
                 "funniest and weirdest statues are the 'manneken pis' (peeing boy) and 'het zinneke' (peeing dog).",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.brussels_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/belgium/brussels.JPG"},
@@ -605,7 +596,6 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Leuven':
-        lat_lon_str = weather.get_lat_lon(coordinates.leuven_geojson)
         return ('What a fun little town really close to Brussels. It is easily accessible via the train system;'
                 'the ride takes less than 30 minutes from Brussels. The main attraction in Leuven is the Town Hall, '
                 'and wow it is actually quite stunning. There are 236 little statues on the exterior depicting saints '
@@ -614,7 +604,7 @@ def set_display_children(value):
                 'at all from the center of the city or the main train station. Be sure to book a tour ahead of '
                 'time though as the time slots fill up.',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.leuven_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/belgium/leuven2.JPG"},
@@ -633,7 +623,6 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Ghent':
-        lat_lon_str = weather.get_lat_lon(coordinates.ghent_geojson)
         return ('I absolutely loved my time here. It is such a cute little city. The main area of the city feels like '
                 'something out of a Harry Potter movie! The canal lined with classic Belgian architecture houses, '
                 'the bridge, the castle (Gravensteen), and the grand churches all make for really stunning and '
@@ -653,7 +642,7 @@ def set_display_children(value):
                 "looking beer glass! Not only that, but the shoes then go in a basket which is raised to the "
                 "ceiling and it rings a bell. Enjoy the picture below!",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.ghent_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/belgium/ghent.JPG"},
@@ -676,12 +665,11 @@ def set_display_children(value):
 
     # Bolivia
     if value == 'Cliza':
-        lat_lon_str = weather.get_lat_lon(coordinates.cliza_geojson)
         return ('A very small town outside of Cochabamba, this was the destination for the Solidarity Bridge '
                 'mission trip where I joined as a Spanish interpreter. This is quite far off the beaten path and '
                 'I would not recommend for tourism purposes, but this will always be a special place for me!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.cliza_geojson)), className='weather'), html.Br(),
                 html.Div(
                     style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
                            "margin": "auto"},
@@ -714,7 +702,6 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Cochabamba':
-        lat_lon_str = weather.get_lat_lon(coordinates.cocha_geojson)
         return ('I only spent a day in this beautiful, bustling city in Bolivia, but I absolutely loved it. '
                 'There is a massive Christ statue that overlooks the city — almost twice the size as the more '
                 'well-known Cristo in Brazil! Visiting the statue, you will realize just how massive it is, '
@@ -722,7 +709,7 @@ def set_display_children(value):
                 'some lovely music from the very kind locals, and I ate a salteña that '
                 'I still dream about to this day. I hope to be back some day!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.cocha_geojson)), className='weather'), html.Br(),
                 html.Div(
                     style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
                            "margin": "auto"},
@@ -754,14 +741,13 @@ def set_display_children(value):
 
     # Bosnia & Herzegovina
     if value == 'Medjugorje':
-        lat_lon_str = weather.get_lat_lon(coordinates.medj_geojson)
         return ('Very small city in B&H where a miracle happened around 30 years ago -- five children saw a vision '
                 'of the Blessed Mother. Even with many people suspicious of the vision, the stories of the '
                 'children all align perfectly. One of the children (now an adult) still has her vision daily and '
                 'has devoted her life to sharing her experiences with Catholics who make the journey or pilgrimage '
                 'to visit Medjugorje. It was quite the moving experience. This is an easy day trip from Mostar. ',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.medj_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/bosnia/medj4.JPG"},
@@ -783,10 +769,9 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Mostar':
-        lat_lon_str = weather.get_lat_lon(coordinates.mostar_geojson)
         return ('more info coming soon!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.mostar_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/bosnia/mostar2.JPG"},
@@ -805,7 +790,6 @@ def set_display_children(value):
 
     # Bulgaria
     if value == 'Sofia':
-        lat_lon_str = weather.get_lat_lon(coordinates.sofia_geojson)
         return ('The Bulgarian capital! The history here is really interesting. People have inhabited modern-day '
                 'Sofia for some 6000 years. Rather than an old town, here you have different layers of the city. '
                 'In the center of the city you can find a number of Roman ruins below the current level of the city. '
@@ -819,7 +803,7 @@ def set_display_children(value):
                 'in Sofia. The food is quite good — go to ___ for a casual but delicious and cheap meal. Get the '
                 'kebapcha (caseless sausages with actually some of the best potatoes I’ve ever had).',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.sofia_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/bulgaria/sofia.JPG"},
@@ -838,7 +822,6 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Varna':
-        lat_lon_str = weather.get_lat_lon(coordinates.varna_geojson)
         return ("I would so highly recommend this little gem of a city on the Black Sea. Enjoy the beaches and the "
                 "cheap prices. This is probably the cheapest place I’ve ever been in Europe. The most expensive "
                 "beers I saw were at a craft brewery — and they were just 2.50 Euros! The beach is beautiful. Go to "
@@ -856,7 +839,7 @@ def set_display_children(value):
                 "There are still remains from Roman baths here, and there are several places you can still bathe "
                 "in the hot spring water.",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.varna_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/bulgaria/varna.JPG"},
@@ -878,10 +861,9 @@ def set_display_children(value):
 
     # Canada
     if value == 'Banff':
-        lat_lon_str = weather.get_lat_lon(coordinates.banff_geojson)
         return ('The color of the lake is really stunning! More to come!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.banff_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/canada/banff.JPG"},
@@ -904,10 +886,9 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Calgary':
-        lat_lon_str = weather.get_lat_lon(coordinates.calgary_geojson)
         return ('Cool, clean city! More to come!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.calgary_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/canada/calgary1.JPG"},
@@ -923,7 +904,6 @@ def set_display_children(value):
 
     # Chile
     if value == 'Puerto Natales (Patagonia)':
-        lat_lon_str = weather.get_lat_lon(coordinates.puertonat_geojson)
         return ('One of the southernmost cities in the world! If you are going to Torres del Paine National Park, '
                 'you will likely fly here and stop here before (and after) your time in the park. '
                 'The airport is quick and cheap 10 minute ride to / from the city. The park is farther, '
@@ -941,7 +921,7 @@ def set_display_children(value):
                 'Calafate beer! It is a delicious local beer made with local calafate berries '
                 '(similar to blueberries).',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.puertonat_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/chile/puertonat.JPG"},
@@ -961,7 +941,6 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Santiago':
-        lat_lon_str = weather.get_lat_lon(coordinates.sant_geojson)
         return ('The capital of Chile! An absolutely beautiful city with the stunning backdrop of the Andes '
                 'mountains everywhere you look. Be sure to eat lots of ‘parilla’ (grilled meat). You can (and '
                 'should) enjoy delicious steak dinners for pretty cheap. Also be sure to drink lots of pisco sours… '
@@ -980,7 +959,7 @@ def set_display_children(value):
                 'to the coast (Valparaíso / Viña del Mar) and to nearby wine country. Skiing is also a fantastic '
                 'option if you are there in winter.',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.sant_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/chile/stgo7.JPG"},
@@ -1001,7 +980,6 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Torres del Paine NP (Patagonia)':
-        lat_lon_str = weather.get_lat_lon(coordinates.torres_geojson)
         return ('"The W" trail was stunning from start to finish. The Torres on the last morning was an amazing end. '
                 'About 50 miles in 4 days. The refugios are really fun to stay in. We stayed at Francés the first '
                 'two nights and then Chileno on the last night. Breakfast and dinner '
@@ -1012,7 +990,7 @@ def set_display_children(value):
                 "there weren't too many tourists yet. You can also catch the end of ski season in the Andes as well! "
                 "Also the southern-most game of beer die ever was played in this park in Sept 2022.",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.torres_geojson)), className='weather'), html.Br(),
                 html.Div(
                     style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
                            "margin": "auto"},
@@ -1049,12 +1027,11 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Valparaíso / Viña del Mar':
-        lat_lon_str = weather.get_lat_lon(coordinates.valpa_geojson)
         return ('Enjoy the beautiful coastline and eat the fresh ceviche from the oceanside marketplace. WOW !!! Also '
                 'be sure to see the Moai statue! This is one of only two Moai statues that have been removed from '
                 'their original location on Easter Island. The other can be found in the British Museum.',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.valpa_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/chile/valpo6.JPG"},
@@ -1072,7 +1049,6 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.valpa_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Valle Nevado':
-        lat_lon_str = weather.get_lat_lon(coordinates.valle_nevado_geojson)
         return ('Stunning views of the Andes mountains! Remember that the seasons in the southern hemisphere are '
                 'flipped, so ski season goes '
                 'from maybe May to September. We were able to ski Valle Nevado resort for free as it is on '
@@ -1085,7 +1061,7 @@ def set_display_children(value):
                 'and there is really no way to get from one side of the mountain to the other '
                 'as there are no Ubers / taxis on the mountain.',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.valle_nevado_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/chile/vn.JPG"},
@@ -1093,7 +1069,6 @@ def set_display_children(value):
                         {"src": "assets/chile/vn2.JPG"},
                         {"src": "assets/chile/vn3.JPG"},
                         {"src": "assets/chile/vn4.JPG"},
-                        # {"src": "assets/chile/vn5.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -1105,7 +1080,6 @@ def set_display_children(value):
 
     # Croatia
     if value == 'Dubrovnik':
-        lat_lon_str = weather.get_lat_lon(coordinates.dubrovnik_geojson)
         return ('One of the coolest cities I have ever been to. Stay near or in the old town. The old city walls of '
                 'the old town look straight out of a movie (and they are -- there has been a lot of filming here in '
                 'recent years, including Game of Thrones and The Last Jedi). Construction of the walls began way '
@@ -1116,7 +1090,7 @@ def set_display_children(value):
                 '(I went in mid-October) still offers lovely warm (but not hot) temperatures and many fewer tourists '
                 'as there are fewer flights.',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.dubrovnik_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/croatia/dubrovnik.JPG"},
@@ -1135,10 +1109,9 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dubrovnik_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Plitvice Lakes National Park':
-        lat_lon_str = weather.get_lat_lon(coordinates.plitvice_geojson)
         return ('Really beautiful. It provides a nice contrast to the coastal cities you will likely in Croatia.',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.plitvice_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/croatia/np.JPG"},
@@ -1159,14 +1132,13 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.plitvice_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Pula':
-        lat_lon_str = weather.get_lat_lon(coordinates.pula_geojson)
         return ("Definitely worth a stop. There's a very old Roman arena and nice little port. There are some cool"
                 "shops and restaurants as well. The view of the city "
                 "from the water / parking lot when you enter the city is beautiful as well. This peninsula (called "
                 "Istria) is so "
                 "fertile and provides great conditions for grapes, olives, and black truffles. Sample frequently!",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.pula_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/croatia/pula2.JPG"},
@@ -1181,14 +1153,13 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.pula_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Motovun':
-        lat_lon_str = weather.get_lat_lon(coordinates.motovun_geojson)
         return ("What a fun, unique experience. Would definitely recommend truffle hunting with a local and their "
                 "dogs! Often times, truffle hunting has run in a family for generations as it takes a lot of effort "
                 " to train the dogs -- it is best when they are trained since birth and there is another already "
                 "trained dog in the house to learn from. We had a great guide and the truffle-focused meal we had "
                 "afterwards was incredible.",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.motovun_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/croatia/truffles4.JPG"},
@@ -1203,10 +1174,9 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.motovun_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Vodnjan':
-        lat_lon_str = weather.get_lat_lon(coordinates.vodnjan_geojson)
         return ("Olivessss! more to come!",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.vodnjan_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/croatia/olives.JPG"},
@@ -1223,12 +1193,11 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.vodnjan_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Opatija':
-        lat_lon_str = weather.get_lat_lon(coordinates.opatija_geojson)
         return ("Just made a quick stop here to watch the sunset, walk by the water, and have a wonderful dinner "
                 "at Valle Losca Tavern. Amazing sunset and amazing meal! I had stingray for dinner and wow it was "
                 "really good. Very cute small town on the water. ",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.opatija_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/croatia/opa3.JPG"},
@@ -1244,12 +1213,11 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.opatija_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Rovinj':
-        lat_lon_str = weather.get_lat_lon(coordinates.rovinj_geojson)
         return ("One of the most picturesque towns I've ever seen, especially from the port. The view of the city "
                 "from the water / parking lot when you enter the city is beautiful as well. This peninsula is so "
                 "fertile and provides great conditions for grapes, olives, and black truffles. Sample frequently.",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.rovinj_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/croatia/rov.JPG"},
@@ -1265,11 +1233,11 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.rovinj_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Zagreb':
-        lat_lon_str = weather.get_lat_lon(coordinates.zagreb_geojson)
         return ('Cool to see the Croatian capital with more of the Germanic influences, compared to the more Italian '
-                'feel on the coast.',
+                "feel on the coast. I wouldn't necessarily recommend coming here instead of a coastal city in "
+                "Croatia, but if you are flying in/out of Zagreb it is definitely worth staying a day!",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.zagreb_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/croatia/zagreb.JPG"},
@@ -1286,7 +1254,6 @@ def set_display_children(value):
 
     # Czechia
     if value == 'Pilsen':
-        lat_lon_str = weather.get_lat_lon(coordinates.pilsen_geojson)
         return ('The birthplace of Pilsner beer! The Pilsner Urquell brewery is definitely the most popular reason '
                 'to visit Pilsen, but Pilsen is also home to the second largest synagogue in Europe -- it is quite '
                 'beautiful. You can also get a great view of the synagogue from atop the St. Bartholomew church '
@@ -1307,7 +1274,7 @@ def set_display_children(value):
                 "taps! After the baths, there was a nice relaxation room (where we were offered more beer). The "
                 "massage at the end was the cherry on top. Would absolutely recommend!",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.pilsen_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/czechia/pils.JPG"},
@@ -1333,7 +1300,6 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Prague':
-        lat_lon_str = weather.get_lat_lon(coordinates.prague_geojson)
         return ('One of my favorite cities in the world! It is relatively cheap compared to western European capitals '
                 "and definitely has a different feel. Stay near the old town. The city is very walkable and you "
                 "shouldn't really need any taxis or public transport to get around. Your first stop should be "
@@ -1359,7 +1325,7 @@ def set_display_children(value):
                 "name. He naturally then filed a patent and gave the same name to the St. Louis Budweiser. So -- "
                 "be sure to try the real Budweiser!",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.prague_geojson)), className='weather'), html.Br(),
                 html.Div(
                     style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
                            "margin": "auto"},
@@ -1404,7 +1370,6 @@ def set_display_children(value):
 
     # Denmark
     if value == 'Copenhagen':
-        lat_lon_str = weather.get_lat_lon(coordinates.copen_geojson)
         return ('The capital of Denmark! Copenhagen is a great city for walking or biking as it is full of parks '
                 'and waterways. My mom and I really enjoyed a bike tour of the city! '
                 'Be sure to walk around Nyhaven and see the most famous view of the city! '
@@ -1431,7 +1396,7 @@ def set_display_children(value):
                 '(Note: an underwater tunnel is actually being built right now, so soon the train will '
                 'make this journey via this tunnel rather than via ferry)',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.copen_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/denmark/cop.JPG"},
@@ -1458,13 +1423,12 @@ def set_display_children(value):
 
     # Ecuador
     if value == 'Quito':
-        lat_lon_str = weather.get_lat_lon(coordinates.quito_geojson)
         return ('I didn’t spend much time in Quito — but the most memorable moments were definitely the outdoor '
                 'equator museum experience and taking the teleférico up to the ___. And how can I forget — '
                 'eating the local delicacy (in Ecuador and in Peru) of ‘cuy’ aka guinea pig. It was a long time ago '
                 'and I don’t really remember how it tasted, but I definitely ate all that was on my plate!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.quito_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/ecuador/quito.JPG"},
@@ -1479,11 +1443,10 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Galapagos Islands':
-        lat_lon_str = weather.get_lat_lon(coordinates.galapagos_geojson)
         return ("Maybe the coolest place I've ever been. Week-long cruise with daily snorkeling. We saw penguins, "
                 "sea lions, sting rays, sharks, and more sea turtles than you could ever imagine.",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.galapagos_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/ecuador/galapagos16.JPG"},
@@ -1514,8 +1477,7 @@ def set_display_children(value):
 
     # England
     if value == 'London':
-        lat_lon_str = weather.get_lat_lon(coordinates.london_geojson)
-        return ("The home of the enemy! Tons of history and of course... "
+        return ("The home of the enemy! Beware! Jokes aside, London is great. Tons of history and of course... "
                 "the world mecca for football. Currently (2023-24), 7 of the 20 teams in the English Premier League "
                 "(the best league in the world) are in London. The atmosphere at second league (called "
                 "The Championship) games is also really fun and a lot cheaper than Premier League games. QPR is a "
@@ -1546,7 +1508,7 @@ def set_display_children(value):
                 html.Br(), html.Br(),
                 "London can be expensive but it's a really great city with lots to do!",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.london_geojson)), className='weather'), html.Br(),
                 html.Div(
                     style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
                            "margin": "auto"},
@@ -1586,14 +1548,13 @@ def set_display_children(value):
 
     # France
     if value == 'Colmar':
-        lat_lon_str = weather.get_lat_lon(coordinates.colmar_geojson)
         return ('Colmar may be small but it really goes all out for Christmas. It is a really cute little city, and '
                 'it is wild how many tourists come to visit the Christmas markets. If you have the time, it '
                 'is definitely worth a day trip from Strasbourg. The French architect that designed the Statue of '
                 'Liberty is from here, and there is actually a small replica of the statue that welcomes you as '
                 'you enter the city!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.colmar_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/france/colmar.JPG"},
@@ -1614,7 +1575,6 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.colmar_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Paris':
-        lat_lon_str = weather.get_lat_lon(coordinates.paris_geojson)
         return ('Lots to do here! It is indeed expensive and many people prefer other parts of France, '
                 'but it is absolutely worth a visit. Of course visit the Eiffel Tour -- catch some great '
                 "views from train line 6. Also be prepared for the little 'light show' that happens "
@@ -1634,7 +1594,7 @@ def set_display_children(value):
                 "Flore (pictured below) is a famous spot -- but be aware it is very expensive. A picture outside "
                 "and eating somewhere else may do the trick!",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.paris_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/france/paris1.JPG"},
@@ -1656,13 +1616,12 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Strasbourg':
-        lat_lon_str = weather.get_lat_lon(coordinates.stras_geojson)
         return ('Known as the ‘Capital of Christmas,’ Strasbourg is quite magical for Christmas. There are so many '
                 'lights and markets all over the city. Christmas season or not, be sure to walk around the ‘Petite '
                 'Paris’ area. It is really cute. A day trip to Colmar is also a great idea, '
                 'especially during Christmas time.',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.stras_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/france/strasbourg.JPG"},
@@ -3151,8 +3110,15 @@ def set_display_children(value):
 
     if value == 'Rabat':
         lat_lon_str = weather.get_lat_lon(coordinates.rabat_geojson)
-        return ('more to come!',
+        return ('The capital of Morocco! I was really pleasantly surprised by Rabat. It is modern, organized, '
+                'and clean (especially compared to other big cities in Morocco). The views of the '
+                'water -- the Bouregreg River and the Atlantic Ocean -- are lovely. You can catch a beautiful '
+                'sunset over the Atlantic from the Kasbah of the Udayas (specifically the Viewpoint Oudayas). '
+                'There are also really nice beaches right in the city center.',
                 html.Br(), html.Br(),
+                'One of my favorite restaurants I visited in all of Morocco is Dar Naji. Delicious food at a very '
+                'fair price, great rooftop terrace, traditional live music, impressive tea pouring from the wait staff '
+                '(see the video below). Try the ___ and the ___. ',
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
                     style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
