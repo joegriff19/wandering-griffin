@@ -3745,7 +3745,18 @@ def set_display_children(value):
 
     if value == 'Córdoba':
         lat_lon_str = weather.get_lat_lon(coordinates.cordoba_geojson)
-        return ("More info coming soon!",
+        return ("A beautiful city in the south of Spain, most famous for its mosque-cathedral. This is perhaps the "
+                "most unique place of worship I have ever visited -- and also one of the most beautiful! It was "
+                "originally built as a mosque, but following the reconquista it was converted into a cathedral. The "
+                "majority of the mosque is still as it was when it was first built, but a cathedral was then "
+                "constructed right in the center of the mosque. It is quite stunning!",
+                html.Br(), html.Br(),
+                "In addition to the mosque, the old fortress and gardens (together known as the Alcázar) are lovely, "
+                "and the small streets in general in the city are charming with lots of restaurants and little shops. "
+                "There is a really cool tucked away bar next to the Alcázar, called ___.",
+                html.Br(), html.Br(),
+                "Be sure to also see a flamenco show -- a great place where you can enjoy a great dinner and a "
+                "show is called Patio La Judería. See my video below! I would recommend getting a reservation.",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
@@ -3913,7 +3924,23 @@ def set_display_children(value):
 
     if value == 'Jaén':
         lat_lon_str = weather.get_lat_lon(coordinates.jaen_geojson)
-        return ("More info coming soon!",
+        return ("A small city in southern Spain, Jaén itself is lovely and is surrounded by beautiful mountains. "
+                "There are not many tourists here by any means -- we really only saw other tourists atop the city "
+                "at the castle, called the Castillo de Santa Catalina. The sunset views from here -- and also from the "
+                "___ vista -- are amazing. I really enjoyed how authentic the city felt. We especially enjoyed the "
+                "vibrant culture at the ___ bar and restaurant, which for whatever reason displays in a glass case "
+                "a pig leg that is hundreds of years old! Locals flocked to this bar late in the evening, some for "
+                "dinner, and others to just gather near the bar and meet friends for a drink. It was quite a warm "
+                "scene, and our waiter was also very friendly and welcoming to us. The tapas were also fantastic. ",
+                html.Br(), html.Br(),
+                "We had dinner our other night in Jaén at ___. The atmosphere wasn't as cool as ____, but the food "
+                "was still great. There are also a number of cafes, restaurants, and bars along the main street of "
+                "___. This street becomes quite lively in the evening. Also see the cathedral of Jaén, "
+                "and nearby the cathedral you can visit the local market, called ___.",
+                html.Br(), html.Br(),
+                "Jaén really pleasantly surprised me, and I would absolutely recommend it to anyone looking to get "
+                "a bit off the beaten path in southern Spain. Even to those not looking to get off the beaten path -- "
+                "I would still recommend it!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -3994,7 +4021,19 @@ def set_display_children(value):
 
     if value == 'Málaga':
         lat_lon_str = weather.get_lat_lon(coordinates.malaga_geojson)
-        return ('Nice city on the Costa del Sol (Coast of the Sun)',
+        return ('Nice city on the Costa del Sol (Coast of the Sun)! Málaga is probably the best combination in '
+                'Andalucía of a true city (bigger than a small town / city) with nice beaches. It is also one of the '
+                'easiest cities to fly to in southern Spain. The beach and port areas of Málaga are lovely places '
+                'for a stroll, and there are plenty of restaurants / bars / cafes with outdoor seating. A must in '
+                'Málaga is sitting down to one of these spots to enjoy some fresh seafood -- especially sardines, '
+                'squid, and octopus!',
+                html.Br(), html.Br(),
+                "Málaga is indeed more than just the areas on the sea. Right in the center of the city, you will find "
+                "the ___, the 'one-armed' church (there was a lack of "
+                "funds toward the end of the construction, and because of that the second church tower was never "
+                "built). There is also a very famous Pablo Picasso museum, as he is from Málaga. Lastly, go for a "
+                "bit of a hike up to ___ vista for a lovely view of the entire city. "
+                "This is a perfect spot for sunset!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -4044,16 +4083,8 @@ def set_display_children(value):
     if value == 'Montserrat':
         lat_lon_str = weather.get_lat_lon(coordinates.montserrat_geojson)
         return ('Beautiful and really uniquely shaped mountains that are only an hour or so by train inland from '
-                'Barcelona.',
-                html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
-                html.Div(
-                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.montserrat_geojson)],
-                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
-
-    if value == 'Pineda de Mar':
-        lat_lon_str = weather.get_lat_lon(coordinates.pineda_de_mar_geojson)
-        return ('more info coming soon!',
+                'Barcelona. If you have more than a few days in Barcelona, definitely consider going to'
+                'Montserrat to hike and visit the little town with the monastery as a day trip.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -4069,6 +4100,15 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(), html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
                 html.Br(), html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.montserrat_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Pineda de Mar':
+        lat_lon_str = weather.get_lat_lon(coordinates.pineda_de_mar_geojson)
+        return ('more info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.pineda_de_mar_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
@@ -4098,9 +4138,23 @@ def set_display_children(value):
 
     if value == 'Sitges':
         lat_lon_str = weather.get_lat_lon(coordinates.sitges_geojson)
-        return ('The carnaval capital of Spain!',
+        return ('The carnaval capital of Spain! Also some beautiful beaches.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/sitges.JPG"},
+                        {"src": "assets/spain/sitges1.JPG"},
+                        {"src": "assets/spain/sitges2.JPG"},
+                        {"src": "assets/spain/sitges3.JPG"},
+                        {"src": "assets/spain/sitges4.JPG"},
+                        {"src": "assets/spain/sitges5.JPG"},
+                        {"src": "assets/spain/sitges6.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.sitges_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -4243,6 +4297,8 @@ def set_display_children(value):
                 dbc.Carousel(
                     items=[
                         {"src": "assets/spain/toledo.JPG"},
+                        {"src": "assets/spain/toledo1.JPG"},
+                        {"src": "assets/spain/toledo2.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -4282,16 +4338,29 @@ def set_display_children(value):
                     ride="carousel",
                     className="carousel-fade"
                 ), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.valencia_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Vilanova':
         lat_lon_str = weather.get_lat_lon(coordinates.vilanova_geojson)
-        return ('more info coming soon!',
+        return ('A small town in Cataluña on the coast maybe an hour south of Barcelona, VIlanova is a lovely town '
+                'with beautiful beaches. I was lucky to be able to visit a friend who is from there, and we enjoyed '
+                'a great relaxing couple days at the beach and enjoying good food. I especially remember the fantastic '
+                'lunch at ___. There was a great menú option with fideua '
+                '(similar to paella but made with noodles rather than rice). It was so good!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/spain/vilanova.JPG"},
+                        {"src": "assets/spain/vilanova1.JPG"},
+                        {"src": "assets/spain/vilanova2.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.vilanova_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -4460,6 +4529,11 @@ def set_display_children(value):
                         {"src": "assets/usa-ma/boston6.JPG"},
                         {"src": "assets/usa-ma/boston7.JPG"},
                         {"src": "assets/usa-ma/boston8.JPG"},
+                        {"src": "assets/usa-ma/boston9.JPG"},
+                        {"src": "assets/usa-ma/boston10.JPG"},
+                        {"src": "assets/usa-ma/boston11.JPG"},
+                        {"src": "assets/usa-ma/boston12.JPG"},
+                        {"src": "assets/usa-ma/boston13.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -4488,13 +4562,52 @@ def set_display_children(value):
 
     if value == 'Chicago':
         lat_lon_str = weather.get_lat_lon(coordinates.chicago_geojson)
-        return ('Home of the world-famous Digglers!',
+        return ('"Chicago... '
+                "that's my "
+                'hometown!"',
+                html.Br(), html.Br(),
+                "Where do I start? There are so many things about Chicago that I love and that make me proud to call "
+                "it home. Let's break it down into a few sections. All lists are in no particular order.",
+                html.Br(), html.Br(),
+                "Food and drinks:",
+                "The food scene in Chicago is top. There are incredible options from so many different cuisines, "
+                "including Spanish, Argentinian, Greek, Ethiopian, Mexican, Venezuelan, Peruvian, German, French, "
+                "Chinese, Jewish, Italian (including our unique Chicago-Italian foods), and many more. "
+                "Some of my favorite food spots include Ba Ba Reeba (Spanish), Athenian Room (Greek), "
+                "Tango Sur / Bodega Sur (Argentina), Avli Taverna (Greek), Johnnie's Beef, The Bagelers, "
+                "Smoke Daddy (BBQ), The Art of Pizza (stuffed pizza), La Vaca (Mexican), Rica Arepa, "
+                "Los 3 Panchos (Mexican), Los Comales (Mexican), Tanta (Peruvian), Happy Lamb Hot Pot, "
+                "Tesfa (Ethiopian), Manny's Cafe (Jewish deli), Parson's Chicken and Fish, Alpine Subs (Italian),"
+                "Farm Bar (American), Au Cheval (best burger in the world?), Sappori (Italian), Billy Goat Tavern, "
+                "Harold's (fried chicken), Twin Anchor's (ribs), and Vito and Nick's (thin crust/tavern style pizza). "
+                "Some of my favorite bars and pubs include The Globe Pub, " 
+                "AJ Hudson's Pub, Cleo's Pub, Prost!, Cindy's Rooftop, Lottie's, LondonHouse Rooftop, Halligan's, "
+                "Bird's Nest, District Brew Yards, River Shannon, Guinness Open Gate Brewery, DryHop Brewing, and "
+                "Kirkwood Tavern. ",
+                html.Br(), html.Br(),
+                "Chicago also has a great music scene. There are many great concert venues across the city for all "
+                "kinds of music. Chicago is perhaps particularly known for their jazz and blues clubs. "
+                "One of my favorite spots in the city is Green Mill! It is an old school jazz club that used to be "
+                "Al Capone's favorite place.",
+                html.Br(), html.Br(),
+                "Chicago is also very famous for their comedy scene. Many popular comics and actors nowadays have "
+                "come through Chicago, and most of them worked at one specific comedy club called Second City. They"
+                "are most famous for their improv shows. They can be a bit expensive but they are so good and "
+                "absolutely worth it!",
+                html.Br(), html.Br(),
+                "Chicago is home to many professional sports teams -- Bulls (basketball), "
+                "Bears (american football), Blackhawks (ice hockey), Fire (soccer), and the Cubs and "
+                "White Sox (both baseball). And lastly, how could I forget... "
+                "Chicago is the home of the world-famous Digglers Softball Team!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/usa-il/chicago.JPG"},
+                        {"src": "assets/usa-il/chicago3.JPG"},
+                        {"src": "assets/usa-il/chicago2.JPG"},
                         {"src": "assets/usa-il/chicago1.JPG"},
+                        {"src": "assets/usa-il/chicago4.JPG"},
+                        {"src": "assets/usa-il/chicago.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
