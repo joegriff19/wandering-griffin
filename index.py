@@ -4521,13 +4521,15 @@ def set_display_children(value):
                 dbc.Carousel(
                     items=[
                         {"src": "assets/usa-ma/boston.JPG"},
+                        {"src": "assets/usa-ma/boston7.JPG"},
+                        {"src": "assets/usa-ma/boston14.JPG"},
+                        {"src": "assets/usa-ma/boston15.JPG"},
                         {"src": "assets/usa-ma/boston1.JPG"},
                         {"src": "assets/usa-ma/boston2.JPG"},
                         {"src": "assets/usa-ma/boston3.JPG"},
                         {"src": "assets/usa-ma/boston4.JPG"},
                         {"src": "assets/usa-ma/boston5.JPG"},
                         {"src": "assets/usa-ma/boston6.JPG"},
-                        {"src": "assets/usa-ma/boston7.JPG"},
                         {"src": "assets/usa-ma/boston8.JPG"},
                         {"src": "assets/usa-ma/boston9.JPG"},
                         {"src": "assets/usa-ma/boston10.JPG"},
@@ -4603,11 +4605,22 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/usa-il/chicago9.JPG"},
                         {"src": "assets/usa-il/chicago3.JPG"},
                         {"src": "assets/usa-il/chicago2.JPG"},
                         {"src": "assets/usa-il/chicago1.JPG"},
                         {"src": "assets/usa-il/chicago4.JPG"},
+                        {"src": "assets/usa-il/chicago5.JPG"},
+                        {"src": "assets/usa-il/chicago13.JPG"},
+                        {"src": "assets/usa-il/chicago6.JPG"},
+                        {"src": "assets/usa-il/chicago7.JPG"},
+                        {"src": "assets/usa-il/chicago8.JPG"},
+                        {"src": "assets/usa-il/chicago10.JPG"},
+                        {"src": "assets/usa-il/chicago12.JPG"},
+                        {"src": "assets/usa-il/chicago14.JPG"},
                         {"src": "assets/usa-il/chicago.JPG"},
+                        {"src": "assets/usa-il/chicago15.JPG"},
+                        {"src": "assets/usa-il/chicago11.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -4684,6 +4697,27 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dubuque_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
+    if value == 'Indiana Dunes NP':
+        lat_lon_str = weather.get_lat_lon(coordinates.ind_dunes_geojson)
+        return ('Beautiful little national park with rolling sand dunes and a really nice beach. '
+                'Only an hour drive from Chicago!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-in/ind_dunes.JPG"},
+                        {"src": "assets/usa-in/ind_dunes1.JPG"},
+                        {"src": "assets/usa-in/ind_dunes2.JPG"},
+                        {"src": "assets/usa-in/ind_dunes3.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.ind_dunes_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Miami':
         lat_lon_str = weather.get_lat_lon(coordinates.miami_geojson)
         return ('Beautiful latino cultural melting pot. And of course the home of Messi! More info to come!',
@@ -4730,6 +4764,25 @@ def set_display_children(value):
                 ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.missoula_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Newport (Rhode Island)':
+        lat_lon_str = weather.get_lat_lon(coordinates.newport_geojson)
+        return ('more info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-ri/newport.JPG"},
+                        {"src": "assets/usa-ri/newport1.JPG"},
+                        {"src": "assets/usa-ri/newport2.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.newport_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'NYC':

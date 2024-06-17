@@ -49,6 +49,6 @@ all_options = {
     #            'North Carolina', 'Ohio', 'Pennsylvania', 'Tennessee', 'Utah', 'Vermont', 'West Virginia', 'Wisconsin',
     #            'West Virginia'],
     'USA 🇺🇸': ['Bonneville Salt Flats', 'Boston', 'Champaign', 'Chicago', 'Copper Mountain', 'Dayton', 'Dubuque',
-               'Miami', 'Missoula', 'Milwaukee',
+               'Indiana Dunes NP', 'Miami', 'Missoula', 'Milwaukee', 'Newport (Rhode Island)',
                'NYC', 'San Francisco', 'Seattle', 'Zion National Park'],
 }
