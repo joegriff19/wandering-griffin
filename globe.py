@@ -33,13 +33,14 @@ fig = go.Figure(data=go.Choropleth(
     z=df['Visited'],
     text=df['Country'],
     colorscale=[
-        [0, "rgb(220, 220, 220)"],
-        # [1, "rgb(175, 225, 175)"],
-        [1, "rgb(175, 225, 175)"]],
+        [0, "rgb(220, 220, 220)"],  # light grey
+        # [0, "rgb(137, 207, 240)"],  # baby blue
+        [1, "rgb(175, 225, 175)"],  # light green
+    ],
     autocolorscale=False,
     reversescale=True,
     showscale=False,
-    # marker_line_color='black',
+    marker_line_color='black',  # country border color
     # marker_line_width=0.5,
     hovertemplate=df['Country'],
     name=""),
@@ -53,11 +54,11 @@ fig.update_layout(
         # font_family="Rockwell"
     ),
     dragmode=False,
-    paper_bgcolor='rgba(0,0,0,0)',
-    plot_bgcolor='rgba(0,0,0,0)',
+    paper_bgcolor='rgba(0,0,0,0)',  # transparent background
+    # plot_bgcolor='rgba(0,0,0,0)',
     # width=500, height=500,
     geo=dict(
-        bgcolor='rgba(0,0,0,0)',
+        bgcolor='rgba(0,0,0,0)',  # transparent background
         showcoastlines=True,
         projection_type='orthographic',
         # center_lon=index.lon_deg,
@@ -70,7 +71,8 @@ fig.update_layout(
         showcountries=True,
         landcolor='rgb(231, 231, 231)',
         # countrycolor='rgb(204, 204, 204)',
-        oceancolor='rgb(137, 207, 240)',
+        oceancolor='rgb(137, 207, 240)',  # baby blue
+        # oceancolor='rgb(46, 90, 136)',  # navy blue
         showframe=True,
         framewidth=2,
         framecolor='black',  # couleur du contour

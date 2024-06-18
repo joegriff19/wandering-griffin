@@ -41,7 +41,7 @@ CONTENT_STYLE = {
 colors = {
     # 'background': '#ffffff',
     # 'text': '#0000CD'
-    'text': '#ffffff',
+    'text': '#000080',  # navy blue
 
 }
 
@@ -116,7 +116,7 @@ index_layout = html.Div(
             style={
                 'textAlign': 'center',
                 'justify': 'center',
-                'color': 'white',
+                'color': '#000080',
                 "padding": "0px",
                 "margin": "0px"
             }
@@ -136,7 +136,7 @@ index_layout = html.Div(
         ], style={
             'textAlign': 'center',
             # 'margin-left': '100px', 'margin-right': '100px',
-            'color': 'white',
+            'color': '#000080',
             # "display": "flex",
             'max-width': '500px',
             'margin': 'auto'
@@ -163,14 +163,14 @@ index_layout = html.Div(
                     children=[
                         dmc.Anchor(
                             children=[DashIconify(
-                                icon='line-md:github-loop', width=40, color="#02ccff")
+                                icon='line-md:github-loop', width=40, color="#000080")
                             ],
                             href=GITHUB
                         ),
                         dmc.Anchor(
                             children=[
                                 DashIconify(
-                                    icon='ri:linkedin-fill', width=40, color="#02ccff")
+                                    icon='ri:linkedin-fill', width=40, color="#000080")
                             ],
                             href=LINKEDIN
                         )
@@ -185,7 +185,7 @@ index_layout = html.Div(
             html.Div(children=[dmc.Anchor(
                 children=[
                     DashIconify(
-                        icon='ion:logo-venmo', width=40, color="#02ccff")
+                        icon='ion:logo-venmo', width=40, color="#000080")
                 ],
                 href=VENMO
                 # pink color #FF69B4
@@ -195,7 +195,7 @@ index_layout = html.Div(
                   'max-width': '900px',
                   'margin': 'auto',
                   # 'margin-left': '100px', 'margin-right': '100px',
-                  'color': 'text',
+                  'color': '#000080',
                   # 'width': '50%',
                   # 'verticalAlign': 'middle'
                   # 'align-items': 'center', 'justify-content': 'center'
@@ -210,7 +210,7 @@ index_layout = html.Div(
 @server.route("/loader", methods=['GET'])
 def serving_lottie_loader():
     directory = os.path.join(os.getcwd(), "assets/lottie")
-    return send_from_directory(directory, "plane1.json")
+    return send_from_directory(directory, "plane4.json")
 
 
 @app.callback(
