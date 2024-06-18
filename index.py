@@ -153,7 +153,7 @@ index_layout = html.Div(
             # size="lg", color="primary", type="border",
             # spinner_style={"position": "absolute", "top": "-30px"}
             # ),
-            dbc.Spinner(children=[html.Div(id='city_info')], size="lg", color="#02ccff", type="border",
+            dbc.Spinner(children=[html.Div(id='city_info')], size="lg", color="#000080", type="border",
                         # delay_hide=2000,
                         show_initially=False,
                         spinner_style={"position": "absolute", "top": "-30px"}),
@@ -4790,6 +4790,14 @@ def set_display_children(value):
         return ('KATZ',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-ny/nyc.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.nyc_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
