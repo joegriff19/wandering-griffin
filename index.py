@@ -4571,7 +4571,7 @@ def set_display_children(value):
                 "Where do I start? There are so many things about Chicago that I love and that make me proud to call "
                 "it home. Let's break it down into a few sections. All lists are in no particular order.",
                 html.Br(), html.Br(),
-                "Food and drinks:",
+                "Food and drinks: ",
                 "The food scene in Chicago is top. There are incredible options from so many different cuisines, "
                 "including Spanish, Argentinian, Greek, Ethiopian, Mexican, Venezuelan, Peruvian, German, French, "
                 "Chinese, Jewish, Italian (including our unique Chicago-Italian foods), and many more. "
@@ -4603,6 +4603,19 @@ def set_display_children(value):
                 "Chicago is the home of the world-famous Digglers Softball Team!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://www.youtube.com/watch?v=P59tBQQPCjk",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/usa-il/chicago9.JPG"},
@@ -4617,6 +4630,7 @@ def set_display_children(value):
                         {"src": "assets/usa-il/chicago8.JPG"},
                         {"src": "assets/usa-il/chicago10.JPG"},
                         {"src": "assets/usa-il/chicago12.JPG"},
+                        {"src": "assets/usa-il/chicago16.JPG"},
                         {"src": "assets/usa-il/chicago14.JPG"},
                         {"src": "assets/usa-il/chicago.JPG"},
                         {"src": "assets/usa-il/chicago15.JPG"},
@@ -4703,6 +4717,19 @@ def set_display_children(value):
                 'Only an hour drive from Chicago!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://www.youtube.com/watch?v=65yCFZ_ekG4",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/usa-in/ind_dunes.JPG"},
