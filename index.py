@@ -2603,7 +2603,7 @@ def set_display_children(value):
                 "multiple times! For just 5 "
                 "euros (in 2017) you can get a huge sandwich on lovely bread topped high with the freshest "
                 "mozzarella, tomatoes, and prosciutto, finished with this black truffle sauce that is "
-                "just too good. There will likely be a line but trust me it is so worth it!"
+                "just too good. There will likely be a line but trust me it is so worth it! "
                 "Definitely visit the cathedral. You can also go up the tower for some great views. "
                 "Also next to the cathedral is another great spot for more great sandwiches and food -- there is a "
                 "very nice little cafe here called Panini Toscani. Also be sure to climb up to the "
@@ -2728,7 +2728,7 @@ def set_display_children(value):
     if value == 'Rome':
         lat_lon_str = weather.get_lat_lon(coordinates.rome_geojson)
         return ('So much fascinating history here. The food scene is also incredible. Be sure to visit the coliseum, '
-                'the old Roman ruins, visit the Vatican(separate Italy page for this), and get your Lizzie McGuire '
+                'the old Roman ruins, visit the Vatican (separate Italy page for this), and get your Lizzie McGuire '
                 'on at the Trevi Fountain! The city is quite big with so many different neighborhoods, '
                 'all deserving of some time being spent there. Trastevere is probably the most beloved neighborhood '
                 '-- beautiful and with many great restaurants and bars. One very famous bar is Bar San Calisto. '
@@ -2737,7 +2737,7 @@ def set_display_children(value):
                 'four classic Roman pastas that are all very connected, just with slight variations in ingredients -- '
                 "cacio e pepe (pecorino and pepper), pasta alla gricia (pecorino, pepper, and  guanciale), "
                 "carbonara (pecorino, pepper, egg, and  guanciale), and pasta all'amatriciana "
-                "(pecorino, pepper, tomatoes, and  guanciale). Hopefully you have time to try all of these!"
+                "(pecorino, pepper, tomatoes, and  guanciale). Hopefully you have time to try all of these! "
                 "Unlike Neopolitan pizza, Roman pizza styles can actually vary quite a bit. "
                 "Bonci Pizzarium is the most famous -- you will probably recognize the logo. Bonci Pizzarium is "
                 "an easy stop before or after visiting the Vatican. Piccolo Buco is "
@@ -2793,10 +2793,11 @@ def set_display_children(value):
     if value == 'Venice':
         lat_lon_str = weather.get_lat_lon(coordinates.venice_geojson)
         return ('It is definitely as charming as everyone says it is. Visit the main plaza (St. Marco) and church, '
-                'go to the top of the tower there for great views of the city, take a boat ride (the boat usually '
+                'go to the top of the tower there for great views of the city, take a gondola ride (the boat usually '
                 'has a fixed cost no matter the size of your group -- find some new friends to lower the cost per '
                 "person!) Beyond St. Marco, don't necessarily worry about "
-                "trying to see or do everything -- just enjoy the lovely ambiance of the canals and little streets.",
+                "trying to see or do everything -- just enjoy the lovely ambiance of the canals and little streets. ",
+                "A cheaper alternative to a gondola is to take the so called water bus, aka the 'vaporetto.'",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -3625,7 +3626,7 @@ def set_display_children(value):
                 "also plenty of great rooftop bars, just look some up online. ",
                 html.Br(), html.Br(),
                 "There is so much great food here. Maybe my favorite restaurant in the world is here and is "
-                "called El Glop (the one in the Gràcia neighborhood is the original and is the best. The chicken & "
+                "called El Glop -- the one in the Gràcia neighborhood is the original and is the best. The chicken & "
                 "vegetable paella is incredible. Also get the crema catalana (similar to a Crème Brûlée) for "
                 "dessert. My other favorite place to eat is at either Sol Soler or Niña. They are right next "
                 "to each other on the lovely Plaça del Sol and share the same kitchen. This plaza is an awesome "
