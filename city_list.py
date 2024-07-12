@@ -25,6 +25,7 @@ all_options = {
     'Ireland 🇮🇪': ['Cliffs of Moher', 'Dingle', 'Dublin', 'Tralee'],
     'Italy 🇮🇹': ['Bergamo', 'Florence', 'Genoa', 'Lecco', 'Milan', 'Portofino', 'Rome', 'Vatican 🇻🇦', 'Venice',
                  'Verona'],
+    'Latvia 🇱🇻': ['Riga'],
     'Mexico 🇲🇽': ['Cancún', 'Mexico City'],
     'Montenegro 🇲🇪': ['Kotor'],
     'Morocco 🇲🇦': ['Aït Benhaddou', 'Casablanca', 'Erg Chebbi (Sahara Desert)', 'Fes', 'Ifrane National Park',
@@ -48,7 +49,7 @@ all_options = {
     #            'Maine',v'Massachusetts', 'Michigan', 'Missouri', 'Montana', 'Nebraska', 'New Hampshire', 'New York',
     #            'North Carolina', 'Ohio', 'Pennsylvania', 'Tennessee', 'Utah', 'Vermont', 'West Virginia', 'Wisconsin',
     #            'West Virginia'],
-    'USA 🇺🇸': ['Bonneville Salt Flats', 'Boston', 'Champaign', 'Chicago', 'Copper Mountain', 'Dayton', 'Dubuque',
-               'Indiana Dunes NP', 'Miami', 'Missoula', 'Milwaukee', 'Newport (Rhode Island)',
+    'USA 🇺🇸': ['Bonneville Salt Flats', 'Boston', 'Champaign', 'Chicago', 'Copper Mountain', 'Dayton', 'Denver',
+               'Dubuque', 'Indiana Dunes NP', 'Miami', 'Missoula', 'Milwaukee', 'Newport (Rhode Island)',
                'NYC', 'San Francisco', 'Seattle', 'Zion National Park'],
 }

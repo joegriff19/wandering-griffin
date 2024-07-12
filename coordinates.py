@@ -118,6 +118,9 @@ vatican_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point"
 venice_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.3155, 45.4408]}}]}
 verona_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.9916, 45.4384]}}]}
 
+# latvia coordinates
+riga_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [24.1056, 56.9677]}}]}
+
 # mexico coordinates
 cancun_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-86.8515, 21.1619]}}]}
 mexico_city_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1332, 19.4326]}}]}
@@ -208,6 +211,7 @@ champaign_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Poin
 chicago_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-87.6298, 41.8781]}}]}
 copper_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-106.1613, 39.479]}}]}
 dayton_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-84.1916, 39.7589]}}]}
+denver_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-106.1613, 39.479]}}]}
 dubuque_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-90.6648, 42.5006]}}]}
 ind_dunes_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-87.0524, 41.6533]}}]}
 miami_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-80.1918, 25.7617]}}]}

@@ -2118,6 +2118,7 @@ def set_display_children(value):
                         {"src": "assets/germany/munich14.JPG"},
                         {"src": "assets/germany/munich15.JPG"},
                         {"src": "assets/germany/munich2.JPG"},
+                        {"src": "assets/germany/munich16.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2845,6 +2846,26 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.verona_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
+    # Latvia
+    if value == 'Riga':
+        lat_lon_str = weather.get_lat_lon(coordinates.riga_geojson)
+        return ("Awesome trip visiting Ross! More info coming soon!",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
+                html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/latvia/riga.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.riga_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40],
+                           zoom=1)))
+
     # Mexico
     if value == 'Cancún':
         lat_lon_str = weather.get_lat_lon(coordinates.cancun_geojson)
@@ -3320,12 +3341,15 @@ def set_display_children(value):
     # Peru
     if value == 'Lima':
         lat_lon_str = weather.get_lat_lon(coordinates.lima_geojson)
-        return ('more info to come!',
+        return ('To be honest I don’t remember much about Lima — our group made a brief stop in Lima at the end of '
+                'our trip before flying home. I still can’t believe I went on this trip when I '
+                'was just 16 years old. I look forward to coming back someday!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.lima_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Iquitos':
         lat_lon_str = weather.get_lat_lon(coordinates.iquitos_geojson)
         return ('The start of my Amazon river adventure. We flew here from Lima and took a boat about 50 miles down '
@@ -4554,6 +4578,7 @@ def set_display_children(value):
                 dbc.Carousel(
                     items=[
                         {"src": "assets/usa-il/champaign.JPG"},
+                        {"src": "assets/usa-il/champaign1.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -4664,6 +4689,23 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.copper_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
+    if value == 'Denver':
+        lat_lon_str = weather.get_lat_lon(coordinates.denver_geojson)
+        return ('More info to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/usa-co/denver.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.denver_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Milwaukee':
         lat_lon_str = weather.get_lat_lon(coordinates.milw_geojson)
         return ('lil Chicago',
@@ -4697,12 +4739,14 @@ def set_display_children(value):
 
     if value == 'Dubuque':
         lat_lon_str = weather.get_lat_lon(coordinates.dubuque_geojson)
+        lat_lon_str = weather.get_lat_lon(coordinates.dubuque_geojson)
         return ('Jewel of the Mississippi!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/usa-ia/dbq.JPG"},
+                        {"src": "assets/usa-ia/dbq1.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
