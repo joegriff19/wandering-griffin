@@ -119,6 +119,7 @@ venice_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point",
 verona_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.9916, 45.4384]}}]}
 
 # latvia coordinates
+jurmala_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [23.7738, 56.9684]}}]}
 riga_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [24.1056, 56.9677]}}]}
 
 # mexico coordinates
@@ -156,6 +157,7 @@ iquitos_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point"
 # poland coordinates
 krakow_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [19.9449, 50.0647]}}]}
 szczecin_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [14.5528, 53.4285]}}]}
+warsaw_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [21.0122, 52.2297]}}]}
 wroclaw_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [17.0385, 51.1079]}}]}
 
 # portugal coordinates
@@ -211,7 +213,7 @@ champaign_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Poin
 chicago_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-87.6298, 41.8781]}}]}
 copper_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-106.1613, 39.479]}}]}
 dayton_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-84.1916, 39.7589]}}]}
-denver_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-106.1613, 39.479]}}]}
+denver_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-104.9903, 39.7392]}}]}
 dubuque_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-90.6648, 42.5006]}}]}
 ind_dunes_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-87.0524, 41.6533]}}]}
 miami_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-80.1918, 25.7617]}}]}

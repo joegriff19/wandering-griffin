@@ -18,6 +18,7 @@ from dash_iconify import DashIconify
 import dash_extensions as de
 import os
 from flask import send_from_directory
+from pages import favorites
 # import dash_loading_spinners as dls
 
 today = date.today()
@@ -158,6 +159,13 @@ index_layout = html.Div(
                         show_initially=False,
                         spinner_style={"position": "absolute", "top": "-30px"}),
             html.Br(),
+
+            # new section on more information below
+            # html.Div(children="More Information", className="beverage"),
+            # dbc.Button(children='My Favorit0e Countries', id='favorites', href='/favorites'),
+            # html.Br(),
+            # html.Br(),
+
             html.Div(children=[
                 dmc.Group(
                     children=[
@@ -230,6 +238,8 @@ def rotate_globe(_):
 def render_page_content(pathname):
     if pathname == '/':
         return index_layout
+    if pathname == '/favorites':
+        return favorites.layout
     # If the user tries to reach a different page, return a 404 message
     else:
         return dbc.Container(
@@ -297,7 +307,7 @@ def set_display_children(value):
                 "continued to decline in value, and because of this many Argentinians would rather store their "
                 "savings in USD rather than pesos. Thus, they are willing to trade you almost twice the current "
                 "exchange rate for your American dollars. This is very common and open on ‘Calle Florida.’ As soon as "
-                "you walk down the street you will here people saying ‘cambio’ (‘change’ in English). Do this as soon "
+                "you walk down the street you will hear people saying ‘cambio’ (‘change’ in English). Do this as soon "
                 "as you get to Argentina and pay with cash for everything. By doing this everything in the country "
                 "essentially becomes 50% off! Even without this ‘discount,’ Airbnbs are still very cheap. Next — "
                 "absolutely go to a soccer game while you are here. The atmosphere is insane. There are 5 top league "
@@ -1449,7 +1459,6 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.galapagos_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/ecuador/galapagos16.JPG"},
                         {"src": "assets/ecuador/galapagos.JPG"},
                         {"src": "assets/ecuador/galapagos1.JPG"},
                         {"src": "assets/ecuador/galapagos2.JPG"},
@@ -2080,10 +2089,11 @@ def set_display_children(value):
                 'up in the Alps that are easy day trips from Munich (especially if you rent a car). '
                 'Jochberg is an awesome hike with stunning views of the Alps, Kochelsee lake, and Walchensee lake '
                 '(photo below). Back in Munich, '
-                'the Englischer Garten park is beautiful -- '
-                "it's fun to watch people surf here on a little artificial wave canal and there "
-                "is a really cool beer garden at the base of the Chinese Tower. You have to visit "
-                "the Hofbräuhaus as well - the most iconic beer hall in the world. There is always "
+                "the Englischer Garten park is beautiful -- it's fun to watch people surf here on a little "
+                'artificial wave canal (called the Eisbachwelle)and there is a really cool beer garden at the '
+                "base of the Chinese Tower. The Seehaus im Englischen Garten is also lovely. ",
+                html.Br(), html.Br(),
+                "You have to visit the Hofbräuhaus as well - the most iconic beer hall in the world. There is always "
                 "live music and the vibes are immaculate. "
                 "It was originally founded as the royal brewery and for hundreds of "
                 "years it has been the primary gathering place in the city, even for political matters. The Nazi "
@@ -2311,8 +2321,8 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/germany/stuttgart.JPG"},
                         {"src": "assets/germany/stuttgart1.JPG"},
+                        {"src": "assets/germany/stuttgart.JPG"},
                         {"src": "assets/germany/stuttgart2.JPG"},
                     ],
                     interval=2000,
@@ -2847,6 +2857,26 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Latvia
+    if value == 'Jūrmala':
+        lat_lon_str = weather.get_lat_lon(coordinates.jurmala_geojson)
+        return ("Lovely little beach town near Riga!",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
+                html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/latvia/jurmala.JPG"},
+                        {"src": "assets/latvia/jurmala1.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.jurmala_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40],
+                           zoom=1)))
+
     if value == 'Riga':
         lat_lon_str = weather.get_lat_lon(coordinates.riga_geojson)
         return ("Awesome trip visiting Ross! More info coming soon!",
@@ -2855,7 +2885,20 @@ def set_display_children(value):
                 html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/latvia/riga.JPG"},
+                        {"src": "assets/latvia/riga.JPG"},
+                        {"src": "assets/latvia/riga1.JPG"},
+                        {"src": "assets/latvia/riga2.JPG"},
+                        {"src": "assets/latvia/riga3.JPG"},
+                        {"src": "assets/latvia/riga4.JPG"},
+                        {"src": "assets/latvia/riga5.JPG"},
+                        {"src": "assets/latvia/riga6.JPG"},
+                        {"src": "assets/latvia/riga7.JPG"},
+                        {"src": "assets/latvia/riga8.JPG"},
+                        {"src": "assets/latvia/riga9.JPG"},
+                        {"src": "assets/latvia/riga10.JPG"},
+                        {"src": "assets/latvia/riga11.JPG"},
+                        {"src": "assets/latvia/riga12.JPG"},
+                        {"src": "assets/latvia/riga13.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2865,6 +2908,7 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.riga_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40],
                            zoom=1)))
+
 
     # Mexico
     if value == 'Cancún':
@@ -3435,6 +3479,23 @@ def set_display_children(value):
                 ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.szczecin_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Warsaw':
+        lat_lon_str = weather.get_lat_lon(coordinates.warsaw_geojson)
+        return ('More info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/poland/warsaw.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.warsaw_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Wrocław':
