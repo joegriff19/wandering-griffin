@@ -19,6 +19,12 @@ import dash_extensions as de
 import os
 from flask import send_from_directory
 from pages import favorites
+from pages import national_parks
+from pages import soccer_stadiums
+from pages import mlb_ballparks
+from pages import states
+from pages import statistics
+from pages import nice_here
 # import dash_loading_spinners as dls
 
 today = date.today()
@@ -159,13 +165,6 @@ index_layout = html.Div(
                         show_initially=False,
                         spinner_style={"position": "absolute", "top": "-30px"}),
             html.Br(),
-
-            # new section on more information below
-            # html.Div(children="More Information", className="beverage"),
-            # dbc.Button(children='My Favorit0e Countries', id='favorites', href='/favorites'),
-            # html.Br(),
-            # html.Br(),
-
             html.Div(children=[
                 dmc.Group(
                     children=[
@@ -186,6 +185,24 @@ index_layout = html.Div(
                 )
             ]),
             html.Br(),
+
+            # # new section on more information below
+            # html.Div(children="More Information", className="beverage"),
+            # html.A("My Favorite Countries", href="/favorites"),
+            # html.Br(),
+            # html.A("Country Statistics", href="/statistics"),
+            # html.Br(),
+            # html.A("National Parks", href="/national_parks"),
+            # html.Br(),
+            # html.A("Soccer Stadiums", href="/soccer_stadiums"),
+            # html.Br(),
+            # html.A("MLB Ballparks", href="/mlb_ballparks"),
+            # html.Br(),
+            # html.A("US States", href="/states"),
+            # html.Br(),
+            # html.A("Nice here... but have you ever been to Dubuque, Iowa?", href="/nice_here"),
+            # html.Br(), html.Br(),
+
             html.Div(children="If this was helpful, please consider buying me a beverage! Thank you!",
                      className="beverage"),
             # html.Div(children="🍻", style={"fontSize": "35px"}),
@@ -240,6 +257,18 @@ def render_page_content(pathname):
         return index_layout
     if pathname == '/favorites':
         return favorites.layout
+    if pathname == '/national_parks':
+        return national_parks.layout
+    if pathname == '/mlb_ballparks':
+        return mlb_ballparks.layout
+    if pathname == '/soccer_stadiums':
+        return soccer_stadiums.layout
+    if pathname == '/states':
+        return states.layout
+    if pathname == '/statistics':
+        return statistics.layout
+    if pathname == '/nice_here':
+        return nice_here.layout
     # If the user tries to reach a different page, return a 404 message
     else:
         return dbc.Container(
@@ -274,7 +303,7 @@ def set_cities_options(selected_country):
 def set_display_children(value):
     # sleep time for spinner to spin
     if value is not None:
-        time.sleep(2)
+        time.sleep(1)
     # Andorra
     if value == 'Pal Arinsal':
         lat_lon_str = weather.get_lat_lon(coordinates.pal_geojson)
@@ -2028,6 +2057,8 @@ def set_display_children(value):
                         {"src": "assets/germany/kiel1.JPG"},
                         {"src": "assets/germany/kiel9.JPG"},
                         {"src": "assets/germany/kiel10.JPG"},
+                        {"src": "assets/germany/kiel15.JPG"},
+                        {"src": "assets/germany/kiel14.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2859,14 +2890,18 @@ def set_display_children(value):
     # Latvia
     if value == 'Jūrmala':
         lat_lon_str = weather.get_lat_lon(coordinates.jurmala_geojson)
-        return ("Lovely little beach town near Riga!",
+        return ("Lovely little beach town near Riga! There's a really nice long street from the train station to the "
+                "beach that is lined with shops, souvenirs, restaurants, and bars. At the end of the street before "
+                "reaching the beach, there is a beautiful church. The beach itself is great too -- and really big!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
                 html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/latvia/jurmala.JPG"},
+                        {"src": "assets/latvia/jurmala3.JPG"},
                         {"src": "assets/latvia/jurmala1.JPG"},
+                        {"src": "assets/latvia/jurmala2.JPG"},
+                        {"src": "assets/latvia/jurmala.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2879,7 +2914,27 @@ def set_display_children(value):
 
     if value == 'Riga':
         lat_lon_str = weather.get_lat_lon(coordinates.riga_geojson)
-        return ("Awesome trip visiting Ross! More info coming soon!",
+        return ("Awesome trip visiting Ross! Also my first destination in the Baltic states! Riga is small for a "
+                "European capital but is quite enjoyable. There are a number of plazas in the city center with "
+                "expansive bar / cafe / restaurant patios (in summer). This is presumably to make "
+                "the most of the summer, as the days get quite short here in the winter. I would definitely "
+                "recommend going to the top of St. Peter's Church for awesome views of the city. "
+                "This is also available at night sometimes.",
+                html.Br(), html.Br(),
+                "Riga has unique history that begins with crusaders founding the city, and you can find a really "
+                "cool restaurant with a medieval / crusader theme, called ____. "
+                "The whole restaurant is underground, and there are so many little rooms and hallways. It is "
+                "definitely not just a tourist trap, there are actual historical references to this restaurant "
+                "dating back to ___ ! This was one of the highlights for me in Riga. There is also another place "
+                "with a similar underground old-time ambience (but not medieval / crusader themed) called "
+                "Ala Pagrabs Folkklubs. Super cool bar with some really great beers!",
+                html.Br(), html.Br(),
+                "Riga is also the world capital for the 'Art Nouveau' architectural style. It is there are over 800 "
+                "buildings in this style (in a city with a population of just ____). The most prevalent feature of "
+                "Art Nouveau is protruding human faces carved into building facades, especially in the arches over "
+                "doors and windows. Many of the buildings also have a nice color scheme, with a brighter color "
+                "complementing the white-ish color of the stone. The highest concentration can be found in the "
+                "____ district. These buildings are quite fun to see, and they are very evident all over the city. ",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
                 html.Br(),
@@ -3462,7 +3517,8 @@ def set_display_children(value):
 
     if value == 'Szczecin':
         lat_lon_str = weather.get_lat_lon(coordinates.szczecin_geojson)
-        return ('Happy birthday Jay! More info coming soon!',
+        return ('Happy birthday Jay! Szczecin is a small city on the border with Germany. We had quite a fun 24 '
+                'hours here. We went to an awesome',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -3483,12 +3539,41 @@ def set_display_children(value):
 
     if value == 'Warsaw':
         lat_lon_str = weather.get_lat_lon(coordinates.warsaw_geojson)
-        return ('More info coming soon!',
+        return ('The capital of Poland! I really enjoyed Warsaw. Similar to Krakow, the food is great, the old town '
+                'is beautiful, and it is very affordable here compared to other big European capitals. Warsaw also '
+                "differs from Krakow in a few ways. I really liked the big city flavor of Warsaw -- there are a number "
+                "of pretty large modern buildings in the newer part of the city. I didn't actually walk through or "
+                "spend any time in this area, but I enjoyed the skyline they provided. Although Warsaw is the capital "
+                "and is the bigger city, the old town of Krakow is bigger and is much more lively. Krakow is known to "
+                "offer more night life, and this seemed to be the case. The castle / palace area in Krakow is "
+                "much more expansive, but don't forget to walk behind the palace in Warsaw! This is really cool to do "
+                "at night as well. Lastly, I was surprised to not see bagels or "
+                "paczki (incredible Polish donuts). Both were everywhere in Krakow.",
+                html.Br(), html.Br(),
+                "For restaurants, I would definitely recommend the little chain (there are a few locations in the "
+                "city) for some good, affordable traditional food options. This is a great lunch spot. For dinner, we "
+                "had a lovely meal at ___. "
+                "They had a number of traditional Polish foods as well as some other options.",
+                html.Br(), html.Br(),
+                "For bars, there are a couple docked boat bars on the river, called __ and __. "
+                "We enjoyed a drink here with a very nice view of the sunset over the river. There's also a really "
+                "cool little bar called that serves a traditional cherry liquor. Of course vodka is also very "
+                "traditional in Poland, but sorry no recommendations there... vodka is not my thing!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/poland/warsaw.JPG"},
+                        {"src": "assets/poland/war.JPG"},
+                        {"src": "assets/poland/war1.JPG"},
+                        {"src": "assets/poland/war2.JPG"},
+                        {"src": "assets/poland/war3.JPG"},
+                        {"src": "assets/poland/war4.JPG"},
+                        {"src": "assets/poland/war5.JPG"},
+                        {"src": "assets/poland/war6.JPG"},
+                        {"src": "assets/poland/war7.JPG"},
+                        {"src": "assets/poland/war8.JPG"},
+                        {"src": "assets/poland/war9.JPG"},
+                        {"src": "assets/poland/war10.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -4640,6 +4725,8 @@ def set_display_children(value):
                     items=[
                         {"src": "assets/usa-il/champaign.JPG"},
                         {"src": "assets/usa-il/champaign1.JPG"},
+                        {"src": "assets/usa-il/champaign2.JPG"},
+                        {"src": "assets/usa-il/champaign3.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -4669,10 +4756,9 @@ def set_display_children(value):
                 "Tesfa (Ethiopian), Manny's Cafe (Jewish deli), Parson's Chicken and Fish, Alpine Subs (Italian),"
                 "Farm Bar (American), Au Cheval (best burger in the world?), Sappori (Italian), Billy Goat Tavern, "
                 "Harold's (fried chicken), Twin Anchor's (ribs), and Vito and Nick's (thin crust/tavern style pizza). "
-                "Some of my favorite bars and pubs include The Globe Pub, " 
-                "AJ Hudson's Pub, Cleo's Pub, Prost!, Cindy's Rooftop, Lottie's, LondonHouse Rooftop, Halligan's, "
-                "Bird's Nest, District Brew Yards, River Shannon, Guinness Open Gate Brewery, DryHop Brewing, and "
-                "Kirkwood Tavern. ",
+                "Some of my favorite bars and pubs include The Globe Pub, AJ Hudson's Pub, Cleo's Pub, Prost!, "
+                "Cindy's Rooftop, Lottie's, LondonHouse Rooftop, Halligan's, Bird's Nest, District Brew Yards, "
+                "River Shannon, Guinness Open Gate Brewery, DryHop Brewing, and Kirkwood Tavern. ",
                 html.Br(), html.Br(),
                 "Chicago also has a great music scene. There are many great concert venues across the city for all "
                 "kinds of music. Chicago is perhaps particularly known for their jazz and blues clubs. "

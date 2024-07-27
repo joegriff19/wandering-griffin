@@ -4,6 +4,8 @@ import dash_bootstrap_components as dbc
 
 layout = html.Div([
     html.Div([
+        html.Div(children="My Favorite Countries", className="wg"),
+        html.Br(),
         html.Div("I have grouped all of the countries I have visited into 4 different tiers. "
                  "Within each tier, the countries are in no particular order. Remember these rankings are simply "
                  "based on my personal experience and opinion!"),
@@ -22,7 +24,7 @@ layout = html.Div([
         html.Div("Bosnia, Bolivia, France"),
         html.Br(),
         html.Div("Bad"),
-        html.Div("None! I have yet to visit a country and have a bad experience overall."),
+        html.Div("None! Thankfully, I have yet to visit a country and have a bad experience overall."),
         html.Br(),
         html.Br(),
         html.Div("Last update: July 2024"),
