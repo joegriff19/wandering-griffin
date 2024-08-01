@@ -808,7 +808,11 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Mostar':
-        return ('more info coming soon!',
+        return ('Mostar is a cool little city in Bosnia & Herzegovina. The most famous site here is the old bridge '
+                '(which was destroyed but rebuilt) that dates back to ___. This bridge also inspired the name of '
+                "the city -- 'most' means bridge in many slavic languages. It's even a bit of a rite of passage into "
+                "adulthood for locals to jump off the bridge into river. The area near the bridge is great to walk "
+                'around and explore. Enjoy the old cobblestone streets and the traditional metalwork shops.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.mostar_geojson)), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -830,7 +834,7 @@ def set_display_children(value):
     # Bulgaria
     if value == 'Sofia':
         return ('The Bulgarian capital! The history here is really interesting. People have inhabited modern-day '
-                'Sofia for some 6000 years. Rather than an old town, here you have different layers of the city. '
+                'Sofia for some 6,000 years. Rather than an old town, here you have different layers of the city. '
                 'In the center of the city you can find a number of Roman ruins below the current level of the city. '
                 'There is also a Catholic Church, an Orthodox Church, a Mosque, and a synagogue all around the main '
                 'square as well. Bulgaria is the only country that never ended up losing any of their Jewish '
@@ -1682,7 +1686,7 @@ def set_display_children(value):
     if value == 'Berlin':
         lat_lon_str = weather.get_lat_lon(coordinates.ber_geojson)
         return ("'Poor but sexy' has become the city's motto after the mayor said this back in 2003. "
-                "There is never a dull moment in Berlin. It's a very creative, unique, fun, and often quirky city "
+                "There is never a dull moment in Berlin. It's a very creative, unique, fun, quirky and weird city "
                 "with lots of history. "
                 "There is so much to see, especially the Brandenburg Gate, the Berliner Dom (cathedral), the "
                 "Reichstag (national parliament), the Fernsehturm (TV tower), the Memorial to the Murdered Jews of "
@@ -1695,7 +1699,7 @@ def set_display_children(value):
                 "to wait a long time in line and know that there is a good chance you will not be let in -- it's part "
                 "of the funky culture that preserves the hype and exclusive aura of the club. For other club "
                 "options, try Watergate, Tresor, Club der Visionäre, or Ritter Butzke. For a really fun bar that "
-                "isn't exactly a club, go to Minimal bar. ",
+                "isn't exactly a club, go to Minimal Bar or Bohnengold. ",
                 html.Br(), html.Br(),
                 "Beyond the clubs, "
                 "there are tons of concerts here every day and there are always "
@@ -1717,7 +1721,7 @@ def set_display_children(value):
                 "vietnamese food (the duck at New Day is crazy good). For German food, 'Max & Moritz' is a "
                 "really cool restaurant with great food and beers. There is also the Hofbräuhaus Berlin for very "
                 "fun and festive Bavarian food, beers, live music, and good vibes. There is also a lot of "
-                "great middle eastern food, especially yemenite food at the 'Jemenitisches Restaurant' "
+                "great middle eastern food, especially yemeni food at the 'Jemenitisches Restaurant' "
                 "and Syrian food at the 'Aleppo Supper Club.' And last but definitely not least -- Christmas "
                 "time is magical here! There are tons of Christmas markets all over the city, and mulled wine "
                 "(Glühwein) also available all over the city.",
@@ -4894,6 +4898,10 @@ def set_display_children(value):
                     items=[
                         {"src": "assets/usa-ia/dbq.JPG"},
                         {"src": "assets/usa-ia/dbq1.JPG"},
+                        {"src": "assets/usa-ia/dbq2.JPG"},
+                        {"src": "assets/usa-ia/dbq3.JPG"},
+                        {"src": "assets/usa-ia/dbq4.JPG"},
+                        {"src": "assets/usa-ia/dbq5.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
