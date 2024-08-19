@@ -3526,7 +3526,8 @@ def set_display_children(value):
                 html.Br(), html.Br(),
                 "One last thing — if you are here in the summer and it’s hot, consider taking the short trip out of "
                 "the city to go for a swim at the nearby lake called Zalew Bagry. There will be lots of people "
-                "enjoying the water and the surprisingly nice beaches. There’s a Good Lood ice cream spot here too!",
+                "enjoying the water and the surprisingly nice beaches. There are a few spots here to grab food as well "
+                "as a Good Lood ice cream!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
