@@ -3589,13 +3589,14 @@ def set_display_children(value):
                 html.Br(), html.Br(),
                 "For restaurants, I would definitely recommend the little chain (there are a few locations in the "
                 "city) for some good, affordable traditional food options. This is a great lunch spot. For dinner, we "
-                "had a lovely meal at ___. "
+                "had a lovely meal at Restauracja Portretowa. "
                 "They had a number of traditional Polish foods as well as some other options.",
                 html.Br(), html.Br(),
-                "For bars, there are a couple docked boat bars on the river, called __ and __. "
-                "We enjoyed a drink here with a very nice view of the sunset over the river. There's also a really "
-                "cool little bar called that serves a traditional cherry liquor. Of course vodka is also very "
-                "traditional in Poland, but sorry no recommendations there... vodka is not my thing!",
+                "For bars, there are a couple docked boat bars on the river, called WIECZÓR NAD WISŁĄ and "
+                "Barka Warszawska DZIEŃ I NOC. We enjoyed a drink here with a very nice view of the sunset over the "
+                "river. There's also a really cool little bar called Pijana Wiśnia that serves a traditional cherry "
+                "liquor. Of course vodka is also very traditional in Poland, but sorry no recommendations there... "
+                "vodka is not my thing!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
