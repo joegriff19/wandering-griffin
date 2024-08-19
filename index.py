@@ -1671,7 +1671,6 @@ def set_display_children(value):
                         {"src": "assets/france/strasbourg2.JPG"},
                         {"src": "assets/france/strasbourg3.JPG"},
                         {"src": "assets/france/strasbourg4.JPG"},
-                        {"src": "assets/france/strasbourg5.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -3493,7 +3492,41 @@ def set_display_children(value):
     # Poland
     if value == 'Krakow':
         lat_lon_str = weather.get_lat_lon(coordinates.krakow_geojson)
-        return ('more info coming soon!',
+        return ('I love Krakow! It’s beautiful, it’s lively, it’s extremely walkable, there’s great food, '
+                'the old town is lovely, and there is a huge castle complex overlooking the river and the city below. '
+                'Additionally, it’s also one of the cheapest cities relative to its size in Europe. '
+                'So what’s not to love!',
+                html.Br(), html.Br(),
+                'There are three main areas of the city to explore. The old town, the '
+                "castle area, and Kazimierz. The old town and the castle area speak for themselves: go explore both "
+                "and enjoy the views of the city and river below from the Wawel Castle. Kazimierz is the historical "
+                "Jewish quarter of the city, and recently has become the trendy, alternative area of Krakow with cool "
+                "bars, vintage shops, thrift stores. There’s definitely a bit of a Berlin vibe in Kazimierz. "
+                "Mleczarnia Ogródek (Mlekowóz) is one bar here with a great beer garden. The Okrąglak is really the "
+                "center of the nightlife, you will see lots of bars and people surrounding this food stand with late "
+                "night bites. Lastly, considering the history, be sure to walk through what’s known as the Schindler's "
+                "List Passage. This was the site used to film a significant part of the Schindler’s List movie.",
+                html.Br(), html.Br(),
+                "It’s hard to walk down the street without seeing the bagel vendors on the streets. "
+                "Bagels were born in Poland, so be sure to try one! Know that in Poland it’s not so common to serve "
+                "them with cream cheese though. For great bagel sandwiches visit Żarówka Cafe. The other thing you "
+                "will see plenty of right away are pączki. I had one with apricot in the middle from Dobra Pączkarnia. "
+                "This may have just been the best donut I have ever had In my life. A beautiful glaze on the outside, "
+                "still warm, plenty big, and the perfect fruity sweetness on the inside from the apricot. Wow. "
+                "I am not even a big donut fan. Staying in the dessert category, the ice cream in Krakow is great, "
+                "especially from the small chain called Good Lood.",
+                html.Br(), html.Br(),
+                "For a fantastic, casual, quality, cheap meal of fresh Tyskie tank beer and pierogi, "
+                "BaniaLuka is an absolute 10/10. There are a few locations in the old town. Thank me later.",
+                html.Br(), html.Br(),
+                "For a perfect traditional Polish dinner, go to Restauracja U Babci Maliny. The pierogi and soups "
+                "(get the bread bowl!) were lovely. Not exactly traditional, but another place to mention is the "
+                "House of Beer Krakow. The main floor is nice but the underground area is really cool. The beers are "
+                "delicious and the food was quite good as well. Tons of different options for both the beer and food!",
+                html.Br(), html.Br(),
+                "One last thing — if you are here in the summer and it’s hot, consider taking the short trip out of "
+                "the city to go for a swim at the nearby lake called Zalew Bagry. There will be lots of people "
+                "enjoying the water and the surprisingly nice beaches. There’s a Good Lood ice cream spot here too!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
