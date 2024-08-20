@@ -2640,6 +2640,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.bergamo_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Florence':
         lat_lon_str = weather.get_lat_lon(coordinates.florence_geojson)
         return ('Such a lovely city. The Arno river runs right through the city and the sun sets '
@@ -2677,6 +2678,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.florence_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Genoa':
         lat_lon_str = weather.get_lat_lon(coordinates.genoa_geojson)
         return ("The birthplace of Christopher Columbus and pesto! Also make sure you try panissa!",
@@ -2699,6 +2701,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.genoa_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Lecco':
         lat_lon_str = weather.get_lat_lon(coordinates.lecco_geojson)
         return ('Lovely day trip from Bergamo. Lecco is on the south of the right wing of Lake Como. The lake and '
@@ -2720,6 +2723,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.lecco_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Milan':
         lat_lon_str = weather.get_lat_lon(coordinates.milan_geojson)
         return ('The center of the city with the cathedral (duomo in Italian) and the arcade to the left of '
@@ -2753,6 +2757,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.milan_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Portofino':
         lat_lon_str = weather.get_lat_lon(coordinates.portofino_geojson)
         return ('more info coming soon!',
@@ -2770,6 +2775,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.portofino_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Rome':
         lat_lon_str = weather.get_lat_lon(coordinates.rome_geojson)
         return ('So much fascinating history here. The food scene is also incredible. Be sure to visit the coliseum, '
@@ -2807,6 +2813,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.rome_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Vatican 🇻🇦':
         lat_lon_str = weather.get_lat_lon(coordinates.vatican_geojson)
         return ('Definitely worth some time on your visit to Rome, especially as a Catholic. The main plaza (St. '
@@ -2835,6 +2842,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.vatican_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Venice':
         lat_lon_str = weather.get_lat_lon(coordinates.venice_geojson)
         return ('It is definitely as charming as everyone says it is. Visit the main plaza (St. Marco) and church, '
@@ -2862,6 +2870,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.venice_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Verona':
         lat_lon_str = weather.get_lat_lon(coordinates.verona_geojson)
         return ('The setting from the famous Romeo and Juliet play -- Verona is a beautiful city '
