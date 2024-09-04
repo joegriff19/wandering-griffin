@@ -2921,8 +2921,7 @@ def set_display_children(value):
                 ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.jurmala_geojson)],
-                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40],
-                           zoom=1)))
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Riga':
         lat_lon_str = weather.get_lat_lon(coordinates.riga_geojson)
@@ -2973,9 +2972,48 @@ def set_display_children(value):
                 ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.riga_geojson)],
-                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40],
-                           zoom=1)))
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
+    # Lithuania
+    if value == 'Kaunas':
+        lat_lon_str = weather.get_lat_lon(coordinates.kaunas_geojson)
+        return ("More info coming soon!",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
+                html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/latvia/jurmala3.JPG"},
+                        # {"src": "assets/latvia/jurmala1.JPG"},
+                        # {"src": "assets/latvia/jurmala2.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.kaunas_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Vilnius':
+        lat_lon_str = weather.get_lat_lon(coordinates.vilnius_geojson)
+        return ("More info coming soon!",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
+                html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/latvia/riga.JPG"},
+                        # {"src": "assets/latvia/riga1.JPG"},
+                        # {"src": "assets/latvia/riga2.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.vilnius_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Mexico
     if value == 'Cancún':
@@ -2988,6 +3026,7 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.cancun_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Mexico City':
         lat_lon_str = weather.get_lat_lon(coordinates.mexico_city_geojson)
         return ("What a city. Weather is temperate year round. So much good cheap food. The tamales with mole "
@@ -3054,9 +3093,10 @@ def set_display_children(value):
 
     # Morocco
     if value == 'Aït Benhaddou':
+        lat_lon_str = weather.get_lat_lon(coordinates.ait_geojson)
         return ('more to come!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.ait_geojson)), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/morocco/ait.JPG"},
@@ -3074,9 +3114,10 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Casablanca':
+        lat_lon_str = weather.get_lat_lon(coordinates.casablanca_geojson)
         return ('more to come!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.casablanca_geojson)), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/morocco/casablanca.JPG"},
@@ -3099,9 +3140,18 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Erg Chebbi (Sahara Desert)':
-        return ('more to come!',
+        lat_lon_str = weather.get_lat_lon(coordinates.erg_chebbi_geojson)
+        return ('Erg Chebbi is the name of the section of the Sahara Desert that reaches into Morocco. '
+                'Our time here was nothing short of incredible. We booked an overnight experience on Viator, and '
+                'we met with our guide and our camels in the town of Merzouga in the late afternoon / early evening.'
+                'We proceeded to ride the camels for maybe an hour into the desert before stopping in the sand dunes '
+                'to watch the sunset. '
+                'You can find the overnight desert experience that we booked ',
+                html.A("here",
+                       href="https://www.viator.com/tours/Merzouga/3-Day-Marrakech-To-Fes-Tiur/d50275-265084P1"),
+                '. ',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.erg_chebbi_geojson)), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/morocco/sahara.JPG"},
@@ -3127,9 +3177,10 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Fes':
+        lat_lon_str = weather.get_lat_lon(coordinates.fes_geojson)
         return ('more to come!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.fes_geojson)), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/morocco/fes.JPG"},
@@ -3148,9 +3199,23 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Ifrane National Park':
+        lat_lon_str = weather.get_lat_lon(coordinates.ifrane_geojson)
         return ('more to come!',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.ifrane_geojson)), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://www.youtube.com/watch?v=CDW9E-8qx8c",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/morocco/ifrane.JPG"},
@@ -3164,6 +3229,7 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Marrakech':
+        lat_lon_str = weather.get_lat_lon(coordinates.marrakech_geojson)
         return ('What a cool city — the small, bustling streets lined with markets feel straight out of a movie. '
                 'Although the entire city feels very authentic and traditional, there are many tourists in the '
                 'city as well. Although the city and lifestyle here are very different from the western world '
@@ -3189,7 +3255,7 @@ def set_display_children(value):
                 'bar, buffet breakfast, and several excursion / experience / entertainment options, including '
                 'day trips, cooking classes, henna, trivia, etc. ',
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.marrakech_geojson)), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/morocco/marr.JPG"},
@@ -3212,15 +3278,32 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.marrakech_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
-    if value == 'Merzouga':
-        return ('more to come!',
+    if value == 'Merzouga (Town outside Sahara Desert)':
+        lat_lon_str = weather.get_lat_lon(coordinates.merzouga_geojson)
+        return ('This town is known as the gateway to the Sahara Desert in Morocco. You will definitely come here if '
+                'you are planning to see the Sahara Desert, and there is a good chance you will want to stay here at '
+                'least one night. There are some really cool hotels right on the edge of the desert, and several have '
+                "stunning pools with nothing but endless desert in the background. Although we didn't stay in this "
+                "hotel, we had a free half-day and we were able to pay about 10 USD per person to have full access "
+                "to the stunning hotel pool (towels included). This was so unreal -- it felt like we were looking at "
+                "a green screen with the palm trees, camels, and endless sand. Please enjoy the pictures below. ",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.merzouga_geojson)), className='weather'), html.Br(),
+                'We also had an absolutely phenomenal lunch in Merzouga at Restaurant Cafe SaharaTime. '
+                'Just like the above-mentioned hotel, this restaurant sits right on the edge of the desert, '
+                'and also feels straight out of a movie with the stunning backdrop. We communicated with our waiter '
+                'in very broken French and English, yet we enjoyed an incredible meal of tea, vegetables, tajine, '
+                'and a small cake dessert. I love our dessert tea party pictures below.',
+                html.Br(), html.Br(),
+                "Lastly, as I mentioned, if you are planning to venture into the desert, your excursion will "
+                "likely start here. This section of the Sahara Desert is called Erg Chebbi. "
+                "See that page for more information about our overnight adventure in the desert.",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/morocco/merzouga.JPG"},
-                        {"src": "assets/morocco/merzouga1.JPG"},
                         {"src": "assets/morocco/merzouga2.JPG"},
+                        {"src": "assets/morocco/merzouga1.JPG"},
                         {"src": "assets/morocco/merzouga3.JPG"},
                         {"src": "assets/morocco/merzouga4.JPG"},
                         {"src": "assets/morocco/merzouga5.JPG"},
@@ -3235,6 +3318,7 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Rabat':
+        lat_lon_str = weather.get_lat_lon(coordinates.rabat_geojson)
         return ('The capital of Morocco! I was really pleasantly surprised by Rabat. It is modern, organized, '
                 'and clean (especially compared to other big cities in Morocco). The views of the '
                 'water -- the Bouregreg River and the Atlantic Ocean -- are lovely. You can catch a beautiful '
@@ -3244,7 +3328,8 @@ def set_display_children(value):
                 'One of my favorite restaurants I visited in all of Morocco is Dar Naji. Delicious food at a very '
                 'fair price, great rooftop terrace, traditional live music, impressive tea pouring from the wait staff '
                 '(see the video below). Try the ___ and the ___. ',
-                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.rabat_geojson)), className='weather'), html.Br(),
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 html.Div(
                     style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
                            "margin": "auto"},
@@ -3277,6 +3362,7 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Tangier':
+        lat_lon_str = weather.get_lat_lon(coordinates.tangier_geojson)
         return ('Despite being just 17 miles from the southern coast of Spain, I felt more culture shock here than '
                 'anywhere in Europe. The newer part of th e city has a European '
                 'feel as this used to be the gateway from Europe to Africa (and vice versa) before air travel. '
@@ -3293,7 +3379,7 @@ def set_display_children(value):
                 "It overlooks the Bay of Tangier (and the Strait of Gibraltar) and you can see the "
                 "southern tip of Spain on a clear day! This was also a favorite spot of Jimi Hendrix!",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.tangier_geojson)), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/morocco/tangier.JPG"},
@@ -3315,9 +3401,16 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Todgha Gorge':
-        return ('more to come!',
+        lat_lon_str = weather.get_lat_lon(coordinates.todgha_geojson)
+        return ('Simply put, this was a stunning location that I wish we had more time for. This massive gorge has a '
+                'river running through it and there were lots of people who were enjoying the cool water or sitting '
+                'along the water and enjoying the scenery. I would definitely recommend this stop if you are driving '
+                'from Marrakech to the Sahara Desert (Merzouga). If I were to redo our itinerary, I would have looked '
+                "for accommodations here so we wouldn't have had to make such a quick stop. We could have "
+                "finished the last few hours of the drive to the desert the next morning, which would also work well "
+                "because the overnight desert experiences begin in the late afternoon / early evening.",
                 html.Br(), html.Br(),
-                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.todgha_geojson)), className='weather'), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/morocco/todgha.JPG"},

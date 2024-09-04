@@ -122,6 +122,10 @@ verona_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point",
 jurmala_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [23.7738, 56.9684]}}]}
 riga_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [24.1056, 56.9677]}}]}
 
+# lithuania coordinates
+kaunas_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [23.9036, 54.8985]}}]}
+vilnius_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [25.2797, 54.6872]}}]}
+
 # mexico coordinates
 cancun_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-86.8515, 21.1619]}}]}
 mexico_city_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-99.1332, 19.4326]}}]}
