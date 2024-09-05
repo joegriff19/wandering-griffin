@@ -3278,7 +3278,7 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.marrakech_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
-    if value == 'Merzouga (Town outside Sahara Desert)':
+    if value == 'Merzouga (Town outside Sahara)':
         lat_lon_str = weather.get_lat_lon(coordinates.merzouga_geojson)
         return ('This town is known as the gateway to the Sahara Desert in Morocco. You will definitely come here if '
                 'you are planning to see the Sahara Desert, and there is a good chance you will want to stay here at '

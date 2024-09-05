@@ -30,7 +30,7 @@ all_options = {
     'Mexico 🇲🇽': ['Cancún', 'Mexico City'],
     'Montenegro 🇲🇪': ['Kotor'],
     'Morocco 🇲🇦': ['Aït Benhaddou', 'Casablanca', 'Erg Chebbi (Sahara Desert)', 'Fes', 'Ifrane National Park',
-                   'Marrakech', 'Merzouga (Town outside Sahara Desert)', 'Rabat', 'Tangier', 'Todgha Gorge'],
+                   'Marrakech', 'Merzouga (Town outside Sahara)', 'Rabat', 'Tangier', 'Todgha Gorge'],
     'Netherlands 🇳🇱': ['Amsterdam'],
     'North Macedonia 🇲🇰': ['Skopje'],
     'Norway 🇳🇴': ['Oslo'],
