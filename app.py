@@ -6,6 +6,7 @@ app = dash.Dash(
         __name__,
         title='Wandering Griffin Travel',
         external_stylesheets=[dbc.themes.MORPH],
-        suppress_callback_exceptions=True
+        suppress_callback_exceptions=True,
+        update_title=None
         )
 server = app.server # NEED THIS FOR RENDER
