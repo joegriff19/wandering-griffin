@@ -69,7 +69,7 @@ index_layout = html.Div(
                 # html.Div(dls.Hash(fullscreen=True), style={"height": "200px"}),
                 html.Div(children="Wandering Griffin Travel", className="wg"),
                 html.Br(),
-                dcc.Interval(id='update-rotation', interval=500, n_intervals=0),
+                dcc.Interval(id='update-rotation', interval=50, n_intervals=0),
                 # html.Div([
                 #     html.Div(
                 #         children=(),
@@ -243,7 +243,7 @@ def serving_lottie_loader():
     [Input('update-rotation', 'n_intervals')]
 )
 def rotate_globe(_):
-    index.lon_deg = index.lon_deg + 1
+    index.lon_deg = index.lon_deg + .3
     x = index.lon_deg
     return globe.fig.update_layout(geo=dict(center_lon=x, projection_rotation_lon=x))
 
@@ -3845,6 +3845,24 @@ def set_display_children(value):
                 ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.san_juan_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    # Slovakia
+    if value == 'Edinburgh':
+        lat_lon_str = weather.get_lat_lon(coordinates.edinburgh_geojson)
+        return ('More info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/scotland/edinburgh.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.edinburgh_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Slovakia

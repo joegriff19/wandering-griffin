@@ -172,6 +172,9 @@ lisbon_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point",
 rincon_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-67.2389, 18.3402]}}]}
 san_juan_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-66.1057, 18.4655]}}]}
 
+# scotland coordinates
+edinburgh_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-3.1883, 55.9533]}}]}
+
 # slovakia coordinates
 bratislava_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [17.1079, 48.1486]}}]}
 
