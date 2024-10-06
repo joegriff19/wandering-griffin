@@ -69,7 +69,7 @@ index_layout = html.Div(
                 # html.Div(dls.Hash(fullscreen=True), style={"height": "200px"}),
                 html.Div(children="Wandering Griffin Travel", className="wg"),
                 html.Br(),
-                dcc.Interval(id='update-rotation', interval=200, n_intervals=0),
+                dcc.Interval(id='update-rotation', interval=500, n_intervals=0),
                 # html.Div([
                 #     html.Div(
                 #         children=(),
@@ -243,7 +243,7 @@ def serving_lottie_loader():
     [Input('update-rotation', 'n_intervals')]
 )
 def rotate_globe(_):
-    index.lon_deg = index.lon_deg + .5
+    index.lon_deg = index.lon_deg + 1
     x = index.lon_deg
     return globe.fig.update_layout(geo=dict(center_lon=x, projection_rotation_lon=x))
 
@@ -2933,19 +2933,20 @@ def set_display_children(value):
                 "This is also available at night sometimes.",
                 html.Br(), html.Br(),
                 "Riga has unique history that begins with crusaders founding the city, and you can find a really "
-                "cool restaurant with a medieval / crusader theme, called ____. "
+                "cool restaurant with a medieval / crusader theme, called Rozengrāls. "
                 "The whole restaurant is underground, and there are so many little rooms and hallways. It is "
                 "definitely not just a tourist trap, there are actual historical references to this restaurant "
-                "dating back to ___ ! This was one of the highlights for me in Riga. There is also another place "
-                "with a similar underground old-time ambience (but not medieval / crusader themed) called "
+                "dating back to the year 1293! This was one of the highlights for me in Riga. There is also another "
+                "place with a similar underground old-time ambience (but not medieval / crusader themed) called "
                 "Ala Pagrabs Folkklubs. Super cool bar with some really great beers!",
                 html.Br(), html.Br(),
                 "Riga is also the world capital for the 'Art Nouveau' architectural style. It is there are over 800 "
-                "buildings in this style (in a city with a population of just ____). The most prevalent feature of "
+                "buildings in this style (in a city with a population of just 600K) -- the highest density of Art "
+                "Nouveau architecture of any city in the world! The most prevalent feature of "
                 "Art Nouveau is protruding human faces carved into building facades, especially in the arches over "
                 "doors and windows. Many of the buildings also have a nice color scheme, with a brighter color "
-                "complementing the white-ish color of the stone. The highest concentration can be found in the "
-                "____ district. These buildings are quite fun to see, and they are very evident all over the city. ",
+                "complementing the white-ish color of the stone. The highest concentration can be found on the Alberta"
+                "Street. These buildings are quite fun to see, and they are prevalent all around the city. ",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
                 html.Br(),
@@ -2977,7 +2978,14 @@ def set_display_children(value):
     # Lithuania
     if value == 'Kaunas':
         lat_lon_str = weather.get_lat_lon(coordinates.kaunas_geojson)
-        return ("More info coming soon!",
+        return ("I was really pleasantly surprised with Kaunas! The city is small and is primarily a single street, "
+                "Laisvės / Vilniaus (two names for two different segments of the same street). "
+                "This area of the city is very clean and modern, and there a number of bars and restaurants. "
+                "Definitely walk the entire street, from the Church of St. Michael the Archangel, Kaunas to the "
+                "Kaunas Castle and the surrounding park (~1.5 mi / 2.5km). The castle is really cool, and the park is "
+                "also quite nice with basketball courts, soccer fields, sand volleyball courts, and bordered by two "
+                "rivers. There were lots of people enjoying the beautiful sunset toward the far end of the park where "
+                "the two rivers meet.",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
                 html.Br(),
