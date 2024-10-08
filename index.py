@@ -2945,7 +2945,7 @@ def set_display_children(value):
                 "Nouveau architecture of any city in the world! The most prevalent feature of "
                 "Art Nouveau is protruding human faces carved into building facades, especially in the arches over "
                 "doors and windows. Many of the buildings also have a nice color scheme, with a brighter color "
-                "complementing the white-ish color of the stone. The highest concentration can be found on the Alberta"
+                "complementing the white-ish color of the stone. The highest concentration can be found on the Alberta "
                 "Street. These buildings are quite fun to see, and they are prevalent all around the city. ",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
@@ -2984,16 +2984,27 @@ def set_display_children(value):
                 "Definitely walk the entire street, from the Church of St. Michael the Archangel, Kaunas to the "
                 "Kaunas Castle and the surrounding park (~1.5 mi / 2.5km). The castle is really cool, and the park is "
                 "also quite nice with basketball courts, soccer fields, sand volleyball courts, and bordered by two "
-                "rivers. There were lots of people enjoying the beautiful sunset toward the far end of the park where "
+                "rivers. The name of the park is quite a mouthful -- Nemunas and Neris Confluence Park. "
+                "There were lots of people enjoying the beautiful sunset toward the far end of the park where "
                 "the two rivers meet.",
+                html.Br(), html.Br(),
+                'For a great traditional Lithuanian restaurant, check out "Bernelių užeiga senamiestyje." For bars, '
+                "there are a number of good-looking spots along the main street, including Godo, Džem'pub, and "
+                "rePUBlic No.1. For craft beers, check out Genys Taproom or Vingiu Dubingiu Aludė (nice beer garden "
+                "just off the main street).",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
                 html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/latvia/jurmala3.JPG"},
-                        # {"src": "assets/latvia/jurmala1.JPG"},
-                        # {"src": "assets/latvia/jurmala2.JPG"},
+                        {"src": "assets/lithuania/kaunas.JPG"},
+                        {"src": "assets/lithuania/kaunas1.JPG"},
+                        {"src": "assets/lithuania/kaunas2.JPG"},
+                        {"src": "assets/lithuania/kaunas3.JPG"},
+                        {"src": "assets/lithuania/kaunas4.JPG"},
+                        {"src": "assets/lithuania/kaunas5.JPG"},
+                        {"src": "assets/lithuania/kaunas6.JPG"},
+
                     ],
                     interval=2000,
                     ride="carousel",
@@ -3005,15 +3016,33 @@ def set_display_children(value):
 
     if value == 'Vilnius':
         lat_lon_str = weather.get_lat_lon(coordinates.vilnius_geojson)
-        return ("More info coming soon!",
+        return ("Besides a walking tour and a beer, I didn't spend much time here. But I can recommend the pub I went "
+                "to, called Šnekutis. With more time, I would have loved to also have a drink and some food at "
+                "Užupio kavinė. I heard good things about this place and it looked really nice when I went by. "
+                "This spot is in the bohemian neighborhood of Užupis, also known as the Republic of Užupis! "
+                "Many, many artists live there, and Užupis was also visited by the Dalai Lama. You can find a memorial "
+                "with his handprint along the river. ",
+                html.Br(), html.Br(),
+                "The Gediminas Castle Tower overlooking the city is quite cool, and I would have liked to also go up "
+                "to the tower for the views of the city below. There is also a little funicular that you can take up "
+                "here from the city. In the city itself, maybe my favorite place was the Gate of Dawn. Of the 10 "
+                "original city gates of Vilnius, only this one remains. It is beautiful. There is also a chapel to Mary"
+                " above the gate, which is a major site for Catholic pilgrimage. ",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
                 html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/latvia/riga.JPG"},
-                        # {"src": "assets/latvia/riga1.JPG"},
-                        # {"src": "assets/latvia/riga2.JPG"},
+                        {"src": "assets/lithuania/vilnius.JPG"},
+                        {"src": "assets/lithuania/vilnius1.JPG"},
+                        {"src": "assets/lithuania/vilnius2.JPG"},
+                        {"src": "assets/lithuania/vilnius3.JPG"},
+                        {"src": "assets/lithuania/vilnius4.JPG"},
+                        {"src": "assets/lithuania/vilnius5.JPG"},
+                        {"src": "assets/lithuania/vilnius6.JPG"},
+                        {"src": "assets/lithuania/vilnius7.JPG"},
+                        {"src": "assets/lithuania/vilnius8.JPG"},
+
                     ],
                     interval=2000,
                     ride="carousel",
@@ -3855,7 +3884,24 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.san_juan_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
-    # Slovakia
+    # Scotland
+    if value == 'Carnoustie':
+        lat_lon_str = weather.get_lat_lon(coordinates.carnoustie_geojson)
+        return ('More info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/scotland/edinburgh.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.carnoustie_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Edinburgh':
         lat_lon_str = weather.get_lat_lon(coordinates.edinburgh_geojson)
         return ('More info coming soon!',
@@ -3871,6 +3917,40 @@ def set_display_children(value):
                 ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.edinburgh_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Glasgow':
+        lat_lon_str = weather.get_lat_lon(coordinates.glasgow_geojson)
+        return ('Trip with Felix, Gienna, & Oliver coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/scotland/edinburgh.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.glasgow_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'St. Andrews':
+        lat_lon_str = weather.get_lat_lon(coordinates.st_andrews_geojson)
+        return ('More info coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/scotland/edinburgh.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.st_andrews_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Slovakia

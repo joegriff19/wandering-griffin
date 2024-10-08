@@ -38,7 +38,7 @@ all_options = {
     'Poland 🇵🇱': ['Krakow', 'Szczecin', 'Warsaw', 'Wrocław'],
     'Portugal 🇵🇹': ['Guincho Beach', 'Lisbon'],
     'Puerto Rico 🇵🇷': ['Rincón', 'San Juan'],
-    'Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿': ['Edinburgh'],
+    'Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿': ['Carnoustie', 'Edinburgh', 'Glasgow', 'St. Andrews'],
     'Slovakia 🇸🇰': ['Bratislava'],
     'Slovenia 🇸🇮': ['Ljubljana'],
     'Spain 🇪🇸': ['Azpeitia', 'Barcelona', 'Begur', 'Bilbao', 'Buñol', 'Córdoba', 'El Escorial', 'Girona', 'Granada',

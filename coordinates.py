@@ -173,7 +173,10 @@ rincon_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point",
 san_juan_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-66.1057, 18.4655]}}]}
 
 # scotland coordinates
+carnoustie_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-2.7033, 56.5026]}}]}
 edinburgh_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-3.1883, 55.9533]}}]}
+glasgow_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-4.2583, 55.8617]}}]}
+st_andrews_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-2.7967, 56.3398]}}]}
 
 # slovakia coordinates
 bratislava_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [17.1079, 48.1486]}}]}
