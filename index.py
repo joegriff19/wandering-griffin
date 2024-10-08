@@ -2989,8 +2989,8 @@ def set_display_children(value):
                 "the two rivers meet.",
                 html.Br(), html.Br(),
                 'For a great traditional Lithuanian restaurant, check out "Bernelių užeiga senamiestyje." For bars, '
-                "there are a number of good-looking spots along the main street, including Godo, Džem'pub, and "
-                "rePUBlic No.1. For craft beers, check out Genys Taproom or Vingiu Dubingiu Aludė (nice beer garden "
+                "there are a number of good-looking spots along the main street, including Godo, rePUBlic No.1, and "
+                "Džem'pub. For craft beers, check out Genys Taproom or Vingiu Dubingiu Aludė (nice beer garden "
                 "just off the main street).",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
