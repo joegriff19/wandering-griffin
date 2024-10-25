@@ -2468,6 +2468,23 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Ireland
+    if value == 'Blarney':
+        lat_lon_str = weather.get_lat_lon(coordinates.blarney_geojson)
+        return ('More coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/ireland/blarney.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.tralee_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Cliffs of Moher':
         lat_lon_str = weather.get_lat_lon(coordinates.cliffs_of_moher_geojson)
         return ('Awesome (big) day trip from Dublin. They are amazing. My trip also included cool little stops at '
@@ -2489,6 +2506,58 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.cliffs_of_moher_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Cobh':
+        lat_lon_str = weather.get_lat_lon(coordinates.cobh_geojson)
+        return ('More coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/ireland/cobh.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.cobh_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Cork':
+        lat_lon_str = weather.get_lat_lon(coordinates.cork_geojson)
+        return ('More coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/ireland/cork.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.cork_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Derry':
+        lat_lon_str = weather.get_lat_lon(coordinates.derry_geojson)
+        return ('More coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/ireland/derry.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.tralee_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Dingle':
         lat_lon_str = weather.get_lat_lon(coordinates.dingle_geojson)
         return ('This peninsula on the west coast of Ireland is absolutely stunning! The cliffs and coastline here '
@@ -2519,6 +2588,24 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dingle_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Donegal':
+        lat_lon_str = weather.get_lat_lon(coordinates.donegal_geojson)
+        return ('More coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/ireland/donegal.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.donegal_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Dublin':
         lat_lon_str = weather.get_lat_lon(coordinates.dublin_geojson)
         return ('There is just such a special charm to this city! It was amazing to finally do a full Griffin family '
@@ -2579,6 +2666,41 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dingle_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Galway':
+        lat_lon_str = weather.get_lat_lon(coordinates.galway_geojson)
+        return ('More coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/ireland/galway.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.galway_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Killarney':
+        lat_lon_str = weather.get_lat_lon(coordinates.killarney_geojson)
+        return ('More coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/ireland/killarney.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.killarney_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Tralee':
         lat_lon_str = weather.get_lat_lon(coordinates.tralee_geojson)
         return ('The hometown of my Grandpa Séan! Tralee is the largest city in County Kerry, but it still pretty '

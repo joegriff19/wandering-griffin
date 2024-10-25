@@ -101,9 +101,16 @@ reykjavik_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Poin
 vik_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.6417, 63.4192]}}]}
 
 # ireland coordinates
+blarney_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-8.5612, 51.9338]}}]}
 cliffs_of_moher_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-9.4247, 52.9719]}}]}
+cobh_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-8.2951, 51.8530]}}]}
+cork_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-8.4756, 51.8985]}}]}
+derry_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-7.3101, 54.9965]}}]}
 dingle_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-10.2664, 52.1414]}}]}
+donegal_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-8.1096, 54.6538]}}]}
 dublin_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-6.2603, 53.3498]}}]}
+galway_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-9.0513, 53.274]}}]}
+killarney_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-9.5044, 52.0599]}}]}
 tralee_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-9.7026, 52.2713]}}]}
 
 # italy coordinates
