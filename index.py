@@ -3888,7 +3888,8 @@ def set_display_children(value):
     # Scotland
     if value == 'Carnoustie':
         lat_lon_str = weather.get_lat_lon(coordinates.carnoustie_geojson)
-        return ('More info coming soon!',
+        return ('Unlike St Andrews, the only reason you should come to Carnoustie is for golf! And that is a great '
+                'reason to come! There are two amazing golf courses here. My dad and I enjoyed two great rounds here.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -3910,7 +3911,16 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/scotland/edinburgh.JPG"},
+                        {"src": "assets/scotland/edinburgh.JPG"},
+                        {"src": "assets/scotland/edinburgh1.JPG"},
+                        {"src": "assets/scotland/edinburgh2.JPG"},
+                        {"src": "assets/scotland/edinburgh3.JPG"},
+                        {"src": "assets/scotland/edinburgh4.JPG"},
+                        {"src": "assets/scotland/edinburgh5.JPG"},
+                        {"src": "assets/scotland/edinburgh6.JPG"},
+                        {"src": "assets/scotland/edinburgh7.JPG"},
+                        {"src": "assets/scotland/edinburgh8.JPG"},
+                        {"src": "assets/scotland/edinburgh9.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
