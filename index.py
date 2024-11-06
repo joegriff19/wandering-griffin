@@ -2482,7 +2482,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.tralee_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.blarney_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Cliffs of Moher':
@@ -2555,7 +2555,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.tralee_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.derry_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Dingle':
@@ -2664,7 +2664,7 @@ def set_display_children(value):
                     className="carousel-fade"
                 ), html.Br(),
                 html.Div(
-                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dingle_geojson)],
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dublin_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Galway':
@@ -2699,6 +2699,23 @@ def set_display_children(value):
                 ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.killarney_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Limerick':
+        lat_lon_str = weather.get_lat_lon(coordinates.limerick_geojson)
+        return ('More coming soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/ireland/limerick.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.limerick_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     if value == 'Tralee':
@@ -3920,6 +3937,32 @@ def set_display_children(value):
     if value == 'Lisbon':
         return ('Absolutely lovely city! The capital of Portugal is a very walkable city that sits on the water with '
                 'good food, good pastries, good wine, and lots of sunshine.',
+                html.Br(), html.Br(),
+                'The main plaza (Praça do Comércio) has a cool gate and beautiful yellow buildings surrounding it. '
+                'The plaza also sits right on the water -- on the Tagus River, which opens up just outside the city '
+                'to the Atlantic Ocean. You’ll notice a bridge, called the 25 April Bridge, that looks very similar to '
+                'the Golden Gate Bridge and the Bay Bridge… that’s because the same company used the design of the Bay '
+                'Bridge to build the 25 April Bridge, and then painted it the same color as the Golden Gate Bridge! If '
+                'you have time, cross the bridge and visit the Christ statue (Sanctuary of Christ the King-Portugal).',
+                html.Br(), html.Br(),
+                'On the topic of going outside of city — the other top desinations to consider are the Belém Tower '
+                'and the National Palace of Pena in Sintra. This palace looks absolutely stunning and I can’t wait to '
+                'visit someday. Guincho Beach is also a beautiful beach if that’s what you are looking for. I was '
+                'lucky to visit and see a stunning sunset.',
+                html.Br(), html.Br(),
+                'Back in the city — be sure to see the Pink Street with the colorful umbrellas, the vista Miradouro '
+                'de Santa Luzia, and another vista Miradouro do Recolhimento. Also go to the viewpoint from the top '
+                'of the Santa Justa elevator. You can pay to take the elevator up, or you can also just walk around '
+                'and up the hills to the viewpoint.',
+                html.Br(), html.Br(),
+                'In terms of food, enjoy bacalao (cod) in all its forms (many of them fried). Also please try a pastel '
+                'de nada. And eat as many as your heart desires. These little egg custard tart pastries are one of my '
+                'favorite desserts on the planet. Maybe the best one can be found at the Pastelaria Santo António. '
+                'Lisbon also has a great Time Out Market. Do yourself a favor and try the goat cheese croquetas.',
+                html.Br(), html.Br(),
+                'For nightlife, definitely check out neighborhood Bairro Alto. There are lots of bars and people out '
+                'on the Rua da Atalaia street. You can also find traditional fado music here — but it is recommended '
+                'to go to the Alfama neighborhood for this.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(

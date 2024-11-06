@@ -23,7 +23,7 @@ all_options = {
     'Hungary 🇭🇺': ['Budapest'],
     'Iceland 🇮🇸': ['Reykjavik', 'Southern half of island'],
     'Ireland 🇮🇪': ['Blarney', 'Cliffs of Moher', 'Cobh', 'Cork', 'Derry', 'Dingle', 'Donegal', 'Dublin', 'Galway',
-                   'Killarney', 'Tralee'],
+                   'Killarney', 'Limerick', 'Tralee'],
     'Italy 🇮🇹': ['Bergamo', 'Florence', 'Genoa', 'Lecco', 'Milan', 'Portofino', 'Rome', 'Vatican 🇻🇦', 'Venice',
                  'Verona'],
     'Latvia 🇱🇻': ['Jūrmala', 'Riga'],
