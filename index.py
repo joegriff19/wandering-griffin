@@ -3975,7 +3975,8 @@ def set_display_children(value):
                 'In terms of food, enjoy bacalao (cod) in all its forms (many of them fried). Also please try a pastel '
                 'de nada. And eat as many as your heart desires. These little egg custard tart pastries are one of my '
                 'favorite desserts on the planet. Maybe the best one can be found at the Pastelaria Santo António. '
-                'Lisbon also has a great Time Out Market. Do yourself a favor and try the goat cheese croquetas.',
+                'This shop also has a delicious Porto croissant -- a croissant brushed with port wine. Lisbon also has '
+                'a really great Time Out Market. Do yourself a favor and try the goat cheese croquetas.',
                 html.Br(), html.Br(),
                 'For nightlife, definitely check out neighborhood Bairro Alto. There are lots of bars and people out '
                 'on the Rua da Atalaia street. You can also find traditional fado music here — but it is recommended '
