@@ -3945,7 +3945,7 @@ def set_display_children(value):
                 'Bridge to build the 25 April Bridge, and then painted it the same color as the Golden Gate Bridge! If '
                 'you have time, cross the bridge and visit the Christ statue (Sanctuary of Christ the King-Portugal).',
                 html.Br(), html.Br(),
-                'On the topic of going outside of city — the other top desinations to consider are the Belém Tower '
+                'On the topic of going outside of city — the other top destinations to consider are the Belém Tower '
                 'and the National Palace of Pena in Sintra. This palace looks absolutely stunning and I can’t wait to '
                 'visit someday. Guincho Beach is also a beautiful beach if that’s what you are looking for. I was '
                 'lucky to visit and see a stunning sunset.',
@@ -3962,7 +3962,7 @@ def set_display_children(value):
                 html.Br(), html.Br(),
                 'For nightlife, definitely check out neighborhood Bairro Alto. There are lots of bars and people out '
                 'on the Rua da Atalaia street. You can also find traditional fado music here — but it is recommended '
-                'to go to the Alfama neighborhood for this.',
+                'to go to the Alfama neighborhood for this. ',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
