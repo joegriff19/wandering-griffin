@@ -101,6 +101,7 @@ reykjavik_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Poin
 vik_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-17.6417, 63.4192]}}]}
 
 # ireland coordinates
+belfast_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-5.9301, 54.5973]}}]}
 blarney_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-8.5612, 51.9338]}}]}
 cliffs_of_moher_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-9.4247, 52.9719]}}]}
 cobh_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-8.2951, 51.8530]}}]}
