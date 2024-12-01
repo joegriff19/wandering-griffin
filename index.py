@@ -202,20 +202,19 @@ index_layout = html.Div(
             # html.Br(),
             # html.A("Nice here... but have you ever been to Dubuque, Iowa?", href="/nice_here"),
             # html.Br(), html.Br(),
-
-            html.Div(children="If this was helpful, please consider buying me a beverage! Thank you!",
-                     className="beverage"),
+            # html.Div(children="If this was helpful, please consider buying me a beverage! Thank you!",
+            #          className="beverage"),
             # html.Div(children="🍻", style={"fontSize": "35px"}),
-            html.Br(),
-            html.Div(children=[dmc.Anchor(
-                children=[
-                    DashIconify(
-                        icon='ion:logo-venmo', width=40, color="#000080")
-                ],
-                href=VENMO
-                # pink color #FF69B4
-            )
-            ]),
+            # html.Br(),
+            # html.Div(children=[dmc.Anchor(
+            #     children=[
+            #         DashIconify(
+            #             icon='ion:logo-venmo', width=40, color="#000080")
+            #     ],
+            #     href=VENMO
+            #     # pink color #FF69B4
+            # )
+            # ]),
         ], style={'textAlign': 'center',
                   'max-width': '900px',
                   'margin': 'auto',
@@ -2504,8 +2503,11 @@ def set_display_children(value):
 
     if value == 'Cliffs of Moher':
         lat_lon_str = weather.get_lat_lon(coordinates.cliffs_of_moher_geojson)
-        return ('Awesome (big) day trip from Dublin. They are amazing. My trip also included cool little stops at '
-                'castles ___ and ___.',
+        return ('Absolutely stunning. The Cliffs of Moher are some of the biggest seaside cliffs in all of Europe. '
+                'The biggest are actually just a little farther up the west coast of Ireland in County Donegal! '
+                'I visited on a big day trip from Dublin. I would certainly recommend spending multiple days in the '
+                'west of Ireland, but if your only option is a day trip from Dublin, it is still definitely worth '
+                'the trip!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
