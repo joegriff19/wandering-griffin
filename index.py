@@ -4275,6 +4275,7 @@ def set_display_children(value):
                 dbc.Carousel(
                     items=[
                         {"src": "assets/spain/bcn.JPG"},
+                        {"src": "assets/spain/bcn17.JPG"},
                         {"src": "assets/spain/bcn1.JPG"},
                         {"src": "assets/spain/bcn2.JPG"},
                         {"src": "assets/spain/bcn3.JPG"},
@@ -4896,7 +4897,7 @@ def set_display_children(value):
         lat_lon_str = weather.get_lat_lon(coordinates.toledo_geojson)
         return ('The original capital of Spain, Toledo is a very old city that makes for an awesome day trip from '
                 'Madrid. It is a small city that is essentially on a little island, surrounded by city walls and a '
-                'river / moat. It is known for its mixture or clash of cultures — catholics, jews, and muslims all '
+                'river / moat. It is known for its mixture or clash of cultures — Catholics, Jews, and Muslims all '
                 'coexisted here for many, many years until the Spanish Inquisition in 1492, the declaration that '
                 'required any non-Catholics in Spain to either convert or leave the country. Over 500 years later, '
                 "there's still a mosque and a synagogue that still stand today. Toledo is also famed as the city where "
