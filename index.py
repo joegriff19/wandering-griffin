@@ -4257,7 +4257,7 @@ def set_display_children(value):
                 "Barcelona also has a big party scene -- there are many clubs on the beach which are a bit touristy "
                 "but really cool. These include Opium, Pacha, and Shoko. Besides the beach clubs, there is Otto Zutz, "
                 "Razzmatazz (huge, known to be probably the best club', and Jamboree (dance club). There are also "
-                "some really fun salsa clubs."
+                "some really fun salsa clubs. "
                 "For an upbeat atmosphere but not clubs, there is Oveja Negra (two locations, one is more casual "
                 "and the other "
                 "is more of a beer hall), Dow Jones (drink prices change like stocks), and Espit Chupitos "
@@ -4897,12 +4897,14 @@ def set_display_children(value):
         return ('The original capital of Spain, Toledo is a very old city that makes for an awesome day trip from '
                 'Madrid. It is a small city that is essentially on a little island, surrounded by city walls and a '
                 'river / moat. It is known for its mixture or clash of cultures — catholics, jews, and muslims all '
-                'coexisted here for many, many years until the ______ in 1492, the declaration that required any '
-                'non-Catholics in Spain to either convert or leave the country. Over 500 years later, there is '
-                'still a mosque and a synagogue that still stand today. Toledo is also famed as the city where Don '
-                'Quijote starts his journey in the fictional books by Miguel Cervantes. The citadel that sits atop '
-                'the city is very cool. Enjoy the old bridge as you enter the old city, and also be sure to make '
-                'the 20 (?) minute walk south along the opposite side of the river to get a great view of the city. '
+                'coexisted here for many, many years until the Spanish Inquisition in 1492, the declaration that '
+                'required any non-Catholics in Spain to either convert or leave the country. Over 500 years later, '
+                "there's still a mosque and a synagogue that still stand today. Toledo is also famed as the city where "
+                'Don Quijote starts his journey in the fictional books by Miguel Cervantes. The citadel that sits atop '
+                'the city is very cool. Enjoy the old Alcántara Bridge as you enter the old city, and also be sure to '
+                'make the ~25 minute walk south from the bridge along the opposite side of the river to '
+                'the "Mirador del Valle" viewpoint for an amazing view of Toledo. ',
+                html.Br(), html.Br(),
                 'Lastly, make sure to try lots of different marzipan treats — to bring some back for friends! Toledo '
                 'is known to make maybe the best marzipan in Europe. There is a shop that even has a maybe 10 foot '
                 'tall Don Quijote made completely out of marzipan! It has some Guinness world record for this.',
@@ -4913,6 +4915,8 @@ def set_display_children(value):
                         {"src": "assets/spain/toledo.JPG"},
                         {"src": "assets/spain/toledo1.JPG"},
                         {"src": "assets/spain/toledo2.JPG"},
+                        {"src": "assets/spain/toledo3.JPG"},
+                        {"src": "assets/spain/toledo4.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -4958,10 +4962,10 @@ def set_display_children(value):
 
     if value == 'Vilanova':
         lat_lon_str = weather.get_lat_lon(coordinates.vilanova_geojson)
-        return ('A small town in Cataluña on the coast maybe an hour south of Barcelona, VIlanova is a lovely town '
+        return ('A small town in Cataluña on the coast maybe an hour south of Barcelona, Vilanova is a lovely town '
                 'with beautiful beaches. I was lucky to be able to visit a friend who is from there, and we enjoyed '
                 'a great relaxing couple days at the beach and enjoying good food. I especially remember the fantastic '
-                'lunch at ___. There was a great menú option with fideua '
+                'lunch at ___. There was a great menú option with fideuà '
                 '(similar to paella but made with noodles rather than rice). It was so good!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
