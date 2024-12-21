@@ -1351,6 +1351,15 @@ def set_display_children(value):
                 "Charles Bridge. After crossing the bridge, climb up to the Prague Castle and explore the castle "
                 "grounds. A boat ride on the river is also a fantastic idea any time of year. ",
                 html.Br(), html.Br(),
+                "There are lots of great traditional restaurants in Prague. U Fleků is fantastic and has a lovely beer "
+                "garden. U Pivrnce is a really cool spot that has a funny theme: there are cartoons all over the walls "
+                'of a Czech "superhero" -- he drinks a lot of beer and has funny adventures... you have to see for '
+                'yourself! Lastly, there are a few locations of the small chain called "Lokál." They are informal, '
+                'friendly restaurants. Go here for some traditional food and try the famous Pilsner Urquell beer '
+                'poured all three ways! First have the normal pour (Hladinka), then a bit more foam (Šnyt), then '
+                "nearly all foam (Mlíko). It's amazing how different the flavor of the beer is depending on the pour. "
+                "Enjoy!",
+                html.Br(), html.Br(),
                 "The Czech Republic is very well known for their beer. The Czechs drink by far the most "
                 "beer in the world -- approximately 500 12-ounce beers per person per year! No other country "
                 "drinks more than one beer per person per day! There are a few beers you will commonly see "
@@ -1363,9 +1372,8 @@ def set_display_children(value):
                 "Budweiser -- no, not from St Louis. Someone from Anheuser Busch came to the Czech Republic to "
                 "learn more about brewing and tried the original Budweiser. The guy liked the name and found "
                 "out that the brewery, despite having brewed beer for nearly a thousand years, had never "
-                "filed a patent on the "
-                "name. He naturally then filed a patent and gave the same name to the St. Louis Budweiser. So -- "
-                "be sure to try the real Budweiser!",
+                "filed a patent on the name. He naturally then filed a patent and gave the same name to the St. Louis "
+                "Budweiser. So -- be sure to try the real Budweiser!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.prague_geojson)), className='weather'), html.Br(),
                 html.Div(
