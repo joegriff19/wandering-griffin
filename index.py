@@ -1573,9 +1573,8 @@ def set_display_children(value):
                 ), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/england/london9.JPG"},
-                        {"src": "assets/england/london11.JPG"},
                         {"src": "assets/england/london3.JPG"},
+                        {"src": "assets/england/london11.JPG"},
                         {"src": "assets/england/london6.JPG"},
                         {"src": "assets/england/london7.JPG"},
                         {"src": "assets/england/london.JPG"},
@@ -3908,7 +3907,6 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/poland/war.JPG"},
                         {"src": "assets/poland/war1.JPG"},
                         {"src": "assets/poland/war2.JPG"},
                         {"src": "assets/poland/war3.JPG"},
@@ -5151,10 +5149,8 @@ def set_display_children(value):
                         {"src": "assets/usa-ma/boston7.JPG"},
                         {"src": "assets/usa-ma/boston14.JPG"},
                         {"src": "assets/usa-ma/boston15.JPG"},
-                        {"src": "assets/usa-ma/boston1.JPG"},
                         {"src": "assets/usa-ma/boston2.JPG"},
                         {"src": "assets/usa-ma/boston3.JPG"},
-                        {"src": "assets/usa-ma/boston4.JPG"},
                         {"src": "assets/usa-ma/boston5.JPG"},
                         {"src": "assets/usa-ma/boston6.JPG"},
                         {"src": "assets/usa-ma/boston8.JPG"},
@@ -5206,10 +5202,10 @@ def set_display_children(value):
                 "including Spanish, Argentinian, Greek, Ethiopian, Mexican, Venezuelan, Peruvian, German, French, "
                 "Chinese, Jewish, Italian (including our unique Chicago-Italian foods), and many more. "
                 "Some of my favorite food spots include Ba Ba Reeba (Spanish), Athenian Room (Greek), "
-                "Tango Sur / Bodega Sur (Argentina), Avli Taverna (Greek), Johnnie's Beef, The Bagelers, "
+                "Tango Sur / Bodega Sur (Argentinian), Avli Taverna (Greek), Johnnie's Beef, The Bagelers, "
                 "Smoke Daddy (BBQ), The Art of Pizza (stuffed pizza), La Vaca (Mexican), Rica Arepa, "
                 "Los 3 Panchos (Mexican), Los Comales (Mexican), Tanta (Peruvian), Happy Lamb Hot Pot, "
-                "Tesfa (Ethiopian), Manny's Cafe (Jewish deli), Parson's Chicken and Fish, Alpine Subs (Italian),"
+                "Tesfa (Ethiopian), Manny's Cafe (Jewish deli), Parson's Chicken and Fish, Alpine Subs (Italian), "
                 "Farm Bar (American), Au Cheval (best burger in the world?), Sappori (Italian), Billy Goat Tavern, "
                 "Harold's (fried chicken), Twin Anchor's (ribs), and Vito and Nick's (thin crust/tavern style pizza). "
                 "Some of my favorite bars and pubs include The Globe Pub, AJ Hudson's Pub, Cleo's Pub, Prost!, "
@@ -5222,7 +5218,7 @@ def set_display_children(value):
                 "Al Capone's favorite place.",
                 html.Br(), html.Br(),
                 "Chicago is also very famous for their comedy scene. Many popular comics and actors nowadays have "
-                "come through Chicago, and most of them worked at one specific comedy club called Second City. They"
+                "come through Chicago, and most of them worked at one specific comedy club called Second City. They "
                 "are most famous for their improv shows. They can be a bit expensive but they are so good and "
                 "absolutely worth it!",
                 html.Br(), html.Br(),
