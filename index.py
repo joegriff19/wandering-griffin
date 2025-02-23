@@ -1734,6 +1734,7 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/germany/berlin17.JPG"},
                         {"src": "assets/germany/berlin16.JPG"},
                         {"src": "assets/germany/berlin10.JPG"},
                         {"src": "assets/germany/berlin14.JPG"},
@@ -2117,7 +2118,7 @@ def set_display_children(value):
                 'I would absolutely recommend going once! Each tent holds thousands of people, '
                 'and with all the people, music, food, and beer it really is quite the amazing and unique experience.',
                 html.Br(), html.Br(),
-                'Beyond Oktoberfest -- it is '
+                'Beyond Oktoberfest -- Munich is '
                 'the capital of Bavaria. Very pretty city. Bavaria is home to some beautiful mountains (the Alps), '
                 'the fairytale-like castle called Neuschwanstein that inspired the Disney castle, one of the '
                 'most successful (but annoying) football teams in the world in Bayern Munich, '
@@ -2130,7 +2131,7 @@ def set_display_children(value):
                 'Jochberg is an awesome hike with stunning views of the Alps, Kochelsee lake, and Walchensee lake '
                 '(photo below). Back in Munich, '
                 "the Englischer Garten park is beautiful -- it's fun to watch people surf here on a little "
-                'artificial wave canal (called the Eisbachwelle)and there is a really cool beer garden at the '
+                'artificial wave canal (called the Eisbachwelle) and there is a really cool beer garden at the '
                 "base of the Chinese Tower. The Seehaus im Englischen Garten is also lovely. ",
                 html.Br(), html.Br(),
                 "You have to visit the Hofbräuhaus as well - the most iconic beer hall in the world. There is always "
