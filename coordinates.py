@@ -121,6 +121,7 @@ florence_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point
 genoa_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.9463, 44.4056]}}]}
 lecco_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.3923, 45.8554]}}]}
 milan_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.1900, 45.4642]}}]}
+monterosa_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.7260, 45.8316]}}]}
 portofino_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.2097, 44.3030]}}]}
 rome_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.4964, 41.9028]}}]}
 vatican_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.4534, 41.9029]}}]}

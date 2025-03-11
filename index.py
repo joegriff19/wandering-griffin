@@ -2924,6 +2924,45 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.milan_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
+    if value == 'Monterosa':
+        return ('Amazing ski conditions and stunning mountain views. More pics to come.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.monterosa_geojson)), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://www.youtube.com/watch?v=2eXZKczwZyM",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/austria/stanton.JPG"},
+                        # {"src": "assets/austria/stanton1.JPG"},
+                        # {"src": "assets/austria/stanton2.JPG"},
+                        # {"src": "assets/austria/stanton3.JPG"},
+                        # {"src": "assets/austria/stanton4.JPG"},
+                        # {"src": "assets/austria/stanton5.JPG"},
+                        # {"src": "assets/austria/stanton6.JPG"},
+                        # {"src": "assets/austria/stanton7.JPG"},
+                        # {"src": "assets/austria/stanton8.JPG"},
+                        # {"src": "assets/austria/stanton9.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.monterosa_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+
     if value == 'Portofino':
         lat_lon_str = weather.get_lat_lon(coordinates.portofino_geojson)
         return ('more info coming soon!',
