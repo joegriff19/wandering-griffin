@@ -2494,7 +2494,15 @@ def set_display_children(value):
 
     if value == 'Blarney':
         lat_lon_str = weather.get_lat_lon(coordinates.blarney_geojson)
-        return ('More coming soon!',
+        return ('Home of the famous Blarney Stone -- a magical stone in the Blarney Castle that endows those who '
+                'kiss it with the "gift of gab." ',
+                html.Br(), html.Br(),
+                'There is much more to Blarney than just the castle or the stone -- the castle is surrounded by '
+                'extensive gardens. The whole area has a unique mystical feeling. This starts with the castle, its '
+                'dungeons, and the other stories about its history. Outside the castle, there are curious natural rock '
+                'formations, including one that resembles "the Blarney Witch" trapped inside a rock. There are signs '
+                'around the grounds that detail the legends of the witch and the other rocks. All of this results in '
+                'a very fun, enchanting visit to Blarney.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -2515,7 +2523,8 @@ def set_display_children(value):
                 'The biggest are actually just a little farther up the west coast of Ireland in County Donegal! '
                 'I visited on a big day trip from Dublin. I would certainly recommend spending multiple days in the '
                 'west of Ireland, but if your only option is a day trip from Dublin, it is still definitely worth '
-                'the trip!',
+                'the trip! If you are looking for somewhere to stay near the Cliffs of Moher, I would recommend '
+                'either Dingle or Galway.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -2536,7 +2545,14 @@ def set_display_children(value):
 
     if value == 'Cobh':
         lat_lon_str = weather.get_lat_lon(coordinates.cobh_geojson)
-        return ('More coming soon!',
+        return ('The last port of call for the Titanic before it set sail for the US. Cobh is a nice little city on '
+                'the southern coast of Ireland. There is naturally a Titanic Museum here, but I would recommend '
+                'going to the bigger Titanic Museum in Belfast (where the Titanic was built) if you have the option. ',
+                html.Br(), html.Br(),
+                'Besides the Titanic, Cobh is especially known for the beautiful view of '
+                'the colored houses (known as the "Deck of Cards") and Spike Island. Spike Island is a small island '
+                'just off the mainland, used for both military defence and as a prison in the past. '
+                'It is supposed to be a really cool visit, but unfortunately I did not have the time to visit. ',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -2553,7 +2569,8 @@ def set_display_children(value):
 
     if value == 'Cork':
         lat_lon_str = weather.get_lat_lon(coordinates.cork_geojson)
-        return ('More coming soon!',
+        return ('The food capital of Ireland! Cork is a cool city as it certainly feels more "Irish" than Dublin, but '
+                'also much more like a "city" than Galway.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -2570,7 +2587,10 @@ def set_display_children(value):
 
     if value == 'Derry':
         lat_lon_str = weather.get_lat_lon(coordinates.derry_geojson)
-        return ('More coming soon!',
+        return ('The Halloween capital of the world! I only made a quick visit here for Halloween but I had a '
+                'wonderful experience. There were so many great costumes from those in the parade and from the regular '
+                'people. It was really cool to see all these people out enjoying themselves in the pubs after the '
+                'parade and the fireworks show.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
