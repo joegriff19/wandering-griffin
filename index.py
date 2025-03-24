@@ -2636,10 +2636,15 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dingle_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
-    if value == 'Donegal':
+    if value == 'Donegal Town':
         lat_lon_str = weather.get_lat_lon(coordinates.donegal_geojson)
-        return ('More coming soon!',
+        return ("Donegal town is a very cute little town in County Donegal, and is home to one of "
+                "Ireland's favorite pubs, called The Forge. A few other great spots in town include McCafferty's Bar, "
+                "Harbour Restaurant & Bar (great seafood), and The Reel Inn. Beyond eating and drinking, the Donegal "
+                "Castle is really cool.",
                 html.Br(), html.Br(),
+                "The town is nice, but the real magic of Donegal is outside of the town and in the hills / along the "
+                "coast. Be sure to get out and explore the beauty of Ireland's outdoors.",
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
@@ -2655,7 +2660,8 @@ def set_display_children(value):
 
     if value == 'Dublin':
         lat_lon_str = weather.get_lat_lon(coordinates.dublin_geojson)
-        return ('There is just such a special charm to this city! It was amazing to finally do a full Griffin family '
+        return ('There is just such a special charm to Ireland and to Dublin! '
+                'It was amazing to finally do a full Griffin family '
                 "trip here in October 2023. Dublin is not the biggest city and you don't need a ton of time here -- "
                 "but the more the better! Enjoy a walk along the River Liffey, through St. Stephens Green park, and "
                 "around the Trinity College campus. Here you can also see the Book of Kells! "
@@ -2716,8 +2722,25 @@ def set_display_children(value):
 
     if value == 'Galway':
         lat_lon_str = weather.get_lat_lon(coordinates.galway_geojson)
-        return ('More coming soon!',
+        return ('Galway is incredible. Known as the musical and cultural capital of Ireland, Galway is such '
+                'a beautifully vibrant and lively town. The town is a decent size with a number of pubs '
+                'and restaurants, but at the same time it is very walkable and you definitely do not need a car '
+                'when staying here. That being said, if you are driving around Ireland, the Cliffs of Moher are just '
+                'a 1.5 hour drive from Galway. There are also day trips you can take from here '
+                'if you do not have a car. Galway is a perfect place to stay for a couple nights if you plan on '
+                'visiting the Cliffs of Moher at some point on your trip.',
                 html.Br(), html.Br(),
+                'For amazing traditional music, Tig Cóilí is the place. It is small and may appear very full when '
+                'you open the door, but do not let that deter you -- there is room inside! Other great live music '
+                "pubs include Taaffes, The Quays (more touristy in terms of prices and what music is played), "
+                "O'Connell's Bar, Monroe's Tavern, and Tigh Neachtain. ",
+                html.Br(), html.Br(),
+                "For food, I loved the quaint little restaurant called Finnegans. Also be sure to go to McDonagh's "
+                'for an awesome fish & chips.',
+                html.Br(), html.Br(),
+                "Lastly, be sure to get out of the town center and walk along the Claddagh Quay, Nimmo's Pier, "
+                'and South Park for some lovely views of the colored houses along "The Long Walk" and of the River '
+                'Corrib and the Galway Bay.',
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
