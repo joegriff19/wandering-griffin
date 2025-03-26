@@ -2776,6 +2776,40 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.galway_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
+    if value == "Giant's Causeway":
+        lat_lon_str = weather.get_lat_lon(coordinates.giants_geojson)
+        return ("Giant's Causeway was really stunning. I was lucky to have had sunshine when I visited. "
+                "The rock formations are quite extensive and really fascinating. I loved the day trip excursion I "
+                "did from Belfast, which included Giant's Causeway, the Old Bushmills Distillery, the 'Dark Hedges' "
+                "used in a famous Game of Thrones scene, and also a couple very cool castles "
+                "(Carrickfergus and Dunluce). Find the link to my excursion ",
+                html.A("here.", href="https://www.getyourguide.com/belfast-l442/giant-s-causeway-day-tour-by-luxury-coach-t43263/?utm_medium=sharing&utm_campaign=activity_details_desktop"),
+                html.Br(), html.Br(),
+                "As is often the case in Ireland, there is also a fun legend that goes with Giant's Causeway. "
+                "The story is that the Irish giant named Fionn mac Cumhaill (Finn McCool) created the causeway "
+                "as a bridge to cross the Irish Sea to battle the Scottish giant named Benandonner. "
+                "While crossing his bridge, Fionn realized the Scottish giant was actually much bigger than he "
+                "realized, and thus he returned to Ireland. With his wife, Fionn devised a plan. Fionn's wife would "
+                "tell Benandonner that Fionn was only the baby of the father who was currently away from the home, "
+                "implying the father is a much larger giant. Benandonner crossed the causeway, came to Fionn's house, "
+                "and found Fionn disguised as a baby. The plan worked perfectly, and Benandonner ran away in fear "
+                "of what Fionn's father might look like. On his way back to Scotland, Benandonner ripped up the "
+                "causeway, leaving what you see today! You can also find similar rock formations on the Scottish side "
+                "of the sea, representing the remnants of the other side of the bridge that Fionn built.",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/ireland/giants.jpg"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.giants_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Killarney':
         lat_lon_str = weather.get_lat_lon(coordinates.killarney_geojson)
         return ('More coming soon!',
@@ -2813,7 +2847,7 @@ def set_display_children(value):
     if value == 'Tralee':
         lat_lon_str = weather.get_lat_lon(coordinates.tralee_geojson)
         return ('The hometown of my Grandpa Séan! Tralee is the largest city in County Kerry, but it still pretty '
-                'small with just ___ people. The mountains of Kerry in the backdrop of the city are quite impressive! '
+                'small with just 26K people. The mountains of Kerry in the backdrop of the city are quite impressive! '
                 "I didn't realize they were so big! See the main square called An Chearnóg and the main street called "
                 "The Mall. Enjoy the local shops, bakeries, and pubs!",
                 html.Br(), html.Br(),

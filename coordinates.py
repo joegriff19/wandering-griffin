@@ -111,6 +111,7 @@ dingle_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point",
 donegal_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-8.1096, 54.6538]}}]}
 dublin_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-6.2603, 53.3498]}}]}
 galway_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-9.0513, 53.274]}}]}
+giants_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-6.5116, 55.2408]}}]}
 killarney_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-9.5044, 52.0599]}}]}
 limerick_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-8.6267, 52.6638]}}]}
 tralee_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-9.7026, 52.2713]}}]}
