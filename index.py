@@ -2656,15 +2656,20 @@ def set_display_children(value):
         lat_lon_str = weather.get_lat_lon(coordinates.donegal_geojson)
         return ("Donegal town is a very cute little town in County Donegal, and is home to one of "
                 "Ireland's favorite pubs, called The Forge. A few other great spots in town include McCafferty's Bar, "
-                "Harbour Restaurant & Bar (great seafood), and The Reel Inn. Beyond eating and drinking, the Donegal "
-                "Castle is really cool.",
+                "Harbour Restaurant & Bar (great seafood), and The Olde Castle Bar. Beyond eating and drinking, "
+                "be sure to check out the 15th century Donegal Castle.",
                 html.Br(), html.Br(),
-                "The town is nice, but the real magic of Donegal is outside of the town and in the hills / along the "
-                "coast. Be sure to get out and explore the beauty of Ireland's outdoors.",
+                "The town is nice (and very small), but the real magic of Donegal is outside of the town and "
+                "in the hills / along the coast. Try to get out and explore the beauty of County Donegal.",
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/ireland/donegal.JPG"},
+                        {"src": "assets/ireland/donegal.jpg"},
+                        {"src": "assets/ireland/donegal1.jpg"},
+                        {"src": "assets/ireland/donegal2.jpg"},
+                        {"src": "assets/ireland/donegal3.jpg"},
+                        {"src": "assets/ireland/donegal4.jpg"},
+
                     ],
                     interval=2000,
                     ride="carousel",
