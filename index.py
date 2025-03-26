@@ -2478,7 +2478,9 @@ def set_display_children(value):
     if value == 'Belfast':
         lat_lon_str = weather.get_lat_lon(coordinates.belfast_geojson)
         return ('I had a really great experience in Belfast and in Northern Ireland -- from an educational '
-                'perspective as well as a more straightforward tourism perspective. More to come!',
+                'perspective as well as a more straightforward tourism perspective. ',
+                html.Br(), html.Br(),
+                'More to come!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -2507,10 +2509,9 @@ def set_display_children(value):
 
     if value == 'Blarney':
         lat_lon_str = weather.get_lat_lon(coordinates.blarney_geojson)
-        return ('Home of the famous Blarney Stone -- a magical stone in the Blarney Castle that endows those who '
-                'kiss it with the "gift of gab." ',
-                html.Br(), html.Br(),
-                'There is much more to Blarney than just the castle or the stone -- the castle is surrounded by '
+        return ('Home of the famous Blarney Stone -- found in the Blarney Castle, it endows those who '
+                'kiss it with the "gift of gab." There is much more to Blarney than just the castle or the stone -- '
+                'the castle is surrounded by '
                 'extensive gardens. The whole area has a unique mystical feeling. This starts with the castle, its '
                 'dungeons, and the other stories about its history. Outside the castle, there are curious natural rock '
                 'formations, including one that resembles "the Blarney Witch" trapped inside a rock. There are signs '
@@ -2520,7 +2521,12 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/ireland/blarney.JPG"},
+                        {"src": "assets/ireland/blarney.jpg"},
+                        {"src": "assets/ireland/blarney1.jpg"},
+                        {"src": "assets/ireland/blarney2.jpg"},
+                        {"src": "assets/ireland/blarney3.jpg"},
+                        {"src": "assets/ireland/blarney4.jpg"},
+                        {"src": "assets/ireland/blarney5.jpg"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2570,7 +2576,9 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/ireland/cobh.JPG"},
+                        {"src": "assets/ireland/cobh.jpg"},
+                        {"src": "assets/ireland/cobh1.jpg"},
+                        {"src": "assets/ireland/cobh2.jpg"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2584,6 +2592,8 @@ def set_display_children(value):
         lat_lon_str = weather.get_lat_lon(coordinates.cork_geojson)
         return ('The food capital of Ireland! Cork is a cool city as it certainly feels more "Irish" than Dublin, but '
                 'also much more like a "city" than Galway.',
+                html.Br(), html.Br(),
+                "More to come!",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -2806,6 +2816,11 @@ def set_display_children(value):
                 dbc.Carousel(
                     items=[
                         {"src": "assets/ireland/giants.jpg"},
+                        {"src": "assets/ireland/giants1.jpg"},
+                        {"src": "assets/ireland/giants2.jpg"},
+                        {"src": "assets/ireland/giants3.jpg"},
+                        {"src": "assets/ireland/giants4.jpg"},
+                        {"src": "assets/ireland/giants5.jpg"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2817,12 +2832,42 @@ def set_display_children(value):
 
     if value == 'Killarney':
         lat_lon_str = weather.get_lat_lon(coordinates.killarney_geojson)
-        return ('More coming soon!',
+        return ('Killarney is a great small town. I stayed here for a few days to see two amazing (but very different) '
+                'concerts -- the Irish (and primarily Irish language) rap group Kneecap, '
+                'and the Irish folk acoustic group Kingfishr. The town of Killarney is just 14K people, '
+                'and the arena where I saw the concerts holds nearly a quarter of that number at 3K! ',
+                html.Br(), html.Br(),
+                'There is a lot to do in Killarney for such a small town. There are a number of great bars and '
+                'restaurants, including Kitty O’Se’s Seafood and Grill Restaurant, Celtic Whiskey Bar & Larder, '
+                "O'Connors Traditional Pub, and "
+                'The Taproom at Killarney Brewing & Distilling Company. ',
+                html.Br(), html.Br(),
+                'The Killarney National Park borders Killarney, and it is quite easy to go for a great little walk '
+                'through the park directly from the town. Definitely make the walk to Ross Castle, it is really cool '
+                'and sits right on the water. The Muckross Abbey also looks really cool but I unfortunately '
+                'did not make it here on this trip. There are also several golf courses close by. '
+                'I very much enjoyed the 9 hole course called Castlerosse Golf Club -- it borders the very nice course '
+                'called Killarney Golf & Fishing Club. ',
+                html.Br(), html.Br(),
+                'Killarney is also the starting point to drive the Ring of Kerry, one of the most scenic routes '
+                'on the entire island! If you do not have a car, there are also plenty of bus excursion options.',
+                html.Br(), html.Br(),
+                'I would also definitely recommend staying at the The Black Sheep Hostel -- I had a wonderful '
+                'experience here and they make amazing brown bread. ',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/ireland/killarney.JPG"},
+                        {"src": "assets/ireland/killarney.JPG"},
+                        {"src": "assets/ireland/killarney1.JPG"},
+                        {"src": "assets/ireland/killarney2.JPG"},
+                        {"src": "assets/ireland/killarney3.JPG"},
+                        {"src": "assets/ireland/killarney4.JPG"},
+                        {"src": "assets/ireland/killarney5.JPG"},
+                        {"src": "assets/ireland/killarney6.JPG"},
+                        {"src": "assets/ireland/killarney7.JPG"},
+                        {"src": "assets/ireland/killarney8.JPG"},
+                        {"src": "assets/ireland/killarney9.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2851,7 +2896,7 @@ def set_display_children(value):
 
     if value == 'Tralee':
         lat_lon_str = weather.get_lat_lon(coordinates.tralee_geojson)
-        return ('The hometown of my Grandpa Séan! Tralee is the largest city in County Kerry, but it still pretty '
+        return ('The hometown of my Grandpa Seán! Tralee is the largest city in County Kerry, but it still pretty '
                 'small with just 26K people. The mountains of Kerry in the backdrop of the city are quite impressive! '
                 "I didn't realize they were so big! See the main square called An Chearnóg and the main street called "
                 "The Mall. Enjoy the local shops, bakeries, and pubs!",
