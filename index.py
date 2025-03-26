@@ -2477,12 +2477,25 @@ def set_display_children(value):
     # Ireland
     if value == 'Belfast':
         lat_lon_str = weather.get_lat_lon(coordinates.belfast_geojson)
-        return ('More coming soon!',
+        return ('I had a really great experience in Belfast and in Northern Ireland -- from an educational '
+                'perspective as well as a more straightforward tourism perspective. More to come!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/ireland/belfast.JPG"},
+                        {"src": "assets/ireland/belfast.jpg"},
+                        {"src": "assets/ireland/belfast1.jpg"},
+                        {"src": "assets/ireland/belfast2.jpg"},
+                        {"src": "assets/ireland/belfast3.jpg"},
+                        {"src": "assets/ireland/belfast4.jpg"},
+                        {"src": "assets/ireland/belfast5.jpg"},
+                        {"src": "assets/ireland/belfast6.jpg"},
+                        {"src": "assets/ireland/belfast7.jpg"},
+                        {"src": "assets/ireland/belfast8.jpg"},
+                        {"src": "assets/ireland/belfast9.jpg"},
+                        {"src": "assets/ireland/belfast10.jpg"},
+                        {"src": "assets/ireland/belfast11.jpg"},
+                        {"src": "assets/ireland/belfast12.jpg"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2595,7 +2608,10 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/ireland/derry.JPG"},
+                        {"src": "assets/ireland/derry.jpg"},
+                        {"src": "assets/ireland/derry1.jpg"},
+                        {"src": "assets/ireland/derry2.jpg"},
+                        {"src": "assets/ireland/derry3.jpg"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2744,7 +2760,13 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/ireland/galway.JPG"},
+                        {"src": "assets/ireland/galway.JPG"},
+                        {"src": "assets/ireland/galway1.JPG"},
+                        {"src": "assets/ireland/galway2.JPG"},
+                        {"src": "assets/ireland/galway3.JPG"},
+                        {"src": "assets/ireland/galway4.JPG"},
+                        {"src": "assets/ireland/galway5.JPG"},
+                        {"src": "assets/ireland/galway6.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
