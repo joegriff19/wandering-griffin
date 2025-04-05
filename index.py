@@ -745,7 +745,7 @@ def set_display_children(value):
                 'well-known Cristo in Brazil! Visiting the statue, you will realize just how massive it is, '
                 'and you will also get incredible views of the surrounding mountains and the city below. I heard '
                 'some lovely music from the very kind locals, and I ate a salteña that '
-                'I still dream about to this day. I hope to be back some day!',
+                'I still dream about to this day. I hope to be back someday!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.cocha_geojson)), className='weather'), html.Br(),
                 html.Div(
@@ -2509,9 +2509,11 @@ def set_display_children(value):
 
     if value == 'Blarney':
         lat_lon_str = weather.get_lat_lon(coordinates.blarney_geojson)
-        return ('Home of the famous Blarney Stone -- found in the Blarney Castle, it endows those who '
-                'kiss it with the "gift of gab." There is much more to Blarney than just the castle or the stone -- '
-                'the castle is surrounded by '
+        return ('Home of the famous Blarney Stone -- found in the legendary Blarney Castle (which dates back to the '
+                'year 1210), it endows those who kiss it with the "gift of gab." ',
+                html.Br(), html.Br(),
+                'There is much more to Blarney than '
+                'just the castle or the stone -- the castle is surrounded by '
                 'extensive gardens. The whole area has a unique mystical feeling. This starts with the castle, its '
                 'dungeons, and the other stories about its history. Outside the castle, there are curious natural rock '
                 'formations, including one that resembles "the Blarney Witch" trapped inside a rock. There are signs '
@@ -2599,7 +2601,8 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/ireland/cork.JPG"},
+                        {"src": "assets/ireland/cork.JPG"},
+                        {"src": "assets/ireland/cork1.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2672,6 +2675,7 @@ def set_display_children(value):
                 html.Br(), html.Br(),
                 "The town is nice (and very small), but the real magic of Donegal is outside of the town and "
                 "in the hills / along the coast. Try to get out and explore the beauty of County Donegal.",
+                html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
@@ -2725,7 +2729,6 @@ def set_display_children(value):
                 ), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/ireland/dublin17.JPG"},
                         {"src": "assets/ireland/dublin8.JPG"},
                         {"src": "assets/ireland/dublin11.JPG"},
                         {"src": "assets/ireland/dublin15.JPG"},
@@ -2740,7 +2743,7 @@ def set_display_children(value):
                         {"src": "assets/ireland/dublin6.JPG"},
                         {"src": "assets/ireland/dublin5.JPG"},
                         {"src": "assets/ireland/dublin12.JPG"},
-                        # {"src": "assets/ireland/dublin7.JPG"},
+                        {"src": "assets/ireland/dublin7.JPG"},
                         {"src": "assets/ireland/dublin14.JPG"},
                         {"src": "assets/ireland/dublin16.JPG"},
                     ],
@@ -2773,6 +2776,7 @@ def set_display_children(value):
                 "Lastly, be sure to get out of the town center and walk along the Claddagh Quay, Nimmo's Pier, "
                 'and South Park for some lovely views of the colored houses along "The Long Walk" and of the River '
                 'Corrib and the Galway Bay.',
+                html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
@@ -2794,7 +2798,7 @@ def set_display_children(value):
 
     if value == "Giant's Causeway":
         lat_lon_str = weather.get_lat_lon(coordinates.giants_geojson)
-        return ("Giant's Causeway was really stunning. I was lucky to have had sunshine when I visited. "
+        return ("Giant's Causeway was really stunning. I was lucky to have some sunshine when I visited. "
                 "The rock formations are quite extensive and really fascinating. I loved the day trip excursion I "
                 "did from Belfast, which included Giant's Causeway, the Old Bushmills Distillery, the 'Dark Hedges' "
                 "used in a famous Game of Thrones scene, and also a couple very cool castles "
@@ -2813,6 +2817,9 @@ def set_display_children(value):
                 "causeway, leaving what you see today! You can also find similar rock formations on the Scottish side "
                 "of the sea, representing the remnants of the other side of the bridge that Fionn built.",
                 html.Br(), html.Br(),
+                "In addition to the Giant's Causeway itself, please enjoy a few other pictures from nearby below, "
+                "including the 'Dark Hedges.'",
+                html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
@@ -2822,6 +2829,11 @@ def set_display_children(value):
                         {"src": "assets/ireland/giants3.jpg"},
                         {"src": "assets/ireland/giants4.jpg"},
                         {"src": "assets/ireland/giants5.jpg"},
+                        {"src": "assets/ireland/giants6.jpg"},
+                        {"src": "assets/ireland/giants7.jpg"},
+                        {"src": "assets/ireland/giants8.jpg"},
+                        {"src": "assets/ireland/giants9.jpg"},
+
                     ],
                     interval=2000,
                     ride="carousel",
@@ -2880,7 +2892,8 @@ def set_display_children(value):
 
     if value == 'Limerick':
         lat_lon_str = weather.get_lat_lon(coordinates.limerick_geojson)
-        return ('More coming soon!',
+        return ('I just made a quick stop in Limerick, but it was fun to see the fabled River Shannon, the namesake '
+                'for the lovely Irish pub in Chicago!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -2925,20 +2938,14 @@ def set_display_children(value):
     if value == 'Bergamo':
         lat_lon_str = weather.get_lat_lon(coordinates.bergamo_geojson)
         return ('DO NOT immediately overlook Bergamo in favor of Milan. A lot of budget airlines that '
-                'fly to "Milan" '
-                'actually fly to the nearby city of Bergamo. It is a really cute city and they invented '
-                'Stracciatella gelato. Take the little cable car up to the high part of the city and walk '
-                'around the '
-                'fortress area. There is a great view to the south of the city right when you get off '
-                'the cable car. '
-                'There is also a restaurant / cafe right there as well with really nice views. '
-                'Climb the rest of the '
-                'way up and you can also get the view the opposite direction (north), where you can '
-                'actually see the '
-                'mountains of Switzerland not too far away! Circolino is a great restaurant -- you can '
-                'get a 3 course '
-                'meal with wine for just 15 euros (as of 2023). Be sure to have some risotto, '
-                'more traditional than pasta in the north of Italy.',
+                'fly to "Milan" actually fly to the nearby city of Bergamo. It is a really cute city and they invented '
+                'Stracciatella gelato. Take the little cable car up to the high part of the city and walk around the '
+                'fortress area. There is a great view to the south of the city right when you get off the cable car. '
+                'There is also a restaurant / cafe right there as well with really nice views. Climb the rest of the '
+                'way up and you can also get the view the opposite direction (north), where you can actually see the '
+                'mountains of Switzerland not too far away! Circolino is a great restaurant -- you can get a 3 course '
+                'meal with wine for just 15 euros (as of 2023). '
+                'Be sure to have some risotto, more traditional than pasta in the north of Italy.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -3026,8 +3033,8 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/italy/lecco.JPG"}, # different photo size
-                        # {"src": "assets/italy/lecco1.JPG"}, # different photo size
+                        {"src": "assets/italy/lecco.JPG"},
+                        {"src": "assets/italy/lecco1.JPG"},
                         {"src": "assets/italy/lecco2.JPG"},
                         {"src": "assets/italy/lecco3.JPG"},
                         {"src": "assets/italy/lecco4.JPG"},
@@ -4269,13 +4276,14 @@ def set_display_children(value):
     # Scotland
     if value == 'Carnoustie':
         lat_lon_str = weather.get_lat_lon(coordinates.carnoustie_geojson)
-        return ('Unlike St Andrews, the only reason you should come to Carnoustie is for golf! And that is a great '
-                'reason to come! There are two amazing golf courses here. My dad and I enjoyed two great rounds here.',
+        return ('Unlike the town of St Andrews which has plenty to offer besides golf, the only reason you should come '
+                'to Carnoustie is for golf. This of course if still a great reason to come! There are two amazing '
+                'golf courses here. My dad and I enjoyed a great round on both of the courses.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/scotland/edinburgh.JPG"},
+                        # {"src": "assets/scotland/carnoustie.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -4292,16 +4300,16 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/scotland/edinburgh.JPG"},
-                        {"src": "assets/scotland/edinburgh1.JPG"},
-                        {"src": "assets/scotland/edinburgh2.JPG"},
-                        {"src": "assets/scotland/edinburgh3.JPG"},
-                        {"src": "assets/scotland/edinburgh4.JPG"},
-                        {"src": "assets/scotland/edinburgh5.JPG"},
-                        {"src": "assets/scotland/edinburgh6.JPG"},
-                        {"src": "assets/scotland/edinburgh7.JPG"},
-                        {"src": "assets/scotland/edinburgh8.JPG"},
-                        {"src": "assets/scotland/edinburgh9.JPG"},
+                        {"src": "assets/scotland/edi.JPG"},
+                        {"src": "assets/scotland/edi1.JPG"},
+                        {"src": "assets/scotland/edi2.JPG"},
+                        {"src": "assets/scotland/edi3.JPG"},
+                        {"src": "assets/scotland/edi4.JPG"},
+                        {"src": "assets/scotland/edi5.JPG"},
+                        {"src": "assets/scotland/edi6.JPG"},
+                        {"src": "assets/scotland/edi7.JPG"},
+                        {"src": "assets/scotland/edi8.JPG"},
+                        {"src": "assets/scotland/edi9.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -4313,7 +4321,33 @@ def set_display_children(value):
 
     if value == 'Glasgow':
         lat_lon_str = weather.get_lat_lon(coordinates.glasgow_geojson)
-        return ('Trip with Felix, Gienna, & Oliver coming soon!',
+        return ('Glasgow is undoubtedly one of my favorite cities on the planet. To me, Glasgow is a beautiful mix of '
+                'Galway and Berlin. You have the unassuming, nonjudgmental attitude of Berlin, the German passion '
+                'for soccer, and the vibrant celtic music and pub culture.',
+                html.Br(), html.Br(),
+                'I was very fortunate to be able to spend a week in Glasgow, and I was also lucky to be joined by '
+                'Gienna, Oliver, and Felix for the weekend! Some of my highlights include '
+                'the University of Glasgow (feels like Hogwarts), the nearby Kelvingrove Park, visiting the Clydeside '
+                'Distillery, the live music at the pubs, and the stunning atmosphere for the Celtic FC games. ',
+                html.Br(), html.Br(),
+                'For incredible live music and soccer culture, be sure to go to the Brazen Head on a Celtic gameday. '
+                'This is the best place to be for a Celtic game, but it is a bit out of the center of the city. More '
+                "centrally, there are several other good spots for live music and the Celtic game, including Grace's "
+                "and Connolly's. "
+                'For a more traditional céilí live music session, be sure to go to Babbity Bowster. This is a great '
+                'place to try haggis, the national dish of Scotland! Any traditional pub or restaurant in Scotland '
+                'should serve haggis. It might sound a bit strange, but it is quite delicious! '
+                'A couple other fantastic restaurants (without live music) include The Griffin Pub and '
+                'Rab Ha’s Pub/Eatery.',
+                html.Br(), html.Br(),
+                'There are plenty of great whiskey bars in Glasgow -- two I would very highly recommend are The Pot '
+                'Still (the most famous) and The Last Bookstore (super cool atmosphere and very friendly staff, '
+                'it feels like a library).',
+                html.Br(), html.Br(),
+                'I was very fortunate to be able to get a ticket for the Celtic Champions League '
+                'game against Leipzig. There were fireworks going off across the entire city starting maybe 2 hours '
+                'before kickoff, continuing throughout the entire game, and continuing after the big win for maybe '
+                'another 2 hours! I have never seen anything quite like it before.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
@@ -4328,14 +4362,38 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.glasgow_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
-    if value == 'St. Andrews':
+    if value == 'St Andrews':
         lat_lon_str = weather.get_lat_lon(coordinates.st_andrews_geojson)
-        return ('More info coming soon!',
+        return ('The home of golf! I am so fortunate to have spent several days in St Andrews with my dad. It is said '
+                'that golf was born here back in the 1500s, and it is the dream of a lifetime of many fathers and sons '
+                'to come together to St Andrews to play golf. There are multiple 18 hole courses at St Andrews, '
+                'but the most famous (probably the most famous course in the world) is called the Old Course. '
+                'As you can imagine, it is very difficult to get a tee time on the Old Course, so tee times need to be '
+                'reserved long in advance. There is however a daily lottery on the Old Course if you are '
+                'not able to get a tee time booked in advance. Additionally, if you are staying at St Andrews, there '
+                'are also a number of fantastic golf courses nearby, including Carnoustie and Kingsbarns.',
+                html.Br(), html.Br(),
+                'It is so cool to see how golf is so present all through the town of St Andrews, with pictures of the '
+                'course and famous golfers hanging all over the walls of local hotels, restaurants, and bars. There '
+                'are so many cool restaurants and bars here, all offering delicious food, stouts, and whiskey. Maybe '
+                'the most famous/popular bar is The Dunvegan -- it has good prices, an amazing Scottish stout, tons '
+                'of whiskey, and golf pictures covering nearly every inch of the walls and even the ceiling. A couple '
+                'other great spots include ____.',
+                html.Br(), html.Br(),
+                'Beyond the golf, there are two other elements that make St Andrews such a special, unique place. '
+                'First, there is also a very old university here, which naturally means that there are plenty of '
+                'students living there. This contributes a youthful energy to the town, and I think also helps '
+                'to keep the town relatively affordable, offering more casual restaurants and bars alongside a number '
+                'of more elevated options. Second, there are also several fascinating historical monuments. '
+                'The walls of a church date back to the year 1158, and the remnants of the St Andrews Castle date '
+                'back to approximately 1200. There are also a couple old city gates that still stand today.',
+                html.Br(), html.Br(),
+                "I absolutely loved St Andrews and I can't wait to go back again someday.",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/scotland/edinburgh.JPG"},
+                        # {"src": "assets/scotland/st_andrews.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
