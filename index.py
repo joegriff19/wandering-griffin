@@ -1526,7 +1526,9 @@ def set_display_children(value):
 
     # England
     if value == 'London':
-        return ("The home of the enemy! Beware! Jokes aside, London is great. Tons of history and of course... "
+        return ("The home of the enemy! Beware! ",
+                html.Br(), html.Br(),
+                "Jokes aside, London is great. Tons of history and of course... "
                 "the world mecca for football. Currently (2023-24), 7 of the 20 teams in the English Premier League "
                 "(the best league in the world) are in London. The atmosphere at second league (called "
                 "The Championship) games is also really fun and a lot cheaper than Premier League games. QPR is a "
@@ -1881,14 +1883,19 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        {"src": "assets/germany/dresden5.JPG"},
-                        {"src": "assets/germany/dresden1.JPG"},
                         {"src": "assets/germany/dresden.JPG"},
+                        {"src": "assets/germany/dresden1.JPG"},
                         {"src": "assets/germany/dresden2.JPG"},
                         {"src": "assets/germany/dresden3.JPG"},
                         {"src": "assets/germany/dresden4.JPG"},
+                        {"src": "assets/germany/dresden5.JPG"},
                         {"src": "assets/germany/dresden6.JPG"},
                         {"src": "assets/germany/dresden7.JPG"},
+                        {"src": "assets/germany/dresden8.JPG"},
+                        {"src": "assets/germany/dresden9.JPG"},
+                        {"src": "assets/germany/dresden10.JPG"},
+                        {"src": "assets/germany/dresden11.JPG"},
+
                     ],
                     interval=2000,
                     ride="carousel",
@@ -5498,6 +5505,7 @@ def set_display_children(value):
                 ), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/usa-il/chicago17.JPG"},
                         {"src": "assets/usa-il/chicago9.JPG"},
                         {"src": "assets/usa-il/chicago3.JPG"},
                         {"src": "assets/usa-il/chicago2.JPG"},
@@ -5635,6 +5643,8 @@ def set_display_children(value):
                 ), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/usa-in/ind_dunes4.JPG"},
+                        {"src": "assets/usa-in/ind_dunes5.JPG"},
                         {"src": "assets/usa-in/ind_dunes.JPG"},
                         {"src": "assets/usa-in/ind_dunes1.JPG"},
                         {"src": "assets/usa-in/ind_dunes2.JPG"},
