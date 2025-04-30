@@ -1799,7 +1799,8 @@ def set_display_children(value):
                         {"src": "assets/germany/koln5.JPG"},
                         {"src": "assets/germany/koln6.JPG"},
                         {"src": "assets/germany/koln8.JPG"},
-                        {"src": "assets/germany/koln9.JPG"}
+                        {"src": "assets/germany/koln9.JPG"},
+                        {"src": "assets/germany/koln10.JPG"}
                     ],
                     interval=2000,
                     ride="carousel",
@@ -1810,18 +1811,26 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Düsseldorf':
         lat_lon_str = weather.get_lat_lon(coordinates.duss_geojson)
-        return ("I was only here briefly, but the center of the city was very lively with many bars and restaurants! "
-                "The waterfront along the Rhine river (Rhein in German) was also nicely developed with a number of "
-                "bars and restaurants overlooking the water.",
+        return ("Düsseldorf is an interesting city -- the city center is very lively with many bars and restaurants, "
+                "and the waterfront along the Rhine River (Rhein in German) is also nicely developed with a number of "
+                "bars and restaurants overlooking the water. However, there seems to be a bit of a materialistic focus "
+                "and the people (in my experience) are not the friendliest. Be sure to try the beer unique to "
+                "Düsseldorf, called Altbier. There are a couple great breweries, Füchschen and Uerige, "
+                "right in the city center.",
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
+                        {"src": "assets/germany/duss5.JPG"},
                         {"src": "assets/germany/duss.JPG"},
                         {"src": "assets/germany/duss1.JPG"},
                         {"src": "assets/germany/duss2.JPG"},
                         {"src": "assets/germany/duss3.JPG"},
                         {"src": "assets/germany/duss4.JPG"},
+                        {"src": "assets/germany/duss6.JPG"},
+                        {"src": "assets/germany/duss7.JPG"},
+                        {"src": "assets/germany/duss8.JPG"},
+
                     ],
                     interval=2000,
                     ride="carousel",
