@@ -128,6 +128,7 @@ index_layout = html.Div(
                 "margin": "0px"
             }
         ),
+        html.Br(),
         html.Div([
             "Select a country",
             dcc.Dropdown(
@@ -4375,7 +4376,19 @@ def set_display_children(value):
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
-                        # {"src": "assets/scotland/edinburgh.JPG"},
+                        {"src": "assets/scotland/glasgow.JPG"},
+                        {"src": "assets/scotland/glasgow1.JPG"},
+                        {"src": "assets/scotland/glasgow2.JPG"},
+                        {"src": "assets/scotland/glasgow3.JPG"},
+                        {"src": "assets/scotland/glasgow4.JPG"},
+                        {"src": "assets/scotland/glasgow5.JPG"},
+                        {"src": "assets/scotland/glasgow6.JPG"},
+                        {"src": "assets/scotland/glasgow7.JPG"},
+                        {"src": "assets/scotland/glasgow8.JPG"},
+                        {"src": "assets/scotland/glasgow9.JPG"},
+                        {"src": "assets/scotland/glasgow10.JPG"},
+                        {"src": "assets/scotland/glasgow11.JPG"},
+                        {"src": "assets/scotland/glasgow12.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
