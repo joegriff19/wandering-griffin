@@ -1890,6 +1890,16 @@ def set_display_children(value):
                 "during Christmas is Stollen (sometimes called Christstollen). The one with marzipan in the "
                 "middle is sooo good. You can come here on a day trip from Berlin.",
                 html.Br(), html.Br(),
+                "Dresden isn't too big and it's easy to walk around. The old city center (Innere Altstadt) has "
+                "some really cool buildings and sights. Be sure to see the Dresden Royal Palace, Dresden Zwinger,  "
+                "Frauenkirche Church, Fürstenzug (super cool mural depicting the 'Procession of Princes'). "
+                "Stroll along the Elbe river on the Brühl's Terrace, "
+                'nicknamed the "Balcony of Europe" for the views of the river and old city. There is a nice riverside '
+                'restaurant/brewery here called "Radeberger Spezialausschank."',
+                html.Br(), html.Br(),
+                "With a bit more time, you can also walk across the Augustus Bridge and "
+                "get a nice view of the old city from the other side of the Elbe river.",
+                html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
                     items=[
