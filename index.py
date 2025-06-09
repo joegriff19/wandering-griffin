@@ -2018,7 +2018,7 @@ def set_display_children(value):
                 'seafood you are in luck, the fresh fish sandwiches (Fischbrötchen) are so good -- go to Brücke 37 '
                 'at the port. Also at the port you will see the iconic new concert hall called the Elbphilharmonie, '
                 'with its roof resembling and reflecting the waves of the water below. Go up to the top of the '
-                'nearby church, St. Michaelis,  to get great views of the port and of the concert hall. Be sure to walk '
+                'nearby church, St. Michaelis, to get great views of the port and of the concert hall. Be sure to walk '
                 'through the Speicherstadt, the beautiful storage area for all incoming goods coming by boat '
                 'to the city. Have a drink at the little castle in this area, called the Wasserschloss. Also be sure '
                 'to visit the Hamburger version of the Amsterdam red light district, St. Pauli. '
@@ -2105,7 +2105,8 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Leipzig':
         lat_lon_str = weather.get_lat_lon(coordinates.leip_geojson)
-        return ('Both the new and old Rathaus (town hall) are really cool. ',
+        return ('Both the new and old Rathaus (town hall) are really cool. Be sure to try tohe Leipzig Lark, or '
+                '"Lerche" -- a delicious little pastry with jam and marzipan.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
                 dbc.Carousel(
