@@ -1627,15 +1627,20 @@ def set_display_children(value):
         return ('Lots to do here! It is indeed expensive and many people prefer other parts of France, '
                 'but it is absolutely worth a visit. Of course visit the Eiffel Tour -- catch some great '
                 "views from train line 6. Also be prepared for the little 'light show' that happens "
-                "on the hour after the sun goes down. Also visit Arc de Triomphe (go to the top "
+                "on the hour every hour after the sun goes down. Also visit Arc de Triomphe (go to the top "
                 "on a clear day for awesome views), the Champs-Élysées street for "
                 "shopping, and the Louvre (where Mona Lisa lives). You could "
-                'spend days in the Louvre so have an idea of what you want to see. Definitely explore the Montmarte '
+                'spend days in the Louvre so have an idea of what you want to see. ',
+                html.Br(), html.Br(),
+                'Definitely explore the Montmarte '
                 'neighborhood. Go to the Sacré-Cœur Basilica. The steps in front are a great place to sit with some '
                 'wine and enjoy a sunset. The area right next to the basilica also has a really unique vibe, almost '
-                'like a ski town. The rest of Montmarte below the basilica is also really nice. Eat a crepe at one '
+                'like a ski town. The rest of Montmarte below the basilica is also really nice. ',
+                html.Br(), html.Br(),
+                'Eat a crepe at one '
                 "the Breizh Cafes. Also get a crepe on the street at some point. Stop by little cafes for awesome "
-                "croissants and other baked goods as well. "
+                "croissants and other baked goods as well. ",
+                html.Br(), html.Br(),
                 "And most important of all... go to Le Relais de l'Entrecote for amazing "
                 "steak frites. There are no reservations. As you can see below, the line can legitimately be an "
                 "hour plus sometimes so get "
