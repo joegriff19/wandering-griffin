@@ -121,6 +121,7 @@ bergamo_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point"
 florence_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.2558, 43.7696]}}]}
 genoa_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.9463, 44.4056]}}]}
 lecco_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.3923, 45.8554]}}]}
+luino_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.7453, 46.0018]}}]}
 milan_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.1900, 45.4642]}}]}
 monterosa_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.7260, 45.8316]}}]}
 portofino_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.2097, 44.3030]}}]}
@@ -223,6 +224,9 @@ vilanova_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point
 
 # sweden coordinates
 stockholm_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [18.0686, 59.3293]}}]}
+
+# switzerland coordinates
+lugano_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.9511, 46.0037]}}]}
 
 # turkey coordinates
 istanbul_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [28.9784, 41.0082]}}]}

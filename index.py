@@ -3085,6 +3085,40 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.lecco_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
+    if value == 'Luino':
+        lat_lon_str = weather.get_lat_lon(coordinates.luino_geojson)
+        return ('Lovely little town on Lago Maggiore. More to come!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                # dbc.Carousel(
+                #     items=[
+                #         {"src": "assets/italy/lecco.JPG"},
+                #         {"src": "assets/italy/lecco1.JPG"},
+                #         {"src": "assets/italy/lecco2.JPG"},
+                #         {"src": "assets/italy/lecco3.JPG"},
+                #         {"src": "assets/italy/lecco4.JPG"},
+                #     ],
+                #     interval=2000,
+                #     ride="carousel",
+                #     className="carousel-fade"
+                # ), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://www.youtube.com/watch?v=4wCGLwk_u_g",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.luino_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Milan':
         lat_lon_str = weather.get_lat_lon(coordinates.milan_geojson)
         return ('The center of the city with the cathedral (duomo in Italian) and the arcade to the left of '
@@ -5342,6 +5376,26 @@ def set_display_children(value):
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.stockholm_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    # Switzerland
+    if value == 'Lugano':
+        lat_lon_str = weather.get_lat_lon(coordinates.lugano_geojson)
+        return ('Beautiful little town on Lake Lugano!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
+                html.Br(),
+                # dbc.Carousel(
+                #     items=[
+                #         {"src": "assets/switzerland/lug.JPG"},
+                #     ],
+                #     interval=2000,
+                #     ride="carousel",
+                #     className="carousel-fade"
+                # ), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.lugano_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40],
+                           zoom=1)))
 
     # Turkey
     if value == 'Istanbul':
