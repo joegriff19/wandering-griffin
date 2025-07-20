@@ -3090,18 +3090,6 @@ def set_display_children(value):
         return ('Lovely little town on Lago Maggiore. More to come!',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
-                # dbc.Carousel(
-                #     items=[
-                #         {"src": "assets/italy/lecco.JPG"},
-                #         {"src": "assets/italy/lecco1.JPG"},
-                #         {"src": "assets/italy/lecco2.JPG"},
-                #         {"src": "assets/italy/lecco3.JPG"},
-                #         {"src": "assets/italy/lecco4.JPG"},
-                #     ],
-                #     interval=2000,
-                #     ride="carousel",
-                #     className="carousel-fade"
-                # ), html.Br(),
                 html.Div(
                     style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
                            "margin": "auto"},
@@ -3115,6 +3103,28 @@ def set_display_children(value):
                         )
                     ]
                 ), html.Br(), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/italy/luino.JPG"},
+                        {"src": "assets/italy/luino1.JPG"},
+                        {"src": "assets/italy/luino2.JPG"},
+                        {"src": "assets/italy/luino3.JPG"},
+                        {"src": "assets/italy/luino4.JPG"},
+                        {"src": "assets/italy/luino5.JPG"},
+                        {"src": "assets/italy/luino6.JPG"},
+                        {"src": "assets/italy/luino7.JPG"},
+                        {"src": "assets/italy/luino8.JPG"},
+                        {"src": "assets/italy/luino9.JPG"},
+                        {"src": "assets/italy/luino10.JPG"},
+                        {"src": "assets/italy/luino11.JPG"},
+                        {"src": "assets/italy/luino12.JPG"},
+                        {"src": "assets/italy/luino13.JPG"},
+                        {"src": "assets/italy/luino14.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.luino_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
@@ -4668,6 +4678,7 @@ def set_display_children(value):
                         {"src": "assets/spain/bilbao2.JPG"},
                         {"src": "assets/spain/bilbao3.JPG"},
                         {"src": "assets/spain/bilbao4.JPG"},
+                        {"src": "assets/spain/bilbao5.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -5072,6 +5083,19 @@ def set_display_children(value):
                 'to get an amazing view of the bay and city from above.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    style={"margin-left": "3rem", "margin-right": "3rem", "max-width": "500px", "max-height": "500px",
+                           "margin": "auto"},
+                    children=[
+                        dp.DashPlayer(
+                            id="player",
+                            url="https://youtu.be/pNM9VXve49A?si=Ux_9Ku3xL8U02M2r",
+                            controls=True,
+                            width="100%",
+                            height="200px",
+                        )
+                    ]
+                ), html.Br(), html.Br(),
                 dbc.Carousel(
                     items=[
                         {"src": "assets/spain/sanseb.JPG"},
@@ -5079,6 +5103,11 @@ def set_display_children(value):
                         {"src": "assets/spain/sanseb2.JPG"},
                         {"src": "assets/spain/sanseb3.JPG"},
                         {"src": "assets/spain/sanseb4.JPG"},
+                        {"src": "assets/spain/sanseb5.JPG"},
+                        {"src": "assets/spain/sanseb7.JPG"},
+                        {"src": "assets/spain/sanseb8.JPG"},
+                        {"src": "assets/spain/sanseb9.JPG"},
+                        {"src": "assets/spain/sanseb10.JPG"},
                     ],
                     interval=2000,
                     ride="carousel",
@@ -5384,14 +5413,19 @@ def set_display_children(value):
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'),
                 html.Br(),
-                # dbc.Carousel(
-                #     items=[
-                #         {"src": "assets/switzerland/lug.JPG"},
-                #     ],
-                #     interval=2000,
-                #     ride="carousel",
-                #     className="carousel-fade"
-                # ), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        {"src": "assets/switzerland/lugano.JPG"},
+                        {"src": "assets/switzerland/lugano1.JPG"},
+                        {"src": "assets/switzerland/lugano2.JPG"},
+                        {"src": "assets/switzerland/lugano3.JPG"},
+                        {"src": "assets/switzerland/lugano4.JPG"},
+                        {"src": "assets/switzerland/lugano5.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ), html.Br(),
                 html.Div(
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.lugano_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40],
