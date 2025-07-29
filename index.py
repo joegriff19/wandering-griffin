@@ -1294,6 +1294,28 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # Czechia
+
+    if value == 'Karlovy Vary':
+        return ("Great trip with Juliana! More to come!",
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(weather.get_lat_lon(coordinates.karlovy_geojson)), className='weather'), html.Br(),
+                dbc.Carousel(
+                    items=[
+                        # {"src": "assets/czechia/prg.JPG"},
+                        # {"src": "assets/czechia/prg1.JPG"},
+                        # {"src": "assets/czechia/prg2.JPG"},
+                        # {"src": "assets/czechia/prg3.JPG"},
+                        # {"src": "assets/czechia/prg4.JPG"},
+                        # {"src": "assets/czechia/prg5.JPG"},
+                    ],
+                    interval=2000,
+                    ride="carousel",
+                    className="carousel-fade"
+                ),
+                html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.karlovy_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Pilsen':
         return ('The birthplace of Pilsner beer! The Pilsner Urquell brewery is definitely the most popular reason '
                 'to visit Pilsen, but Pilsen is also home to the second largest synagogue in Europe -- it is quite '

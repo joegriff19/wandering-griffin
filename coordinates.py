@@ -54,6 +54,7 @@ vodnjan_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point"
 zagreb_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [15.9819, 45.8150]}}]}
 
 # czechia coordinates
+karlovy_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.8720, 50.2319]}}]}
 pilsen_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.3776, 49.7475]}}]}
 prague_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [14.4378, 50.0755]}}]}
 
