@@ -6,6 +6,7 @@ ba_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "co
 
 # austria coordinates
 dornbirn_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [9.7438, 47.4124]}}]}
+gmunden_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.7993, 47.9184]}}]}
 innsbruck_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.4041, 47.2692]}}]}
 stanton_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.2682, 47.1296]}}]}
 vienna_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [16.3738, 48.2082]}}]}
@@ -66,6 +67,7 @@ galapagos_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Poin
 quito_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.4678, -0.1807]}}]}
 
 # england coordinates
+liverpool_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-2.9916, 53.4084]}}]}
 london_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-0.1276, 51.5072]}}]}
 
 # france coordinates
@@ -86,6 +88,7 @@ kiel_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "
 koln_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.9603, 50.9375]}}]}
 leip_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [12.3731, 51.3397]}}]}
 lub_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [10.6866, 53.8655]}}]}
+mag_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.6081, 52.1132]}}]}
 munich_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.5820, 48.1351]}}]}
 nur_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.0767, 49.4521]}}]}
 oran_geojson = {"features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.2409, 52.7557]}}]}

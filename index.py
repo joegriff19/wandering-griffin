@@ -414,6 +414,17 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(), dl.GeoJSON(data=coordinates.dornbirn_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
+    if value == 'Gmunden':
+        lat_lon_str = weather.get_lat_lon(coordinates.gmunden_geojson)
+        return ('What a lovely little city on a big lake in the Austrian Alps! Be sure to take the cable car up '
+                'into the mountains for some stunning views of the surrounding area. More to come soon!',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=coordinates.gmunden_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Innsbruck':
         return ('Very cute city in the Austrian Alps -- the mountains surrounding the city are beautiful. Innsbruck '
                 'is very close to some world-class ski destinations, including St. Anton! See the St. Anton page for '
@@ -1546,14 +1557,32 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
 
     # England
+    if value == 'Liverpool':
+        lat_lon_str = weather.get_lat_lon(coordinates.liverpool_geojson)
+        return ('The Irish capital of England! Also known as "Dublin East," Liverpool has been shaped by Irish '
+                'immigrants. Many, many immigrants came in the mid 1800s because of the famine. They did a lot of the '
+                'work on the shipping docks and helped to grow Liverpool into one of the biggest shipping ports in the '
+                'world. The Irish immigrants also had an impact in creating the distinct Liverpool accent. Today, '
+                'there are tons of Irish pubs around the city. Speaking of pubs -- some of the most beautiful pubs I '
+                'have ever seen can be found in Liverpool. Please enjoy some pictures below (coming soon).',
+                html.Br(), html.Br(),
+                'If you enjoy a maritime city, live music, beautiful and cozy pubs, '
+                'the Peaky Blinders (lots of filming here), or soccer -- you will have a fantastic time in Liverpool! ',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=coordinates.liverpool_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'London':
         return ("The home of the enemy! Beware! ",
                 html.Br(), html.Br(),
                 "Jokes aside, London is great. Tons of history and of course... "
-                "the world mecca for football. Currently (2023-24), 7 of the 20 teams in the English Premier League "
-                "(the best league in the world) are in London. The atmosphere at second league (called "
+                "perhaps the world mecca for football. Currently (2023-24), 7 of the 20 teams in the English Premier "
+                "League (the best league in the world) are in London. The atmosphere at second league (called "
                 "The Championship) games is also really fun and a lot cheaper than Premier League games. QPR is a "
-                "second league team in London -- their games are so fun! It's a completely different feel than a  "
+                "second league team in London and the atmosphere was really great. It's a much different feel than a  "
                 "top league game as the stadium is much smaller and there are very few tourists at the games. "
                 "During the season or in summer, also consider doing a stadium tour of a Premier League team. My "
                 "biased opinion would be Arsenal's Emirates Stadium (GO GUNNERS !) ",
@@ -1868,7 +1897,7 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Dortmund':
         lat_lon_str = weather.get_lat_lon(coordinates.dort_geojson)
-        return ("Home to Borussia Dortmund! Go to a football game. It's known to be one of the best game atmospheres "
+        return ("Home of Borussia Dortmund! Go to a football game. It's known to be one of the best game atmospheres "
                 "in the world. I have been lucky to see Dortmund and the German national team play here! Both games "
                 "were so much fun, especially since both resulted in wins for the home team! At the Westfalenstadion,"
                 "they also have the coolest 'Herrenhandtasche,' literally 'man's handbag' in English (picture below).",
@@ -2132,7 +2161,7 @@ def set_display_children(value):
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
     if value == 'Leipzig':
         lat_lon_str = weather.get_lat_lon(coordinates.leip_geojson)
-        return ('Both the new and old Rathaus (town hall) are really cool. Be sure to try tohe Leipzig Lark, or '
+        return ('Both the new and old Rathaus (town hall) are really cool. Be sure to try the Leipzig Lark, or '
                 '"Lerche" -- a delicious little pastry with jam and marzipan.',
                 html.Br(), html.Br(),
                 html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
@@ -2170,6 +2199,20 @@ def set_display_children(value):
                     dl.Map([dl.TileLayer(),
                             dl.GeoJSON(data=coordinates.lub_geojson)],
                            style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
+    if value == 'Magdeburg':
+        lat_lon_str = weather.get_lat_lon(coordinates.mag_geojson)
+        return ('Small city not too far from Berlin. Even though this was a second division game -- what an atmosphere '
+                'of a soccer game! I saw Kiel play a very exciting 3-3 draw at Magdeburg.'
+                'The Christmas market was also really nice, with a modern market as well as a medieval market '
+                'right next to each other in the center of the city.',
+                html.Br(), html.Br(),
+                html.Div(id="weather", children=weather.update_weather(lat_lon_str), className='weather'), html.Br(),
+                html.Div(
+                    dl.Map([dl.TileLayer(),
+                            dl.GeoJSON(data=coordinates.mag_geojson)],
+                           style={'height': '35vh', 'max-width': "400px", "margin": "auto"}, center=[25, -40], zoom=1)))
+
     if value == 'Munich':
         lat_lon_str = weather.get_lat_lon(coordinates.munich_geojson)
         return ('If you like to have fun and drink beer then Oktoberfest is '
@@ -2703,9 +2746,11 @@ def set_display_children(value):
                 'northern coast of the peninsula were incredible. Also on the northern coast, you can find a beautiful '
                 'golf course called Castlegregory. The hole that runs along the massive beach was amazing!',
                 html.Br(), html.Br(),
-                'The city of Dingle is quite small and quite lovely! There are a number of fun pubs, including ____. '
-                "Murphy's is a great local ice cream shop. "
-                "Lastly, a little boat trip out of Dingle to see "
+                'The city of Dingle is quite small and quite lovely! There are a number of fun pubs, including '
+                "Dick Mack's, O'Sullivan's Courthouse Pub, and Bob Griffin’s Bar. Foxy John's is also a really cool, "
+                "unique pub that also doubles as a hardware store!",
+                html.Br(), html.Br(),
+                "Murphy's is a great local ice cream shop. Lastly, a little boat trip out of Dingle to see "
                 "the nearby cliffs and caves from the water is also a great idea! This was very reasonably priced "
                 "for a group as we paid for the entire boat, rather than per person.",
                 html.Br(), html.Br(),
