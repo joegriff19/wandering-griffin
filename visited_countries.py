@@ -1,4 +1,4 @@
-visited_countries = ['Andorra', 'Argentina', 'Austria', 'Bahamas', 'Belgium', 'Bolivia',
+visited_countries = ['Albania', 'Andorra', 'Argentina', 'Austria', 'Bahamas', 'Belgium', 'Bolivia',
                      'Bosnia & Herzegovina', 'Bulgaria', 'Canada', 'Chile', 'Croatia', 'Czechia',
                      'Denmark', 'Ecuador', 'England', 'France', 'Germany', 'Hungary', 'Iceland',
                      'Ireland', 'Italy', 'Latvia', 'Lithuania', 'Mexico', 'Montenegro', 'Morocco', 'Netherlands',
@@ -9,7 +9,7 @@ af_countries = ['Morocco']
 
 as_countries = ['Turkey']
 
-eu_countries = ['Andorra', 'Austria', 'Belgium', 'Bosnia & Herzegovina', 'Bulgaria', 'Croatia', 'Czechia',
+eu_countries = ['Albania', 'Andorra', 'Austria', 'Belgium', 'Bosnia & Herzegovina', 'Bulgaria', 'Croatia', 'Czechia',
                 'Denmark', 'Ecuador', 'England', 'France', 'Germany', 'Hungary', 'Iceland',
                 'Ireland', 'Italy', 'Latvia', 'Lithuania', 'Montenegro', 'Netherlands', 'North Macedonia',
                 'Norway', 'Poland', 'Portugal', 'Scotland', 'Slovakia', 'Slovenia', 'Spain',
